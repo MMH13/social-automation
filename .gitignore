@@ -9,3 +9,6 @@ queue/
 __pycache__/
 *.pyc
 Git-*.exe
+
+# Claude Code local session settings
+.claude/settings.local.json
