@@ -1,0 +1,37 @@
+# ── Social automation configuration ─────────────────────────────
+# Fill in your niche and brand details, then run:  python -m src.main --dry-run
+
+niche: "AI tools, making money online with AI, and mindset for worldwide digital entrepreneurs (primary audience: USA)"
+brand_name: "IamMamunHossain"
+brand_voice: "professional content creator: engaging, valuable, easy to understand; clear, creative, useful; every post intentional and audience-focused; short punchy sentences; speaks to ambitious digital entrepreneurs worldwide"
+language: "English"
+call_to_action: "Follow for more daily tips."
+
+# Which platforms to publish to each run.
+# Direct API platforms (need credentials in .env):
+platforms:
+  x: true
+  facebook: true
+  instagram: true
+  linkedin: true
+  # TikTok + YouTube go through the video queue (see below)
+  tiktok: true
+  youtube: true
+
+# TikTok/YouTube delivery mode:
+#   "queue"      - save video + captions to the queue/ folder for manual upload (default, works today)
+#   "upload_post"- publish automatically via upload-post.com API (set UPLOAD_POST_API_KEY in .env)
+video_delivery: "queue"
+
+# Visual style for generated images/videos
+style:
+  bg_color: "#0F172A"        # dark navy
+  accent_color: "#38BDF8"    # sky blue
+  text_color: "#F8FAFC"
+  font: "arialbd.ttf"        # any font in C:\Windows\Fonts
+
+# How many recent topics to remember so posts don't repeat
+history_window: 30
+
+# Claude model used for content generation
+model: "claude-sonnet-5"

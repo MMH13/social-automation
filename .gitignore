@@ -1,0 +1,11 @@
+# secrets — never commit
+.env
+
+# local artifacts
+output/*
+!output/memes/
+state/runs.log
+queue/
+__pycache__/
+*.pyc
+Git-*.exe
