@@ -30,14 +30,14 @@ jobs:
           FB_PAGE_ACCESS_TOKEN=${{ secrets.FB_PAGE_ACCESS_TOKEN }}
           IG_USER_ID=${{ secrets.IG_USER_ID }}
           EOF
-      - name: Post next meme
-        run: python -m src.post_meme
+      - name: Post next item (meme / psych / status / reel)
+        run: python -m src.post_pt
       - name: Commit queue state
         if: always()
         run: |
           git config user.name "auto-poster"
           git config user.email "actions@github.com"
-          git add scheduled_memes/memes.json state/history.jsonl
-          git diff --cached --quiet || git commit -m "memes: mark posted"
+          git add scheduled_pt/content.json state/history.jsonl
+          git diff --cached --quiet || git commit -m "pt: mark posted"
           git pull --rebase origin master
           git push

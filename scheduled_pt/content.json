@@ -1,0 +1,432 @@
+[
+  {
+    "id": 1,
+    "type": "meme",
+    "text": "Being an adult is googling\nyour symptoms\nand then ignoring them professionally.",
+    "fb_caption": "Tag someone 👀",
+    "ig_caption": "Tag someone 👀\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood"
+  },
+  {
+    "id": 2,
+    "type": "status",
+    "text": "healing is just learning to sit with yourself without picking a fight",
+    "fb_caption": "",
+    "ig_caption": "Read that again.\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset",
+    "variant": 0
+  },
+  {
+    "id": 3,
+    "type": "reel",
+    "text": "Your brain at 3am:\n“let's revisit 2019.”",
+    "fb_caption": "Who felt this? 😭",
+    "ig_caption": "Who felt this? 😭\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings",
+    "variant": 1,
+    "posted_at": "2026-07-17T19:06:21",
+    "fb_url": "https://www.facebook.com/reel/1689613012346037",
+    "ig_url": "skipped: IG reels need Cloudinary credentials in .env (video hosting)"
+  },
+  {
+    "id": 4,
+    "type": "psych",
+    "text": "Your brain treats uncertainty like physical pain.\nThat's why “maybe” hurts more than “no.”",
+    "fb_caption": "Save this one 📌",
+    "ig_caption": "Save this one 📌\n\n#psychology #therapy #growth #relatable #memepage #realtalk"
+  },
+  {
+    "id": 5,
+    "type": "status",
+    "text": "accidentally healed by minding my own business",
+    "fb_caption": "",
+    "ig_caption": "It's deeper than it looks.\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood",
+    "variant": 2
+  },
+  {
+    "id": 6,
+    "type": "meme",
+    "text": "Real rest isn't sleep.\nIt's zero notifications\nand nowhere to be.",
+    "fb_caption": "Say it louder 📢",
+    "ig_caption": "Say it louder 📢\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset"
+  },
+  {
+    "id": 7,
+    "type": "status",
+    "text": "your anxiety is not a prophecy. it's a smoke alarm that goes off when you cook.",
+    "fb_caption": "",
+    "ig_caption": "This one's for you 🤍\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings",
+    "variant": 3
+  },
+  {
+    "id": 8,
+    "type": "reel",
+    "text": "Psychology says:\nthe fastest overthinkers are the slowest sleepers",
+    "fb_caption": "Facts? 👀",
+    "ig_caption": "Facts? 👀\n\n#psychology #therapy #growth #relatable #memepage #realtalk",
+    "variant": 4
+  },
+  {
+    "id": 9,
+    "type": "meme",
+    "text": "You're not behind in life.\nYou're comparing your chapter 3\nto someone's chapter 20.",
+    "fb_caption": "Read that again.",
+    "ig_caption": "Read that again.\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset"
+  },
+  {
+    "id": 10,
+    "type": "status",
+    "text": "some people regulate your nervous system. some people ARE the dysregulation.",
+    "fb_caption": "",
+    "ig_caption": "Who felt this? 😭\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings",
+    "variant": 5
+  },
+  {
+    "id": 11,
+    "type": "reel",
+    "text": "Nobody:\nMy anxiety: “what if though”",
+    "fb_caption": "Save this one 📌",
+    "ig_caption": "Save this one 📌\n\n#psychology #therapy #growth #relatable #memepage #realtalk",
+    "variant": 6
+  },
+  {
+    "id": 12,
+    "type": "psych",
+    "text": "Your nervous system decides if it likes someone\nbefore your brain finishes the introduction.",
+    "fb_caption": "It's deeper than it looks.",
+    "ig_caption": "It's deeper than it looks.\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood"
+  },
+  {
+    "id": 13,
+    "type": "status",
+    "text": "my toxic trait is thinking the gym counts if I thought about it",
+    "fb_caption": "",
+    "ig_caption": "Say it louder 📢\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset",
+    "variant": 7
+  },
+  {
+    "id": 14,
+    "type": "meme",
+    "text": "I love people who match my energy\ninstead of draining it.",
+    "fb_caption": "This one's for you 🤍",
+    "ig_caption": "This one's for you 🤍\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings"
+  },
+  {
+    "id": 15,
+    "type": "status",
+    "text": "rest is productive. read that again.",
+    "fb_caption": "",
+    "ig_caption": "Facts? 👀\n\n#psychology #therapy #growth #relatable #memepage #realtalk",
+    "variant": 8
+  },
+  {
+    "id": 16,
+    "type": "reel",
+    "text": "Burnout recipe:\ntreating everything urgent as important",
+    "fb_caption": "Tag someone 👀",
+    "ig_caption": "Tag someone 👀\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood",
+    "variant": 9
+  },
+  {
+    "id": 17,
+    "type": "meme",
+    "text": "My biggest red flag?\nSaying 'I'm fine'\nwith the confidence of a liar.",
+    "fb_caption": "Who felt this? 😭",
+    "ig_caption": "Who felt this? 😭\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings"
+  },
+  {
+    "id": 18,
+    "type": "status",
+    "text": "maturity is realizing silence was the answer you kept asking for",
+    "fb_caption": "",
+    "ig_caption": "Save this one 📌\n\n#psychology #therapy #growth #relatable #memepage #realtalk",
+    "variant": 10
+  },
+  {
+    "id": 19,
+    "type": "reel",
+    "text": "POV: you replied in your head\nand thought you sent it",
+    "fb_caption": "It's deeper than it looks.",
+    "ig_caption": "It's deeper than it looks.\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood",
+    "variant": 11
+  },
+  {
+    "id": 20,
+    "type": "psych",
+    "text": "Overthinking at night happens because it's the first\nquiet moment your brain gets all day.",
+    "fb_caption": "Say it louder 📢",
+    "ig_caption": "Say it louder 📢\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset"
+  },
+  {
+    "id": 21,
+    "type": "status",
+    "text": "adulthood is just googling “why am I tired” every 3 days",
+    "fb_caption": "",
+    "ig_caption": "This one's for you 🤍\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings",
+    "variant": 12
+  },
+  {
+    "id": 22,
+    "type": "meme",
+    "text": "We replay conversations\nbecause we crave closure.\nMy brain calls it evening entertainment.",
+    "fb_caption": "Facts? 👀",
+    "ig_caption": "Facts? 👀\n\n#psychology #therapy #growth #relatable #memepage #realtalk"
+  },
+  {
+    "id": 23,
+    "type": "status",
+    "text": "you can't heal in the same chat where you got hurt",
+    "fb_caption": "",
+    "ig_caption": "Tag someone 👀\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood",
+    "variant": 13
+  },
+  {
+    "id": 24,
+    "type": "reel",
+    "text": "People pleasing is fear\nwearing a friendly face",
+    "fb_caption": "Read that again.",
+    "ig_caption": "Read that again.\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset",
+    "variant": 14
+  },
+  {
+    "id": 25,
+    "type": "meme",
+    "text": "Some friendships die from a fight.\nMost die from\n'we should catch up soon.'",
+    "fb_caption": "Save this one 📌",
+    "ig_caption": "Save this one 📌\n\n#psychology #therapy #growth #relatable #memepage #realtalk"
+  },
+  {
+    "id": 26,
+    "type": "status",
+    "text": "protect your peace like it pays your bills",
+    "fb_caption": "",
+    "ig_caption": "It's deeper than it looks.\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood",
+    "variant": 15
+  },
+  {
+    "id": 27,
+    "type": "reel",
+    "text": "Social battery: 1%\nLocation: still at the party",
+    "fb_caption": "Say it louder 📢",
+    "ig_caption": "Say it louder 📢\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset",
+    "variant": 16
+  },
+  {
+    "id": 28,
+    "type": "psych",
+    "text": "The people who check on others the most\nare usually the ones nobody checks on.",
+    "fb_caption": "This one's for you 🤍",
+    "ig_caption": "This one's for you 🤍\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings"
+  },
+  {
+    "id": 29,
+    "type": "status",
+    "text": "I'm not antisocial. I'm selectively social. there's a difference.",
+    "fb_caption": "",
+    "ig_caption": "Facts? 👀\n\n#psychology #therapy #growth #relatable #memepage #realtalk",
+    "variant": 17
+  },
+  {
+    "id": 30,
+    "type": "meme",
+    "text": "I'm not ignoring my problems.\nI'm letting them marinate\nwhile I nap.",
+    "fb_caption": "Tag someone 👀",
+    "ig_caption": "Tag someone 👀\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood"
+  },
+  {
+    "id": 31,
+    "type": "status",
+    "text": "not every thought deserves a chair at the table",
+    "fb_caption": "",
+    "ig_caption": "Read that again.\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset",
+    "variant": 18
+  },
+  {
+    "id": 32,
+    "type": "reel",
+    "text": "You don't miss them.\nYou miss who you thought they were.",
+    "fb_caption": "Who felt this? 😭",
+    "ig_caption": "Who felt this? 😭\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings",
+    "variant": 19
+  },
+  {
+    "id": 33,
+    "type": "meme",
+    "text": "Nothing ages you faster than asking\n'how is it already July?'",
+    "fb_caption": "It's deeper than it looks.",
+    "ig_caption": "It's deeper than it looks.\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood"
+  },
+  {
+    "id": 34,
+    "type": "status",
+    "text": "growth is quiet. that's why nobody claps.",
+    "fb_caption": "",
+    "ig_caption": "Say it louder 📢\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset",
+    "variant": 20
+  },
+  {
+    "id": 35,
+    "type": "reel",
+    "text": "“I'm fine.”\n— someone who is not fine",
+    "fb_caption": "This one's for you 🤍",
+    "ig_caption": "This one's for you 🤍\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings",
+    "variant": 21
+  },
+  {
+    "id": 36,
+    "type": "psych",
+    "text": "Your attachment style was written years ago.\nEvery relationship since has been a rerun — until you notice the script.",
+    "fb_caption": "Facts? 👀",
+    "ig_caption": "Facts? 👀\n\n#psychology #therapy #growth #relatable #memepage #realtalk"
+  },
+  {
+    "id": 37,
+    "type": "status",
+    "text": "canceled plans are my love language",
+    "fb_caption": "",
+    "ig_caption": "Tag someone 👀\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood",
+    "variant": 22
+  },
+  {
+    "id": 38,
+    "type": "meme",
+    "text": "My comfort zone has a couch,\nsnacks,\nand zero small talk.",
+    "fb_caption": "Read that again.",
+    "ig_caption": "Read that again.\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset"
+  },
+  {
+    "id": 39,
+    "type": "status",
+    "text": "your body remembers the stress your calendar forgot",
+    "fb_caption": "",
+    "ig_caption": "Who felt this? 😭\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings",
+    "variant": 23
+  },
+  {
+    "id": 40,
+    "type": "reel",
+    "text": "Silence isn't awkward.\nIt's honest. That's why it's scary.",
+    "fb_caption": "Save this one 📌",
+    "ig_caption": "Save this one 📌\n\n#psychology #therapy #growth #relatable #memepage #realtalk",
+    "variant": 24
+  },
+  {
+    "id": 41,
+    "type": "meme",
+    "text": "Emotional damage is\nhearing your own voice\nin a video.",
+    "fb_caption": "Say it louder 📢",
+    "ig_caption": "Say it louder 📢\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset"
+  },
+  {
+    "id": 42,
+    "type": "status",
+    "text": "being understood is a basic need, not a luxury",
+    "fb_caption": "",
+    "ig_caption": "This one's for you 🤍\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings",
+    "variant": 25
+  },
+  {
+    "id": 43,
+    "type": "reel",
+    "text": "Me ignoring my problems:\n“they'll log out eventually”",
+    "fb_caption": "Facts? 👀",
+    "ig_caption": "Facts? 👀\n\n#psychology #therapy #growth #relatable #memepage #realtalk",
+    "variant": 26
+  },
+  {
+    "id": 44,
+    "type": "psych",
+    "text": "Low energy isn't always laziness.\nSometimes it's your brain billing you for stress you thought was free.",
+    "fb_caption": "Tag someone 👀",
+    "ig_caption": "Tag someone 👀\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood"
+  },
+  {
+    "id": 45,
+    "type": "status",
+    "text": "me: needs rest. also me at 1am: let's think about everything.",
+    "fb_caption": "",
+    "ig_caption": "Read that again.\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset",
+    "variant": 27
+  },
+  {
+    "id": 46,
+    "type": "meme",
+    "text": "The bravest thing I do daily\nis check my bank account\nwithout crying.",
+    "fb_caption": "Who felt this? 😭",
+    "ig_caption": "Who felt this? 😭\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings"
+  },
+  {
+    "id": 47,
+    "type": "status",
+    "text": "the opposite of overthinking isn't ignorance. it's trust.",
+    "fb_caption": "",
+    "ig_caption": "Save this one 📌\n\n#psychology #therapy #growth #relatable #memepage #realtalk",
+    "variant": 28
+  },
+  {
+    "id": 48,
+    "type": "reel",
+    "text": "Your standards rise\nwhen your self-respect does",
+    "fb_caption": "It's deeper than it looks.",
+    "ig_caption": "It's deeper than it looks.\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood",
+    "variant": 29
+  },
+  {
+    "id": 49,
+    "type": "meme",
+    "text": "I don't fear commitment.\nI fear starting a series\nwith 9 seasons.",
+    "fb_caption": "This one's for you 🤍",
+    "ig_caption": "This one's for you 🤍\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings"
+  },
+  {
+    "id": 50,
+    "type": "status",
+    "text": "closure is a gift you give yourself. stop waiting for the courier.",
+    "fb_caption": "",
+    "ig_caption": "Facts? 👀\n\n#psychology #therapy #growth #relatable #memepage #realtalk",
+    "variant": 30
+  },
+  {
+    "id": 51,
+    "type": "reel",
+    "text": "My personality:\n50% sarcasm, 50% snacks",
+    "fb_caption": "Tag someone 👀",
+    "ig_caption": "Tag someone 👀\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood",
+    "variant": 31
+  },
+  {
+    "id": 52,
+    "type": "psych",
+    "text": "You don't fear commitment.\nYou fear repeating what commitment looked like the first time you saw it.",
+    "fb_caption": "Read that again.",
+    "ig_caption": "Read that again.\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset"
+  },
+  {
+    "id": 53,
+    "type": "status",
+    "text": "therapist: what do we do when we're overwhelmed? me: add another tab",
+    "fb_caption": "",
+    "ig_caption": "Who felt this? 😭\n\n#mentalhealthawareness #selflove #psychology #dailymemes #feelings",
+    "variant": 32
+  },
+  {
+    "id": 54,
+    "type": "meme",
+    "text": "Group chat psychology:\n47 messages = memes.\n1 message at 1am = someone needs to talk.",
+    "fb_caption": "Save this one 📌",
+    "ig_caption": "Save this one 📌\n\n#psychology #therapy #growth #relatable #memepage #realtalk"
+  },
+  {
+    "id": 55,
+    "type": "status",
+    "text": "small boundaries now or big resentments later. pick one.",
+    "fb_caption": "",
+    "ig_caption": "It's deeper than it looks.\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood",
+    "variant": 33
+  },
+  {
+    "id": 56,
+    "type": "reel",
+    "text": "Discipline is self-love\nin work clothes",
+    "fb_caption": "Say it louder 📢",
+    "ig_caption": "Say it louder 📢\n\n#psychologyfacts #healing #overthinking #relatablememes #mindset",
+    "variant": 34
+  }
+]

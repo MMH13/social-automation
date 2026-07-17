@@ -86,3 +86,44 @@ def publish(caption: str, image_path: Path, fb_post_id: str | None = None) -> st
     )
     pub.raise_for_status()
     return f"instagram media id {pub.json()['id']}"
+
+
+def publish_reel(caption: str, video_path: Path) -> str:
+    """Publish a Reel to Instagram. Requires Cloudinary (video must be at a public URL)."""
+    import cloudinary
+    import cloudinary.uploader
+
+    if not _cloudinary_configured():
+        raise RuntimeError("IG reels need Cloudinary credentials in .env (video hosting)")
+
+    ig_id = os.environ["IG_USER_ID"]
+    token = os.environ["FB_PAGE_ACCESS_TOKEN"]
+
+    cloudinary.config(
+        cloud_name=os.environ["CLOUDINARY_CLOUD_NAME"],
+        api_key=os.environ["CLOUDINARY_API_KEY"],
+        api_secret=os.environ["CLOUDINARY_API_SECRET"],
+    )
+    up = cloudinary.uploader.upload(str(video_path), resource_type="video", folder="social-auto")
+    video_url = up["secure_url"]
+
+    container = requests.post(f"{GRAPH}/{ig_id}/media", data={
+        "media_type": "REELS", "video_url": video_url, "caption": caption,
+        "access_token": token}, timeout=120)
+    container.raise_for_status()
+    creation_id = container.json()["id"]
+
+    for _ in range(30):  # video processing can take a while
+        status = requests.get(f"{GRAPH}/{creation_id}",
+                              params={"fields": "status_code", "access_token": token},
+                              timeout=30).json()
+        if status.get("status_code") == "FINISHED":
+            break
+        if status.get("status_code") == "ERROR":
+            raise RuntimeError(f"IG reel container error: {status}")
+        time.sleep(5)
+
+    pub = requests.post(f"{GRAPH}/{ig_id}/media_publish",
+                        data={"creation_id": creation_id, "access_token": token}, timeout=120)
+    pub.raise_for_status()
+    return f"instagram reel id {pub.json()['id']}"
