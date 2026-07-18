@@ -23,6 +23,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
+      - name: Install ffmpeg (needed for reels)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - name: Build .env from secrets
         run: |
           cat > .env << EOF
