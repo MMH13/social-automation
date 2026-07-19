@@ -164,7 +164,10 @@
     "text": "Burnout recipe:\ntreating everything urgent as important",
     "fb_caption": "Tag someone 👀",
     "ig_caption": "Tag someone 👀\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood",
-    "variant": 9
+    "variant": 9,
+    "posted_at": "2026-07-19T17:55:52",
+    "fb_url": "https://www.facebook.com/reel/28258072813778920",
+    "ig_url": "skipped: IG reels need Cloudinary credentials in .env (video hosting)"
   },
   {
     "id": 17,
