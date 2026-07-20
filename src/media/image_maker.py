@@ -109,6 +109,55 @@ def make_gradient_status(text: str, variant: int, out_path: Path) -> Path:
     return out_path
 
 
+def make_prompt_card(caps_text: str, delivery: str, out_path: Path,
+                     name: str = "Mamun Hossain", handle: str = "@iammamunhossain") -> Path:
+    """Social-card style hook post: black bg, profile header, CAPS hook, sentence-case payoff.
+
+    The card carries only the hook — the actual prompts go in the caption.
+    """
+    W, H = 1080, 1350
+    img = Image.new("RGB", (W, H), "#000000")
+    draw = ImageDraw.Draw(img)
+    margin = 80
+
+    # profile header: white monogram avatar + name + handle
+    r = 62
+    cx, cy = margin + r, 150
+    draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill="#FFFFFF")
+    init_font = _font("arialbd.ttf", 50)
+    initials = "".join(w[0] for w in name.split()[:2]).upper()
+    iw = draw.textlength(initials, font=init_font)
+    draw.text((cx - iw / 2, cy - 32), initials, font=init_font, fill="#000000")
+    draw.text((margin + 2 * r + 28, 112), name, font=_font("arialbd.ttf", 46), fill="#FFFFFF")
+    draw.text((margin + 2 * r + 28, 172), handle, font=_font("arial.ttf", 38), fill="#8A8A8E")
+
+    caps_font = _font("arialbd.ttf", 54)
+    del_font = _font("arial.ttf", 46)
+    max_w = W - 2 * margin
+
+    rows: list[tuple[str, object, int]] = []
+    for block in caps_text.split("\n\n"):
+        for raw in block.split("\n"):
+            for line in _wrap(draw, raw, caps_font, max_w):
+                rows.append((line, caps_font, 70))
+        rows.append(("", None, 38))
+    rows.append(("", None, 26))
+    for line in _wrap(draw, delivery, del_font, max_w):
+        rows.append((line, del_font, 62))
+
+    top, bottom = 300, H - 90
+    y = top + (bottom - top - sum(h for _, _, h in rows)) // 2
+    for text, font, h in rows:
+        if text:
+            fill = "#FFFFFF" if font is caps_font else "#DCDCDC"
+            draw.text((margin, y), text, font=font, fill=fill)
+        y += h
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    img.save(out_path, "JPEG", quality=93)
+    return out_path
+
+
 def make_psych_card(text: str, out_path: Path) -> Path:
     """Psychology insight card: charcoal textured bg, serif text, small header + watermark."""
     img = _gradient_bg(SIZE, SIZE, "#1C1C1E", "#0D0D0F")
