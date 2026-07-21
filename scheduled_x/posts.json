@@ -841,5 +841,515 @@
     "day": 15,
     "type": "single",
     "text": "If I lost everything today, the restart plan:\n\n1 skill: AI automation\n1 platform: X\n1 offer\n90 days of daily proof\n\nSimplicity isn't a compromise. It's the strategy."
+  },
+  {
+    "id": 91,
+    "day": 16,
+    "type": "thread",
+    "source": "promptpack:weekly planning systems",
+    "tweets": [
+      "YOU'RE NOT LAZY. YOU'RE RUNNING A BROKEN SYSTEM.\n\n7 ChatGPT prompts to rebuild your week around what actually matters:",
+      "1. \"Act as a productivity coach. Ask me 5 questions about my goals, then build a realistic weekly schedule around them.\"",
+      "2. \"Audit my week. Here's how I spend my time: [paste]. Show me the 3 biggest leaks and exactly what to cut.\"",
+      "3. \"Turn my goal of [goal] into a 12-week plan with weekly milestones I can actually hit.\"",
+      "4. \"Design a 90-minute morning block that moves my most important project forward. Assume I have low energy.\"",
+      "5. \"I keep dropping [habit]. Diagnose why using behavior science, then redesign it so it survives a bad day.\"",
+      "6. \"Build me a Sunday review checklist: 10 questions that catch problems before they cost me a week.\"",
+      "7. \"Rank my task list by leverage, not urgency: [paste list].\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 92,
+    "day": 16,
+    "type": "thread",
+    "source": "promptpack:content planning",
+    "tweets": [
+      "POSTING MORE WON'T SAVE YOU. POSTING WITH A PATTERN WILL.\n\n7 ChatGPT prompts to build 30 days of content in one sitting:",
+      "1. \"Act as a content strategist. My niche is [niche], my audience is [audience]. Give me 5 content pillars I can post about forever.\"",
+      "2. \"Turn this one idea into 10 posts in different formats: [idea].\"",
+      "3. \"Write 20 hooks for the topic [topic]. Half contrarian, half curiosity-driven.\"",
+      "4. \"Cut my long post to under 280 characters without losing the punch: [paste].\"",
+      "5. \"Build a 30-day calendar from these 5 pillars, mixing formats so it never feels repetitive.\"",
+      "6. \"Review my last 10 post ideas and tell me which are actually about my audience, not about me: [paste].\"",
+      "7. \"Rewrite this caption 3 ways: funny, emotional, and direct: [paste].\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 93,
+    "day": 16,
+    "type": "thread",
+    "source": "promptpack:offer creation",
+    "tweets": [
+      "NOBODY PAYS FOR YOUR SKILLS. THEY PAY FOR THEIR PROBLEM TO DISAPPEAR.\n\n7 ChatGPT prompts to turn what you know into something people will actually buy:",
+      "1. \"Act as an offer strategist. I can do [skill]. List 5 specific business problems it solves and what each is worth to the buyer.\"",
+      "2. \"Rewrite this service description so it sells an outcome, not my time: [paste].\"",
+      "3. \"Give me 3 pricing tiers for [service] and explain exactly what changes at each level.\"",
+      "4. \"List the top 8 objections someone has before buying [offer], with a one-line answer for each.\"",
+      "5. \"Write 10 versions of: 'I help [who] get [outcome] without [pain]' for my niche [niche].\"",
+      "6. \"Design a free demo I can build in 2 hours that proves I can deliver [service].\"",
+      "7. \"Draft a simple one-page proposal for [service] priced at [price].\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 94,
+    "day": 16,
+    "type": "thread",
+    "source": "promptpack:client outreach",
+    "tweets": [
+      "YOUR PITCH ISN'T TOO LONG. IT'S TOO MUCH ABOUT YOU.\n\n7 ChatGPT prompts to write outreach that actually gets answered:",
+      "1. \"Act as a cold outreach expert. Write a 3-line message to [business type] offering [service]. Line one must prove I researched them.\"",
+      "2. \"Here's a business: [paste their website text]. Find 3 specific problems I could fix with [service].\"",
+      "3. \"Rewrite this DM and delete every sentence that's about me: [paste].\"",
+      "4. \"Write 5 follow-ups for someone who read but didn't reply. Friendly, never desperate.\"",
+      "5. \"Turn my service into a 2-minute video script that shows the fix instead of describing it.\"",
+      "6. \"Give me 10 openers referencing something specific and public about a business. No flattery.\"",
+      "7. \"Score this outreach message out of 10 and tell me exactly what to cut: [paste].\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 95,
+    "day": 16,
+    "type": "thread",
+    "source": "promptpack:automation",
+    "tweets": [
+      "AI WON'T REPLACE YOU. BUT YOUR WORKFLOW MIGHT.\n\n7 ChatGPT prompts to automate the boring 80% of your work:",
+      "1. \"Here's what my job involves: [paste]. List every task I repeat weekly and rank them by how automatable they are.\"",
+      "2. \"Design a step-by-step workflow that turns [input] into [output] with AI doing the heavy lifting.\"",
+      "3. \"Write a reusable prompt template for [recurring task] with variables I can swap each time.\"",
+      "4. \"I spend [X hours] on [task]. Show me how to cut that to 30 minutes.\"",
+      "5. \"What could go wrong if I automate [process]? Give me a check that catches each failure.\"",
+      "6. \"Turn this messy process into a checklist someone else could follow without me: [paste].\"",
+      "7. \"Build me a 15-minute daily AI routine that compounds over a year.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 96,
+    "day": 16,
+    "type": "thread",
+    "source": "promptpack:idea validation",
+    "tweets": [
+      "MOST SIDE HUSTLES DON'T FAIL. THEY WERE NEVER TESTED.\n\n7 ChatGPT prompts to test your idea before you waste 3 months on it:",
+      "1. \"Act as a skeptical investor. My idea: [idea]. Ask me the 5 hardest questions and tell me where it's weakest.\"",
+      "2. \"Who already pays for a solution to this problem, and roughly what do they pay?\"",
+      "3. \"Design a 7-day test that proves demand without building the product.\"",
+      "4. \"Write a landing page for [idea] that would tell me within a week whether anyone cares.\"",
+      "5. \"List 10 places online where my exact customer already gathers.\"",
+      "6. \"What's the smallest version of [idea] I could sell within 14 days?\"",
+      "7. \"Give me 5 ways this idea could fail and an early warning sign for each.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 97,
+    "day": 17,
+    "type": "thread",
+    "source": "promptpack:newsletters",
+    "tweets": [
+      "SOCIAL MEDIA RENTS YOU AN AUDIENCE. EMAIL LETS YOU OWN ONE.\n\n7 ChatGPT prompts to launch a newsletter people actually open:",
+      "1. \"Act as a newsletter strategist. My niche is [niche]. Give me 5 formats I could sustain weekly for a year.\"",
+      "2. \"Write 20 subject lines for this issue: [topic]. Half curiosity, half direct value.\"",
+      "3. \"Turn this long post into a 300-word email with one clear takeaway: [paste].\"",
+      "4. \"Design a 5-email welcome sequence for new subscribers in [niche].\"",
+      "5. \"What free lead magnet should I offer [audience]? Give me 5 I could make in a day.\"",
+      "6. \"Rewrite this email so it sounds like a person, not a brand: [paste].\"",
+      "7. \"Give me ideas for issues 1 through 10 so I never face a blank page.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 98,
+    "day": 17,
+    "type": "thread",
+    "source": "promptpack:money systems",
+    "tweets": [
+      "BUDGETING DOESN'T FAIL BECAUSE YOU'RE BAD WITH MONEY.\n\n7 ChatGPT prompts to get your money organized this weekend:",
+      "1. \"Act as a financial coach. Here's my income and expenses: [paste]. Build me a simple 3-account system.\"",
+      "2. \"Find the 5 subscriptions or habits quietly costing me the most: [paste].\"",
+      "3. \"I want to save [amount] in [months]. Build a realistic plan and tell me what I'd have to give up.\"",
+      "4. \"Explain my [loan/debt] and show me two payoff strategies with the actual math.\"",
+      "5. \"Design a 15-minute monthly money review I'll actually do.\"",
+      "6. \"My freelance income is irregular. Build a system for smoothing it across slow months.\"",
+      "7. \"Turn my financial goal into a one-page dashboard I can build in Notion or Sheets.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 99,
+    "day": 17,
+    "type": "thread",
+    "source": "promptpack:learning fast",
+    "tweets": [
+      "YOU DON'T NEED ANOTHER COURSE. YOU NEED A DEADLINE.\n\n7 ChatGPT prompts to learn any skill in 30 days:",
+      "1. \"Act as a curriculum designer. Build a 30-day plan to go from zero to employable in [skill], one hour a day.\"",
+      "2. \"What are the 20% of concepts in [skill] that produce 80% of the results?\"",
+      "3. \"Quiz me on [topic] with 10 questions, then explain everything I got wrong.\"",
+      "4. \"Give me 5 small real projects that force me to use [skill], easiest to hardest.\"",
+      "5. \"Explain [hard concept] three ways: to a beginner, with an analogy, and with a real example.\"",
+      "6. \"I have [X hours] this week. Turn my learning plan into specific scheduled sessions.\"",
+      "7. \"Review my project and tell me what a professional would have done differently: [paste].\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 100,
+    "day": 17,
+    "type": "thread",
+    "source": "promptpack:mindset",
+    "tweets": [
+      "YOU'RE NOT BEHIND. YOU'RE COMPARING YOUR START TO SOMEONE'S MIDDLE.\n\n7 ChatGPT prompts to get your head straight and get back to work:",
+      "1. \"Act as a no-nonsense coach. Here's what I'm stuck on: [paste]. Tell me the one thing I'm avoiding.\"",
+      "2. \"Help me separate what I control from what I don't in this situation: [paste].\"",
+      "3. \"I keep procrastinating on [task]. Ask me questions until we find the real reason.\"",
+      "4. \"Write me a 5-line framework for saying no without guilt.\"",
+      "5. \"Turn this vague goal into something specific and measurable: [goal].\"",
+      "6. \"Design a 10-minute reset routine so a bad day doesn't become a bad week.\"",
+      "7. \"What would someone who already achieved [goal] do differently this week than I'm planning to?\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 101,
+    "day": 17,
+    "type": "thread",
+    "source": "promptpack:email marketing",
+    "tweets": [
+      "OPEN RATES DON'T DROP BY ACCIDENT. YOU JUST STOPPED SOUNDING HUMAN.\n\n7 ChatGPT prompts to write emails people actually open:",
+      "1. \"Act as an email copywriter. Write 15 subject lines for [topic]. Mix curiosity, benefit, and urgency.\"",
+      "2. \"Turn this blog post into a 250-word email with one clear takeaway and one CTA: [paste].\"",
+      "3. \"Write a 5-email welcome sequence for someone who just joined my list about [niche].\"",
+      "4. \"Rewrite this email to sound like one person talking to one person: [paste].\"",
+      "5. \"Give me 10 email ideas for [audience] that aren't just 'buy my thing.'\"",
+      "6. \"Write a re-engagement email for subscribers who haven't opened in 60 days.\"",
+      "7. \"Audit this email and tell me exactly where a reader would stop reading: [paste].\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 102,
+    "day": 17,
+    "type": "thread",
+    "source": "promptpack:personal branding",
+    "tweets": [
+      "NOBODY REMEMBERS A GENERALIST. THEY REMEMBER A NAME + A TOPIC.\n\n7 ChatGPT prompts to build a personal brand people remember:",
+      "1. \"Act as a brand strategist. Based on my skills [list] and interests [list], suggest 3 clear brand angles I could own.\"",
+      "2. \"Write 5 versions of my bio for [platform], each under 160 characters, leading with a specific outcome.\"",
+      "3. \"What one topic should I become known for, given my background: [paste]? Explain why.\"",
+      "4. \"Give me 10 content themes that would make me recognizable for [topic].\"",
+      "5. \"Turn my messy 'about me' into a clear 3-sentence story: [paste].\"",
+      "6. \"What questions do people in [niche] constantly ask that I could own the answer to?\"",
+      "7. \"Design a simple content pillar system so every post reinforces one identity.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 103,
+    "day": 18,
+    "type": "thread",
+    "source": "promptpack:sales & closing",
+    "tweets": [
+      "PEOPLE DON'T HATE BEING SOLD TO. THEY HATE BEING PRESSURED.\n\n7 ChatGPT prompts to close more without feeling pushy:",
+      "1. \"Act as a sales coach. Here's my offer [paste]. Write 5 questions that help a prospect sell themselves.\"",
+      "2. \"List the 8 most common objections for [offer] with a calm, honest response to each.\"",
+      "3. \"Rewrite this sales message to lead with the buyer's problem, not my product: [paste].\"",
+      "4. \"Write a follow-up sequence for a prospect who said 'let me think about it.'\"",
+      "5. \"Give me 3 ways to present [price] so it feels like a bargain against the alternative.\"",
+      "6. \"Turn a testimonial into a short story I can use in a pitch: [paste].\"",
+      "7. \"Roleplay a skeptical buyer for [offer] and let me practice handling it.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 104,
+    "day": 18,
+    "type": "thread",
+    "source": "promptpack:deep work",
+    "tweets": [
+      "YOU'RE NOT DISTRACTED. YOUR ENVIRONMENT IS DESIGNED TO DISTRACT YOU.\n\n7 ChatGPT prompts to reclaim 3 focused hours a day:",
+      "1. \"Act as a focus coach. Here's my typical day [paste]. Find where I could carve out 2 hours of deep work.\"",
+      "2. \"Design a distraction-free work block for someone who checks their phone every 6 minutes.\"",
+      "3. \"I keep getting pulled into [distraction]. Build me a system that removes the trigger, not just the willpower.\"",
+      "4. \"Turn my vague to-do list into 3 'must-do' outcomes for today: [paste].\"",
+      "5. \"Give me a 5-minute shutdown ritual so work stops following me home.\"",
+      "6. \"What's the ideal order to do my tasks based on energy? Here's my list: [paste].\"",
+      "7. \"Design a 25-minute focus sprint routine I'll actually repeat.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 105,
+    "day": 18,
+    "type": "thread",
+    "source": "promptpack:AI copywriting",
+    "tweets": [
+      "GOOD COPY ISN'T WRITTEN. IT'S ASSEMBLED FROM WHAT THE READER ALREADY FEELS.\n\n7 ChatGPT prompts to write copy that converts:",
+      "1. \"Act as a direct-response copywriter. Write 3 headlines for [offer] using a different emotion each.\"",
+      "2. \"Rewrite this paragraph so a distracted reader can't stop: [paste].\"",
+      "3. \"Give me 5 opening lines that hook someone in the first 3 seconds for [topic].\"",
+      "4. \"Turn these features into benefits my customer actually cares about: [paste].\"",
+      "5. \"Write a landing page above-the-fold section for [product]: headline, subhead, CTA.\"",
+      "6. \"List 10 power words for [niche] and show me how to use 3 in my current copy: [paste].\"",
+      "7. \"Audit this copy for clarity and tell me the one line to cut: [paste].\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 106,
+    "day": 18,
+    "type": "thread",
+    "source": "promptpack:freelancing",
+    "tweets": [
+      "THE PROBLEM ISN'T NO CLIENTS. IT'S THAT NOBODY KNOWS WHAT YOU DO.\n\n7 ChatGPT prompts to land your next freelance client:",
+      "1. \"Act as a freelance coach. I offer [service]. Write a Fiverr/Upwork gig description that sells the outcome.\"",
+      "2. \"Write a proposal for [project type] that a client would actually finish reading.\"",
+      "3. \"Give me 10 niches where [my skill] is in high demand and underserved.\"",
+      "4. \"Rewrite my portfolio intro to lead with results, not adjectives: [paste].\"",
+      "5. \"Write 5 cold pitches for [service] to [business type]. Each references something specific.\"",
+      "6. \"How do I justify raising my rate from [X] to [Y] to an existing client?\"",
+      "7. \"Turn a finished project into a mini case study: problem, action, result: [paste].\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 107,
+    "day": 18,
+    "type": "thread",
+    "source": "promptpack:Notion systems",
+    "tweets": [
+      "YOU DON'T NEED MORE APPS. YOU NEED ONE PLACE THAT ACTUALLY WORKS.\n\n7 ChatGPT prompts to organize your whole life in one system:",
+      "1. \"Act as a systems designer. Design a simple Notion setup to run my [business/life area].\"",
+      "2. \"Turn my scattered notes into a clear structure with categories: [paste].\"",
+      "3. \"Build me a weekly dashboard that shows only the 5 things that matter.\"",
+      "4. \"Design a content pipeline (idea → draft → scheduled → posted) I can track in one table.\"",
+      "5. \"Give me a simple database structure to track clients, tasks, and income.\"",
+      "6. \"What's the minimum system I need to stop forgetting things? I do [paste].\"",
+      "7. \"Design a 'second brain' capture habit that takes under 30 seconds per note.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 108,
+    "day": 18,
+    "type": "thread",
+    "source": "promptpack:raising rates",
+    "tweets": [
+      "YOU'RE NOT EXPENSIVE. YOU'RE UNDERPRICING THE PROBLEM YOU SOLVE.\n\n7 ChatGPT prompts to charge what you're worth:",
+      "1. \"Act as a pricing strategist. My service [paste] solves [problem]. What's that problem worth monthly to the client?\"",
+      "2. \"Give me 3 pricing tiers for [service] and what changes at each level.\"",
+      "3. \"Write a message telling an existing client my rate is going from [X] to [Y], kept warm.\"",
+      "4. \"List 5 ways to add value to [offer] that cost me little but justify a higher price.\"",
+      "5. \"How do I respond when a prospect says 'that's too expensive'? Give 3 calm replies.\"",
+      "6. \"Turn my hourly service into a fixed-price package priced on outcome.\"",
+      "7. \"What proof do I need to collect before I can double my rate?\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 109,
+    "day": 19,
+    "type": "thread",
+    "source": "promptpack:audience from zero",
+    "tweets": [
+      "YOU DON'T NEED 10,000 FOLLOWERS. YOU NEED 100 WHO TRUST YOU.\n\n7 ChatGPT prompts to grow an audience from scratch:",
+      "1. \"Act as a growth strategist. I'm starting from 0 in [niche]. Give me a 30-day plan posting once a day.\"",
+      "2. \"What 3 content formats grow fastest for a brand-new account in [niche]?\"",
+      "3. \"Write 10 'first follower' posts that make a stranger hit follow.\"",
+      "4. \"Where does my exact audience already hang out online? I serve [audience].\"",
+      "5. \"Give me 5 ways to get my first 100 followers without paid ads.\"",
+      "6. \"Turn my expertise into a 'why follow me' pinned post: [paste].\"",
+      "7. \"Design a daily 15-minute engagement routine that borrows other accounts' reach.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 110,
+    "day": 19,
+    "type": "thread",
+    "source": "promptpack:digital products",
+    "tweets": [
+      "THE HARDEST PART OF PASSIVE INCOME IS THAT THE START ISN'T PASSIVE.\n\n7 ChatGPT prompts to create your first digital product:",
+      "1. \"Act as a product coach. Based on what people ask me [paste], suggest 5 digital products I could sell.\"",
+      "2. \"Turn my knowledge of [topic] into an outline for a $19 guide.\"",
+      "3. \"Write the sales page for [product]: headline, 3 benefits, objection-buster, CTA.\"",
+      "4. \"What's the smallest version of [product] I could launch in 7 days?\"",
+      "5. \"Give me 10 name ideas for a product that helps [audience] achieve [outcome].\"",
+      "6. \"Design a simple funnel: free lead magnet → $9 product → $29 product for [niche].\"",
+      "7. \"List 5 places to sell a digital product that need zero website.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 111,
+    "day": 19,
+    "type": "thread",
+    "source": "promptpack:AI design",
+    "tweets": [
+      "DESIGN ISN'T ABOUT TALENT ANYMORE. IT'S ABOUT TASTE AND THE RIGHT PROMPT.\n\nHere are 7 ChatGPT + AI image prompts for premium-looking visuals:",
+      "1. \"Act as an art director. Describe the ideal visual style for a [niche] brand: colors, mood, layout.\"",
+      "2. \"Write an AI image prompt for a clean, modern [subject], soft studio lighting, minimal, no text.\"",
+      "3. \"Give me a 5-color palette for a [niche] brand that looks premium, with hex codes.\"",
+      "4. \"Turn this post idea into a simple, high-contrast graphic concept: [paste].\"",
+      "5. \"Write 3 thumbnail concepts for a video titled [title] that get clicks honestly.\"",
+      "6. \"What layout makes a quote post most shareable? Describe it.\"",
+      "7. \"Give me an AI prompt for a realistic flat-lay of [objects], top-down, natural light.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 112,
+    "day": 19,
+    "type": "thread",
+    "source": "promptpack:customer research",
+    "tweets": [
+      "STOP GUESSING WHAT PEOPLE WANT. THEY'VE ALREADY TOLD YOU.\n\n7 ChatGPT prompts to understand your audience deeply:",
+      "1. \"Act as a market researcher. Build a profile of my ideal customer in [niche]: fears, desires, daily frustrations.\"",
+      "2. \"Here are 10 customer comments [paste]. Find the patterns in what they actually want.\"",
+      "3. \"Write 10 questions I could ask my audience to learn what to build next.\"",
+      "4. \"What words does my audience use to describe their problem? Niche: [niche].\"",
+      "5. \"Turn these pain points into 5 content ideas that make people feel seen: [paste].\"",
+      "6. \"What objections stop my audience from buying [offer]? List 8.\"",
+      "7. \"Summarize what this competitor's reviews reveal about an unmet need: [paste].\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 113,
+    "day": 19,
+    "type": "thread",
+    "source": "promptpack:consistency",
+    "tweets": [
+      "MOTIVATION IS A VISITOR. SYSTEMS ARE ROOMMATES.\n\n7 ChatGPT prompts to finally stay consistent:",
+      "1. \"Act as a habit coach. I keep quitting [habit]. Diagnose the real reason and redesign it to survive bad days.\"",
+      "2. \"Turn my big goal [goal] into the smallest daily action I can't skip.\"",
+      "3. \"Design a streak system that makes missing a day feel worse than doing it.\"",
+      "4. \"What's a realistic minimum version of [habit] for my worst day?\"",
+      "5. \"Build me a weekly check-in that catches a slip before it becomes a stop.\"",
+      "6. \"Give me 5 ways to make [habit] easier to start.\"",
+      "7. \"Rewrite my goal so it's tied to identity, not willpower: [goal].\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 114,
+    "day": 19,
+    "type": "thread",
+    "source": "promptpack:networking & DMs",
+    "tweets": [
+      "OPPORTUNITIES DON'T COME FROM POSTING. THEY COME FROM CONVERSATIONS.\n\n7 ChatGPT prompts to network without being awkward:",
+      "1. \"Act as a networking coach. Write a first DM to someone I admire in [niche] that isn't cringe.\"",
+      "2. \"Give me 5 ways to add value to someone before I ever ask for anything.\"",
+      "3. \"Write a reply that turns a comment into a real conversation.\"",
+      "4. \"How do I reconnect with an old contact without it feeling transactional?\"",
+      "5. \"Write a message asking [person] for 15 minutes of advice, respectfully.\"",
+      "6. \"Give me 10 genuine comment ideas for big accounts in [niche] that get noticed.\"",
+      "7. \"Turn a cold connection into a warm one over 3 low-pressure messages.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 115,
+    "day": 20,
+    "type": "thread",
+    "source": "promptpack:career & LinkedIn",
+    "tweets": [
+      "YOUR RESUME ISN'T THE PROBLEM. YOUR POSITIONING IS.\n\n7 ChatGPT prompts to level up your career with AI:",
+      "1. \"Act as a career coach. Rewrite this job bullet to show impact and numbers: [paste].\"",
+      "2. \"Turn my LinkedIn headline into a clear value statement: [current headline].\"",
+      "3. \"Write a LinkedIn 'about' section that reads like a person, based on [paste].\"",
+      "4. \"Give me 10 LinkedIn post ideas that build authority in [field].\"",
+      "5. \"Prep me for an interview for [role]: 10 likely questions and strong answers.\"",
+      "6. \"What skills should I learn next for [career goal], ranked by ROI?\"",
+      "7. \"Rewrite my resume summary to target [specific role]: [paste].\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 116,
+    "day": 20,
+    "type": "thread",
+    "source": "promptpack:YouTube scripting",
+    "tweets": [
+      "PEOPLE DON'T CLICK OFF BECAUSE IT'S LONG. THEY CLICK OFF BECAUSE IT'S SLOW.\n\n7 ChatGPT prompts to script videos people finish:",
+      "1. \"Act as a YouTube strategist. Write 10 title + thumbnail ideas for a video about [topic].\"",
+      "2. \"Write a 15-second hook for a video on [topic] that kills the urge to scroll.\"",
+      "3. \"Turn this idea into a retention-optimized script outline with a loop: [idea].\"",
+      "4. \"Give me 5 ways to open a video that aren't 'hey guys welcome back.'\"",
+      "5. \"Where would a viewer drop off in this script, and how do I fix it: [paste]?\"",
+      "6. \"Turn one long video into 5 short-form clips with their own hooks: [paste].\"",
+      "7. \"Write an end screen CTA that actually earns the next click.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 117,
+    "day": 20,
+    "type": "thread",
+    "source": "promptpack:get found / SEO",
+    "tweets": [
+      "TRAFFIC ISN'T LUCK. IT'S ANSWERING WHAT PEOPLE ALREADY SEARCH.\n\n7 ChatGPT prompts to get discovered on search:",
+      "1. \"Act as an SEO strategist. Give me 15 low-competition search phrases for [niche].\"",
+      "2. \"Turn this topic into a blog title people actually search: [topic].\"",
+      "3. \"Write an SEO-friendly meta title and description for [page].\"",
+      "4. \"What questions do people search around [topic]? Give me 10 to answer.\"",
+      "5. \"Outline a blog post targeting the phrase [keyword] that's genuinely useful.\"",
+      "6. \"Give me 5 content ideas that could rank AND get shared for [niche].\"",
+      "7. \"Audit this title for search + click appeal and suggest 3 better versions: [paste].\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 118,
+    "day": 20,
+    "type": "thread",
+    "source": "promptpack:know what works",
+    "tweets": [
+      "YOU CAN'T IMPROVE WHAT YOU DON'T MEASURE. BUT MOST PEOPLE MEASURE THE WRONG THING.\n\n7 ChatGPT prompts to actually understand your analytics:",
+      "1. \"Act as a data analyst. Here are my last 10 posts' stats [paste]. What patterns explain the winners?\"",
+      "2. \"Which metric should I optimize for growth vs. sales, and why?\"",
+      "3. \"Turn this messy analytics export into 3 clear takeaways: [paste].\"",
+      "4. \"My reach dropped this week. Give me a checklist to diagnose why.\"",
+      "5. \"What does a high save rate but low comment rate tell me about my content?\"",
+      "6. \"Design a simple weekly review to spot what to repeat and what to stop.\"",
+      "7. \"Given these top 3 posts [paste], what should my next 5 posts be about?\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 119,
+    "day": 20,
+    "type": "thread",
+    "source": "promptpack:beat distraction",
+    "tweets": [
+      "YOUR PHONE ISN'T THE ENEMY. THE HABIT LOOP IS.\n\n7 ChatGPT prompts to beat distraction for good:",
+      "1. \"Act as a behavior designer. I lose hours to [distraction]. Map the trigger, routine, reward and break it.\"",
+      "2. \"Design my phone home screen and settings to reduce mindless opens.\"",
+      "3. \"Give me a 3-step 'urge surfing' script for when I want to check my phone.\"",
+      "4. \"Build a focus environment checklist I run before deep work.\"",
+      "5. \"What single change would cut my screen time the most, given [paste]?\"",
+      "6. \"Design a reward for finishing focused work that isn't more screen time.\"",
+      "7. \"Turn my 'someday' distractions into a scheduled 'later' list so my brain lets go.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
+  },
+  {
+    "id": 120,
+    "day": 20,
+    "type": "thread",
+    "source": "promptpack:first sale",
+    "tweets": [
+      "YOUR FIRST SALE ISN'T ABOUT LUCK. IT'S ABOUT ASKING CLEARLY.\n\n7 ChatGPT prompts to make your first sale this week:",
+      "1. \"Act as a launch coach. I want to sell [product] in 7 days. Give me a day-by-day plan.\"",
+      "2. \"Write a launch post announcing [product] that doesn't feel salesy.\"",
+      "3. \"Give me 5 DMs I can send to warm contacts about [offer] without being weird.\"",
+      "4. \"Write 3 pieces of proof I can create before launch with no customers yet.\"",
+      "5. \"Turn my product's features into a single sentence someone would repeat.\"",
+      "6. \"What's the one objection blocking my first sale, and how do I answer it?\"",
+      "7. \"Write a 'founding customer' offer that rewards the first 5 buyers.\"",
+      "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
+    ]
   }
 ]
