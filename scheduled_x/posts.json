@@ -664,6 +664,201 @@
     ]
   },
   {
+    "id": 121,
+    "day": 21,
+    "pillar": "reposition",
+    "type": "thread",
+    "tweets": [
+      "7 Facebook Ads mistakes quietly burning your budget:",
+      "1. Testing 1 creative at a time.\nYou need 3-5 angles per audience or you're guessing.",
+      "2. Killing ads in 24h.\nGive the algorithm 3 days + 50 conversions before judging.",
+      "3. One audience, one ad.\nNo. Match the message to the stage of awareness.",
+      "4. Ignoring the offer.\nThe best creative can't save a weak offer.",
+      "5. No retargeting.\n97% don't buy first visit. Catch them.",
+      "6. Optimizing for clicks, not purchases.\nTell Meta what actually matters.",
+      "7. No follow-up.\nThe lead is warm for minutes, not days. Automate it.",
+      "Fix these before you spend another dollar.\n\nBookmark this. You'll need it later."
+    ]
+  },
+  {
+    "id": 122,
+    "day": 21,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "Most businesses don't need a bigger ad budget.\n\nThey need a better offer.\n\nThe best creative in the world can't save a weak offer."
+  },
+  {
+    "id": 123,
+    "day": 21,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "What's the one marketing task you waste the most time on every week?"
+  },
+  {
+    "id": 124,
+    "day": 22,
+    "pillar": "reposition",
+    "type": "thread",
+    "tweets": [
+      "9 AI tools every marketer should be using in 2026 (most are free):",
+      "1. Claude - strategy, copy, analysis\n2. ChatGPT - ideation, quick drafts",
+      "3. Canva Magic - ad creatives fast\n4. CapCut - short-form video edits",
+      "5. ElevenLabs - voiceovers\n6. Perplexity - research with sources",
+      "7. Notion AI - docs + ops\n8. Opus Clip - long video to shorts",
+      "9. Make / n8n - glue it all into automations",
+      "Pick 3. Master them. That beats owning 30 you never open.\n\nBookmark this."
+    ]
+  },
+  {
+    "id": 125,
+    "day": 22,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "AI won't replace marketers.\n\nMarketers who build AI systems will replace the ones who don't."
+  },
+  {
+    "id": 126,
+    "day": 22,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "What's the first task you'd hand to an AI assistant tomorrow?"
+  },
+  {
+    "id": 127,
+    "day": 23,
+    "pillar": "reposition",
+    "type": "thread",
+    "tweets": [
+      "How I automate a full week of content in 2 hours with AI:",
+      "Step 1: Idea bank.\nOne note. Add 3 ideas a day as you scroll. Never start from zero.",
+      "Step 2: Batch.\nPick 7 ideas. Draft 3 versions of each with AI. Keep the one that sounds like you.",
+      "Step 3: Templates.\nReuse hooks that worked. Lists, mistakes, step-by-steps.",
+      "Step 4: Schedule.\nQueue it all. Post on autopilot at peak times.",
+      "Step 5: Engage live.\n15 min/day replying. That's the only part AI shouldn't do.",
+      "Create once. Distribute all week.\n\nBookmark this - you'll build your own version."
+    ]
+  },
+  {
+    "id": 128,
+    "day": 23,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "You don't have a productivity problem.\n\nYou have a systems problem.\n\nSystems scale. Willpower doesn't."
+  },
+  {
+    "id": 129,
+    "day": 23,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "Threads or short posts - which actually gives you more value on here?"
+  },
+  {
+    "id": 130,
+    "day": 24,
+    "pillar": "reposition",
+    "type": "thread",
+    "tweets": [
+      "How one AI automation 3x'd a local business's leads in 30 days:",
+      "The problem:\nThey got inquiries at night. Nobody replied till morning. Leads went cold.",
+      "The fix:\nAn AI responder that answered FAQs + booked calls 24/7.",
+      "Week 1: response time 8h to 2 min.\nWeek 2: booked calls doubled.",
+      "Week 4: 3x the qualified leads. Same ad spend.",
+      "The lesson:\nYou don't always need more traffic. Sometimes you need to stop leaking it.",
+      "Bookmark this if follow-up is your leak too."
+    ]
+  },
+  {
+    "id": 131,
+    "day": 24,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "Leads don't go cold because of your product.\n\nThey go cold because nobody followed up in time.\n\nAutomate the follow-up."
+  },
+  {
+    "id": 132,
+    "day": 24,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "What's a result you got recently that you're quietly proud of? Drop it below."
+  },
+  {
+    "id": 133,
+    "day": 25,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "Unpopular opinion:\n\n90% of \"AI experts\" here have never shipped a real system.\n\nProof of work > prompt screenshots."
+  },
+  {
+    "id": 134,
+    "day": 25,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "The future of work isn't AI vs humans.\n\nIt's humans with systems vs humans without."
+  },
+  {
+    "id": 135,
+    "day": 25,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "What AI prediction do you think is completely wrong?"
+  },
+  {
+    "id": 136,
+    "day": 26,
+    "pillar": "reposition",
+    "type": "thread",
+    "tweets": [
+      "My exact workflow to go from idea to posted in 15 minutes:",
+      "1. Open my idea bank, pick one that still excites me.",
+      "2. Ask AI for 5 hooks. Keep the sharpest.",
+      "3. Draft the body in my voice. Cut every line that doesn't earn its place.",
+      "4. Read it out loud. If I stumble, I rewrite.",
+      "5. Post. Reply to comments for 10 min.",
+      "That's it. No fancy tools. Just a repeatable loop.\n\nBookmark this."
+    ]
+  },
+  {
+    "id": 137,
+    "day": 26,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "One good workflow beats ten new tools.\n\nStop collecting apps. Start finishing systems."
+  },
+  {
+    "id": 138,
+    "day": 26,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "What's one workflow you've automated that saved you real hours?"
+  },
+  {
+    "id": 139,
+    "day": 27,
+    "pillar": "reposition",
+    "type": "thread",
+    "tweets": [
+      "I spent months posting AI news and grew nothing.\n\nThen I changed one thing:",
+      "I stopped reporting what AI did.\n\nI started showing what I built with it.",
+      "News is a commodity. Anyone can repost it.\n\nYour systems, your results, your voice - that's yours.",
+      "The posts that finally landed weren't smarter.\n\nThey were mine.",
+      "If you're stuck: stop curating. Start documenting.\n\nBookmark this for the day you need the reminder."
+    ]
+  },
+  {
+    "id": 140,
+    "day": 27,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "Growth here is boring:\n\nShow up. Add value. Repeat.\n\nThe people winning just didn't quit at month two."
+  },
+  {
+    "id": 141,
+    "day": 27,
+    "pillar": "reposition",
+    "type": "single",
+    "text": "What made you start building in public?"
+  },
+  {
     "id": 58,
     "day": 10,
     "type": "single",
