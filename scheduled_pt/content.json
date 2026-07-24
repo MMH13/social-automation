@@ -536,7 +536,10 @@
     "text": "My personality:\n50% sarcasm, 50% snacks",
     "fb_caption": "Tag someone 👀",
     "ig_caption": "Tag someone 👀\n\n#psychology #mentalhealth #relatable #memes #selfcare #mood",
-    "variant": 31
+    "variant": 31,
+    "posted_at": "2026-07-24T18:15:58",
+    "fb_url": "https://www.facebook.com/reel/4437677939885100",
+    "ig_url": "skipped: IG reels need Cloudinary credentials in .env (video hosting)"
   },
   {
     "id": 52,
