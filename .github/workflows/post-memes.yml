@@ -13,6 +13,7 @@ concurrency:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   post:
@@ -43,3 +44,20 @@ jobs:
           git diff --cached --quiet || git commit -m "pt: mark posted"
           git pull --rebase origin master
           git push
+      - name: Check queue depth
+        id: queue
+        if: always()
+        run: python scripts/queue_check.py scheduled_pt/content.json 8 "Psychology Tube"
+      - name: Open low-queue issue
+        if: always() && steps.queue.outputs.low == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Psychology Tube queue running low"
+          EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
+          BODY="Only ${{ steps.queue.outputs.left }} item(s) (~${{ steps.queue.outputs.days }} days at 8/day) left in \`scheduled_pt/content.json\`. Refill it before the queue empties."
+          if [ -z "$EXISTING" ]; then
+            gh issue create --title "$TITLE" --body "$BODY"
+          else
+            echo "Issue #$EXISTING already open - not spamming."
+          fi
