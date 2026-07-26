@@ -593,5 +593,432 @@
     "posted_at": "2026-07-25T12:00:12",
     "fb_url": "https://www.facebook.com/reel/27471414269195408",
     "ig_url": "skipped: IG reels need Cloudinary credentials in .env (video hosting)"
+  },
+  {
+    "id": 57,
+    "type": "meme",
+    "text": "Nobody:\nMy brain at 2:47am:\n\"remember that thing you said in 2017?\"",
+    "fb_caption": "Tag someone who does this",
+    "ig_caption": "Tag someone who does this\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 58,
+    "type": "status",
+    "text": "you're not lazy. you're tired in a way sleep doesn't fix.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 0
+  },
+  {
+    "id": 59,
+    "type": "reel",
+    "text": "Your brain at 3am:\n\"let's review every\nmistake since 2015.\"",
+    "fb_caption": "Who felt this?",
+    "ig_caption": "Who felt this?\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 0
+  },
+  {
+    "id": 60,
+    "type": "psych",
+    "text": "Your brain can't tell the difference between\nreal rejection and imagined rejection.\nBoth light up the same pain circuits.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
+  },
+  {
+    "id": 61,
+    "type": "status",
+    "text": "growth is quiet. nobody claps when you stop replying to what drains you.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 1
+  },
+  {
+    "id": 62,
+    "type": "meme",
+    "text": "Me: I'll sleep early tonight.\nAlso me: one more episode at 1am.",
+    "fb_caption": "Who else?",
+    "ig_caption": "Who else?\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 63,
+    "type": "reel",
+    "text": "Overthinking isn't caring.\nIt's fear wearing a\nproductivity costume.",
+    "fb_caption": "Save this one",
+    "ig_caption": "Save this one\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 1
+  },
+  {
+    "id": 64,
+    "type": "status",
+    "text": "some people are only comfortable with the version of you that never says no.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 2
+  },
+  {
+    "id": 65,
+    "type": "meme",
+    "text": "Adulthood is choosing which\nunopened notification\nscares you the least.",
+    "fb_caption": "Tag your notification-avoiding friend",
+    "ig_caption": "Tag your notification-avoiding friend\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 66,
+    "type": "status",
+    "text": "peace is expensive. it costs you people.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 3
+  },
+  {
+    "id": 67,
+    "type": "reel",
+    "text": "You're not behind.\nYou're just watching\neveryone's highlights.",
+    "fb_caption": "Send this to someone",
+    "ig_caption": "Send this to someone\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 2
+  },
+  {
+    "id": 68,
+    "type": "psych",
+    "text": "You remember unfinished tasks better than finished ones.\nIt's called the Zeigarnik effect.\nThat's why your mind won't let it go.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
+  },
+  {
+    "id": 69,
+    "type": "status",
+    "text": "you can be proud of surviving something you never talk about.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 4
+  },
+  {
+    "id": 70,
+    "type": "meme",
+    "text": "I'm not procrastinating.\nI'm letting the task marinate.",
+    "fb_caption": "Tag a fellow marinator",
+    "ig_caption": "Tag a fellow marinator\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 71,
+    "type": "reel",
+    "text": "Saying no is not rude.\nIt's a full sentence.",
+    "fb_caption": "Tag someone who needs this",
+    "ig_caption": "Tag someone who needs this\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 3
+  },
+  {
+    "id": 72,
+    "type": "status",
+    "text": "healing looks boring from the outside. that's how you know it's working.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 5
+  },
+  {
+    "id": 73,
+    "type": "meme",
+    "text": "My social battery:\n100% at home\n3% the second I leave",
+    "fb_caption": "Introverts, assemble",
+    "ig_caption": "Introverts, assemble\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 74,
+    "type": "status",
+    "text": "the mind repeats what the heart hasn't processed.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 6
+  },
+  {
+    "id": 75,
+    "type": "reel",
+    "text": "The tired you feel\nisn't from doing too much.\nIt's from pretending too long.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 4
+  },
+  {
+    "id": 76,
+    "type": "psych",
+    "text": "P",
+    "fb_caption": "e",
+    "ig_caption": "e\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
+  },
+  {
+    "id": 77,
+    "type": "status",
+    "text": "not everything you feel needs a reason to be valid.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 7
+  },
+  {
+    "id": 78,
+    "type": "meme",
+    "text": "Therapist: and how does that make you feel?\nMe: fine (it does not)",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 79,
+    "type": "reel",
+    "text": "Your nervous system\ndoesn't need motivation.\nIt needs safety.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 5
+  },
+  {
+    "id": 80,
+    "type": "status",
+    "text": "you stopped explaining yourself and life got lighter.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 8
+  },
+  {
+    "id": 81,
+    "type": "meme",
+    "text": "Overthinking is just\nrehearsing a conversation\nthat will never happen.",
+    "fb_caption": "Guilty?",
+    "ig_caption": "Guilty?\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 82,
+    "type": "status",
+    "text": "rest is not a reward for finishing. it's part of the work.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 1
+  },
+  {
+    "id": 83,
+    "type": "reel",
+    "text": "You don't need everyone\nto understand you.\nOne person is enough.",
+    "fb_caption": "Tag that person",
+    "ig_caption": "Tag that person\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 6
+  },
+  {
+    "id": 84,
+    "type": "psych",
+    "text": "A",
+    "fb_caption": "n",
+    "ig_caption": "n\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
+  },
+  {
+    "id": 85,
+    "type": "status",
+    "text": "the loudest room in your life is your own head at night.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 2
+  },
+  {
+    "id": 86,
+    "type": "meme",
+    "text": "Doing the dishes: 4 minutes\nThinking about doing the dishes: 4 days",
+    "fb_caption": "Tag someone",
+    "ig_caption": "Tag someone\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 87,
+    "type": "reel",
+    "text": "Anxiety is your brain\ntrying to protect you\nfrom a future that isn't real.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 7
+  },
+  {
+    "id": 88,
+    "type": "status",
+    "text": "you don't need closure. you need distance.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 3
+  },
+  {
+    "id": 89,
+    "type": "meme",
+    "text": "Me making a plan: excited\nMe when the plan arrives: how do I cancel",
+    "fb_caption": "Too accurate?",
+    "ig_caption": "Too accurate?\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 90,
+    "type": "status",
+    "text": "being misunderstood by the right amount of people is peace.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 4
+  },
+  {
+    "id": 91,
+    "type": "reel",
+    "text": "Rest before you're empty.\nNot after you collapse.",
+    "fb_caption": "Send to a friend",
+    "ig_caption": "Send to a friend\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 8
+  },
+  {
+    "id": 92,
+    "type": "psych",
+    "text": "Y",
+    "fb_caption": "o",
+    "ig_caption": "o\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
+  },
+  {
+    "id": 93,
+    "type": "status",
+    "text": "you learned to be strong because you had no one to be soft with.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 5
+  },
+  {
+    "id": 94,
+    "type": "meme",
+    "text": "\"I'm fine\"\nalso me: reorganizing my entire room at midnight",
+    "fb_caption": "Anyone else?",
+    "ig_caption": "Anyone else?\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 95,
+    "type": "reel",
+    "text": "The right people\nfeel like exhaling.",
+    "fb_caption": "Tag them",
+    "ig_caption": "Tag them\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 9
+  },
+  {
+    "id": 96,
+    "type": "status",
+    "text": "some days doing the bare minimum is the whole victory.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 6
+  },
+  {
+    "id": 97,
+    "type": "meme",
+    "text": "My to-do list has a to-do list\nand neither of them is being done.",
+    "fb_caption": "Tag a list maker",
+    "ig_caption": "Tag a list maker\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 98,
+    "type": "status",
+    "text": "your standards aren't too high. your patience was too long.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 7
+  },
+  {
+    "id": 99,
+    "type": "reel",
+    "text": "You survived 100% of\nthe days you thought\nyou couldn't.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 10
+  },
+  {
+    "id": 100,
+    "type": "psych",
+    "text": "N",
+    "fb_caption": "a",
+    "ig_caption": "a\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
+  },
+  {
+    "id": 101,
+    "type": "status",
+    "text": "if it costs you your calm, it's not a good deal.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 8
+  },
+  {
+    "id": 102,
+    "type": "meme",
+    "text": "Reading the same line 5 times\nbecause my brain left the chat.",
+    "fb_caption": "Relatable?",
+    "ig_caption": "Relatable?\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 103,
+    "type": "reel",
+    "text": "Stop calling it overthinking.\nCall it what it is:\nunprocessed fear.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 11
+  },
+  {
+    "id": 104,
+    "type": "status",
+    "text": "you can forgive someone and still never let them close again.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 9
+  },
+  {
+    "id": 105,
+    "type": "meme",
+    "text": "Group project energy:\n1 person working\n4 people typing \"agreed\"",
+    "fb_caption": "Tag your group",
+    "ig_caption": "Tag your group\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 106,
+    "type": "status",
+    "text": "the version of you that survived that year deserves an apology.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 2
+  },
+  {
+    "id": 107,
+    "type": "reel",
+    "text": "Some people will only\nlove the quiet version\nof your boundaries.",
+    "fb_caption": "Read that again",
+    "ig_caption": "Read that again\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 12
+  },
+  {
+    "id": 108,
+    "type": "psych",
+    "text": "T",
+    "fb_caption": "h",
+    "ig_caption": "h\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
+  },
+  {
+    "id": 109,
+    "type": "status",
+    "text": "you're allowed to outgrow people who never noticed you were growing.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 3
+  },
+  {
+    "id": 110,
+    "type": "meme",
+    "text": "I apologize to furniture\nI bump into.\nJust in case.",
+    "fb_caption": "Only me?",
+    "ig_caption": "Only me?\n\n#psychology #relatable #memes #mood #dailymemes #reallife"
+  },
+  {
+    "id": 111,
+    "type": "reel",
+    "text": "Progress is invisible\nright until it isn't.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
+    "variant": 13
+  },
+  {
+    "id": 112,
+    "type": "status",
+    "text": "sometimes the answer is sleep, water, and one honest conversation.",
+    "fb_caption": "",
+    "ig_caption": "#psychologyfacts #healing #overthinking #relatable #mindset #selflove",
+    "variant": 4
   }
 ]
