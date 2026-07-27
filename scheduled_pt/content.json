@@ -706,7 +706,10 @@
     "text": "You're not behind.\nYou're just watching\neveryone's highlights.",
     "fb_caption": "Send this to someone",
     "ig_caption": "Send this to someone\n\n#mentalhealthawareness #psychology #selflove #relatable #feelings #reels",
-    "variant": 2
+    "variant": 2,
+    "posted_at": "2026-07-27T16:14:09",
+    "fb_url": "https://www.facebook.com/reel/2021121005176721",
+    "ig_url": "skipped: IG reels need Cloudinary credentials in .env (video hosting)"
   },
   {
     "id": 68,
