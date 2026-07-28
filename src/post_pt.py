@@ -48,7 +48,9 @@ def main() -> int:
 
     if kind == "reel":
         video = media_dir / f"item{iid:02d}.mp4"
-        if not video.exists() and make_reel(item["text"], item.get("variant", 0), video) is None:
+        if not video.exists() and make_reel(
+            item["text"], item.get("variant", 0), video, item.get("bg_query")
+        ) is None:
             log(f"post_pt item{iid}: reel render failed")
             return 1
         try:

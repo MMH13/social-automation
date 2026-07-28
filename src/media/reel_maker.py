@@ -1,5 +1,9 @@
-"""Render a short Reel: text fading in over a slowly zooming gradient background,
+"""Render a short Reel: text fading in over a moving background,
 with a calm, royalty-free ambient audio bed.
+
+Background source, in priority order (see stock_video.py):
+  1. A copyright-free stock clip (local assets/video/, else Pexels/Pixabay API).
+  2. A slowly zooming generated gradient.
 
 Audio source, in priority order:
   1. Your own licensed tracks dropped in assets/music/ (*.mp3/*.m4a/*.wav) — rotated by variant.
@@ -14,6 +18,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 from .image_maker import GRADIENTS, _font, _gradient_bg, _wrap
+from .stock_video import get_background
 
 W, H = 1080, 1920
 DURATION = 8  # seconds
@@ -45,7 +50,7 @@ def _music_files() -> list[Path]:
     return sorted(p for p in MUSIC_DIR.iterdir() if p.suffix.lower() in MUSIC_EXTS)
 
 
-def make_reel(text: str, variant: int, out_path: Path) -> Path | None:
+def make_reel(text: str, variant: int, out_path: Path, bg_query: str | None = None) -> Path | None:
     if not ffmpeg_available():
         print("  [reel] ffmpeg not found - skipping")
         return None
@@ -53,6 +58,7 @@ def make_reel(text: str, variant: int, out_path: Path) -> Path | None:
     top, bot = GRADIENTS[variant % len(GRADIENTS)]
     out_path.parent.mkdir(parents=True, exist_ok=True)
     fade_out_start = max(0.0, DURATION - 1.5)
+    bg_clip = get_background(variant, bg_query)
 
     with tempfile.TemporaryDirectory() as tmp:
         tmp_dir = Path(tmp)
@@ -85,15 +91,29 @@ def make_reel(text: str, variant: int, out_path: Path) -> Path | None:
         text_path = tmp_dir / "text.png"
         overlay.save(text_path)
 
+        if bg_clip:
+            # Cover-crop the clip to 9:16, then darken/desaturate it so the text stays legible.
+            bg_chain = (
+                f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,"
+                f"crop={W}:{H},fps=30,eq=brightness=-0.14:saturation=0.85,setsar=1,"
+                f"fade=t=in:st=0:d=0.5,fade=t=out:st={fade_out_start}:d=1.5[bg];"
+            )
+            inputs = ["-stream_loop", "-1", "-t", str(DURATION), "-i", str(bg_clip)]
+        else:
+            bg_chain = (
+                f"[0:v]scale={int(W*1.15)}:{int(H*1.15)},"
+                f"zoompan=z='min(1.12,1+0.0005*on)':x='(iw-iw/zoom)/2':y='(ih-ih/zoom)/2'"
+                f":d={DURATION*30}:s={W}x{H}:fps=30[bg];"
+            )
+            inputs = ["-i", str(bg_path)]
+
         video_chain = (
-            f"[0:v]scale={int(W*1.15)}:{int(H*1.15)},"
-            f"zoompan=z='min(1.12,1+0.0005*on)':x='(iw-iw/zoom)/2':y='(ih-ih/zoom)/2'"
-            f":d={DURATION*30}:s={W}x{H}:fps=30[bg];"
-            "[1:v]format=rgba,fade=t=in:st=0.6:d=0.9:alpha=1[txt];"
+            bg_chain
+            + "[1:v]format=rgba,fade=t=in:st=0.6:d=0.9:alpha=1[txt];"
             "[bg][txt]overlay=0:0:shortest=1[v]"
         )
 
-        inputs = ["-i", str(bg_path), "-loop", "1", "-t", str(DURATION), "-i", str(text_path)]
+        inputs += ["-loop", "1", "-t", str(DURATION), "-i", str(text_path)]
 
         music = _music_files()
         if music:

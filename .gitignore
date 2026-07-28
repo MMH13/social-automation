@@ -12,3 +12,8 @@ Git-*.exe
 
 # Claude Code local session settings
 .claude/settings.local.json
+
+# stock background clips (large; fetched at runtime)
+assets/video/*.mp4
+assets/video/*.mov
+assets/video/*.webm

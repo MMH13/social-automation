@@ -32,6 +32,8 @@ jobs:
           FB_PAGE_ID=${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN=${{ secrets.FB_PAGE_ACCESS_TOKEN }}
           IG_USER_ID=${{ secrets.IG_USER_ID }}
+          PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY=${{ secrets.PIXABAY_API_KEY }}
           EOF
       - name: Post next item (meme / psych / status / reel)
         run: python -m src.post_pt
