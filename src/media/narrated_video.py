@@ -61,11 +61,12 @@ def _caption_png(text: str, path: Path, watermark: str, big: bool) -> None:
     font = _font("arialbd.ttf", size)
     margin = 90
 
+    blocks = [b.strip() for b in text.upper().split("\n") if b.strip()]
     lines: list[str] = []
-    for i, block in enumerate([b.strip() for b in text.upper().split("\n") if b.strip()]):
+    for i, block in enumerate(blocks):
         lines.extend(_wrap(draw, block, font, W - 2 * margin))
-        if i:
-            lines.insert(len(lines) - 1, "")
+        if i < len(blocks) - 1:
+            lines.append("")  # breathing room between the source lines
 
     line_h = int(size * 1.18)
     y = (H - len(lines) * line_h) // 2
