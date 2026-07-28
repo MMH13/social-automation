@@ -1,4 +1,4 @@
-"""Post the next queued Psychology Tube item (meme / psych card / status / reel) to FB + IG.
+﻿"""Post the next queued Psychology Tube item (meme / psych card / status / reel) to FB + IG.
 
 Usage: python -m src.post_pt
 Replaces post_meme as the page's queue consumer. Renders media per type, posts to
@@ -13,6 +13,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from .media.image_maker import make_gradient_status, make_minimal_dark, make_psych_card
+from .media.narrated_video import make_narrated
 from .media.reel_maker import make_reel
 from .publishers import facebook_publisher, instagram_publisher
 
@@ -46,13 +47,23 @@ def main() -> int:
     kind, iid = item["type"], item["id"]
     media_dir = ROOT / "output" / "pt"
 
-    if kind == "reel":
+    if kind in ("reel", "narrated"):
         video = media_dir / f"item{iid:02d}.mp4"
-        if not video.exists() and make_reel(
-            item["text"], item.get("variant", 0), video, item.get("bg_query")
-        ) is None:
-            log(f"post_pt item{iid}: reel render failed")
-            return 1
+        if not video.exists():
+            if kind == "narrated":
+                built = make_narrated(
+                    item["title"], item["points"], video,
+                    variant=item.get("variant", 0),
+                    bg_query=item.get("bg_query"),
+                    outro=item.get("outro", "Save this. Follow for more."),
+                )
+            else:
+                built = make_reel(
+                    item["text"], item.get("variant", 0), video, item.get("bg_query")
+                )
+            if built is None:
+                log(f"post_pt item{iid}: {kind} render failed")
+                return 1
         try:
             fb_url = facebook_publisher.publish_reel(item["ig_caption"], video)
         except Exception as e:
@@ -65,14 +76,14 @@ def main() -> int:
         item["posted_at"] = datetime.now().isoformat(timespec="seconds")
         item["fb_url"] = fb_url
         save(queue)
-        log(f"post_pt item{iid} (reel): FB {fb_url}")
+        log(f"post_pt item{iid} ({kind}): FB {fb_url}")
         try:
             ig = instagram_publisher.publish_reel(item["ig_caption"], video)
             item["ig_url"] = ig
-            log(f"post_pt item{iid} (reel): IG {ig}")
+            log(f"post_pt item{iid} ({kind}): IG {ig}")
         except Exception as e:
             item["ig_url"] = f"skipped: {e}"
-            log(f"post_pt item{iid} (reel): IG skipped: {e}")
+            log(f"post_pt item{iid} ({kind}): IG skipped: {e}")
         save(queue)
     else:
         image = media_dir / f"item{iid:02d}.jpg"

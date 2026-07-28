@@ -3,8 +3,8 @@ name: Post Psychology Tube meme (FB+IG)
 
 on:
   schedule:
-    # every 3 hours; 11:00 UTC = 5:00 PM Dhaka
-    - cron: "0 2,5,8,11,14,17,20,23 * * *"
+    # 10 posts/day (8 short-form + 2 narrated listicles); 11:00 UTC = 5:00 PM Dhaka
+    - cron: "0 0,2,5,7,10,12,15,17,20,22 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -59,7 +59,7 @@ jobs:
       - name: Check queue depth
         id: queue
         if: always()
-        run: python scripts/queue_check.py scheduled_pt/content.json 8 "Psychology Tube"
+        run: python scripts/queue_check.py scheduled_pt/content.json 10 "Psychology Tube"
       - name: Open low-queue issue
         if: always() && steps.queue.outputs.low == 'true'
         env:
@@ -67,7 +67,7 @@ jobs:
         run: |
           TITLE="Psychology Tube queue running low"
           EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
-          BODY="Only ${{ steps.queue.outputs.left }} item(s) (~${{ steps.queue.outputs.days }} days at 8/day) left in \`scheduled_pt/content.json\`. Refill it before the queue empties."
+          BODY="Only ${{ steps.queue.outputs.left }} item(s) (~${{ steps.queue.outputs.days }} days at 10/day) left in \`scheduled_pt/content.json\`. Refill it before the queue empties."
           if [ -z "$EXISTING" ]; then
             gh issue create --title "$TITLE" --body "$BODY"
           else
