@@ -23,22 +23,57 @@ W, H = 1080, 1440           # 3:4, same as the reference format
 GAP = 0.45                  # silence between spoken segments (seconds)
 LEAD_IN = 0.6               # beat before the first line
 TAIL = 1.8                  # music-only outro
-VOICE = "en-US-GuyNeural"   # calm male narrator; en-US-AriaNeural for female
+# Mamun's pick: "TMR-Narrator-Onyx" in Voicebox == the kokoro voice `am_onyx`.
+# kokoro is Apache-2.0 and runs on CPU, so the same voice works on CI — no dependency
+# on the local Voicebox app. edge-tts is the fallback if kokoro isn't installed.
+VOICE = "am_onyx"
+FALLBACK_VOICE = "en-US-GuyNeural"
 RATE = "-8%"                # slightly slower reads better over b-roll
+KOKORO_SR = 24000
+
+_kokoro_pipeline = None
 
 
-def _tts(text: str, path: Path, voice: str) -> bool:
+def _kokoro(text: str, path: Path, voice: str) -> bool:
+    """Synthesize with kokoro. Returns False if unavailable so callers can fall back."""
+    global _kokoro_pipeline
+    try:
+        import numpy as np
+        import soundfile as sf
+        from kokoro import KPipeline
+    except ImportError:
+        return False
+    try:
+        if _kokoro_pipeline is None:
+            _kokoro_pipeline = KPipeline(lang_code="a")  # American English
+        chunks = [audio for _, _, audio in _kokoro_pipeline(text, voice=voice)]
+        if not chunks:
+            return False
+        wav = np.concatenate([np.asarray(c, dtype="float32").reshape(-1) for c in chunks])
+        sf.write(str(path), wav, KOKORO_SR)
+        return path.exists() and path.stat().st_size > 0
+    except Exception as e:
+        print(f"  [tts] kokoro failed ({e}) - falling back")
+        return False
+
+
+def _tts(text: str, base: Path, voice: str) -> Path | None:
+    """Render `text` to an audio file next to `base`. Returns the path actually written."""
+    wav = base.with_suffix(".wav")
+    if _kokoro(text, wav, voice):
+        return wav
     try:
         import edge_tts
     except ImportError:
-        print("  [tts] edge-tts not installed - skipping narration")
-        return False
+        print("  [tts] no TTS engine available (install kokoro or edge-tts)")
+        return None
+    mp3 = base.with_suffix(".mp3")
     try:
-        asyncio.run(edge_tts.Communicate(text, voice, rate=RATE).save(str(path)))
-        return path.exists() and path.stat().st_size > 0
+        asyncio.run(edge_tts.Communicate(text, FALLBACK_VOICE, rate=RATE).save(str(mp3)))
+        return mp3 if mp3.exists() and mp3.stat().st_size > 0 else None
     except Exception as e:
         print(f"  [tts] failed: {e}")
-        return False
+        return None
 
 
 def _duration(path: Path) -> float:
@@ -110,8 +145,8 @@ def make_narrated(
         timed: list[tuple[Path, Path, float, float]] = []  # audio, png, start, end
         clock = LEAD_IN
         for i, seg in enumerate(segments):
-            audio = tmp_dir / f"seg{i:02d}.mp3"
-            if not _tts(seg, audio, voice):
+            audio = _tts(seg, tmp_dir / f"seg{i:02d}", voice)
+            if audio is None:
                 return None
             dur = _duration(audio)
             png = tmp_dir / f"seg{i:02d}.png"

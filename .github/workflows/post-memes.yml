@@ -23,9 +23,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
+      - name: Install CPU torch first (avoids the 2.5GB CUDA build)
+        run: pip install torch --index-url https://download.pytorch.org/whl/cpu
       - run: pip install -r requirements.txt
-      - name: Install ffmpeg (needed for reels)
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Install ffmpeg + espeak-ng (reels / TTS fallback)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng
+      - name: Cache kokoro TTS model
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/torch
+          key: kokoro-models-v1
       - name: Build .env from secrets
         run: |
           cat > .env << EOF

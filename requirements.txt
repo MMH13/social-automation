@@ -5,4 +5,12 @@ Pillow>=10.0
 python-dotenv>=1.0
 PyYAML>=6.0
 cloudinary>=1.40
+
+# Narrated videos: kokoro provides the "Onyx" voice (am_onyx), edge-tts is the fallback.
+# NOTE: install the CPU torch wheel BEFORE this file on Linux, or pip pulls the ~2.5GB
+# CUDA build as a kokoro dependency (see .github/workflows/post-memes.yml).
+kokoro>=0.9
+soundfile>=0.12
 edge-tts
+# Pinned so kokoro's phonemizer doesn't shell out to `spacy download` at render time.
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
