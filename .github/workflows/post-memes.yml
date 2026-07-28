@@ -44,6 +44,9 @@ jobs:
           IG_USER_ID=${{ secrets.IG_USER_ID }}
           PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY=${{ secrets.PIXABAY_API_KEY }}
+          CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}
           EOF
       - name: Post next item (meme / psych / status / reel)
         run: python -m src.post_pt
