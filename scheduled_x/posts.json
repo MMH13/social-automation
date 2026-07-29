@@ -1132,7 +1132,10 @@
     "id": 70,
     "day": 12,
     "type": "single",
-    "text": "You don't find focus.\n\nYou subtract until it's the only thing left."
+    "text": "You don't find focus.\n\nYou subtract until it's the only thing left.",
+    "posted_at": "2026-07-29T14:42:07",
+    "url": "https://x.com/i/status/2082386070549955040",
+    "note": "posted manually while diagnosing the 403; text reworded to plain ASCII"
   },
   {
     "id": 71,

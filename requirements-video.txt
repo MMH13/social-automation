@@ -1,0 +1,12 @@
+# Narrated-video extras — only the Psychology Tube workflow needs these.
+# Keep them OUT of requirements.txt: the X workflow shares that file and would
+# otherwise pull PyTorch (and on Linux, the ~2.5GB CUDA build) for nothing.
+#
+# Install the CPU torch wheel BEFORE this file on Linux:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+-r requirements.txt
+kokoro>=0.9
+soundfile>=0.12
+edge-tts
+# Pinned so kokoro's phonemizer doesn't shell out to `spacy download` at render time.
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
