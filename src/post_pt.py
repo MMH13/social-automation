@@ -47,6 +47,13 @@ def main() -> int:
     kind, iid = item["type"], item["id"]
     media_dir = ROOT / "output" / "pt"
 
+    # A queue-builder bug once truncated 5 psych cards to a single character and they
+    # published as "A" with the caption "n". Refuse to post obvious garbage.
+    body = item.get("title") if kind == "narrated" else item.get("text")
+    if not body or len(body.strip()) < 12:
+        log(f"post_pt item{iid} ({kind}): text looks corrupted ({body!r}) - refusing to post")
+        return 1
+
     if kind in ("reel", "narrated"):
         video = media_dir / f"item{iid:02d}.mp4"
         if not video.exists():

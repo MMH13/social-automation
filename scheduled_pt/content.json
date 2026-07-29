@@ -799,12 +799,14 @@
   {
     "id": 76,
     "type": "psych",
-    "text": "P",
-    "fb_caption": "e",
-    "ig_caption": "e\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset",
-    "posted_at": "2026-07-28T17:52:31",
-    "fb_url": "https://www.facebook.com/104887429209160_1028299886870046",
-    "ig_url": "instagram media id 18053436083534184"
+    "text": "People don't remember what you said.\nThey remember how the conversation ended.\nEndings get weighted heaviest.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset",
+    "reposted_after_corruption": {
+      "posted_at": "2026-07-28T17:52:31",
+      "fb_url": "https://www.facebook.com/104887429209160_1028299886870046",
+      "ig_url": "instagram media id 18053436083534184"
+    }
   },
   {
     "id": 209,
@@ -925,12 +927,14 @@
   {
     "id": 84,
     "type": "psych",
-    "text": "A",
-    "fb_caption": "n",
-    "ig_caption": "n\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset",
-    "posted_at": "2026-07-29T18:03:16",
-    "fb_url": "https://www.facebook.com/104887429209160_1029217883444913",
-    "ig_url": "instagram media id 18098937044214551"
+    "text": "Anxiety and excitement produce\nalmost identical body signals.\nThe only difference is the story you attach.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset",
+    "reposted_after_corruption": {
+      "posted_at": "2026-07-29T18:03:16",
+      "fb_url": "https://www.facebook.com/104887429209160_1029217883444913",
+      "ig_url": "instagram media id 18098937044214551"
+    }
   },
   {
     "id": 211,
@@ -1025,9 +1029,9 @@
   {
     "id": 92,
     "type": "psych",
-    "text": "Y",
-    "fb_caption": "o",
-    "ig_caption": "o\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
+    "text": "You are more likely to trust someone\nwho admits a small flaw.\nPerfection reads as distance.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
   },
   {
     "id": 213,
@@ -1121,9 +1125,9 @@
   {
     "id": 100,
     "type": "psych",
-    "text": "N",
-    "fb_caption": "a",
-    "ig_caption": "a\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
+    "text": "Naming an emotion lowers its intensity.\nBrain scans show the amygdala calms\nthe moment you label it.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
   },
   {
     "id": 215,
@@ -1218,9 +1222,9 @@
   {
     "id": 108,
     "type": "psych",
-    "text": "T",
-    "fb_caption": "h",
-    "ig_caption": "h\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
+    "text": "The people who apologize the most\nusually caused the least harm.\nGuilt tracks sensitivity, not fault.",
+    "fb_caption": "Save this",
+    "ig_caption": "Save this\n\n#psychologyfacts #mentalhealth #therapy #growth #selfawareness #mindset"
   },
   {
     "id": 217,
