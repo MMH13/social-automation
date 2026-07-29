@@ -55,10 +55,24 @@ jobs:
         run: |
           git config user.name "auto-poster"
           git config user.email "actions@github.com"
-          git add scheduled_pt/content.json state/history.jsonl
-          git diff --cached --quiet || git commit -m "pt: mark posted"
-          git pull --rebase origin master
-          git push
+          # Never lose a posted mark: a failed push after a successful post makes the
+          # next run publish the same item again (happened to item 77 on 2026-07-28).
+          cp scheduled_pt/content.json /tmp/mine.json
+          cp state/history.jsonl /tmp/mine.jsonl 2>/dev/null || true
+          for attempt in 1 2 3 4 5; do
+            git fetch -q origin master
+            git reset -q --hard origin/master
+            python scripts/merge_queue.py /tmp/mine.json scheduled_pt/content.json
+            python scripts/merge_queue.py /tmp/mine.jsonl state/history.jsonl --lines
+            git add scheduled_pt/content.json state/history.jsonl
+            if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+            git commit -q -m "pt: mark posted"
+            if git push -q origin HEAD:master; then echo "pushed on attempt $attempt"; exit 0; fi
+            echo "push raced another commit - remerging (attempt $attempt)"
+            sleep 5
+          done
+          echo "::error::could not push queue state after 5 attempts - item may repost"
+          exit 1
       - name: Check queue depth
         id: queue
         if: always()
