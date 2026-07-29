@@ -1803,5 +1803,423 @@
       "7. \"Write a 'founding customer' offer that rewards the first 5 buyers.\"",
       "Steal these. Tweak the [brackets] for your niche.\n\nFollow @IamMamunHossain for daily AI prompts that actually do something."
     ]
+  },
+  {
+    "id": 142,
+    "day": 28,
+    "type": "thread",
+    "tweets": [
+      "I automated my entire content pipeline so it posts without my PC on.",
+      "The problem:\nI'd write 20 posts on Sunday, then miss half the slots because scheduling meant my laptop had to be awake.",
+      "1. Queue as a JSON file in a git repo.\nOne item per slot. Nothing clever.",
+      "2. GitHub Actions cron instead of a desktop scheduler.\nThe runner is the machine now.",
+      "3. The run commits the queue back.\nThat's how it knows what already went out.",
+      "4. Render media on the runner, not locally.\nffmpeg + Pillow, installed per run.",
+      "5. A depth check that opens an issue when the queue runs low.",
+      "Cost: a few cents a day in API writes. The runner is free.",
+      "Bookmark this. You'll need it later."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 143,
+    "day": 28,
+    "type": "single",
+    "text": "Most people don't need a better content calendar.\n\nThey need the calendar to run without them.",
+    "pillar": "build"
+  },
+  {
+    "id": 144,
+    "day": 28,
+    "type": "single",
+    "text": "Free AI tools I actually use weekly:\n\nClaude - strategy + long writing\nPerplexity - research with sources\nCapCut - short-form edits\nffmpeg - every video task nobody wants to do manually\n\nThree cost nothing. One is 30 years old and still wins.",
+    "pillar": "ai"
+  },
+  {
+    "id": 145,
+    "day": 28,
+    "type": "single",
+    "text": "Performance marketing lesson that took me too long:\n\nThe algorithm optimizes for what you tell it to optimize for.\n\nIf you optimize for clicks, you'll get clicks. From people who don't buy.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 146,
+    "day": 28,
+    "type": "single",
+    "text": "Unpopular opinion:\n\nMost \"AI automation\" content is a screenshot of a prompt.\n\nShow the system running for 30 days. That's the proof.",
+    "pillar": "op"
+  },
+  {
+    "id": 147,
+    "day": 28,
+    "type": "single",
+    "text": "What's the one task you'd automate first if it took an afternoon instead of a month?",
+    "pillar": "build"
+  },
+  {
+    "id": 148,
+    "day": 29,
+    "type": "single",
+    "text": "My automation broke last night.\n\nA dependency I never pinned shipped a major version and removed the module my script imported.\n\nEvery scheduled run failed for 18 hours before I noticed.\n\nPin your dependencies. Unpinned means \"whatever ships next.\"",
+    "pillar": "build"
+  },
+  {
+    "id": 149,
+    "day": 29,
+    "type": "thread",
+    "tweets": [
+      "7 Meta Ads mistakes I still see agencies make:",
+      "1. One creative per audience.\nYou need 3-5 angles or you're guessing which message failed.",
+      "2. Killing ads at 24 hours.\nThe learning phase isn't superstition. Give it volume before you judge.",
+      "3. Optimizing for the cheap event.\nLink clicks are cheap because they're worth less.",
+      "4. Same message for cold and warm.\nAwareness stage decides the copy, not the audience size.",
+      "5. No retargeting layer.\nMost people don't buy on first contact.",
+      "6. Blaming creative for an offer problem.\nNo hook survives a weak offer.",
+      "7. No follow-up system.\nThe lead goes cold in minutes, not days.",
+      "Fix the offer and the follow-up before you touch the targeting.\n\nBookmark this."
+    ],
+    "pillar": "mkt"
+  },
+  {
+    "id": 150,
+    "day": 29,
+    "type": "single",
+    "text": "AI won't take your marketing job.\n\nBut the marketer who built a system while you were reading threads about AI might.",
+    "pillar": "op"
+  },
+  {
+    "id": 151,
+    "day": 29,
+    "type": "single",
+    "text": "Prompt that earns its place in my workflow:\n\n\"Rewrite this in my voice. Cut every line that doesn't earn its place. Show me what you cut and why.\"\n\nThe last clause is the whole trick.",
+    "pillar": "ai"
+  },
+  {
+    "id": 152,
+    "day": 29,
+    "type": "single",
+    "text": "I keep an idea bank in one file.\n\n3 lines a day, added while scrolling.\n\nI have never once started a post from a blank page since.",
+    "pillar": "build"
+  },
+  {
+    "id": 153,
+    "day": 29,
+    "type": "single",
+    "text": "What's the last tool you paid for and actually still use?",
+    "pillar": "ai"
+  },
+  {
+    "id": 154,
+    "day": 30,
+    "type": "thread",
+    "tweets": [
+      "I let an AI voice narrate my videos. Here's what I learned building it:",
+      "The problem:\nEvery TTS option was either a paid API, or locked to an app on my laptop. Neither survives a scheduled job at 3am.",
+      "1. The voice has to be portable.\nI found the one I liked was an open-source model underneath. That changed everything.",
+      "2. Open weights means it runs anywhere.\nApache-2.0, CPU-only, no API key, no per-character cost.",
+      "3. Watch the install size.\nThe default install pulled 2.5GB of GPU libraries I never use. The CPU build is ~200MB.",
+      "4. Cache the model between runs.\nOtherwise you download it every single time.",
+      "5. Render captions timed to the audio, not to a guess.\nMeasure each segment, then place the text.",
+      "Example: a 45-second narrated video now renders start to finish on a free runner.",
+      "Bookmark this if you're building anything with voice."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 155,
+    "day": 30,
+    "type": "single",
+    "text": "Everyone says \"use AI to scale content.\"\n\nNobody mentions the boring part: you need somewhere for the output to go, on a schedule, without you.\n\nThe generation was never the bottleneck.",
+    "pillar": "op"
+  },
+  {
+    "id": 156,
+    "day": 30,
+    "type": "single",
+    "text": "Stock footage that's genuinely free for commercial use:\n\nPexels\nPixabay\n\nBoth have APIs. Both allow commercial use with no attribution.\n\nRead the license yourself before you build on it. I did.",
+    "pillar": "ai"
+  },
+  {
+    "id": 157,
+    "day": 30,
+    "type": "single",
+    "text": "A/B testing rule I'd give any junior marketer:\n\nTest one thing.\n\nIf you change the headline and the image and the audience, you didn't run a test. You made a new ad.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 158,
+    "day": 30,
+    "type": "single",
+    "text": "Your first automation shouldn't be impressive.\n\nIt should be boring, small, and finished.",
+    "pillar": "build"
+  },
+  {
+    "id": 159,
+    "day": 30,
+    "type": "single",
+    "text": "What part of your workflow do you still do manually that you know could be automated?",
+    "pillar": "build"
+  },
+  {
+    "id": 160,
+    "day": 31,
+    "type": "single",
+    "text": "Shipped a bug to production yesterday.\n\nA script wrote 5 pieces of content as single characters. Two published before I caught it.\n\nThe fix wasn't the parser. It was adding a check that refuses to publish anything suspiciously short.\n\nValidate output. Generators lie quietly.",
+    "pillar": "build"
+  },
+  {
+    "id": 161,
+    "day": 31,
+    "type": "thread",
+    "tweets": [
+      "How I plan a week of content in about 2 hours:",
+      "The problem:\nDaily creation means daily decisions. Decisions are where the time actually goes.",
+      "1. Pull 7 ideas from the idea bank.\nNever start cold.",
+      "2. Draft 3 versions of each with AI.\nKeep the one that sounds like me. Delete the rest without mercy.",
+      "3. Reuse formats that worked before.\nLists, mistakes, step-by-steps. Format is not the same as repetition.",
+      "4. Queue everything at once.\nBatching removes the daily decision entirely.",
+      "5. Keep replies manual.\nThat's the one part that shouldn't be automated. Ever.",
+      "Example: this post was drafted in a batch on a Sunday.",
+      "Bookmark this and build your own version."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 162,
+    "day": 31,
+    "type": "single",
+    "text": "The best marketing hire I ever saw wasn't the most creative.\n\nThey were the one who wrote down what worked.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 163,
+    "day": 31,
+    "type": "single",
+    "text": "Claude for strategy and long-form.\nPerplexity when I need sources I can check.\n\nUsing one model for everything is like owning one wrench.",
+    "pillar": "ai"
+  },
+  {
+    "id": 164,
+    "day": 31,
+    "type": "single",
+    "text": "Hot take:\n\n\"AI-powered\" in a product name tells me nothing about whether the product is good.\n\nIt used to be \"cloud.\" Before that, \"smart.\"",
+    "pillar": "op"
+  },
+  {
+    "id": 165,
+    "day": 31,
+    "type": "single",
+    "text": "Marketers: what's the metric your client asks for that you wish they'd stop asking for?",
+    "pillar": "mkt"
+  },
+  {
+    "id": 166,
+    "day": 32,
+    "type": "thread",
+    "tweets": [
+      "5 things that broke while I automated my content, and what fixed them:",
+      "1. The queue silently ran dry.\nRuns stayed green while logging \"nothing to post.\"\nFix: a depth check that alerts before it empties, not after.",
+      "2. A post published twice.\nThe job posted, then failed to save the \"already posted\" mark.\nFix: merge the state instead of overwriting it.",
+      "3. An unpinned dependency shipped a breaking major version.\nFix: pin it.",
+      "4. A 2.5GB GPU install on a job that never touches a GPU.\nFix: install the CPU build explicitly.",
+      "5. Generated content published as garbage.\nFix: refuse to publish output that fails a sanity check.",
+      "Every one of these was a small oversight with a loud consequence.",
+      "Bookmark this before you build your own."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 167,
+    "day": 32,
+    "type": "single",
+    "text": "Automation doesn't remove work.\n\nIt moves the work to the front, once, instead of every day forever.\n\nThat's still the best trade in the building.",
+    "pillar": "build"
+  },
+  {
+    "id": 168,
+    "day": 32,
+    "type": "single",
+    "text": "If your reporting takes a full day every month, that day is the product you're selling to yourself.\n\nAutomate the pull. Keep the thinking.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 169,
+    "day": 32,
+    "type": "single",
+    "text": "The most underrated AI skill isn't prompting.\n\nIt's knowing which tasks shouldn't go near a model at all.",
+    "pillar": "op"
+  },
+  {
+    "id": 170,
+    "day": 32,
+    "type": "single",
+    "text": "ffmpeg does more than most paid video tools.\n\nThe interface is just hostile enough that people pay to avoid learning it.",
+    "pillar": "ai"
+  },
+  {
+    "id": 171,
+    "day": 32,
+    "type": "single",
+    "text": "What broke the last time you tried to automate something?",
+    "pillar": "build"
+  },
+  {
+    "id": 172,
+    "day": 33,
+    "type": "single",
+    "text": "Retargeting isn't a campaign type.\n\nIt's an admission that your first message reached someone who wasn't ready yet.\n\nWrite the second message for that person, not the first one again.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 173,
+    "day": 33,
+    "type": "thread",
+    "tweets": [
+      "9 AI tools worth your attention in 2026, and what each is actually for:",
+      "1. Claude - strategy, long-form writing, working through a problem",
+      "2. ChatGPT - quick drafts and ideation",
+      "3. Perplexity - research when you need to check the sources",
+      "4. Canva - creative variations at speed",
+      "5. CapCut - short-form editing",
+      "6. ElevenLabs - voiceover when quality matters more than cost",
+      "7. Opus Clip - long video into shorts",
+      "8. n8n or Make - connecting the pieces",
+      "9. ffmpeg - free, scriptable, does the boring 80%",
+      "Pick three. Learn them properly. That beats a bookmark folder of thirty.",
+      "Bookmark this."
+    ],
+    "pillar": "ai"
+  },
+  {
+    "id": 174,
+    "day": 33,
+    "type": "single",
+    "text": "You don't need a personal brand.\n\nYou need a body of work that's easy to find.\n\nThe brand is what people call it afterwards.",
+    "pillar": "op"
+  },
+  {
+    "id": 175,
+    "day": 33,
+    "type": "single",
+    "text": "Watching a client's ad account get better because someone finally wrote down the process is a specific kind of satisfying.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 176,
+    "day": 33,
+    "type": "single",
+    "text": "Build in public isn't posting your wins.\n\nIt's posting the bug that cost you a day, and what you changed so it can't happen again.",
+    "pillar": "build"
+  },
+  {
+    "id": 177,
+    "day": 33,
+    "type": "single",
+    "text": "What's a tool everyone recommends that you tried and quietly stopped using?",
+    "pillar": "ai"
+  },
+  {
+    "id": 178,
+    "day": 34,
+    "type": "thread",
+    "tweets": [
+      "How to write an ad that survives contact with a real audience:",
+      "The problem:\nMost ads are written to please the person approving them, not the person scrolling past them.",
+      "1. Lead with the problem, in their words.\nNot your product category.",
+      "2. Say the specific thing.\n\"Save 3 hours a week\" beats \"boost productivity.\"",
+      "3. Name the objection before they do.\nIt reads as confidence.",
+      "4. One idea per ad.\nIf you're testing three messages, make three ads.",
+      "5. Make the next step obvious and small.",
+      "Example: the highest performer I've written was the one that named the price in the first line.",
+      "Bookmark this."
+    ],
+    "pillar": "mkt"
+  },
+  {
+    "id": 179,
+    "day": 34,
+    "type": "single",
+    "text": "The gap between people who talk about AI and people who ship with it is mostly just tolerance for debugging.",
+    "pillar": "op"
+  },
+  {
+    "id": 180,
+    "day": 34,
+    "type": "single",
+    "text": "My content system in one line:\n\nWrite once, queue it, let a machine handle the calendar, and keep every reply human.",
+    "pillar": "build"
+  },
+  {
+    "id": 181,
+    "day": 34,
+    "type": "single",
+    "text": "Free beats paid more often than people admit.\n\nOpen-source models, free stock libraries, free CI runners.\n\nThe expensive part was never the tools.",
+    "pillar": "ai"
+  },
+  {
+    "id": 182,
+    "day": 34,
+    "type": "single",
+    "text": "Every marketer should build one small system end to end.\n\nNot to become a developer. To stop being surprised by what's possible.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 183,
+    "day": 34,
+    "type": "single",
+    "text": "What would you build if the technical part wasn't the blocker?",
+    "pillar": "build"
+  },
+  {
+    "id": 184,
+    "day": 35,
+    "type": "single",
+    "text": "Six months ago I posted AI news.\n\nIt grew nothing, because anyone can repost a headline.\n\nNow I post what I built and what broke. Fewer posts. Much better conversations.\n\nDocument, don't curate.",
+    "pillar": "build"
+  },
+  {
+    "id": 185,
+    "day": 35,
+    "type": "thread",
+    "tweets": [
+      "6 automations worth building before any of the fancy ones:",
+      "The problem:\nPeople build the impressive automation first, then abandon it. Start with the boring, daily one.",
+      "1. Your content queue.\nWrite in batches, publish on a schedule.",
+      "2. Your reporting pull.\nThe numbers, gathered. You still do the thinking.",
+      "3. Lead follow-up.\nSpeed matters more than polish here.",
+      "4. File and asset naming.\nFuture you will be grateful.",
+      "5. A weekly digest of what actually shipped.",
+      "6. Alerts for when any of the above breaks.\nThis one is not optional. Ask me how I know.",
+      "Bookmark this. You'll need it later."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 186,
+    "day": 35,
+    "type": "single",
+    "text": "\"Post consistently\" is useless advice without a system behind it.\n\nConsistency is an infrastructure problem wearing a discipline costume.",
+    "pillar": "op"
+  },
+  {
+    "id": 187,
+    "day": 35,
+    "type": "single",
+    "text": "The best performing creative in most accounts is the one that looks least like an ad.\n\nThis has been true for years and we all keep forgetting it.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 188,
+    "day": 35,
+    "type": "single",
+    "text": "If a prompt saves you 10 minutes once, it's a trick.\n\nIf it's in a workflow that runs every day, it's leverage.",
+    "pillar": "ai"
+  },
+  {
+    "id": 189,
+    "day": 35,
+    "type": "single",
+    "text": "What's the most useful thing you've automated this year?",
+    "pillar": "build"
   }
 ]
