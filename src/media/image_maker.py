@@ -199,6 +199,52 @@ def make_psych_card(text: str, out_path: Path) -> Path:
     return out_path
 
 
+THUMB_W, THUMB_H = 1280, 720
+
+
+def make_thumbnail(text: str, out_path: Path, bg_image: Path | None = None,
+                    variant: int = 0, watermark: str = "@psychology.tube") -> Path:
+    """YouTube thumbnail: 1280x720, big bold high-contrast headline over a darkened
+    background (a supplied still frame, else a gradient), PT branding corner mark.
+    """
+    if bg_image is not None:
+        img = Image.open(bg_image).convert("RGB")
+        img = img.resize((THUMB_W, THUMB_H)) if img.size != (THUMB_W, THUMB_H) else img
+        overlay = Image.new("RGB", (THUMB_W, THUMB_H), (0, 0, 0))
+        img = Image.blend(img, overlay, 0.45)  # darken so white text stays legible
+    else:
+        top, bot = GRADIENTS[variant % len(GRADIENTS)]
+        img = _gradient_bg(THUMB_W, THUMB_H, top, bot)
+
+    draw = ImageDraw.Draw(img)
+    font = _font("arialbd.ttf", 104)
+    margin = 70
+    blocks = [b.strip() for b in text.upper().split("\n") if b.strip()]
+    lines: list[str] = []
+    for i, block in enumerate(blocks):
+        lines.extend(_wrap(draw, block, font, THUMB_W - 2 * margin))
+        if i < len(blocks) - 1:
+            lines.append("")
+
+    line_h = 118
+    y = (THUMB_H - len(lines) * line_h) // 2
+    for line in lines:
+        if line:
+            w = draw.textlength(line, font=font)
+            draw.text(((THUMB_W - w) // 2, y), line, font=font, fill="#FFFFFF",
+                      stroke_width=10, stroke_fill="#000000")
+        y += line_h
+
+    wm_font = _font("arialbd.ttf", 34)
+    w = draw.textlength(watermark, font=wm_font)
+    draw.text((THUMB_W - w - 30, THUMB_H - 60), watermark, font=wm_font,
+              fill="#C9A96A", stroke_width=3, stroke_fill="#000000")
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    img.save(out_path, "JPEG", quality=93)
+    return out_path
+
+
 def make_image(headline: str, subtext: str, style: dict, brand: str, out_path: Path) -> Path:
     img = Image.new("RGB", (SIZE, SIZE), style["bg_color"])
     draw = ImageDraw.Draw(img)

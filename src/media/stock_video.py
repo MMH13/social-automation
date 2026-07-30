@@ -56,12 +56,12 @@ def _download(url: str, dest: Path) -> Path | None:
         return None
 
 
-def _from_pexels(query: str, key: str) -> Path | None:
+def _from_pexels(query: str, key: str, orientation: str = "portrait") -> Path | None:
     try:
         r = requests.get(
             "https://api.pexels.com/videos/search",
             headers={"Authorization": key},
-            params={"query": query, "orientation": "portrait", "size": "medium", "per_page": 15},
+            params={"query": query, "orientation": orientation, "size": "medium", "per_page": 15},
             timeout=TIMEOUT,
         )
         r.raise_for_status()
@@ -70,10 +70,13 @@ def _from_pexels(query: str, key: str) -> Path | None:
         print(f"  [bg] pexels search failed: {e}")
         return None
 
+    landscape = orientation == "landscape"
     for vid in videos:
-        # Prefer a portrait file around 1080p — big enough to crop, small enough to fetch.
-        files = [f for f in vid.get("video_files", []) if (f.get("height") or 0) >= (f.get("width") or 0)]
-        files.sort(key=lambda f: abs((f.get("height") or 0) - 1920))
+        # Prefer a file matching the requested orientation, around 1080p.
+        files = [f for f in vid.get("video_files", [])
+                 if ((f.get("width") or 0) >= (f.get("height") or 0)) == landscape]
+        target = 1920 if landscape else 1920  # long edge target either way
+        files.sort(key=lambda f: abs(max(f.get("height") or 0, f.get("width") or 0) - target))
         if not files:
             continue
         link = files[0].get("link")
@@ -82,7 +85,7 @@ def _from_pexels(query: str, key: str) -> Path | None:
     return None
 
 
-def _from_pixabay(query: str, key: str) -> Path | None:
+def _from_pixabay(query: str, key: str, orientation: str = "portrait") -> Path | None:
     try:
         r = requests.get(
             "https://pixabay.com/api/videos/",
@@ -95,17 +98,28 @@ def _from_pixabay(query: str, key: str) -> Path | None:
         print(f"  [bg] pixabay search failed: {e}")
         return None
 
+    landscape = orientation == "landscape"
     for hit in hits:
         streams = hit.get("videos", {})
         for size in ("large", "medium", "small"):
-            link = streams.get(size, {}).get("url")
-            if link:
-                return _download(link, CACHE_DIR / f"pixabay_{hit['id']}.mp4")
+            info = streams.get(size, {})
+            link = info.get("url")
+            if not link:
+                continue
+            is_landscape = (info.get("width") or 0) >= (info.get("height") or 0)
+            if is_landscape != landscape:
+                continue
+            return _download(link, CACHE_DIR / f"pixabay_{hit['id']}.mp4")
     return None
 
 
-def get_background(variant: int, query: str | None = None) -> Path | None:
-    """Return a path to a background clip, or None to fall back to a gradient."""
+def get_background(variant: int, query: str | None = None, orientation: str = "portrait") -> Path | None:
+    """Return a path to a background clip, or None to fall back to a gradient.
+
+    orientation: "portrait" (default, Shorts/reels) or "landscape" (long-form 16:9).
+    Local clips in assets/video/ aren't filtered by orientation — keep landscape
+    source clips in a separate folder if you add any, or rely on stock APIs.
+    """
     clips = local_clips()
     if clips:
         clip = clips[variant % len(clips)]
@@ -116,14 +130,14 @@ def get_background(variant: int, query: str | None = None) -> Path | None:
 
     pexels = os.getenv("PEXELS_API_KEY", "").strip()
     if pexels:
-        path = _from_pexels(q, pexels)
+        path = _from_pexels(q, pexels, orientation)
         if path:
             print(f"  [bg] pexels '{q}' -> {path.name}")
             return path
 
     pixabay = os.getenv("PIXABAY_API_KEY", "").strip()
     if pixabay:
-        path = _from_pixabay(q, pixabay)
+        path = _from_pixabay(q, pixabay, orientation)
         if path:
             print(f"  [bg] pixabay '{q}' -> {path.name}")
             return path

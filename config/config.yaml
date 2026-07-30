@@ -35,3 +35,14 @@ history_window: 30
 
 # Claude model used for content generation
 model: "claude-sonnet-5"
+
+# ── YouTube (Psychology Tube channel) ───────────────────────────
+# Content is batch-authored into scheduled_yt/content.json (same pattern as
+# scheduled_pt/content.json) rather than generated live each run.
+# Pipeline: src.render_yt renders queued items -> youtube_queue/<id>/ for review
+# (scripts/review_youtube.py) -> src.post_yt publishes only approved items.
+youtube:
+  channel_watermark: "@psychology.tube"
+  # Even approved uploads land private first — flip to public manually in Studio
+  # until the pipeline has proven itself.
+  privacy_status: "private"
