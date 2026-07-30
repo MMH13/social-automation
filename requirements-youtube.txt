@@ -1,9 +1,0 @@
-# YouTube Data API v3 upload — used by src/post_yt.py and scripts/youtube_oauth_setup.py.
-# Kept separate from requirements-video.txt: post_yt.py only uploads already-rendered
-# video, so it never needs kokoro/torch — this stays light for the frequent publish job.
--r requirements.txt
-google-api-python-client>=2.100
-google-auth>=2.23
-google-auth-httplib2>=0.2
-# Only needed for the one-time local scripts/youtube_oauth_setup.py flow, not at runtime.
-google-auth-oauthlib>=1.1
