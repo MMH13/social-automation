@@ -2394,5 +2394,989 @@
     "type": "single",
     "text": "What's the most useful thing you've automated this year?",
     "pillar": "build"
+  },
+  {
+    "id": 190,
+    "day": 36,
+    "type": "thread",
+    "tweets": [
+      "I split one page's posting into two content types instead of picking one.",
+      "The problem:\nOne format gets stale. Viewers tune out the fifth identical post in a row even if each one is good.",
+      "1. Kept the informational format.\nListicles, narrated, still useful on their own.",
+      "2. Added a second, lighter format.\nSame page, different rhythm.",
+      "3. Built a picker that balances the mix automatically.\nNo manual scheduling grid.",
+      "4. It tracks what's already gone out today and fills whichever type is behind.",
+      "5. If one pool runs low, it doesn't stall. It just leans on the other for a day.",
+      "Variety isn't a nice-to-have. It's retention.",
+      "Bookmark this."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 191,
+    "day": 36,
+    "type": "single",
+    "text": "A content calendar with one format is a content calendar with an expiration date.",
+    "pillar": "op"
+  },
+  {
+    "id": 192,
+    "day": 36,
+    "type": "single",
+    "text": "Marketing lesson I relearn every quarter:\n\nThe channel isn't the strategy.\n\nThe channel is where you find out if the strategy was ever any good.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 193,
+    "day": 36,
+    "type": "single",
+    "text": "Prompt I use weekly:\n\n\"List every assumption baked into this plan. Then argue against the weakest one.\"",
+    "pillar": "ai"
+  },
+  {
+    "id": 194,
+    "day": 36,
+    "type": "single",
+    "text": "Consistency beats intensity in almost everything except deadlines.",
+    "pillar": "op"
+  },
+  {
+    "id": 195,
+    "day": 36,
+    "type": "single",
+    "text": "What's a small process change that quietly fixed a bigger problem for you?",
+    "pillar": "build"
+  },
+  {
+    "id": 196,
+    "day": 37,
+    "type": "single",
+    "text": "Every automated system eventually needs a rule for what happens when it runs out of things to do.\n\nMost builders skip that part. It's the part that saves you.",
+    "pillar": "build"
+  },
+  {
+    "id": 197,
+    "day": 37,
+    "type": "thread",
+    "tweets": [
+      "7 things that separate ads that convert from ads that just get seen:",
+      "1. The hook matches the scroll speed of the platform, not the brand deck.",
+      "2. The offer is stated, not implied. People don't decode ambiguity, they scroll past it.",
+      "3. Social proof is specific. A number beats an adjective.",
+      "4. The CTA matches the funnel stage. Cold traffic doesn't need \"buy now.\"",
+      "5. The landing page says the same thing the ad said.",
+      "6. There's a reason to act today, not eventually.",
+      "7. It was tested against something, not shipped on a hunch.",
+      "None of this is clever. All of it gets skipped under deadline pressure.",
+      "Bookmark this."
+    ],
+    "pillar": "mkt"
+  },
+  {
+    "id": 198,
+    "day": 37,
+    "type": "single",
+    "text": "The AI tools worth paying for are the ones you'd miss for a week if they disappeared.\n\nEverything else is a bookmark you'll never open again.",
+    "pillar": "ai"
+  },
+  {
+    "id": 199,
+    "day": 37,
+    "type": "single",
+    "text": "Hot take:\n\nMost \"10 AI tools you need\" posts are written by people who opened each tool once.",
+    "pillar": "op"
+  },
+  {
+    "id": 200,
+    "day": 37,
+    "type": "single",
+    "text": "A system that fails loudly is worth more than one that fails silently.\n\nI'd rather get an alert at 3am than find out a week later nothing posted.",
+    "pillar": "build"
+  },
+  {
+    "id": 201,
+    "day": 37,
+    "type": "single",
+    "text": "What's the most useless piece of marketing advice you were ever given with total confidence?",
+    "pillar": "mkt"
+  },
+  {
+    "id": 202,
+    "day": 38,
+    "type": "thread",
+    "tweets": [
+      "How I decide what NOT to automate:",
+      "The problem:\nEverything looks automatable once you're in the mindset. Not everything should be.",
+      "1. If it needs judgment about a specific person, it stays manual. Replies, DMs, relationships.",
+      "2. If getting it wrong is expensive, it stays manual until it's proven cheap to get wrong.",
+      "3. If I can't explain the failure mode in one sentence, I don't trust it unattended yet.",
+      "4. If automating it removes the only feedback loop I have, I keep it manual on purpose.",
+      "5. Everything else is fair game.",
+      "The goal was never zero manual work. It was removing the boring 80%.",
+      "Bookmark this before you automate the wrong 20%."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 203,
+    "day": 38,
+    "type": "single",
+    "text": "Nobody regrets writing the boring documentation.\n\nEveryone regrets not writing it, six months later, at 11pm.",
+    "pillar": "op"
+  },
+  {
+    "id": 204,
+    "day": 38,
+    "type": "single",
+    "text": "Claude for anything that needs to hold context across a long task.\n\nA smaller, faster model for anything that's one shot and done.\n\nPicking the wrong one for the job wastes more time than it saves.",
+    "pillar": "ai"
+  },
+  {
+    "id": 205,
+    "day": 38,
+    "type": "single",
+    "text": "The best performing ad account I've seen wasn't the biggest budget.\n\nIt was the one where someone actually read last month's data before planning this month's.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 206,
+    "day": 38,
+    "type": "single",
+    "text": "Most burnout in marketing isn't from too much work.\n\nIt's from redoing work that was never measured the first time.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 207,
+    "day": 38,
+    "type": "single",
+    "text": "What's one metric you stopped caring about once you understood what it actually measured?",
+    "pillar": "mkt"
+  },
+  {
+    "id": 208,
+    "day": 39,
+    "type": "single",
+    "text": "Shipped something today that took 20 minutes to build and will save an hour a week forever.\n\nThat ratio is the entire case for automation. Everything else is a bonus.",
+    "pillar": "build"
+  },
+  {
+    "id": 209,
+    "day": 39,
+    "type": "thread",
+    "tweets": [
+      "6 things I'd tell someone starting their first automation project:",
+      "1. Start with the task you already do the same way every single time.",
+      "2. Build the smallest version that actually runs end to end, then improve it.",
+      "3. Log everything. You will need the log before you need the feature.",
+      "4. Assume the third-party API will fail. Build the retry before you need it, not after.",
+      "5. Version control isn't optional. Neither is a way to undo a bad run.",
+      "6. The unglamorous parts, alerts, retries, validation, are the parts that make it trustworthy.",
+      "Bookmark this. You'll need it on day one."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 210,
+    "day": 39,
+    "type": "single",
+    "text": "If your reporting dashboard requires a person to build it fresh every week, you don't have a dashboard. You have a recurring task wearing a dashboard's name.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 211,
+    "day": 39,
+    "type": "single",
+    "text": "The gap between knowing a prompting technique and using it under deadline pressure is where most AI adoption actually stalls.",
+    "pillar": "ai"
+  },
+  {
+    "id": 212,
+    "day": 39,
+    "type": "single",
+    "text": "Opinion:\n\nMost brands don't have a differentiation problem. They have a specificity problem. \"Better\" isn't a position. \"Faster for X person\" is.",
+    "pillar": "op"
+  },
+  {
+    "id": 213,
+    "day": 39,
+    "type": "single",
+    "text": "What's the last thing you built that felt small but paid off bigger than expected?",
+    "pillar": "build"
+  },
+  {
+    "id": 214,
+    "day": 40,
+    "type": "thread",
+    "tweets": [
+      "A performance marketing framework I still use, years in:",
+      "The problem:\nMost accounts fail from unclear priorities, not from bad execution.",
+      "1. Diagnose before you optimize.\nKnow whether the problem is traffic, message, or offer before touching the budget.",
+      "2. One variable per test.\nChange the creative or the audience. Never both in the same test.",
+      "3. Give tests enough volume to mean something before judging them.",
+      "4. Match the message to awareness stage, every time.",
+      "5. Report on what changed the outcome, not what looks good in a screenshot.",
+      "Boring, repeatable, and it still works better than most \"growth hacks.\"",
+      "Bookmark this."
+    ],
+    "pillar": "mkt"
+  },
+  {
+    "id": 215,
+    "day": 40,
+    "type": "single",
+    "text": "AI didn't make marketing easier.\n\nIt made the gap between good judgment and no judgment more visible, faster.",
+    "pillar": "op"
+  },
+  {
+    "id": 216,
+    "day": 40,
+    "type": "single",
+    "text": "Every tool I've kept using long-term does one thing extremely well instead of ten things adequately.",
+    "pillar": "ai"
+  },
+  {
+    "id": 217,
+    "day": 40,
+    "type": "single",
+    "text": "The best system I've built this year isn't the most complex one.\n\nIt's the one that hasn't needed a single manual fix in three weeks.",
+    "pillar": "build"
+  },
+  {
+    "id": 218,
+    "day": 40,
+    "type": "single",
+    "text": "A queue that quietly runs out is worse than one that fails loudly.\n\nSilence looks like success until someone checks.",
+    "pillar": "build"
+  },
+  {
+    "id": 219,
+    "day": 40,
+    "type": "single",
+    "text": "What's a tool you dropped that everyone else still swears by?",
+    "pillar": "ai"
+  },
+  {
+    "id": 220,
+    "day": 41,
+    "type": "single",
+    "text": "The account that grows isn't the one that posts the most.\n\nIt's the one where every post earns the next one a reader.",
+    "pillar": "op"
+  },
+  {
+    "id": 221,
+    "day": 41,
+    "type": "thread",
+    "tweets": [
+      "5 mistakes I made building my first content automation:",
+      "1. No validation on generated content.\nBad output shipped straight to the page. Learned that one the hard way.",
+      "2. Unpinned dependencies.\nA library update broke a working script overnight, with zero warning.",
+      "3. No retry logic on flaky network calls.\nOne bad response killed the whole run instead of just that item.",
+      "4. State that could get lost mid-run.\nA failed save after a successful post meant the same thing posted twice.",
+      "5. No alerting when the queue ran low.\nIt just quietly stopped, and I found out days later.",
+      "Every one of these is now a guardrail instead of a lesson.",
+      "Bookmark this before you build yours."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 222,
+    "day": 41,
+    "type": "single",
+    "text": "If a prompt only works with perfect input, it's not a workflow. It's a demo.",
+    "pillar": "ai"
+  },
+  {
+    "id": 223,
+    "day": 41,
+    "type": "single",
+    "text": "Attribution isn't solved. It's managed.\n\nAnyone who tells you they've fully solved it is selling something.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 224,
+    "day": 41,
+    "type": "single",
+    "text": "Discipline is doing the unglamorous 20% that makes the impressive 80% actually reliable.",
+    "pillar": "op"
+  },
+  {
+    "id": 225,
+    "day": 41,
+    "type": "single",
+    "text": "What's the most annoying bug you've fixed that nobody but you will ever know existed?",
+    "pillar": "build"
+  },
+  {
+    "id": 226,
+    "day": 42,
+    "type": "thread",
+    "tweets": [
+      "How I write a thread that doesn't fall apart by tweet four:",
+      "The problem:\nMost threads start strong and drift because there was no structure, just momentum.",
+      "1. One idea per thread. If you need two, that's two threads.",
+      "2. The hook has to work as a standalone tweet. If it needs the thread to make sense, it's not a hook.",
+      "3. Each tweet should survive being read alone, out of order.",
+      "4. Cut the tweet that only exists to pad the count.",
+      "5. End with something to do, not just something to feel.",
+      "Structure first, voice second. Voice can't save a thread with no shape.",
+      "Bookmark this."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 227,
+    "day": 42,
+    "type": "single",
+    "text": "Most \"AI replaces marketers\" takes assume marketers were only ever doing the part AI is good at.",
+    "pillar": "op"
+  },
+  {
+    "id": 228,
+    "day": 42,
+    "type": "single",
+    "text": "A dashboard nobody checks isn't reporting. It's decoration with numbers on it.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 229,
+    "day": 42,
+    "type": "single",
+    "text": "The tool matters less than the habit of actually opening it.",
+    "pillar": "ai"
+  },
+  {
+    "id": 230,
+    "day": 42,
+    "type": "single",
+    "text": "I'd rather ship something small and real than plan something large and theoretical.",
+    "pillar": "build"
+  },
+  {
+    "id": 231,
+    "day": 42,
+    "type": "single",
+    "text": "What's a habit that changed your output more than any tool did?",
+    "pillar": "op"
+  },
+  {
+    "id": 232,
+    "day": 43,
+    "type": "single",
+    "text": "Every account claiming to have cracked the algorithm is describing last month.\n\nThe algorithm doesn't hold still long enough to be cracked.",
+    "pillar": "op"
+  },
+  {
+    "id": 233,
+    "day": 43,
+    "type": "thread",
+    "tweets": [
+      "6 things that actually move a Meta ad account, in order of impact:",
+      "1. The offer. Nothing below this fixes a weak one.",
+      "2. The hook, in the first 2 seconds of video or the first line of copy.",
+      "3. Audience-message match. Same product, different words for different people.",
+      "4. Creative volume. One good ad dies faster than five decent ones rotating.",
+      "5. Landing page continuity. If the ad promises X, the page better open with X.",
+      "6. Budget pacing. Even the best creative can't survive an account starved mid-learning.",
+      "People chase 6 while ignoring 1. That's the actual problem in most accounts.",
+      "Bookmark this."
+    ],
+    "pillar": "mkt"
+  },
+  {
+    "id": 234,
+    "day": 43,
+    "type": "single",
+    "text": "The best AI workflows are boring to describe and impossible to live without once you have them.",
+    "pillar": "ai"
+  },
+  {
+    "id": 235,
+    "day": 43,
+    "type": "single",
+    "text": "Most burnout is a boundary problem wearing a productivity costume.",
+    "pillar": "op"
+  },
+  {
+    "id": 236,
+    "day": 43,
+    "type": "single",
+    "text": "Built a small guardrail today that will quietly prevent a bug I've already made once before.\n\nThat's the whole job some days.",
+    "pillar": "build"
+  },
+  {
+    "id": 237,
+    "day": 43,
+    "type": "single",
+    "text": "What's one thing you automated that you were embarrassed took you this long to do?",
+    "pillar": "build"
+  },
+  {
+    "id": 238,
+    "day": 44,
+    "type": "thread",
+    "tweets": [
+      "The exact checklist I run before trusting any script with a real account:",
+      "The problem:\nA script that works once in testing isn't the same as a script that's safe unattended.",
+      "1. What happens if the API is down. Does it fail loudly or silently?",
+      "2. What happens if it runs twice on the same input by accident?",
+      "3. Is there a way to undo the last action if it was wrong?",
+      "4. Does a failure alert a human, or just vanish into a log nobody reads?",
+      "5. Can I look at the last 10 runs and know exactly what happened in each?",
+      "If I can't answer all five, it doesn't touch a live account yet.",
+      "Bookmark this before your next integration."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 239,
+    "day": 44,
+    "type": "single",
+    "text": "The best marketers I know read the raw data before they read anyone's summary of the raw data.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 240,
+    "day": 44,
+    "type": "single",
+    "text": "An AI tool that requires a perfect prompt every time isn't a tool. It's a party trick.",
+    "pillar": "ai"
+  },
+  {
+    "id": 241,
+    "day": 44,
+    "type": "single",
+    "text": "Opinion:\n\nMost personal brands fail from inconsistency, not from a bad niche. The niche was fine. Month three just never happened.",
+    "pillar": "op"
+  },
+  {
+    "id": 242,
+    "day": 44,
+    "type": "single",
+    "text": "You don't need a bigger system.\n\nYou need the current one to not silently break at 3am.",
+    "pillar": "build"
+  },
+  {
+    "id": 243,
+    "day": 44,
+    "type": "single",
+    "text": "What's the most consistent creator you follow doing differently than everyone else?",
+    "pillar": "op"
+  },
+  {
+    "id": 244,
+    "day": 45,
+    "type": "single",
+    "text": "A queue that never runs dry teaches you nothing.\n\nThe first time it does is when you actually learn what your system was missing.",
+    "pillar": "build"
+  },
+  {
+    "id": 245,
+    "day": 45,
+    "type": "thread",
+    "tweets": [
+      "7 things I wish someone told me about performance marketing early on:",
+      "1. The account structure matters less than people think. The offer matters more.",
+      "2. Attribution will never be perfect. Stop chasing perfect, start chasing directionally useful.",
+      "3. A client's gut feeling about creative is data. Just not the only data.",
+      "4. Frequency capping isn't a setting, it's a discipline.",
+      "5. The best week of results is usually not repeatable. Don't build a strategy on it.",
+      "6. Retargeting pools decay faster than people budget for.",
+      "7. The account that wins long-term is the one someone actually maintains weekly.",
+      "Bookmark this."
+    ],
+    "pillar": "mkt"
+  },
+  {
+    "id": 246,
+    "day": 45,
+    "type": "single",
+    "text": "I don't trust an AI tool until I've seen it fail. Failing predictably is more useful than succeeding once.",
+    "pillar": "ai"
+  },
+  {
+    "id": 247,
+    "day": 45,
+    "type": "single",
+    "text": "The system you build on a good day needs to survive a bad one. That's the actual test.",
+    "pillar": "build"
+  },
+  {
+    "id": 248,
+    "day": 45,
+    "type": "single",
+    "text": "Most people don't need more discipline. They need fewer decisions to make with the discipline they already have.",
+    "pillar": "op"
+  },
+  {
+    "id": 249,
+    "day": 45,
+    "type": "single",
+    "text": "What's the least sexy part of your job that quietly does the most work?",
+    "pillar": "mkt"
+  },
+  {
+    "id": 250,
+    "day": 46,
+    "type": "thread",
+    "tweets": [
+      "How to know if an AI tool is actually worth adding to your stack:",
+      "The problem:\nEvery week there's a new tool promising to change everything. Most don't survive contact with a real workflow.",
+      "1. Would I miss it for a week? If unsure, it's a toy, not a tool.",
+      "2. Does it save time on something I do weekly, not just something impressive once?",
+      "3. Can I explain what it does in one sentence to someone who's never seen it?",
+      "4. Does it fail gracefully, or does it just guess when it's unsure?",
+      "5. Is the output good enough to ship, or does it always need a full rewrite?",
+      "Most tools fail question one. That's fine. That's what the question is for.",
+      "Bookmark this."
+    ],
+    "pillar": "ai"
+  },
+  {
+    "id": 251,
+    "day": 46,
+    "type": "single",
+    "text": "The most underrated skill in marketing right now is writing a brief someone else can actually execute without asking you six questions.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 252,
+    "day": 46,
+    "type": "single",
+    "text": "Every automated system I've built taught me more about my own process than about the tool I used to build it.",
+    "pillar": "build"
+  },
+  {
+    "id": 253,
+    "day": 46,
+    "type": "single",
+    "text": "Opinion:\n\nMost \"personal brand\" advice is really just \"post consistently\" wearing a longer outfit.",
+    "pillar": "op"
+  },
+  {
+    "id": 254,
+    "day": 46,
+    "type": "single",
+    "text": "Fixed a bug today that's been quietly wrong for a week. Nobody noticed. That's the scary part of automation, not the exciting part.",
+    "pillar": "build"
+  },
+  {
+    "id": 255,
+    "day": 46,
+    "type": "single",
+    "text": "What's a skill you underrated for years before realizing how much it was actually worth?",
+    "pillar": "op"
+  },
+  {
+    "id": 256,
+    "day": 47,
+    "type": "single",
+    "text": "The difference between a hobby project and a system is whether it still runs when you stop watching it.",
+    "pillar": "build"
+  },
+  {
+    "id": 257,
+    "day": 47,
+    "type": "thread",
+    "tweets": [
+      "5 signs a Meta ad account needs a full reset, not another tweak:",
+      "1. Every test is inconclusive because nothing runs long enough to mean anything.",
+      "2. The naming convention has stopped matching what's actually running.",
+      "3. Nobody can explain why a specific ad set exists anymore.",
+      "4. Creative refresh happens reactively, only after performance already dropped.",
+      "5. The last documented strategy is older than the last three algorithm changes.",
+      "A reset isn't giving up. It's refusing to keep optimizing a structure nobody trusts.",
+      "Bookmark this."
+    ],
+    "pillar": "mkt"
+  },
+  {
+    "id": 258,
+    "day": 47,
+    "type": "single",
+    "text": "The best prompts read like instructions to a very literal, very fast new hire. Specific, bounded, and checkable.",
+    "pillar": "ai"
+  },
+  {
+    "id": 259,
+    "day": 47,
+    "type": "single",
+    "text": "Most growth plateaus aren't a strategy problem. They're a maintenance problem wearing a strategy costume.",
+    "pillar": "op"
+  },
+  {
+    "id": 260,
+    "day": 47,
+    "type": "single",
+    "text": "A system with zero manual steps left in it usually means nobody's watching it closely enough anymore either.",
+    "pillar": "build"
+  },
+  {
+    "id": 261,
+    "day": 47,
+    "type": "single",
+    "text": "What's something you check manually on purpose, even though you could automate it?",
+    "pillar": "build"
+  },
+  {
+    "id": 262,
+    "day": 48,
+    "type": "thread",
+    "tweets": [
+      "What actually happens when you let an AI voice narrate content at scale:",
+      "The problem:\nText-to-speech used to sound like text-to-speech. That's changed, but the workflow around it hasn't caught up for most people.",
+      "1. The voice model matters less than the pacing. A good voice read too fast still sounds robotic.",
+      "2. Captions timed to the actual audio beat guesswork every time.",
+      "3. Silence between points matters as much as the words in them.",
+      "4. A consistent voice across a whole page becomes part of the brand, the same way a font does.",
+      "5. The cost per video is now low enough that quality has no excuse to be an afterthought.",
+      "Bookmark this if you're building anything with voice."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 263,
+    "day": 48,
+    "type": "single",
+    "text": "Most competitive analysis stops at \"what are they posting\" and skips \"why is it actually working.\" That second question is the whole point.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 264,
+    "day": 48,
+    "type": "single",
+    "text": "An AI model with a personality isn't better. An AI model that's consistent is better. Those aren't the same thing.",
+    "pillar": "ai"
+  },
+  {
+    "id": 265,
+    "day": 48,
+    "type": "single",
+    "text": "Opinion:\n\nRestraint is an underused creative skill. Most content fails from saying too much, not too little.",
+    "pillar": "op"
+  },
+  {
+    "id": 266,
+    "day": 48,
+    "type": "single",
+    "text": "Every format eventually plateaus. The fix isn't more of it. It's a second format running alongside it.",
+    "pillar": "build"
+  },
+  {
+    "id": 267,
+    "day": 48,
+    "type": "single",
+    "text": "What's the most restrained, minimal piece of content you've seen that still worked?",
+    "pillar": "op"
+  },
+  {
+    "id": 268,
+    "day": 49,
+    "type": "single",
+    "text": "A system that alerts you before it breaks is worth more than one that's merely fast.",
+    "pillar": "build"
+  },
+  {
+    "id": 269,
+    "day": 49,
+    "type": "thread",
+    "tweets": [
+      "6 things that actually build trust in a personal brand, slowly:",
+      "1. Saying \"I don't know\" instead of guessing confidently.",
+      "2. Showing the failed version before the polished one.",
+      "3. Being the same person in comments as in posts.",
+      "4. Correcting yourself in public when you were wrong.",
+      "5. Consistency across a bad month, not just a good one.",
+      "6. Never claiming a result you can't actually back up.",
+      "None of this is fast. All of it compounds.",
+      "Bookmark this."
+    ],
+    "pillar": "op"
+  },
+  {
+    "id": 270,
+    "day": 49,
+    "type": "single",
+    "text": "The best marketing decisions I've made came from reading the complaints in the comments, not the compliments.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 271,
+    "day": 49,
+    "type": "single",
+    "text": "A prompt library beats a prompt in your head every single time you're under a deadline.",
+    "pillar": "ai"
+  },
+  {
+    "id": 272,
+    "day": 49,
+    "type": "single",
+    "text": "Rebuilt a small piece of a system today instead of patching it a fourth time. The rebuild took less time than the fourth patch would have.",
+    "pillar": "build"
+  },
+  {
+    "id": 273,
+    "day": 49,
+    "type": "single",
+    "text": "What's something you rebuilt from scratch that you were tempted to just patch again?",
+    "pillar": "build"
+  },
+  {
+    "id": 274,
+    "day": 50,
+    "type": "thread",
+    "tweets": [
+      "5 questions I ask before scaling any content system:",
+      "The problem:\nScaling something broken just gets you more broken output, faster.",
+      "1. Does the current version work reliably at low volume first?",
+      "2. What's the failure mode if volume doubles overnight?",
+      "3. Is there a human checkpoint anywhere, or is it fully unattended?",
+      "4. What's the cost curve as volume grows, and does it stay sane?",
+      "5. Who gets alerted first when something goes wrong?",
+      "Scale amplifies whatever you already have, including the parts you haven't fixed yet.",
+      "Bookmark this before you scale anything."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 275,
+    "day": 50,
+    "type": "single",
+    "text": "Most audiences don't leave because the content got worse. They leave because it got repetitive.",
+    "pillar": "op"
+  },
+  {
+    "id": 276,
+    "day": 50,
+    "type": "single",
+    "text": "A/B testing without a hypothesis is just guessing with extra steps and a spreadsheet.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 277,
+    "day": 50,
+    "type": "single",
+    "text": "The AI tools that last are the ones built for a specific job, not the ones trying to do everything adequately.",
+    "pillar": "ai"
+  },
+  {
+    "id": 278,
+    "day": 50,
+    "type": "single",
+    "text": "Some weeks the whole job is making the boring part more reliable. That's not a small week. That's the job.",
+    "pillar": "build"
+  },
+  {
+    "id": 279,
+    "day": 50,
+    "type": "single",
+    "text": "What's the most \"boring\" improvement you made that had an outsized effect?",
+    "pillar": "build"
+  },
+  {
+    "id": 280,
+    "day": 51,
+    "type": "single",
+    "text": "The fastest way to lose an audience's trust is to claim a result you can't actually show your work for.",
+    "pillar": "op"
+  },
+  {
+    "id": 281,
+    "day": 51,
+    "type": "thread",
+    "tweets": [
+      "7 things that quietly separate good creative from great creative:",
+      "1. It states the benefit instead of implying it.",
+      "2. It matches the platform's native format instead of fighting it.",
+      "3. It has one clear job, not three competing ones.",
+      "4. It was tested against a real alternative, not shipped because everyone liked it in the room.",
+      "5. The first two seconds earn the next two.",
+      "6. It doesn't need the caption to make sense.",
+      "7. It gets refreshed before performance actually drops, not after.",
+      "Bookmark this."
+    ],
+    "pillar": "mkt"
+  },
+  {
+    "id": 282,
+    "day": 51,
+    "type": "single",
+    "text": "A model that admits uncertainty is more useful than one that's confidently wrong. I'll take the honest hedge every time.",
+    "pillar": "ai"
+  },
+  {
+    "id": 283,
+    "day": 51,
+    "type": "single",
+    "text": "Most \"I quit social media\" posts are really \"I quit posting without a system\" posts.",
+    "pillar": "op"
+  },
+  {
+    "id": 284,
+    "day": 51,
+    "type": "single",
+    "text": "Wrote a guardrail today for a failure mode that's never happened yet. That's the whole point of writing it before it happens.",
+    "pillar": "build"
+  },
+  {
+    "id": 285,
+    "day": 51,
+    "type": "single",
+    "text": "What's a rule you follow now because of a mistake you only made once?",
+    "pillar": "build"
+  },
+  {
+    "id": 286,
+    "day": 52,
+    "type": "thread",
+    "tweets": [
+      "How I actually decide what to build next in this system:",
+      "The problem:\nThere's always a longer list of ideas than there is time. Most of them are noise.",
+      "1. What's actually breaking right now, not what might break someday.",
+      "2. What takes the least effort for the most reliability gained.",
+      "3. What would I regret not having the next time something goes wrong.",
+      "4. What's genuinely interesting enough that I'll actually finish it.",
+      "5. Everything else waits.",
+      "A backlog isn't a to-do list. It's a filter for what doesn't matter yet.",
+      "Bookmark this."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 287,
+    "day": 52,
+    "type": "single",
+    "text": "The marketers who survive platform changes are the ones who never fully depended on one platform to begin with.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 288,
+    "day": 52,
+    "type": "single",
+    "text": "Most AI skepticism I hear is really frustration with a bad first prompt, not an informed opinion about the technology.",
+    "pillar": "ai"
+  },
+  {
+    "id": 289,
+    "day": 52,
+    "type": "single",
+    "text": "Opinion:\n\nSpecificity is the cheapest form of differentiation and almost nobody uses it.",
+    "pillar": "op"
+  },
+  {
+    "id": 290,
+    "day": 52,
+    "type": "single",
+    "text": "A month of steady, unremarkable output will outperform a week of intense, unsustainable output every time I've tracked it.",
+    "pillar": "op"
+  },
+  {
+    "id": 291,
+    "day": 52,
+    "type": "single",
+    "text": "What's a belief about your industry you've quietly changed your mind on this year?",
+    "pillar": "op"
+  },
+  {
+    "id": 292,
+    "day": 53,
+    "type": "single",
+    "text": "The best debugging session is the one where the fix is one line and the understanding behind it took an hour.",
+    "pillar": "build"
+  },
+  {
+    "id": 293,
+    "day": 53,
+    "type": "thread",
+    "tweets": [
+      "6 things a good weekly marketing report actually needs:",
+      "1. What changed, not just what happened.",
+      "2. Why it changed, with an actual hypothesis, not a shrug.",
+      "3. What you're doing about it this week, specifically.",
+      "4. One number that matters more than the others, called out clearly.",
+      "5. What you're NOT worried about, so the reader doesn't have to guess.",
+      "6. A next-week plan someone could execute without you in the room.",
+      "Most reports are data dumps pretending to be reports.",
+      "Bookmark this."
+    ],
+    "pillar": "mkt"
+  },
+  {
+    "id": 294,
+    "day": 53,
+    "type": "single",
+    "text": "The most useful AI habit I've built is asking it to argue against my own plan before I commit to it.",
+    "pillar": "ai"
+  },
+  {
+    "id": 295,
+    "day": 53,
+    "type": "single",
+    "text": "A brand voice isn't a tone. It's a set of decisions about what you'll never say, repeated consistently.",
+    "pillar": "op"
+  },
+  {
+    "id": 296,
+    "day": 53,
+    "type": "single",
+    "text": "Every reliable system I've built started as the least reliable version that technically worked.",
+    "pillar": "build"
+  },
+  {
+    "id": 297,
+    "day": 53,
+    "type": "single",
+    "text": "What's the least reliable version of something you shipped anyway, and improved later?",
+    "pillar": "build"
+  },
+  {
+    "id": 298,
+    "day": 54,
+    "type": "thread",
+    "tweets": [
+      "5 lessons from running an automated system for weeks straight:",
+      "The problem:\nDay-one confidence and week-three reality are two very different things.",
+      "1. The failures you didn't plan for are the ones that teach you the most.",
+      "2. Alerts you ignore for a week aren't alerts. They're noise you'll eventually mute.",
+      "3. The system that never needs attention is either perfect or you haven't looked closely enough.",
+      "4. Small guardrails compound. None of them look impressive individually.",
+      "5. The version running now is unrecognizable from the version that shipped first, and that's the actual sign it's working.",
+      "Bookmark this before you start your own."
+    ],
+    "pillar": "build"
+  },
+  {
+    "id": 299,
+    "day": 54,
+    "type": "single",
+    "text": "Most people asking \"what's your niche\" already know the answer. They're asking because committing to it in public feels harder than picking it in private.",
+    "pillar": "op"
+  },
+  {
+    "id": 300,
+    "day": 54,
+    "type": "single",
+    "text": "The best performance marketers I know spend more time reading their own account than reading industry newsletters.",
+    "pillar": "mkt"
+  },
+  {
+    "id": 301,
+    "day": 54,
+    "type": "single",
+    "text": "An AI tool is only as useful as the worst prompt you're willing to write for it under deadline pressure.",
+    "pillar": "ai"
+  },
+  {
+    "id": 302,
+    "day": 54,
+    "type": "single",
+    "text": "Building in public isn't the highlight reel. It's the bug report with better writing.",
+    "pillar": "build"
+  },
+  {
+    "id": 303,
+    "day": 54,
+    "type": "single",
+    "text": "What's the most \"unfinished\" thing you've ever shared publicly, and how did people actually respond?",
+    "pillar": "build"
   }
 ]
