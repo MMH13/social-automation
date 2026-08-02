@@ -50,12 +50,14 @@ def _music_files() -> list[Path]:
     return sorted(p for p in MUSIC_DIR.iterdir() if p.suffix.lower() in MUSIC_EXTS)
 
 
-def make_reel(text: str, variant: int, out_path: Path, bg_query: str | None = None) -> Path | None:
+def make_reel(text: str, variant: int, out_path: Path, bg_query: str | None = None,
+              watermark: str = "@psychology.tube", palette: list | None = None) -> Path | None:
     if not ffmpeg_available():
         print("  [reel] ffmpeg not found - skipping")
         return None
 
-    top, bot = GRADIENTS[variant % len(GRADIENTS)]
+    palette = palette or GRADIENTS
+    top, bot = palette[variant % len(palette)]
     out_path.parent.mkdir(parents=True, exist_ok=True)
     fade_out_start = max(0.0, DURATION - 1.5)
     bg_clip = get_background(variant, bg_query)
@@ -85,9 +87,8 @@ def make_reel(text: str, variant: int, out_path: Path, bg_query: str | None = No
                 draw.text(((W - w) // 2, y), line, font=font, fill=(255, 255, 255, 255))
             y += line_h
         wm_font = _font("arialbd.ttf", 40)
-        wm = "@psychology.tube"
-        w = draw.textlength(wm, font=wm_font)
-        draw.text(((W - w) // 2, H - 180), wm, font=wm_font, fill=(255, 255, 255, 200))
+        w = draw.textlength(watermark, font=wm_font)
+        draw.text(((W - w) // 2, H - 180), watermark, font=wm_font, fill=(255, 255, 255, 200))
         text_path = tmp_dir / "text.png"
         overlay.save(text_path)
 

@@ -14,8 +14,8 @@ REQUIRED = ["IG_USER_ID", "FB_PAGE_ACCESS_TOKEN"]
 CLOUDINARY = ["CLOUDINARY_CLOUD_NAME", "CLOUDINARY_API_KEY", "CLOUDINARY_API_SECRET"]
 
 
-def configured() -> bool:
-    return all(os.environ.get(k) for k in REQUIRED)
+def configured(ig_id_var: str = "IG_USER_ID", token_var: str = "FB_PAGE_ACCESS_TOKEN") -> bool:
+    return bool(os.environ.get(ig_id_var)) and bool(os.environ.get(token_var))
 
 
 def _cloudinary_configured() -> bool:
@@ -46,11 +46,12 @@ def _host_on_cloudinary(image_path: Path) -> str:
     return result["secure_url"]
 
 
-def publish(caption: str, image_path: Path, fb_post_id: str | None = None) -> str:
+def publish(caption: str, image_path: Path, fb_post_id: str | None = None,
+            ig_id: str | None = None, token: str | None = None) -> str:
     """Publish to Instagram. Needs the image at a public URL: reuses the Facebook
     post's CDN copy when fb_post_id is given, otherwise uploads to Cloudinary."""
-    ig_id = os.environ["IG_USER_ID"]
-    token = os.environ["FB_PAGE_ACCESS_TOKEN"]
+    ig_id = ig_id or os.environ["IG_USER_ID"]
+    token = token or os.environ["FB_PAGE_ACCESS_TOKEN"]
 
     if fb_post_id:
         image_url = _fb_cdn_url(fb_post_id, token)
@@ -88,7 +89,7 @@ def publish(caption: str, image_path: Path, fb_post_id: str | None = None) -> st
     return f"instagram media id {pub.json()['id']}"
 
 
-def publish_reel(caption: str, video_path: Path) -> str:
+def publish_reel(caption: str, video_path: Path, ig_id: str | None = None, token: str | None = None) -> str:
     """Publish a Reel to Instagram. Requires Cloudinary (video must be at a public URL)."""
     import cloudinary
     import cloudinary.uploader
@@ -96,8 +97,8 @@ def publish_reel(caption: str, video_path: Path) -> str:
     if not _cloudinary_configured():
         raise RuntimeError("IG reels need Cloudinary credentials in .env (video hosting)")
 
-    ig_id = os.environ["IG_USER_ID"]
-    token = os.environ["FB_PAGE_ACCESS_TOKEN"]
+    ig_id = ig_id or os.environ["IG_USER_ID"]
+    token = token or os.environ["FB_PAGE_ACCESS_TOKEN"]
 
     cloudinary.config(
         cloud_name=os.environ["CLOUDINARY_CLOUD_NAME"],

@@ -72,6 +72,14 @@ GRADIENTS = [
     ("#000428", "#004E92"), ("#B24592", "#1F1C2C"),
 ]
 
+# softer, dusk-toned pairs for the reflective/poetry track (Speaking from soul) —
+# muted rather than the saturated GRADIENTS above, closer to Whisprs-style visuals.
+SOFT_GRADIENTS = [
+    ("#3A2E52", "#1C1730"), ("#4A3B5C", "#22192E"), ("#2E3B4E", "#141B24"),
+    ("#5C4B51", "#241D22"), ("#33475B", "#151E27"), ("#4B3B47", "#1D161B"),
+    ("#3D3A50", "#191722"), ("#4E3C3C", "#1E1616"),
+]
+
 
 def _gradient_bg(w: int, h: int, top_hex: str, bottom_hex: str) -> Image.Image:
     top = tuple(int(top_hex[i:i + 2], 16) for i in (1, 3, 5))
@@ -193,6 +201,44 @@ def make_psych_card(text: str, out_path: Path) -> Path:
     wm = "@psychology.tube"
     w = draw.textlength(wm, font=wm_font)
     draw.text(((SIZE - w) // 2, SIZE - 120), wm, font=wm_font, fill="#C9A96A")
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    img.save(out_path, "JPEG", quality=92)
+    return out_path
+
+
+def make_quote_card(text: str, out_path: Path, variant: int = 0,
+                    watermark: str = "speaking from soul") -> Path:
+    """Reflective quote card for the poetry/deep-thoughts track: soft dusk gradient,
+    centered serif text, small lowercase watermark — no meme framing, no branding noise.
+    """
+    top, bot = SOFT_GRADIENTS[variant % len(SOFT_GRADIENTS)]
+    img = _gradient_bg(SIZE, SIZE, top, bot)
+    draw = ImageDraw.Draw(img)
+
+    try:
+        body_font = ImageFont.truetype(str(Path(r"C:\Windows\Fonts") / "georgiai.ttf"), 58)
+    except OSError:
+        body_font = _font("DejaVuSerif-Italic.ttf", 58)
+    margin = 130
+    blocks = [b.strip() for b in text.split("\n") if b.strip()]
+    lines: list[str] = []
+    for i, block in enumerate(blocks):
+        lines.extend(_wrap(draw, block, body_font, SIZE - 2 * margin))
+        if i < len(blocks) - 1:
+            lines.append("")
+    line_h = 80
+    y = (SIZE - len(lines) * line_h) // 2
+    for line in lines:
+        if line:
+            w = draw.textlength(line, font=body_font)
+            draw.text(((SIZE - w) // 2, y), line, font=body_font, fill="#F1ECE6")
+        y += line_h
+
+    if watermark:
+        wm_font = _font("arial.ttf", 30)
+        w = draw.textlength(watermark, font=wm_font)
+        draw.text(((SIZE - w) // 2, SIZE - 110), watermark, font=wm_font, fill="#B9AFC4")
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_path, "JPEG", quality=92)

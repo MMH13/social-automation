@@ -34,7 +34,7 @@ KOKORO_SR = 24000
 _kokoro_pipeline = None
 
 
-def _kokoro(text: str, path: Path, voice: str) -> bool:
+def _kokoro(text: str, path: Path, voice: str, speed: float = 1.0) -> bool:
     """Synthesize with kokoro. Returns False if unavailable so callers can fall back."""
     global _kokoro_pipeline
     try:
@@ -46,7 +46,7 @@ def _kokoro(text: str, path: Path, voice: str) -> bool:
     try:
         if _kokoro_pipeline is None:
             _kokoro_pipeline = KPipeline(lang_code="a")  # American English
-        chunks = [audio for _, _, audio in _kokoro_pipeline(text, voice=voice)]
+        chunks = [audio for _, _, audio in _kokoro_pipeline(text, voice=voice, speed=speed)]
         if not chunks:
             return False
         wav = np.concatenate([np.asarray(c, dtype="float32").reshape(-1) for c in chunks])
@@ -57,10 +57,10 @@ def _kokoro(text: str, path: Path, voice: str) -> bool:
         return False
 
 
-def _tts(text: str, base: Path, voice: str) -> Path | None:
+def _tts(text: str, base: Path, voice: str, speed: float = 1.0) -> Path | None:
     """Render `text` to an audio file next to `base`. Returns the path actually written."""
     wav = base.with_suffix(".wav")
-    if _kokoro(text, wav, voice):
+    if _kokoro(text, wav, voice, speed):
         return wav
     try:
         import edge_tts
