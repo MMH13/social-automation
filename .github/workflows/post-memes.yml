@@ -76,15 +76,18 @@ jobs:
       - name: Check queue depth
         id: queue
         if: always()
-        run: python scripts/queue_check.py scheduled_pt/content.json 10 "Psychology Tube"
+        run: python scripts/queue_check.py scheduled_pt/content.json 10 "Psychology Tube" --pt-buckets
       - name: Open low-queue issue
-        if: always() && steps.queue.outputs.low == 'true'
+        if: always() && steps.queue.outputs.any_low == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           TITLE="Psychology Tube queue running low"
           EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
-          BODY="Only ${{ steps.queue.outputs.left }} item(s) (~${{ steps.queue.outputs.days }} days at 10/day) left in \`scheduled_pt/content.json\`. Refill it before the queue empties."
+          BODY="Total: ${{ steps.queue.outputs.left }} item(s) (~${{ steps.queue.outputs.days }} days at 10/day).
+          Narrated: ${{ steps.queue.outputs.narrated_left }} item(s) (~${{ steps.queue.outputs.narrated_days }} days at 5/day target).
+          Other: ${{ steps.queue.outputs.other_left }} item(s) (~${{ steps.queue.outputs.other_days }} days at 5/day target).
+          Refill whichever bucket is low in \`scheduled_pt/content.json\`."
           if [ -z "$EXISTING" ]; then
             gh issue create --title "$TITLE" --body "$BODY"
           else

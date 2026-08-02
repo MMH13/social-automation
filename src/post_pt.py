@@ -20,6 +20,15 @@ from .publishers import facebook_publisher, instagram_publisher
 ROOT = Path(__file__).resolve().parent.parent
 QUEUE_FILE = ROOT / "scheduled_pt" / "content.json"
 
+# Daily mix target (set 2026-07-30): 5 narrated listicle videos + 5 other formats = 10/day.
+# The picker is self-balancing rather than relying on a hand-interleaved queue order, so
+# it keeps working correctly no matter what order future refills add items in.
+DAILY_TARGET = {"narrated": 5, "other": 5}
+
+
+def category(item) -> str:
+    return "narrated" if item["type"] == "narrated" else "other"
+
 
 def log(msg: str) -> None:
     print(msg)
@@ -33,10 +42,41 @@ def save(queue) -> None:
     QUEUE_FILE.write_text(json.dumps(queue, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
+def pick_next(queue):
+    """Pick the next item, favoring whichever category is furthest behind its daily
+    target so far today. Falls back to the other category if the preferred one is
+    empty, so a dry pool never stalls the pipeline - it just skews the mix instead."""
+    unposted = [m for m in queue if not m.get("posted_at")]
+    if not unposted:
+        return None
+
+    today = datetime.now().strftime("%Y-%m-%d")
+    posted_today = {"narrated": 0, "other": 0}
+    for m in queue:
+        stamp = m.get("posted_at")
+        if stamp and stamp.startswith(today):
+            posted_today[category(m)] += 1
+
+    remaining = {
+        cat: DAILY_TARGET[cat] - posted_today[cat] for cat in DAILY_TARGET
+    }
+    order = sorted(DAILY_TARGET, key=lambda c: remaining[c], reverse=True)
+
+    for cat in order:
+        item = next((m for m in unposted if category(m) == cat), None)
+        if item:
+            other = next(c for c in DAILY_TARGET if c != cat)
+            if remaining[cat] <= 0:
+                log(f"post_pt: {cat} is at/over today's target ({posted_today[cat]}/{DAILY_TARGET[cat]}) "
+                    f"but no {other} items remain - posting {cat} anyway to avoid stalling")
+            return item
+    return None
+
+
 def main() -> int:
     load_dotenv(ROOT / ".env")
     queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
-    item = next((m for m in queue if not m.get("posted_at")), None)
+    item = pick_next(queue)
     if item is None:
         log("post_pt: queue empty - nothing to post")
         return 0
