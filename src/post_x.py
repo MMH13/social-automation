@@ -49,7 +49,7 @@ def _detail(e: Exception) -> str:
     return f"{e}{extra}{' | ' + body[:300] if body else ''}"
 
 
-def _create(client, text: str, reply_to, item_id: int):
+def _create(client, text: str, reply_to, item_id: int, quote_of=None):
     """X intermittently answers writes with a transient Cloudflare 403 from any IP.
     One retry turns most of those into a normal post instead of a failed run."""
     last = None
@@ -57,6 +57,8 @@ def _create(client, text: str, reply_to, item_id: int):
         try:
             if reply_to:
                 return client.create_tweet(text=text, in_reply_to_tweet_id=reply_to)
+            if quote_of:
+                return client.create_tweet(text=text, quote_tweet_id=quote_of)
             return client.create_tweet(text=text)
         except tweepy.errors.Forbidden as e:
             last = e
@@ -74,11 +76,12 @@ def _post(item, queue):
         access_token_secret=os.environ["X_ACCESS_TOKEN_SECRET"],
     )
 
-    tweets = [item["text"]] if item["type"] == "single" else item["tweets"]
+    tweets = item["tweets"] if item["type"] == "thread" else [item["text"]]
+    quote_of = item.get("quote_of") if item["type"] == "quote" else None
     urls, reply_to = [], None
     for i, text in enumerate(tweets):
         try:
-            resp = _create(client, text, reply_to, item["id"])
+            resp = _create(client, text, reply_to, item["id"], quote_of=quote_of if i == 0 else None)
         except Exception as e:
             if i == 0:
                 log(f"post_x item{item['id']}: FAILED: {_detail(e)}")
