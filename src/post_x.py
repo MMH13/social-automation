@@ -33,7 +33,7 @@ def main() -> int:
     load_dotenv(ROOT / ".env")
     queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
 
-    item = next((p for p in queue if not p.get("posted_at")), None)
+    item = next((p for p in queue if not p.get("posted_at") and not p.get("skip_reason")), None)
     if item is None:
         log("post_x: queue empty - nothing to post")
         return 0

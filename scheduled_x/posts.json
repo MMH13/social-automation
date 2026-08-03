@@ -1639,7 +1639,9 @@
     "source": "quote-tweet",
     "text": "The tool stack isn't the moat. Shipping with 2-3 skills on repeat beats hoarding 30 you never open twice.",
     "quote_of": "2083575992992305534",
-    "quote_url": "https://x.com/thedankoe/status/2083575992992305534"
+    "quote_url": "https://x.com/thedankoe/status/2083575992992305534",
+    "skip_reason": "X API rejected the quote-tweet: \"You can only reply to or quote posts where you are mentioned or are the author.\" (403 not-authorized-for-resource). This looks like a write-tier restriction, not a code bug - the same account can post plain tweets and threads fine. Quoting other accounts' tweets needs a higher API access tier, or this feature stays unused.",
+    "skipped_at": "2026-08-03T12:59:55"
   },
   {
     "id": 305,
@@ -1648,7 +1650,9 @@
     "source": "quote-tweet",
     "text": "Doing a lighter version of this myself: Stripe churn notes + support tickets in one daily doc. Caught a pattern in week one I'd have missed for a month.",
     "quote_of": "2083954605533065561",
-    "quote_url": "https://x.com/gregisenberg/status/2083954605533065561"
+    "quote_url": "https://x.com/gregisenberg/status/2083954605533065561",
+    "skip_reason": "X API rejected the quote-tweet: \"You can only reply to or quote posts where you are mentioned or are the author.\" (403 not-authorized-for-resource). This looks like a write-tier restriction, not a code bug - the same account can post plain tweets and threads fine. Quoting other accounts' tweets needs a higher API access tier, or this feature stays unused.",
+    "skipped_at": "2026-08-03T12:59:55"
   },
   {
     "id": 306,
@@ -1657,7 +1661,9 @@
     "source": "quote-tweet",
     "text": "The $38/mo QuickBooks-replacement one in this thread is the real story. Not flashy — just an AI workflow that pays for itself immediately.",
     "quote_of": "2083971684558848500",
-    "quote_url": "https://x.com/rowancheung/status/2083971684558848500"
+    "quote_url": "https://x.com/rowancheung/status/2083971684558848500",
+    "skip_reason": "X API rejected the quote-tweet: \"You can only reply to or quote posts where you are mentioned or are the author.\" (403 not-authorized-for-resource). This looks like a write-tier restriction, not a code bug - the same account can post plain tweets and threads fine. Quoting other accounts' tweets needs a higher API access tier, or this feature stays unused.",
+    "skipped_at": "2026-08-03T12:59:55"
   },
   {
     "id": 100,
