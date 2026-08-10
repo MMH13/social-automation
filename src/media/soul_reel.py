@@ -15,6 +15,7 @@ from .ai_image import generate_background
 from .image_maker import SOFT_GRADIENTS, _font, _gradient_bg, _wrap
 from .narrated_video import _duration, _tts
 from .reel_maker import _music_files, ffmpeg_available
+from .stock_video import get_background as get_stock_clip
 
 W, H = 1080, 1920
 LEAD_IN = 0.6
@@ -100,13 +101,18 @@ def make_soul_reel(
                 d += GAP
             scene_d.append(d)
 
-        # 3. One AI (or gradient) background per block — genuine scene changes, not one
+        # 3. Background per block, in order of preference: AI art (if OPENAI_API_KEY has
+        # credit) -> free real stock footage (Pexels/Pixabay, via the prompt as a search
+        # query) -> a plain gradient as the last resort. Genuine scene changes, not one
         # continuous clip. Prompts cycle if there are fewer than blocks.
         bg_inputs: list[str] = []
         bg_pre = ""
+        bg_sources: list[str] = []
         for i, d in enumerate(scene_d):
             prompt = bg_prompts[i % len(bg_prompts)] if bg_prompts else None
             img = generate_background(prompt, tmp_dir / f"scene{i:02d}.png") if prompt else None
+            clip = None if img else (get_stock_clip(variant + i, prompt) if prompt else None)
+            bg_sources.append("ai" if img else "stock" if clip else "gradient")
             if img:
                 bg_pre += (
                     f"[{i}:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
@@ -116,6 +122,12 @@ def make_soul_reel(
                     f"eq=brightness=-0.08:saturation=0.92,setsar=1[bg{i}];"
                 )
                 bg_inputs += ["-loop", "1", "-t", f"{d:.2f}", "-i", str(img)]
+            elif clip:
+                bg_pre += (
+                    f"[{i}:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+                    f"fps=30,eq=brightness=-0.14:saturation=0.88,setsar=1[bg{i}];"
+                )
+                bg_inputs += ["-stream_loop", "-1", "-t", f"{d:.2f}", "-i", str(clip)]
             else:
                 top, bot = SOFT_GRADIENTS[(variant + i) % len(SOFT_GRADIENTS)]
                 grad = tmp_dir / f"grad{i:02d}.png"
@@ -197,5 +209,6 @@ def make_soul_reel(
         if result.returncode != 0:
             print(f"  [soul_reel] ffmpeg failed: {result.stderr[-800:]}")
             return None
-        print(f"  [soul_reel] {total:.1f}s, {n} scenes, voice={voice}")
+        src_summary = ",".join(bg_sources)
+        print(f"  [soul_reel] {total:.1f}s, {n} scenes ({src_summary}), voice={voice}")
     return out_path
