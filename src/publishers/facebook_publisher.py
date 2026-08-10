@@ -32,6 +32,38 @@ def publish(caption: str, image_path: Path, page_id: str | None = None, token: s
     return f"https://www.facebook.com/{post_id}"
 
 
+def comment_on_post(post_id: str, message: str, page_id: str | None = None,
+                     token: str | None = None, reply_to: str | None = None) -> str:
+    """Comment on a post (or reply to a comment, if reply_to is a comment id).
+
+    Used for the "hook in the post, value in the comments" format: publish a bold
+    text-card post, then follow up with the actual resource list / numbered steps
+    as a comment thread. Boosts comment count and forces scroll-through engagement.
+    """
+    token = token or os.environ["FB_PAGE_ACCESS_TOKEN"]
+    target = reply_to or post_id
+    resp = requests.post(
+        f"{GRAPH}/{target}/comments",
+        data={"message": message, "access_token": token},
+        timeout=60,
+    )
+    resp.raise_for_status()
+    return resp.json()["id"]
+
+
+def comment_thread(post_id: str, messages: list[str], page_id: str | None = None,
+                    token: str | None = None) -> list[str]:
+    """Post a numbered sequence of comments as nested replies (1/8, 2/8, ... style),
+    so they read as one continuous thread instead of scattered top-level comments."""
+    ids: list[str] = []
+    reply_to = None
+    for msg in messages:
+        cid = comment_on_post(post_id, msg, page_id=page_id, token=token, reply_to=reply_to)
+        ids.append(cid)
+        reply_to = cid
+    return ids
+
+
 def publish_reel(caption: str, video_path: Path, page_id: str | None = None, token: str | None = None) -> str:
     """Publish a vertical video as a Facebook Reel (3-phase resumable upload)."""
     page_id = page_id or os.environ["FB_PAGE_ID"]
