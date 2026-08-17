@@ -2,9 +2,18 @@
 
 Usage: python -m src.post_mh
 FB-only for now (no Instagram — page has no linked IG yet). Uses the hook-card +
-comment-thread format: publish a bold text-card post, then follow up with the
-actual resource list / numbered steps as nested comments, matching how
+first-comment format: publish a bold text-card post, then follow up with the
+actual resource list / numbered steps as ONE comment, matching how
 NasirUShamim's page structures its highest-performing posts.
+
+Format rules (from a 14-post reference analysis + this repo's own testing,
+2026-08-03/17): "crimson" theme reserved for fear/curiosity + personal-development
+hooks, "black" is the default for everything else - other colors were tried and
+dropped after real engagement data. The first-comment payload is a SINGLE plain
+comment, not a numbered reply thread, and never uses "**bold**" markdown - Facebook
+doesn't render markdown in comments, it just shows literal asterisks (confirmed by
+checking a live posted comment). Some items are "hot" - no image, a short opinion/
+news-reaction text post - matching the reference page's occasional text-only posts.
 
 Requires MH_PAGE_ID / MH_PAGE_ACCESS_TOKEN (separate from Psychology Tube's
 FB_PAGE_ID/FB_PAGE_ACCESS_TOKEN — this is a different Page).
@@ -50,41 +59,46 @@ def main() -> int:
         return 0
 
     iid = item["id"]
-    body = item.get("hook")
+    kind = item.get("format", "A")
+    body = item.get("hook") if kind != "hot" else item.get("caption")
     if not body or len(body.strip()) < 12:
-        log(f"post_mh item{iid}: hook text looks corrupted ({body!r}) - refusing to post")
+        log(f"post_mh item{iid}: text looks corrupted ({body!r}) - refusing to post")
         return 1
 
     page_id = os.environ[PAGE_ID_VAR]
     token = os.environ[TOKEN_VAR]
 
-    image = ROOT / "output" / "mh" / f"item{iid:02d}.png"
-    if not image.exists():
-        make_hook_card(
-            item["hook"], image,
-            bg=item.get("bg", "#c00000"),
-            highlight=item.get("highlight"),
-        )
-
-    try:
-        fb_url = facebook_publisher.publish(item.get("caption", ""), image, page_id=page_id, token=token)
-    except Exception as e:
-        log(f"post_mh item{iid}: FB FAILED: {e}")
-        return 1
+    if kind == "hot":
+        # No image - a short text-only opinion/news-reaction post.
+        try:
+            fb_url = facebook_publisher.publish_text(body, page_id=page_id, token=token)
+        except Exception as e:
+            log(f"post_mh item{iid}: FB FAILED: {e}")
+            return 1
+    else:
+        image = ROOT / "output" / "mh" / f"item{iid:02d}.png"
+        if not image.exists():
+            make_hook_card(item["hook"], image, theme=item.get("theme", "black"))
+        caption = item["hook"].replace("*", "") + item.get("cta", "")
+        try:
+            fb_url = facebook_publisher.publish(caption, image, page_id=page_id, token=token)
+        except Exception as e:
+            log(f"post_mh item{iid}: FB FAILED: {e}")
+            return 1
 
     item["posted_at"] = datetime.now().isoformat(timespec="seconds")
     item["fb_url"] = fb_url
     save(queue)
-    log(f"post_mh item{iid}: FB {fb_url}")
+    log(f"post_mh item{iid} ({kind}): FB {fb_url}")
 
-    comments = item.get("comments") or []
-    if comments:
+    first_comment = item.get("first_comment")
+    if first_comment:
         post_id = fb_url.rsplit("/", 1)[-1]
         try:
-            facebook_publisher.comment_thread(post_id, comments, page_id=page_id, token=token)
-            log(f"post_mh item{iid}: posted {len(comments)} comment(s) with the value list")
+            facebook_publisher.comment_on_post(post_id, first_comment, page_id=page_id, token=token)
+            log(f"post_mh item{iid}: posted first-comment value list")
         except Exception as e:
-            log(f"post_mh item{iid}: comment thread FAILED (post still live): {e}")
+            log(f"post_mh item{iid}: first-comment FAILED (post still live): {e}")
 
     with open(ROOT / "state" / "history.jsonl", "a", encoding="utf-8") as f:
         f.write(json.dumps({"stamp": datetime.now().strftime("%Y%m%d_%H%M"), "platform": "fb-mh",

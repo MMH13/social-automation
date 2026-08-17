@@ -32,6 +32,20 @@ def publish(caption: str, image_path: Path, page_id: str | None = None, token: s
     return f"https://www.facebook.com/{post_id}"
 
 
+def publish_text(message: str, page_id: str | None = None, token: str | None = None) -> str:
+    """Text-only post, no image - the page's feed endpoint rather than /photos."""
+    page_id = page_id or os.environ["FB_PAGE_ID"]
+    token = token or os.environ["FB_PAGE_ACCESS_TOKEN"]
+    resp = requests.post(
+        f"{GRAPH}/{page_id}/feed",
+        data={"message": message, "access_token": token},
+        timeout=60,
+    )
+    resp.raise_for_status()
+    post_id = resp.json()["id"]
+    return f"https://www.facebook.com/{post_id}"
+
+
 def comment_on_post(post_id: str, message: str, page_id: str | None = None,
                      token: str | None = None, reply_to: str | None = None) -> str:
     """Comment on a post (or reply to a comment, if reply_to is a comment id).
