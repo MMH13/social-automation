@@ -22,6 +22,10 @@ WATERMARK = "speaking from soul"
 # Mamun picked SS-Narrator-Echo (kokoro am_echo) after comparing samples — single
 # consistent narrator for the page rather than a rotation.
 VOICES = ["am_echo"]
+# 2026-08-28: page moved to reels-only (6/day). Quote-card items already written stay
+# in the queue but are skipped, so flipping this back to False restores the old
+# 4 reels + 2 cards mix without regenerating anything.
+REELS_ONLY = True
 
 
 def log(msg: str) -> None:
@@ -43,7 +47,8 @@ def main() -> int:
     ig_id = os.environ.get("SS_IG_USER_ID")
 
     queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
-    item = next((m for m in queue if not m.get("posted_at")), None)
+    item = next((m for m in queue
+                 if not m.get("posted_at") and (not REELS_ONLY or m["type"] == "reel")), None)
     if item is None:
         log("post_ss: queue empty - nothing to post")
         return 0

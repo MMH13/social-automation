@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
 """Report how many unposted items are left in a queue file.
 
-Usage: python scripts/queue_check.py <queue.json> <per_day> <label> [--pt-buckets]
+Usage: python scripts/queue_check.py <queue.json> <per_day> <label> [--pt-buckets] [--only-type=X]
 
 --pt-buckets additionally checks the Psychology Tube narrated/other split
 (post_pt.py targets 5/5 per day) so a starved bucket gets caught even while
 the total count still looks healthy - it did, silently, until this existed.
+
+--only-type=X counts just that item type. Speaking from soul needs it: the page
+posts reels only, so counting the skipped quote-card items too would overstate
+the runway by roughly half and delay the low-queue warning past the point of use.
 """
 import json
 import os
@@ -45,6 +49,11 @@ def main() -> int:
     path, per_day, label = Path(args[0]), float(args[1]), args[2]
     items = json.loads(path.read_text(encoding="utf-8"))
     unposted = [i for i in items if not i.get("posted_at")]
+
+    only = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--only-type=")), None)
+    if only:
+        unposted = [i for i in unposted if i["type"] == only]
+        label = f"{label} ({only}s)"
 
     left = len(unposted)
     days = left / per_day if per_day else 0

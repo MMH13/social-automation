@@ -2,7 +2,8 @@ name: Post Speaking from soul (FB+IG)
 
 on:
   schedule:
-    # 6 posts/day, every 4h — cold-start cadence, matches X's rhythm
+    # 6 reels/day, every 4h. GitHub drops scheduled runs under load, so treat this
+    # as a ceiling rather than a guarantee — some days land fewer.
     - cron: "0 0,4,8,12,16,20 * * *"
   workflow_dispatch:
 
@@ -74,7 +75,7 @@ jobs:
       - name: Check queue depth
         id: queue
         if: always()
-        run: python scripts/queue_check.py scheduled_ss/content.json 6 "Speaking from soul"
+        run: python scripts/queue_check.py scheduled_ss/content.json 6 "Speaking from soul" --only-type=reel
       - name: Open low-queue issue
         if: always() && steps.queue.outputs.low == 'true'
         env:
