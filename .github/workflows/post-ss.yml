@@ -43,7 +43,13 @@ jobs:
           SS_FB_PAGE_ID=${{ secrets.SS_FB_PAGE_ID }}
           SS_FB_PAGE_ACCESS_TOKEN=${{ secrets.SS_FB_PAGE_ACCESS_TOKEN }}
           SS_IG_USER_ID=${{ secrets.SS_IG_USER_ID }}
-          OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+          # OPENAI_API_KEY deliberately NOT passed (2026-08-28, zero-cost policy).
+          # It drove gpt-image-1 backgrounds in soul_reel; the account has been out of
+          # credit for a while, so every run burned a guaranteed-to-fail API call and
+          # ~100s of wall time before falling back to free Pexels/Pixabay footage anyway.
+          # Omitting it skips that call entirely and guarantees no OpenAI charge can ever
+          # be incurred here, even if credit is topped up later for something else.
+          # To re-enable AI backgrounds: add this line back (the secret still exists).
           PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY=${{ secrets.PIXABAY_API_KEY }}
           CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}

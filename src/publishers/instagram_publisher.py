@@ -107,24 +107,38 @@ def publish_reel(caption: str, video_path: Path, ig_id: str | None = None, token
     )
     up = cloudinary.uploader.upload(str(video_path), resource_type="video", folder="social-auto")
     video_url = up["secure_url"]
+    public_id = up.get("public_id")
 
-    container = requests.post(f"{GRAPH}/{ig_id}/media", data={
-        "media_type": "REELS", "video_url": video_url, "caption": caption,
-        "access_token": token}, timeout=120)
-    container.raise_for_status()
-    creation_id = container.json()["id"]
+    try:
+        container = requests.post(f"{GRAPH}/{ig_id}/media", data={
+            "media_type": "REELS", "video_url": video_url, "caption": caption,
+            "access_token": token}, timeout=120)
+        container.raise_for_status()
+        creation_id = container.json()["id"]
 
-    for _ in range(30):  # video processing can take a while
-        status = requests.get(f"{GRAPH}/{creation_id}",
-                              params={"fields": "status_code", "access_token": token},
-                              timeout=30).json()
-        if status.get("status_code") == "FINISHED":
-            break
-        if status.get("status_code") == "ERROR":
-            raise RuntimeError(f"IG reel container error: {status}")
-        time.sleep(5)
+        for _ in range(30):  # video processing can take a while
+            status = requests.get(f"{GRAPH}/{creation_id}",
+                                  params={"fields": "status_code", "access_token": token},
+                                  timeout=30).json()
+            if status.get("status_code") == "FINISHED":
+                break
+            if status.get("status_code") == "ERROR":
+                raise RuntimeError(f"IG reel container error: {status}")
+            time.sleep(5)
 
-    pub = requests.post(f"{GRAPH}/{ig_id}/media_publish",
-                        data={"creation_id": creation_id, "access_token": token}, timeout=120)
-    pub.raise_for_status()
-    return f"instagram reel id {pub.json()['id']}"
+        pub = requests.post(f"{GRAPH}/{ig_id}/media_publish",
+                            data={"creation_id": creation_id, "access_token": token}, timeout=120)
+        pub.raise_for_status()
+        return f"instagram reel id {pub.json()['id']}"
+    finally:
+        # Cloudinary is only a temporary public URL for Instagram to fetch from - once
+        # IG has ingested the video it keeps its own copy, so the hosted file is dead
+        # weight. Deleting it keeps storage flat instead of growing every single post,
+        # which is what would push the free tier into paid territory. In a finally block
+        # so a failed publish doesn't leak the file either. Never raises: losing the
+        # cleanup must not turn a successful post into a failed run.
+        if public_id:
+            try:
+                cloudinary.uploader.destroy(public_id, resource_type="video", invalidate=True)
+            except Exception as e:
+                print(f"  [cloudinary] cleanup failed for {public_id}: {e}")
