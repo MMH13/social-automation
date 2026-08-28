@@ -22,10 +22,31 @@ WATERMARK = "speaking from soul"
 # Mamun picked SS-Narrator-Echo (kokoro am_echo) after comparing samples — single
 # consistent narrator for the page rather than a rotation.
 VOICES = ["am_echo"]
-# 2026-08-28: page moved to reels-only (6/day). Quote-card items already written stay
-# in the queue but are skipped, so flipping this back to False restores the old
-# 4 reels + 2 cards mix without regenerating anything.
-REELS_ONLY = True
+# 2026-08-28: 6 reels + 1 quote card per day (7 cron slots). The first run of each
+# UTC day takes a quote, the rest take reels. Once the 77 pre-written cards are used
+# up this degrades to reels-only on its own — no code change needed at that point.
+DAILY_QUOTE = True
+
+
+def _quote_posted_today(queue) -> bool:
+    """Has a quote card already gone out today? Date-based rather than tied to a
+    specific cron hour, so a run GitHub delays or skips can't double-post one."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    return any(m["type"] == "quote" and str(m.get("posted_at", "")).startswith(today)
+               for m in queue)
+
+
+def pick_next(queue):
+    unposted = [m for m in queue if not m.get("posted_at")]
+    if DAILY_QUOTE and not _quote_posted_today(queue):
+        quote = next((m for m in unposted if m["type"] == "quote"), None)
+        if quote:
+            return quote
+    # Reels only from here. Deliberately NO fallback to quote cards: reels run out
+    # long before the cards do (~26 days vs ~77 at these rates), and falling back
+    # would dump 7 static cards a day and burn the whole card stock in 11 days.
+    # Returning None instead leaves the slot empty, which the low-queue alert flags.
+    return next((m for m in unposted if m["type"] == "reel"), None)
 
 
 def log(msg: str) -> None:
@@ -47,8 +68,7 @@ def main() -> int:
     ig_id = os.environ.get("SS_IG_USER_ID")
 
     queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
-    item = next((m for m in queue
-                 if not m.get("posted_at") and (not REELS_ONLY or m["type"] == "reel")), None)
+    item = pick_next(queue)
     if item is None:
         log("post_ss: queue empty - nothing to post")
         return 0
