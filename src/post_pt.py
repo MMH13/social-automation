@@ -20,10 +20,14 @@ from .publishers import facebook_publisher, instagram_publisher
 ROOT = Path(__file__).resolve().parent.parent
 QUEUE_FILE = ROOT / "scheduled_pt" / "content.json"
 
-# Daily mix target (set 2026-07-30): 5 narrated listicle videos + 5 other formats = 10/day.
-# The picker is self-balancing rather than relying on a hand-interleaved queue order, so
-# it keeps working correctly no matter what order future refills add items in.
-DAILY_TARGET = {"narrated": 5, "other": 5}
+# Set 2026-08-28: NARRATED REELS ONLY, 10/day. Nothing else posts.
+# Explicitly no fallback to meme/psych/status/reel items - if the narrated pool runs
+# dry the page goes quiet rather than posting a different format. The ~50 remaining
+# non-narrated items stay in the queue untouched (not deleted) in case the mix is ever
+# wanted again. The low-queue alert is the safety net here: it warns before the pool
+# empties, since nothing else will cover the gap.
+DAILY_TARGET = {"narrated": 10}
+POST_TYPE = "narrated"
 
 
 def category(item) -> str:
@@ -43,34 +47,17 @@ def save(queue) -> None:
 
 
 def pick_next(queue):
-    """Pick the next item, favoring whichever category is furthest behind its daily
-    target so far today. Falls back to the other category if the preferred one is
-    empty, so a dry pool never stalls the pipeline - it just skews the mix instead."""
-    unposted = [m for m in queue if not m.get("posted_at")]
-    if not unposted:
-        return None
-
-    today = datetime.now().strftime("%Y-%m-%d")
-    posted_today = {"narrated": 0, "other": 0}
-    for m in queue:
-        stamp = m.get("posted_at")
-        if stamp and stamp.startswith(today):
-            posted_today[category(m)] += 1
-
-    remaining = {
-        cat: DAILY_TARGET[cat] - posted_today[cat] for cat in DAILY_TARGET
-    }
-    order = sorted(DAILY_TARGET, key=lambda c: remaining[c], reverse=True)
-
-    for cat in order:
-        item = next((m for m in unposted if category(m) == cat), None)
-        if item:
-            other = next(c for c in DAILY_TARGET if c != cat)
-            if remaining[cat] <= 0:
-                log(f"post_pt: {cat} is at/over today's target ({posted_today[cat]}/{DAILY_TARGET[cat]}) "
-                    f"but no {other} items remain - posting {cat} anyway to avoid stalling")
-            return item
-    return None
+    """Pick the next unposted narrated item. Narrated-only by design: other formats
+    are never selected, even when the narrated pool is empty - the page stays quiet
+    instead of silently switching format."""
+    item = next((m for m in queue
+                 if not m.get("posted_at") and m["type"] == POST_TYPE), None)
+    if item is None:
+        other_left = sum(1 for m in queue
+                         if not m.get("posted_at") and m["type"] != POST_TYPE)
+        log(f"post_pt: no {POST_TYPE} items left "
+            f"({other_left} non-{POST_TYPE} item(s) in the queue are intentionally skipped)")
+    return item
 
 
 def main() -> int:

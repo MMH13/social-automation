@@ -76,7 +76,10 @@ jobs:
       - name: Check queue depth
         id: queue
         if: always()
-        run: python scripts/queue_check.py scheduled_pt/content.json 10 "Psychology Tube" --pt-buckets
+        # --only-type=narrated because the page is narrated-only now: counting the ~50
+        # skipped meme/psych/status items would overstate the runway and delay the warning
+        # past the point where it is useful. Nothing covers a gap if narrated runs dry.
+        run: python scripts/queue_check.py scheduled_pt/content.json 10 "Psychology Tube" --only-type=narrated
       - name: Open low-queue issue
         if: always() && steps.queue.outputs.any_low == 'true'
         env:
@@ -84,10 +87,9 @@ jobs:
         run: |
           TITLE="Psychology Tube queue running low"
           EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
-          BODY="Total: ${{ steps.queue.outputs.left }} item(s) (~${{ steps.queue.outputs.days }} days at 10/day).
-          Narrated: ${{ steps.queue.outputs.narrated_left }} item(s) (~${{ steps.queue.outputs.narrated_days }} days at 5/day target).
-          Other: ${{ steps.queue.outputs.other_left }} item(s) (~${{ steps.queue.outputs.other_days }} days at 5/day target).
-          Refill whichever bucket is low in \`scheduled_pt/content.json\`."
+          BODY="Only ${{ steps.queue.outputs.left }} narrated item(s) left (~${{ steps.queue.outputs.days }} days at 10/day).
+          The page is narrated-only - no other format will cover the gap, so it goes quiet when this hits zero.
+          Refill the narrated items in \`scheduled_pt/content.json\`."
           if [ -z "$EXISTING" ]; then
             gh issue create --title "$TITLE" --body "$BODY"
           else
