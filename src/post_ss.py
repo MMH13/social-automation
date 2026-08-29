@@ -63,7 +63,12 @@ def _seconds_since_last(queue) -> float:
         last = datetime.fromisoformat(max(stamps))
     except ValueError:
         return float("inf")
-    return (datetime.now() - last).total_seconds()
+    gap = (datetime.now() - last).total_seconds()
+    # A stamp in the future means it was written by a clock in another timezone —
+    # a --force run from the Dhaka laptop stamps +6h ahead of the UTC runners, which
+    # otherwise reads as "just posted" and blocks every slot until UTC catches up.
+    # Treat that as no recent post rather than silently stalling the page.
+    return float("inf") if gap < 0 else gap
 
 
 def _quote_posted_today(queue) -> bool:
