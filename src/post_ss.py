@@ -189,13 +189,20 @@ def main() -> int:
     already = _posted_today(queue)
     due = _due_by_now()
     want = min(max(due - already, 0), MAX_PER_RUN)
-    if want == 0:
+
+    # `--force` posts one item regardless of pacing — for filling a gap by hand after
+    # an outage. It deliberately still marks posted_at, so the queue stays consistent
+    # and the next scheduled run counts it.
+    if "--force" in sys.argv:
+        log(f"post_ss: --force, posting 1 now ({already} posted today, {due} due by now)")
+        want = 1
+    elif want == 0:
         log(f"post_ss: {already} posted today, {due}/{DAILY_TARGET} due by now "
             f"- nothing due this run")
         return 0
 
     gap = _seconds_since_last(queue)
-    if gap < MIN_GAP_SECONDS:
+    if "--force" not in sys.argv and gap < MIN_GAP_SECONDS:
         log(f"post_ss: last post was {gap/60:.0f}min ago (<{MIN_GAP_SECONDS//60}min) "
             f"- skipping so posts don't bunch")
         return 0
