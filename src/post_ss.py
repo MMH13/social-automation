@@ -7,6 +7,7 @@ SS_-prefixed env vars, so it runs independently of the Psychology Tube track.
 import json
 import os
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -30,16 +31,39 @@ DAILY_QUOTE = True
 # 2026-08-29: GitHub only actually delivered 25-35% of this repo's scheduled runs
 # (5-7 of 20/day across all workflows) — scheduled events are best-effort and get
 # dropped under load. One-item-per-run therefore capped the page at ~2 posts/day.
-# Each run now backfills toward the daily target instead, so the output no longer
-# depends on every cron slot firing. Capped per run so a long outage can't dump a
-# whole day of reels back-to-back.
-DAILY_TARGET = 7
-MAX_PER_RUN = 3
+#
+# Backfilling to a flat daily total fixed the volume but front-loaded the whole day:
+# on 2026-08-29 all 7 posts landed between 02:45 and 09:52, three of them inside two
+# minutes, then nothing for 7+ hours. So the budget is paced against the clock instead
+# of a day total — a run may only catch up to the slots that have actually passed.
+# SLOT_HOURS must stay in sync with the cron in .github/workflows/post-ss.yml.
+SLOT_HOURS = [0, 3, 7, 10, 13, 17, 20]
+DAILY_TARGET = len(SLOT_HOURS)
+MAX_PER_RUN = 2            # a late run catches up gently rather than dumping
+SPACING_SECONDS = 600      # gap between posts inside one run
+MIN_GAP_SECONDS = 900      # ignore a trigger this soon after the last post
 
 
 def _posted_today(queue) -> int:
     today = datetime.now().strftime("%Y-%m-%d")
     return sum(1 for m in queue if str(m.get("posted_at", "")).startswith(today))
+
+
+def _due_by_now() -> int:
+    """How many posts should have gone out by this hour — not the whole day's total."""
+    hour = datetime.now().hour
+    return sum(1 for h in SLOT_HOURS if hour >= h)
+
+
+def _seconds_since_last(queue) -> float:
+    stamps = [m["posted_at"] for m in queue if m.get("posted_at")]
+    if not stamps:
+        return float("inf")
+    try:
+        last = datetime.fromisoformat(max(stamps))
+    except ValueError:
+        return float("inf")
+    return (datetime.now() - last).total_seconds()
 
 
 def _quote_posted_today(queue) -> bool:
@@ -163,14 +187,29 @@ def main() -> int:
 
     queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
     already = _posted_today(queue)
-    want = min(max(DAILY_TARGET - already, 0), MAX_PER_RUN)
+    due = _due_by_now()
+    want = min(max(due - already, 0), MAX_PER_RUN)
     if want == 0:
-        log(f"post_ss: {already}/{DAILY_TARGET} already posted today - nothing due this run")
+        log(f"post_ss: {already} posted today, {due}/{DAILY_TARGET} due by now "
+            f"- nothing due this run")
         return 0
-    log(f"post_ss: {already}/{DAILY_TARGET} posted today, posting up to {want} this run")
+
+    gap = _seconds_since_last(queue)
+    if gap < MIN_GAP_SECONDS:
+        log(f"post_ss: last post was {gap/60:.0f}min ago (<{MIN_GAP_SECONDS//60}min) "
+            f"- skipping so posts don't bunch")
+        return 0
+
+    log(f"post_ss: {already} posted today, {due}/{DAILY_TARGET} due by now "
+        f"- posting up to {want} this run")
 
     posted = 0
-    for _ in range(want):
+    for n in range(want):
+        if n:
+            # Space multiple posts inside one catch-up run; back-to-back reels
+            # compete with each other for reach.
+            log(f"post_ss: waiting {SPACING_SECONDS//60}min before the next post")
+            time.sleep(SPACING_SECONDS)
         # Re-pick each pass: the previous post mutated the queue, and the quote/reel
         # choice depends on what has gone out today.
         item = pick_next(queue)
