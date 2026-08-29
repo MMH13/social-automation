@@ -27,6 +27,20 @@ VOICES = ["am_echo"]
 # up this degrades to reels-only on its own — no code change needed at that point.
 DAILY_QUOTE = True
 
+# 2026-08-29: GitHub only actually delivered 25-35% of this repo's scheduled runs
+# (5-7 of 20/day across all workflows) — scheduled events are best-effort and get
+# dropped under load. One-item-per-run therefore capped the page at ~2 posts/day.
+# Each run now backfills toward the daily target instead, so the output no longer
+# depends on every cron slot firing. Capped per run so a long outage can't dump a
+# whole day of reels back-to-back.
+DAILY_TARGET = 7
+MAX_PER_RUN = 3
+
+
+def _posted_today(queue) -> int:
+    today = datetime.now().strftime("%Y-%m-%d")
+    return sum(1 for m in queue if str(m.get("posted_at", "")).startswith(today))
+
 
 def _quote_posted_today(queue) -> bool:
     """Has a quote card already gone out today? Date-based rather than tied to a
@@ -61,21 +75,7 @@ def save(queue) -> None:
     QUEUE_FILE.write_text(json.dumps(queue, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def main() -> int:
-    load_dotenv(ROOT / ".env")
-    page_id = os.environ.get("SS_FB_PAGE_ID")
-    token = os.environ.get("SS_FB_PAGE_ACCESS_TOKEN")
-    ig_id = os.environ.get("SS_IG_USER_ID")
-
-    queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
-    item = pick_next(queue)
-    if item is None:
-        log("post_ss: queue empty - nothing to post")
-        return 0
-    if not page_id or not token:
-        log("post_ss: SS_FB_PAGE_ID / SS_FB_PAGE_ACCESS_TOKEN not set - page not created/granted yet")
-        return 1
-
+def post_one(queue, item, page_id, token, ig_id) -> int:
     kind, iid = item["type"], item["id"]
     media_dir = ROOT / "output" / "ss"
 
@@ -148,8 +148,46 @@ def main() -> int:
         f.write(json.dumps({"stamp": datetime.now().strftime("%Y%m%d_%H%M"), "platform": "fb+ig (ss)",
                             "topic": f"ss queue #{iid} ({kind})", "url": item["fb_url"]},
                            ensure_ascii=False) + "\n")
+    return 0
+
+
+def main() -> int:
+    load_dotenv(ROOT / ".env")
+    page_id = os.environ.get("SS_FB_PAGE_ID")
+    token = os.environ.get("SS_FB_PAGE_ACCESS_TOKEN")
+    ig_id = os.environ.get("SS_IG_USER_ID")
+
+    if not page_id or not token:
+        log("post_ss: SS_FB_PAGE_ID / SS_FB_PAGE_ACCESS_TOKEN not set - page not created/granted yet")
+        return 1
+
+    queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
+    already = _posted_today(queue)
+    want = min(max(DAILY_TARGET - already, 0), MAX_PER_RUN)
+    if want == 0:
+        log(f"post_ss: {already}/{DAILY_TARGET} already posted today - nothing due this run")
+        return 0
+    log(f"post_ss: {already}/{DAILY_TARGET} posted today, posting up to {want} this run")
+
+    posted = 0
+    for _ in range(want):
+        # Re-pick each pass: the previous post mutated the queue, and the quote/reel
+        # choice depends on what has gone out today.
+        item = pick_next(queue)
+        if item is None:
+            log("post_ss: queue empty - nothing further to post")
+            break
+        rc = post_one(queue, item, page_id, token, ig_id)
+        if rc != 0:
+            # Stop on the first failure so a broken item can't burn the whole
+            # day's budget retrying siblings; the next run picks up from here.
+            log(f"post_ss: stopping this run after a failure ({posted} posted)")
+            return rc
+        posted += 1
+
     remaining = sum(1 for m in queue if not m.get("posted_at"))
-    log(f"post_ss: {remaining} item(s) left in queue")
+    reels_left = sum(1 for m in queue if not m.get("posted_at") and m["type"] == "reel")
+    log(f"post_ss: posted {posted} this run | {remaining} left in queue ({reels_left} reels)")
     return 0
 
 
