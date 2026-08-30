@@ -7,7 +7,7 @@ SS_-prefixed env vars, so it runs independently of the Psychology Tube track.
 import json
 import os
 import sys
-
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -41,14 +41,17 @@ DAILY_QUOTE = True
 # the cron in .github/workflows/post-ss.yml.
 DAILY_TARGET = 7
 SLOT_MINUTES = [round(i * 1440 / DAILY_TARGET) for i in range(DAILY_TARGET)]
-GAP_SECONDS = 86400 // DAILY_TARGET          # 12342s = 3h25m
-# One post per run, never a burst: two reels close together compete for the same
-# reach window, which is what pairs 11 minutes apart were doing before.
-MAX_PER_RUN = 1
-# A run may fire a little early or late, so allow this much slack against the gap
-# rather than skipping a slot that is only seconds short.
-GAP_TOLERANCE_SECONDS = 900
-MIN_GAP_SECONDS = GAP_SECONDS - GAP_TOLERANCE_SECONDS
+GAP_SECONDS = 86400 // DAILY_TARGET          # 12342s = 3h25m, the even spacing
+# Volume over perfect spacing (Mamun's call, 2026-08-31): capping at 1 post per run
+# guaranteed the 3h25m gap but only yielded ~3 posts/day, because GitHub drops 4 of
+# the 7 slots. A run may catch up on the slots it missed instead, sleeping between
+# posts so a catch-up still spreads over hours rather than minutes — the 11-minute
+# pairs came from a 10-minute sleep, not from catching up as such.
+MAX_PER_RUN = 3
+SPACING_SECONDS = 3600     # 1h between posts inside one catch-up run
+# Only guards against a duplicate trigger double-posting; real spacing is the sleep
+# above plus _due_by_now, so this stays small or it would block the catch-up itself.
+MIN_GAP_SECONDS = 1200
 
 
 def _posted_today(queue) -> int:
@@ -224,7 +227,11 @@ def main() -> int:
         f"- posting up to {want} this run")
 
     posted = 0
-    for _ in range(want):
+    for n in range(want):
+        if n:
+            # Spread a catch-up across hours; back-to-back reels compete for reach.
+            log(f"post_ss: waiting {SPACING_SECONDS//60}min before the next post")
+            time.sleep(SPACING_SECONDS)
         # Re-pick each pass: the previous post mutated the queue, and the quote/reel
         # choice depends on what has gone out today.
         item = pick_next(queue)
