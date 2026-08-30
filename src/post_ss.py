@@ -40,7 +40,13 @@ DAILY_QUOTE = True
 SLOT_HOURS = [0, 3, 7, 10, 13, 17, 20]
 DAILY_TARGET = len(SLOT_HOURS)
 MAX_PER_RUN = 2            # a late run catches up gently rather than dumping
-SPACING_SECONDS = 600      # gap between posts inside one run
+# GitHub delivers ~3 of the 7 slots (measured 2026-08-30), so most runs are 2 behind
+# and post a pair. At the old 10 minutes that pair landed ~11 minutes apart, which
+# looks like a burst and makes the two reels compete for the same reach window.
+# 45 minutes keeps the catch-up but spreads it; the job just sleeps between posts.
+# This only matters while slots are being dropped — once the external trigger in
+# docs/external-trigger.md is live, runs post one item each and never sleep.
+SPACING_SECONDS = 2700
 MIN_GAP_SECONDS = 900      # ignore a trigger this soon after the last post
 
 
