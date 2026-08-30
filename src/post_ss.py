@@ -7,7 +7,7 @@ SS_-prefixed env vars, so it runs independently of the Psychology Tube track.
 import json
 import os
 import sys
-import time
+
 from datetime import datetime
 from pathlib import Path
 
@@ -36,18 +36,19 @@ DAILY_QUOTE = True
 # on 2026-08-29 all 7 posts landed between 02:45 and 09:52, three of them inside two
 # minutes, then nothing for 7+ hours. So the budget is paced against the clock instead
 # of a day total — a run may only catch up to the slots that have actually passed.
-# SLOT_HOURS must stay in sync with the cron in .github/workflows/post-ss.yml.
-SLOT_HOURS = [0, 3, 7, 10, 13, 17, 20]
-DAILY_TARGET = len(SLOT_HOURS)
-MAX_PER_RUN = 2            # a late run catches up gently rather than dumping
-# GitHub delivers ~3 of the 7 slots (measured 2026-08-30), so most runs are 2 behind
-# and post a pair. At the old 10 minutes that pair landed ~11 minutes apart, which
-# looks like a burst and makes the two reels compete for the same reach window.
-# 45 minutes keeps the catch-up but spreads it; the job just sleeps between posts.
-# This only matters while slots are being dropped — once the external trigger in
-# docs/external-trigger.md is live, runs post one item each and never sleep.
-SPACING_SECONDS = 2700
-MIN_GAP_SECONDS = 900      # ignore a trigger this soon after the last post
+# Slots are evenly spaced: 24h / DAILY_TARGET, so every post sits the same distance
+# from its neighbours (7/day = one every 3h25m). SLOT_MINUTES must stay in sync with
+# the cron in .github/workflows/post-ss.yml.
+DAILY_TARGET = 7
+SLOT_MINUTES = [round(i * 1440 / DAILY_TARGET) for i in range(DAILY_TARGET)]
+GAP_SECONDS = 86400 // DAILY_TARGET          # 12342s = 3h25m
+# One post per run, never a burst: two reels close together compete for the same
+# reach window, which is what pairs 11 minutes apart were doing before.
+MAX_PER_RUN = 1
+# A run may fire a little early or late, so allow this much slack against the gap
+# rather than skipping a slot that is only seconds short.
+GAP_TOLERANCE_SECONDS = 900
+MIN_GAP_SECONDS = GAP_SECONDS - GAP_TOLERANCE_SECONDS
 
 
 def _posted_today(queue) -> int:
@@ -56,9 +57,10 @@ def _posted_today(queue) -> int:
 
 
 def _due_by_now() -> int:
-    """How many posts should have gone out by this hour — not the whole day's total."""
-    hour = datetime.now().hour
-    return sum(1 for h in SLOT_HOURS if hour >= h)
+    """How many posts should have gone out by now — not the whole day's total."""
+    now = datetime.now()
+    minutes = now.hour * 60 + now.minute
+    return sum(1 for m in SLOT_MINUTES if minutes >= m)
 
 
 def _seconds_since_last(queue) -> float:
@@ -222,12 +224,7 @@ def main() -> int:
         f"- posting up to {want} this run")
 
     posted = 0
-    for n in range(want):
-        if n:
-            # Space multiple posts inside one catch-up run; back-to-back reels
-            # compete with each other for reach.
-            log(f"post_ss: waiting {SPACING_SECONDS//60}min before the next post")
-            time.sleep(SPACING_SECONDS)
+    for _ in range(want):
         # Re-pick each pass: the previous post mutated the queue, and the quote/reel
         # choice depends on what has gone out today.
         item = pick_next(queue)
