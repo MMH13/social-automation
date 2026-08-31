@@ -1,0 +1,55 @@
+name: Daily health check
+
+# Catches a page going quiet before it is noticed on Facebook. The per-post
+# queue_check only sees the queue it just touched and only fires when one is nearly
+# empty; this looks at whether posts actually went out across every page.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"        # 06:00 UTC = noon Dhaka
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check every queue
+        id: health
+        run: python scripts/health_check.py
+
+      - name: Open or update the alert issue
+        if: steps.health.outputs.unhealthy == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Posting health: a page is behind"
+          BODY=$(printf 'The daily health check found:\n\n%b\n\nRun: %s/%s/actions/runs/%s\n\nThis reopens/updates daily until the pages are back on target.' \
+            "${{ steps.health.outputs.summary }}" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID")
+          EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
+          if [ -z "$EXISTING" ]; then
+            gh issue create --title "$TITLE" --body "$BODY"
+          else
+            # Comment rather than opening a duplicate, so the issue reads as a
+            # timeline of how long a page has been struggling.
+            gh issue comment "$EXISTING" --body "$BODY"
+          fi
+
+      - name: Close the alert once everything is healthy
+        if: steps.health.outputs.unhealthy == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Posting health: a page is behind"
+          EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            gh issue close "$EXISTING" --comment "All pages back on target - closing automatically."
+          fi
