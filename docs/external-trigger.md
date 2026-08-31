@@ -63,22 +63,39 @@ and reliable. Create one job per posting slot, all with the same request:
 - **Body:** `{"ref":"master"}`
 - **Expected response:** `204 No Content` (success returns an empty body)
 
-### Schedule (UTC — cron-job.org defaults to your local timezone, set it to UTC)
+### Schedule — 7 jobs (set the account timezone to UTC first)
 
-Speaking from soul, 7 slots: `00:00, 03:00, 07:00, 10:00, 13:00, 17:00, 20:00`
+cron-job.org defaults to your local timezone. Set it to **UTC** in account settings
+before adding these, or every slot lands 6 hours out.
 
-Match `.github/workflows/post-ss.yml`. Leave the workflow's own `schedule:` block in
-place as a fallback for when the external service has an outage — the run is a no-op
-once the day's target is met, so a doubled trigger costs nothing.
+These are 24h / 7 = 3h25m apart, matching `SLOT_MINUTES` in `src/post_ss.py`:
 
-Other pages, if you want them on the external trigger too — same setup, different
-workflow file in the URL:
-
-| Page | Workflow file | Slots (UTC) |
+| # | UTC (enter this) | Dhaka |
 |---|---|---|
-| Speaking from soul | `post-ss.yml` | 00, 03, 07, 10, 13, 17, 20 |
-| Psychology Tube | `post-memes.yml` | 00, 02, 05, 07, 10, 12, 15, 17, 20, 22 |
-| Mamun Hossain | `post-mh.yml` | 03, 09, 15 |
+| 1 | `00:00` | 06:00 |
+| 2 | `03:26` | 09:26 |
+| 3 | `06:51` | 12:51 |
+| 4 | `10:17` | 16:17 |
+| 5 | `13:43` | 19:43 |
+| 6 | `17:09` | 23:09 |
+| 7 | `20:34` | 02:34 |
+
+If you change these, change `SLOT_MINUTES` to match — the pacing logic decides how many
+posts are due from that list, so a mismatch makes runs think they are behind or ahead.
+
+Leave the workflow's own `schedule:` block in place as a fallback for when the external
+service has an outage. A doubled trigger is harmless: the run no-ops once the slots due
+so far are already posted.
+
+Other pages use the same setup with a different workflow file in the URL — but their
+schedules are still the old hourly ones, so copy the hours from the `cron:` line in each
+workflow rather than from here:
+
+| Page | Workflow file |
+|---|---|
+| Speaking from soul | `post-ss.yml` |
+| Psychology Tube | `post-memes.yml` |
+| Mamun Hossain | `post-mh.yml` |
 
 ## Notes
 
