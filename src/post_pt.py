@@ -7,6 +7,7 @@ configured). Marks the item posted right after the FB publish so nothing double-
 """
 import json
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -29,9 +30,47 @@ QUEUE_FILE = ROOT / "scheduled_pt" / "content.json"
 DAILY_TARGET = {"narrated": 10}
 POST_TYPE = "narrated"
 
+# 2026-08-31: the daily health check found this page publishing 5 of 10. Same cause as
+# Speaking from soul had - GitHub delivers only a fraction of the scheduled slots, and
+# one-post-per-run turns every dropped slot into a permanently lost post. A run may now
+# catch up on the slots that have already passed.
+DAILY_POSTS = 10
+GAP_SECONDS = 86400 // DAILY_POSTS                      # 8640s = 2h24m
+SLOT_MINUTES = [(i * GAP_SECONDS) // 60 for i in range(DAILY_POSTS)]
+# 4 rather than 3: with only ~3 runs delivered a cap of 3 still left the page at 7 of
+# 10. Narrated renders take ~5 min each, so a full 4-post run is ~20 min of work plus
+# 2h of sleep - long, but far inside the 6h job limit.
+MAX_PER_RUN = 4
+SPACING_SECONDS = 2400
+MIN_GAP_SECONDS = 1200
+
 
 def category(item) -> str:
     return "narrated" if item["type"] == "narrated" else "other"
+
+
+def _posted_today(queue) -> int:
+    today = datetime.now().strftime("%Y-%m-%d")
+    return sum(1 for m in queue if str(m.get("posted_at", "")).startswith(today))
+
+
+def _due_by_now() -> int:
+    now = datetime.now()
+    return sum(1 for s in SLOT_MINUTES if now.hour * 60 + now.minute >= s)
+
+
+def _seconds_since_last(queue) -> float:
+    stamps = [m["posted_at"] for m in queue if m.get("posted_at")]
+    if not stamps:
+        return float("inf")
+    try:
+        last = datetime.fromisoformat(max(stamps))
+    except ValueError:
+        return float("inf")
+    gap = (datetime.now() - last).total_seconds()
+    # A stamp from a laptop in another timezone reads as "just posted" and would
+    # otherwise block every slot until the runner's UTC clock catches up.
+    return float("inf") if gap < 0 else gap
 
 
 def log(msg: str) -> None:
@@ -60,17 +99,7 @@ def pick_next(queue):
     return item
 
 
-def main() -> int:
-    load_dotenv(ROOT / ".env")
-    queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
-    item = pick_next(queue)
-    if item is None:
-        log("post_pt: queue empty - nothing to post")
-        return 0
-    if not facebook_publisher.configured():
-        log("post_pt: facebook credentials missing")
-        return 1
-
+def post_one(queue, item) -> int:
     kind, iid = item["type"], item["id"]
     media_dir = ROOT / "output" / "pt"
 
@@ -151,8 +180,49 @@ def main() -> int:
         f.write(json.dumps({"stamp": datetime.now().strftime("%Y%m%d_%H%M"), "platform": "fb+ig",
                             "topic": f"pt queue #{iid} ({kind})", "url": item["fb_url"]},
                            ensure_ascii=False) + "\n")
+    return 0
+
+
+def main() -> int:
+    load_dotenv(ROOT / ".env")
+    if not facebook_publisher.configured():
+        log("post_pt: facebook credentials missing")
+        return 1
+
+    queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
+    already = _posted_today(queue)
+    due = _due_by_now()
+    want = min(max(due - already, 0), MAX_PER_RUN)
+    if want == 0:
+        log(f"post_pt: {already} posted today, {due}/{DAILY_POSTS} due by now "
+            f"- nothing due this run")
+        return 0
+
+    gap = _seconds_since_last(queue)
+    if gap < MIN_GAP_SECONDS:
+        log(f"post_pt: last post was {gap/60:.0f}min ago - skipping so posts don't bunch")
+        return 0
+
+    log(f"post_pt: {already} posted today, {due}/{DAILY_POSTS} due by now "
+        f"- posting up to {want} this run")
+
+    posted = 0
+    for n in range(want):
+        if n:
+            log(f"post_pt: waiting {SPACING_SECONDS//60}min before the next post")
+            time.sleep(SPACING_SECONDS)
+        item = pick_next(queue)
+        if item is None:
+            log("post_pt: queue empty - nothing further to post")
+            break
+        rc = post_one(queue, item)
+        if rc != 0:
+            log(f"post_pt: stopping this run after a failure ({posted} posted)")
+            return rc
+        posted += 1
+
     remaining = sum(1 for m in queue if not m.get("posted_at"))
-    log(f"post_pt: {remaining} item(s) left in queue")
+    log(f"post_pt: posted {posted} this run | {remaining} item(s) left in queue")
     return 0
 
 
