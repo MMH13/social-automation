@@ -2,17 +2,12 @@ name: Post Speaking from soul (FB+IG)
 
 on:
   schedule:
-    # 7 evenly spaced slots = 24h/7 = one post every 3h25m (6 reels + 1 quote card;
-    # the day's first run takes the quote). Must match SLOT_MINUTES in src/post_ss.py.
-    # GitHub drops scheduled runs under load, so this is a ceiling, not a guarantee —
-    # docs/external-trigger.md covers the fix for that.
-    - cron: "0 0 * * *"
-    - cron: "26 3 * * *"
-    - cron: "51 6 * * *"
-    - cron: "17 10 * * *"
-    - cron: "43 13 * * *"
-    - cron: "9 17 * * *"
-    - cron: "34 20 * * *"
+    # Poll every 15 min rather than asking for the 7 slots directly. GitHub delivers
+    # only a fraction of scheduled runs, ~2h late (measured: 1-5 of 7 per day, median
+    # 125 min late), so naming the slots meant most posts were simply never made. At
+    # 96 attempts a day even a 30% delivery rate covers every slot soon after it opens.
+    # The `gate` job below keeps this cheap: a run with nothing due exits in ~20s.
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 concurrency:
@@ -24,7 +19,19 @@ permissions:
   issues: write
 
 jobs:
+  # Bare checkout, no dependencies — decides whether the expensive job runs at all.
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      due: ${{ steps.check.outputs.due }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        run: python scripts/is_due.py scheduled_ss/content.json 7
+
   post:
+    needs: gate
+    if: needs.gate.outputs.due == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

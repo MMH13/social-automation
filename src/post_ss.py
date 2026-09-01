@@ -42,15 +42,14 @@ DAILY_QUOTE = True
 DAILY_TARGET = 7
 SLOT_MINUTES = [round(i * 1440 / DAILY_TARGET) for i in range(DAILY_TARGET)]
 GAP_SECONDS = 86400 // DAILY_TARGET          # 12342s = 3h25m, the even spacing
-# Volume over perfect spacing (Mamun's call, 2026-08-31): capping at 1 post per run
-# guaranteed the 3h25m gap but only yielded ~3 posts/day, because GitHub drops 4 of
-# the 7 slots. A run may catch up on the slots it missed instead, sleeping between
-# posts so a catch-up still spreads over hours rather than minutes — the 11-minute
-# pairs came from a 10-minute sleep, not from catching up as such.
-MAX_PER_RUN = 3
-SPACING_SECONDS = 3600     # 1h between posts inside one catch-up run
-# Only guards against a duplicate trigger double-posting; real spacing is the sleep
-# above plus _due_by_now, so this stays small or it would block the catch-up itself.
+# 2026-09-01: the workflow polls every 15 minutes instead of firing at the 7 slots,
+# so a slot is picked up shortly after it opens and there is no backlog to burn down.
+# One post per run is therefore enough, and the hour-long in-run sleep that used to
+# spread a catch-up is gone — spacing now comes from the schedule itself, which is
+# both better spaced and ~10x cheaper in runner minutes.
+MAX_PER_RUN = 1
+SPACING_SECONDS = 0
+# Guards against two runs overlapping near a slot boundary and double-posting.
 MIN_GAP_SECONDS = 1200
 
 

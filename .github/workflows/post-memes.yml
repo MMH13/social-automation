@@ -3,8 +3,11 @@ name: Post Psychology Tube meme (FB+IG)
 
 on:
   schedule:
-    # 10 posts/day (8 short-form + 2 narrated listicles); 11:00 UTC = 5:00 PM Dhaka
-    - cron: "0 0,2,5,7,10,12,15,17,20,22 * * *"
+    # Poll every 15 min instead of naming the 10 slots. GitHub delivers only a
+    # fraction of scheduled runs and delivers them ~2h late, which is why this page
+    # was publishing 5 of 10. The `gate` job keeps polling cheap: a run with nothing
+    # due exits in ~20s on a bare checkout, before any dependency is installed.
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 concurrency:
@@ -16,7 +19,18 @@ permissions:
   issues: write
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      due: ${{ steps.check.outputs.due }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        run: python scripts/is_due.py scheduled_pt/content.json 10 --type=narrated
+
   post:
+    needs: gate
+    if: needs.gate.outputs.due == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

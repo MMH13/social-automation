@@ -37,11 +37,11 @@ POST_TYPE = "narrated"
 DAILY_POSTS = 10
 GAP_SECONDS = 86400 // DAILY_POSTS                      # 8640s = 2h24m
 SLOT_MINUTES = [(i * GAP_SECONDS) // 60 for i in range(DAILY_POSTS)]
-# 4 rather than 3: with only ~3 runs delivered a cap of 3 still left the page at 7 of
-# 10. Narrated renders take ~5 min each, so a full 4-post run is ~20 min of work plus
-# 2h of sleep - long, but far inside the 6h job limit.
-MAX_PER_RUN = 4
-SPACING_SECONDS = 2400
+# 2026-09-01: the workflow polls every 15 minutes instead of firing at the 10 slots,
+# so each slot is picked up shortly after it opens and no backlog builds. One post per
+# run is enough, and the in-run sleep that used to spread a catch-up is gone.
+MAX_PER_RUN = 1
+SPACING_SECONDS = 0
 MIN_GAP_SECONDS = 1200
 
 
