@@ -37,11 +37,15 @@ POST_TYPE = "narrated"
 DAILY_POSTS = 10
 GAP_SECONDS = 86400 // DAILY_POSTS                      # 8640s = 2h24m
 SLOT_MINUTES = [(i * GAP_SECONDS) // 60 for i in range(DAILY_POSTS)]
-# 2026-09-01: the workflow polls every 15 minutes instead of firing at the 10 slots,
-# so each slot is picked up shortly after it opens and no backlog builds. One post per
-# run is enough, and the in-run sleep that used to spread a catch-up is gone.
-MAX_PER_RUN = 1
-SPACING_SECONDS = 0
+# 2026-09-01: the workflow polls every 15 minutes instead of firing at the 10 slots.
+# 2026-09-03: even so, this page was still landing at 6-7/10 - GitHub was delivering
+# only ~9 scheduled runs/day (measured: Speaking from soul got almost the same 9-10,
+# despite asking for fewer posts, which points to a per-repo cap on delivered *
+# schedule* events rather than anything specific to this workflow). With cap=1 that
+# ceiling IS the daily total. Replaying the actual delivered run times from 2026-09-02
+# through the real picker: cap=1 -> 7/10, cap=2 with a 10 min in-run sleep -> 10/10.
+MAX_PER_RUN = 2
+SPACING_SECONDS = 600
 MIN_GAP_SECONDS = 1200
 
 
