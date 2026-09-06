@@ -46,8 +46,12 @@ body {
   display: flex; align-items: center; justify-content: center;
   font-family: 'Anek Bangla', 'Hind Siliguri', sans-serif;
 }
+/* Centering lives on the wrapper, not on .card: .arrow is a SIBLING of .card,
+   so when it sat on .card the appended arrow inherited no centering and rendered
+   hard-left. Width also belongs here - as a flex item the wrapper is sized by its
+   content, so a %% width on .card resolved against a shrink-to-fit parent. */
+.wrap { width: 88%%; text-align: center; }
 .card {
-  width: 88%%; text-align: center;
   color: %(fg)s;
   font-size: %(size)dpx; font-weight: 800; line-height: 1.4;
   text-shadow: 0 2px 6px rgba(0,0,0,0.35);
@@ -74,14 +78,19 @@ def _html(text_html: str, bg: str, fg: str, accent: str, font_size: int, arrow: 
     css = CARD_CSS % {"w": W, "h": H, "bg": bg, "fg": fg, "accent": accent, "size": font_size}
     return f"""<!doctype html><html><head><meta charset="utf-8">{_FONTS}
 <style>{css}</style>
-</head><body><div><div class="card">{text_html}</div>{arrow_html}</div></body></html>"""
+</head><body><div class="wrap"><div class="card">{text_html}</div>{arrow_html}</div></body></html>"""
 
 
 def make_hook_card(text: str, out_path: Path, theme: str = "black",
-                    font_size: int = 56, arrow: bool = True) -> Path:
+                    font_size: int = 56, arrow: bool = False) -> Path:
     """text may contain literal '\\n' for line breaks. Wrap any word or phrase
     in *stars* to accent-color it - supports multiple per card, matching the
-    proven live format (not a single all-or-nothing highlight)."""
+    proven live format (not a single all-or-nothing highlight).
+
+    arrow defaults to False: the queue's hooks already end with their own inline
+    down-arrow emoji (81 of 84 items as of 2026-09-06), so appending another one
+    printed TWO arrows per card. Pass arrow=True only for a hook whose text
+    doesn't carry one."""
     bg, fg, accent = THEMES[theme]
     html_text = _lines_html(text)
     out_path.parent.mkdir(parents=True, exist_ok=True)
