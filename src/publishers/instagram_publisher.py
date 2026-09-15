@@ -110,26 +110,43 @@ def publish_reel(caption: str, video_path: Path, ig_id: str | None = None, token
     public_id = up.get("public_id")
 
     try:
-        container = requests.post(f"{GRAPH}/{ig_id}/media", data={
-            "media_type": "REELS", "video_url": video_url, "caption": caption,
-            "access_token": token}, timeout=120)
-        container.raise_for_status()
-        creation_id = container.json()["id"]
+        # Container ERROR here is usually a transient Meta-side processing hiccup,
+        # not something wrong with this specific video - measured ~8% of reels
+        # hitting it, spread evenly across days rather than concentrated on any
+        # one render, which doesn't look like a content problem. A fresh container
+        # (same already-uploaded video_url, no new Cloudinary upload) recovers most
+        # of these. Once a container errors it's dead - you can't re-poll it, so
+        # each attempt creates a new one.
+        last_status = None
+        for attempt in range(1, 3):
+            container = requests.post(f"{GRAPH}/{ig_id}/media", data={
+                "media_type": "REELS", "video_url": video_url, "caption": caption,
+                "access_token": token}, timeout=120)
+            container.raise_for_status()
+            creation_id = container.json()["id"]
 
-        for _ in range(30):  # video processing can take a while
-            status = requests.get(f"{GRAPH}/{creation_id}",
-                                  params={"fields": "status_code", "access_token": token},
-                                  timeout=30).json()
+            for _ in range(30):  # video processing can take a while
+                status = requests.get(f"{GRAPH}/{creation_id}",
+                                      params={"fields": "status_code,status", "access_token": token},
+                                      timeout=30).json()
+                if status.get("status_code") == "FINISHED":
+                    break
+                if status.get("status_code") == "ERROR":
+                    break
+                time.sleep(5)
+
             if status.get("status_code") == "FINISHED":
-                break
-            if status.get("status_code") == "ERROR":
-                raise RuntimeError(f"IG reel container error: {status}")
-            time.sleep(5)
+                pub = requests.post(f"{GRAPH}/{ig_id}/media_publish",
+                                    data={"creation_id": creation_id, "access_token": token}, timeout=120)
+                pub.raise_for_status()
+                return f"instagram reel id {pub.json()['id']}"
 
-        pub = requests.post(f"{GRAPH}/{ig_id}/media_publish",
-                            data={"creation_id": creation_id, "access_token": token}, timeout=120)
-        pub.raise_for_status()
-        return f"instagram reel id {pub.json()['id']}"
+            last_status = status
+            if attempt < 2:
+                print(f"  [ig] container attempt {attempt} -> {status}, retrying with a fresh container")
+                time.sleep(5)
+
+        raise RuntimeError(f"IG reel container error after 2 attempts: {last_status}")
     finally:
         # Cloudinary is only a temporary public URL for Instagram to fetch from - once
         # IG has ingested the video it keeps its own copy, so the hosted file is dead
