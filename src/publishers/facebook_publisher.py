@@ -17,6 +17,18 @@ def configured(page_id_var: str = "FB_PAGE_ID", token_var: str = "FB_PAGE_ACCESS
     return bool(os.environ.get(page_id_var)) and bool(os.environ.get(token_var))
 
 
+def _raise_for_status(resp: requests.Response) -> None:
+    """Like resp.raise_for_status(), but keeps the response body in the exception
+    message. The plain version drops it, so every failed run just logged "400 Bad
+    Request" with no way to tell a dead token (code 190) apart from a rate limit, a
+    bad caption, or a genuinely broken item - without a manual repro. That cost real
+    diagnosis time on the "Speaking from soul" 44h outage (2026-09-14/16): the real
+    cause (session invalidated - password changed) only surfaced once someone ran
+    the request by hand and printed resp.text."""
+    if resp.status_code >= 400:
+        raise requests.HTTPError(f"{resp.status_code} error for {resp.url}: {resp.text[:500]}", response=resp)
+
+
 def publish(caption: str, image_path: Path, page_id: str | None = None, token: str | None = None) -> str:
     page_id = page_id or os.environ["FB_PAGE_ID"]
     token = token or os.environ["FB_PAGE_ACCESS_TOKEN"]
@@ -27,7 +39,7 @@ def publish(caption: str, image_path: Path, page_id: str | None = None, token: s
             files={"source": f},
             timeout=120,
         )
-    resp.raise_for_status()
+    _raise_for_status(resp)
     post_id = resp.json().get("post_id") or resp.json()["id"]
     return f"https://www.facebook.com/{post_id}"
 
@@ -41,7 +53,7 @@ def publish_text(message: str, page_id: str | None = None, token: str | None = N
         data={"message": message, "access_token": token},
         timeout=60,
     )
-    resp.raise_for_status()
+    _raise_for_status(resp)
     post_id = resp.json()["id"]
     return f"https://www.facebook.com/{post_id}"
 
@@ -61,7 +73,7 @@ def comment_on_post(post_id: str, message: str, page_id: str | None = None,
         data={"message": message, "access_token": token},
         timeout=60,
     )
-    resp.raise_for_status()
+    _raise_for_status(resp)
     return resp.json()["id"]
 
 
@@ -85,7 +97,7 @@ def publish_reel(caption: str, video_path: Path, page_id: str | None = None, tok
 
     start = requests.post(f"{GRAPH}/{page_id}/video_reels",
                           data={"upload_phase": "start", "access_token": token}, timeout=60)
-    start.raise_for_status()
+    _raise_for_status(start)
     video_id = start.json()["video_id"]
 
     size = video_path.stat().st_size
@@ -95,12 +107,12 @@ def publish_reel(caption: str, video_path: Path, page_id: str | None = None, tok
             headers={"Authorization": f"OAuth {token}", "offset": "0", "file_size": str(size)},
             data=f, timeout=600,
         )
-    up.raise_for_status()
+    _raise_for_status(up)
 
     fin = requests.post(f"{GRAPH}/{page_id}/video_reels", data={
         "upload_phase": "finish", "video_id": video_id, "video_state": "PUBLISHED",
         "description": caption, "access_token": token}, timeout=120)
-    fin.raise_for_status()
+    _raise_for_status(fin)
     return f"https://www.facebook.com/reel/{video_id}"
 
 
@@ -112,5 +124,5 @@ def publish_video(caption: str, video_path: Path, page_id: str | None = None, to
         resp = requests.post(f"{GRAPH}/{page_id}/videos",
                              data={"description": caption, "access_token": token},
                              files={"source": f}, timeout=600)
-    resp.raise_for_status()
+    _raise_for_status(resp)
     return f"https://www.facebook.com/{resp.json()['id']}"

@@ -18,6 +18,14 @@ def configured(ig_id_var: str = "IG_USER_ID", token_var: str = "FB_PAGE_ACCESS_T
     return bool(os.environ.get(ig_id_var)) and bool(os.environ.get(token_var))
 
 
+def _raise_for_status(resp: requests.Response) -> None:
+    """Like resp.raise_for_status(), but keeps the response body - see the same
+    helper in facebook_publisher.py for why (plain raise_for_status() drops the
+    Meta error message, e.g. a dead token, and only the status code survives)."""
+    if resp.status_code >= 400:
+        raise requests.HTTPError(f"{resp.status_code} error for {resp.url}: {resp.text[:500]}", response=resp)
+
+
 def _cloudinary_configured() -> bool:
     return all(os.environ.get(k) for k in CLOUDINARY)
 
@@ -29,7 +37,7 @@ def _fb_cdn_url(fb_post_id: str, token: str) -> str:
         params={"fields": "attachments{media{image{src}}}", "access_token": token},
         timeout=30,
     )
-    resp.raise_for_status()
+    _raise_for_status(resp)
     return resp.json()["attachments"]["data"][0]["media"]["image"]["src"]
 
 
@@ -66,7 +74,7 @@ def publish(caption: str, image_path: Path, fb_post_id: str | None = None,
         data={"image_url": image_url, "caption": caption, "access_token": token},
         timeout=120,
     )
-    container.raise_for_status()
+    _raise_for_status(container)
     creation_id = container.json()["id"]
 
     # container can take a few seconds to become ready
@@ -85,7 +93,7 @@ def publish(caption: str, image_path: Path, fb_post_id: str | None = None,
         data={"creation_id": creation_id, "access_token": token},
         timeout=120,
     )
-    pub.raise_for_status()
+    _raise_for_status(pub)
     return f"instagram media id {pub.json()['id']}"
 
 
@@ -122,7 +130,7 @@ def publish_reel(caption: str, video_path: Path, ig_id: str | None = None, token
             container = requests.post(f"{GRAPH}/{ig_id}/media", data={
                 "media_type": "REELS", "video_url": video_url, "caption": caption,
                 "access_token": token}, timeout=120)
-            container.raise_for_status()
+            _raise_for_status(container)
             creation_id = container.json()["id"]
 
             for _ in range(30):  # video processing can take a while
@@ -138,7 +146,7 @@ def publish_reel(caption: str, video_path: Path, ig_id: str | None = None, token
             if status.get("status_code") == "FINISHED":
                 pub = requests.post(f"{GRAPH}/{ig_id}/media_publish",
                                     data={"creation_id": creation_id, "access_token": token}, timeout=120)
-                pub.raise_for_status()
+                _raise_for_status(pub)
                 return f"instagram reel id {pub.json()['id']}"
 
             last_status = status
