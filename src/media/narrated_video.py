@@ -23,10 +23,13 @@ W, H = 1080, 1440           # 3:4, same as the reference format
 GAP = 0.45                  # silence between spoken segments (seconds)
 LEAD_IN = 0.6               # beat before the first line
 TAIL = 1.8                  # music-only outro
-# Mamun's pick: "TMR-Narrator-Onyx" in Voicebox == the kokoro voice `am_onyx`.
-# kokoro is Apache-2.0 and runs on CPU, so the same voice works on CI — no dependency
-# on the local Voicebox app. edge-tts is the fallback if kokoro isn't installed.
-VOICE = "am_onyx"
+# 2026-09-28: switched from Onyx to Adam. After the Speaking from soul voice upgrade,
+# Mamun asked for a similarly good voice on Psychology Tube too - sampled onyx/fenrir/
+# adam/puck each slowed + given the same natural deep-pitch treatment (see soul_reel.py)
+# against the unmodified current onyx, and picked plain am_adam at the slower pace with
+# NO pitch/formant processing (he wanted the slowdown, not the deep effect, for this page).
+VOICE = "am_adam"
+SPEED = 0.78                # same slower, more deliberate pace picked for Speaking from soul
 FALLBACK_VOICE = "en-US-GuyNeural"
 RATE = "-8%"                # slightly slower reads better over b-roll
 KOKORO_SR = 24000
@@ -145,7 +148,7 @@ def make_narrated(
         timed: list[tuple[Path, Path, float, float]] = []  # audio, png, start, end
         clock = LEAD_IN
         for i, seg in enumerate(segments):
-            audio = _tts(seg, tmp_dir / f"seg{i:02d}", voice)
+            audio = _tts(seg, tmp_dir / f"seg{i:02d}", voice, speed=SPEED)
             if audio is None:
                 return None
             dur = _duration(audio)
