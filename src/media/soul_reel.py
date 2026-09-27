@@ -22,7 +22,22 @@ LEAD_IN = 0.6
 GAP = 0.4          # pause between blocks
 TAIL = 2.0          # final beat after the last block
 XFADE = 0.6         # scene-to-scene crossfade duration
-SPEED = 0.87        # slower, more deliberate/confident delivery than kokoro's default pace
+SPEED = 0.78        # slower, more deliberate/confident delivery than kokoro's default pace
+# Mamun compared am_michael against am_echo/am_onyx/am_fenrir/am_adam/am_puck plus
+# slowed and pitch-shifted variants of each and picked "am_michael deep": am_michael
+# at SPEED above, pitched down slightly for a more prominent, weightier tone. Uses
+# the rubberband filter (true pitch-shift, tempo held constant) rather than the more
+# common asetrate+aresample+atempo trick - that combination produced broken/non-
+# monotonic timestamps in this ffmpeg build ("Queue input is backward in time"),
+# which silently truncated the AAC-encoded audio to ~20ms. Caught only because
+# Mamun said he couldn't hear the voice in the first shipped sample - ffprobe on
+# that file confirmed a 6.6s video with a 0.02s audio track. rubberband keeps
+# duration exact and has none of that failure mode.
+PITCH_RATIO = 0.94
+# formant=preserved keeps the natural vocal-tract character instead of shifting it down
+# with the pitch (rubberband's default) - the default made the deep effect sound
+# artificial/monster-ish; Mamun A/B'd both on the same line and picked preserved.
+PITCH_FILTER = f"rubberband=pitch={PITCH_RATIO}:formant=preserved"
 
 
 def _block_caption(text: str, path: Path, watermark: str) -> None:
@@ -179,7 +194,7 @@ def make_soul_reel(
             audio_inputs += ["-i", str(audio)]
         legs = ""
         for i, (_, start, _) in enumerate(timed):
-            legs += f"[{voice_idx0+i}:a]adelay={int(start*1000)}|{int(start*1000)}[d{i}];"
+            legs += f"[{voice_idx0+i}:a]{PITCH_FILTER},adelay={int(start*1000)}|{int(start*1000)}[d{i}];"
         mix_ins = "".join(f"[d{i}]" for i in range(n))
         legs += f"{mix_ins}amix=inputs={n}:normalize=0,volume=1.6[speech];"
 

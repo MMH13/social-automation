@@ -20,9 +20,11 @@ from .publishers import facebook_publisher, instagram_publisher
 ROOT = Path(__file__).resolve().parent.parent
 QUEUE_FILE = ROOT / "scheduled_ss" / "content.json"
 WATERMARK = "speaking from soul"
-# Mamun picked SS-Narrator-Echo (kokoro am_echo) after comparing samples — single
-# consistent narrator for the page rather than a rotation.
-VOICES = ["am_echo"]
+# 2026-09-27: switched from Echo to Michael after Mamun compared it against several
+# deep/pitch-shifted candidates on a matched line ("Pick up all your pieces and
+# start over.") and picked "am_michael deep" — the actual pitch-down effect lives in
+# soul_reel.py (PITCH_RATIO), not here; this just selects the base kokoro voice.
+VOICES = ["am_michael"]
 # 2026-08-28: 6 reels + 1 quote card per day (7 cron slots). The first run of each
 # UTC day takes a quote, the rest take reels. Once the 77 pre-written cards are used
 # up this degrades to reels-only on its own — no code change needed at that point.
