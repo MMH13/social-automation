@@ -49,8 +49,16 @@ GAP_SECONDS = 86400 // DAILY_TARGET          # 12342s = 3h25m, the even spacing
 # One post per run is therefore enough, and the hour-long in-run sleep that used to
 # spread a catch-up is gone — spacing now comes from the schedule itself, which is
 # both better spaced and ~10x cheaper in runner minutes.
-MAX_PER_RUN = 1
-SPACING_SECONDS = 0
+#
+# 2026-10-01: that assumption broke down. GitHub is delivering far fewer of this
+# repo's */15min triggers than it used to (measured 4-6 actual runs/day instead of
+# ~96 - the same per-repo schedule-delivery cap documented for PT, now worse here
+# too), landing only 4-6 posts/day against the 7 target even though every run
+# succeeds. Raised to 2/run + a spacing gap, mirroring the fix already proven for
+# PT (post_pt.py), so a delivered trigger can burn down more than one missed slot
+# instead of just the one closest to it.
+MAX_PER_RUN = 2
+SPACING_SECONDS = 600
 # Guards against two runs overlapping near a slot boundary and double-posting.
 MIN_GAP_SECONDS = 1200
 
