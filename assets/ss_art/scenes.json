@@ -1,0 +1,525 @@
+{
+ "style_suffix": "Lo-fi anime illustration, cinematic moody painterly style with soft film grain, deep teal and dusty amber palette, empty space in the upper middle, no text.",
+ "scenes": [
+  {
+   "id": 1,
+   "file": "bedroom_night_01.png",
+   "prompt": "a lone young person sitting on the edge of a bed in a dark bedroom at night, moonlight at the window and a warm amber lamp",
+   "tags": [
+    "loneliness",
+    "night",
+    "insomnia",
+    "sadness",
+    "quiet"
+   ],
+   "status": "done"
+  },
+  {
+   "id": 2,
+   "file": "night_bus_01.png",
+   "prompt": "a tired young person seen from behind by the window of a night bus, city lights streaking past in amber and teal",
+   "tags": [
+    "commute",
+    "tired",
+    "city",
+    "loneliness",
+    "distance"
+   ],
+   "status": "done"
+  },
+  {
+   "id": 3,
+   "file": "rain_street_01.png",
+   "prompt": "a person walking alone down a rainy city street at night holding a dark umbrella, wet pavement reflecting amber street lamps",
+   "tags": [
+    "resilience",
+    "keep-going",
+    "rain",
+    "walking",
+    "city"
+   ],
+   "status": "done"
+  },
+  {
+   "id": 4,
+   "file": "tea_window_01.png",
+   "prompt": "two hands holding a steaming cup of tea beside a rain-streaked window at dusk",
+   "tags": [
+    "comfort",
+    "healing",
+    "quiet",
+    "rest",
+    "rain"
+   ],
+   "status": "done"
+  },
+  {
+   "id": 5,
+   "file": "rooftop_sunrise_01.png",
+   "prompt": "a silhouetted person on a rooftop at sunrise over a quiet city, sky dusty orange and rose",
+   "tags": [
+    "hope",
+    "becoming",
+    "new-beginning",
+    "sunrise",
+    "growth"
+   ],
+   "status": "done"
+  },
+  {
+   "id": 6,
+   "file": "cafe_empty_night.png",
+   "prompt": "a person sitting alone at a small cafe table at night, empty chairs around, warm lamp glow, rain outside",
+   "tags": [
+    "loneliness",
+    "waiting",
+    "night",
+    "city",
+    "missing-someone"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 7,
+   "file": "two_cups_table.png",
+   "prompt": "two tea cups on a small table by a window at dusk, one chair empty",
+   "tags": [
+    "love",
+    "missing-someone",
+    "loss",
+    "absence",
+    "longing"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 8,
+   "file": "phone_glow_bed.png",
+   "prompt": "a person lying in a dark bedroom, face lit by the cold glow of a phone, unread message mood",
+   "tags": [
+    "overthinking",
+    "situationship",
+    "waiting",
+    "night",
+    "anxiety"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 9,
+   "file": "train_platform_rain.png",
+   "prompt": "a person with a suitcase standing on an empty train platform on a rainy night, one lamp overhead",
+   "tags": [
+    "leaving",
+    "goodbye",
+    "migration",
+    "journey",
+    "rain"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 10,
+   "file": "airport_window_dusk.png",
+   "prompt": "a person at a big airport window watching a plane at sunset, suitcase beside them",
+   "tags": [
+    "homesick",
+    "migration",
+    "distance",
+    "journey",
+    "longing"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 11,
+   "file": "kitchen_morning_light.png",
+   "prompt": "an old family kitchen in early morning light, kettle steaming on the stove, an empty chair at the table",
+   "tags": [
+    "family",
+    "memory",
+    "mother",
+    "home",
+    "nostalgia"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 12,
+   "file": "grandmother_chair.png",
+   "prompt": "an empty wooden rocking chair by a window with soft evening light and a shawl on it",
+   "tags": [
+    "grief",
+    "memory",
+    "family",
+    "absence",
+    "nostalgia"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 13,
+   "file": "office_night_desk.png",
+   "prompt": "a person at a desk in an empty office at night, laptop glow, city windows behind",
+   "tags": [
+    "burnout",
+    "work",
+    "pressure",
+    "night",
+    "tired"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 14,
+   "file": "subway_rush.png",
+   "prompt": "a blurred rushing crowd in a subway station with one person standing perfectly still",
+   "tags": [
+    "busy",
+    "loneliness-in-crowd",
+    "anxiety",
+    "city",
+    "pressure"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 15,
+   "file": "stairs_climb.png",
+   "prompt": "a person climbing a long outdoor stone staircase at dawn, mist around",
+   "tags": [
+    "effort",
+    "resilience",
+    "discipline",
+    "growth",
+    "climbing"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 16,
+   "file": "running_dawn.png",
+   "prompt": "a lone runner on an empty road at dawn, soft pink and teal sky",
+   "tags": [
+    "discipline",
+    "growth",
+    "motivation",
+    "morning",
+    "effort"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 17,
+   "file": "lake_morning_mist.png",
+   "prompt": "a calm lake with mist and a small lone boat at sunrise",
+   "tags": [
+    "peace",
+    "healing",
+    "calm",
+    "stillness",
+    "hope"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 18,
+   "file": "forest_path_light.png",
+   "prompt": "a quiet forest path with beams of light through the trees, a person walking away",
+   "tags": [
+    "calm",
+    "letting-go",
+    "healing",
+    "nature",
+    "walking"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 19,
+   "file": "mountain_view_figure.png",
+   "prompt": "a person standing on a mountain ridge looking over valley clouds at golden hour",
+   "tags": [
+    "perspective",
+    "hope",
+    "courage",
+    "freedom",
+    "growth"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 20,
+   "file": "autumn_leaves_street.png",
+   "prompt": "an autumn street with falling orange leaves and a person walking with a scarf",
+   "tags": [
+    "letting-go",
+    "change",
+    "seasons",
+    "melancholy",
+    "walking"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 21,
+   "file": "snow_window_night.png",
+   "prompt": "a snowy night seen through a cosy window, a warm lamp and a blanket on the sill",
+   "tags": [
+    "rest",
+    "stillness",
+    "comfort",
+    "winter",
+    "quiet"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 22,
+   "file": "journal_desk.png",
+   "prompt": "hands writing in a journal at a desk by lamplight, tea beside it",
+   "tags": [
+    "healing",
+    "honesty",
+    "self-reflection",
+    "quiet",
+    "night"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 23,
+   "file": "plant_window.png",
+   "prompt": "a small green plant growing on a windowsill in soft morning light",
+   "tags": [
+    "growth",
+    "patience",
+    "slow-healing",
+    "hope",
+    "morning"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 24,
+   "file": "prayer_window_light.png",
+   "prompt": "a person sitting in quiet prayer by a window with warm golden light on their face",
+   "tags": [
+    "faith",
+    "gratitude",
+    "peace",
+    "trust",
+    "morning"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 25,
+   "file": "open_hands_sky.png",
+   "prompt": "open hands raised toward a sunset sky, soft clouds",
+   "tags": [
+    "gratitude",
+    "surrender",
+    "faith",
+    "letting-go",
+    "hope"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 26,
+   "file": "cat_window_rain.png",
+   "prompt": "a cat sitting on a windowsill watching rain, warm room behind",
+   "tags": [
+    "comfort",
+    "quiet",
+    "humour",
+    "rest",
+    "rain"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 27,
+   "file": "neon_alley_walk.png",
+   "prompt": "a person walking alone down a neon-lit alley at night with puddle reflections",
+   "tags": [
+    "city",
+    "thinking",
+    "night",
+    "solitude",
+    "walking"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 28,
+   "file": "bridge_night_city.png",
+   "prompt": "a person leaning on a bridge railing over a river with city lights at night",
+   "tags": [
+    "overthinking",
+    "decisions",
+    "night",
+    "city",
+    "crossroads"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 29,
+   "file": "beach_dusk_alone.png",
+   "prompt": "a person sitting alone on a beach at dusk with gentle waves",
+   "tags": [
+    "healing",
+    "letting-go",
+    "solitude",
+    "dusk",
+    "peace"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 30,
+   "file": "couple_silhouette_sunset.png",
+   "prompt": "two silhouettes sitting apart on a bench at sunset with space between them",
+   "tags": [
+    "love",
+    "growing-apart",
+    "distance",
+    "sunset",
+    "longing"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 31,
+   "file": "hallway_door_light.png",
+   "prompt": "a dark hallway with a thin line of light under a closed door",
+   "tags": [
+    "anxiety",
+    "fear",
+    "waiting",
+    "behind-the-door",
+    "tension"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 32,
+   "file": "mirror_bathroom_night.png",
+   "prompt": "a person looking at their reflection in a bathroom mirror in dim warm light",
+   "tags": [
+    "self-worth",
+    "identity",
+    "honesty",
+    "night",
+    "self-reflection"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 33,
+   "file": "crowd_street_alone.png",
+   "prompt": "a person standing still at a busy rainy crosswalk while blurred crowds pass",
+   "tags": [
+    "loneliness-in-crowd",
+    "rain",
+    "city",
+    "pressure",
+    "numbness"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 34,
+   "file": "bookshop_corner.png",
+   "prompt": "a person reading in a cosy bookshop corner at night under a warm lamp",
+   "tags": [
+    "solitude",
+    "comfort",
+    "peace",
+    "night",
+    "quiet"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 35,
+   "file": "window_seat_train_day.png",
+   "prompt": "a person on a daytime train looking out at green fields",
+   "tags": [
+    "journey",
+    "patience",
+    "change",
+    "calm",
+    "thinking"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 36,
+   "file": "old_photos_table.png",
+   "prompt": "old photographs spread on a table in lamplight",
+   "tags": [
+    "memory",
+    "nostalgia",
+    "family",
+    "grief",
+    "past"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 37,
+   "file": "hospital_corridor_night.png",
+   "prompt": "a quiet hospital corridor late at night, a person waiting on a chair under a soft light",
+   "tags": [
+    "fear",
+    "waiting",
+    "hope",
+    "fragility",
+    "night"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 38,
+   "file": "street_market_evening.png",
+   "prompt": "a warm street market in the evening with lanterns, a person walking through",
+   "tags": [
+    "belonging",
+    "community",
+    "migration",
+    "warmth",
+    "evening"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 39,
+   "file": "dawn_balcony_coffee.png",
+   "prompt": "a person on a balcony with a coffee at dawn as the city wakes",
+   "tags": [
+    "fresh-start",
+    "calm",
+    "morning",
+    "hope",
+    "new-beginning"
+   ],
+   "status": "todo"
+  },
+  {
+   "id": 40,
+   "file": "starry_field_lying.png",
+   "prompt": "a person lying on grass looking up at a starry night sky",
+   "tags": [
+    "dreams",
+    "perspective",
+    "wonder",
+    "night",
+    "peace"
+   ],
+   "status": "todo"
+  }
+ ]
+}
