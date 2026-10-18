@@ -15,10 +15,12 @@ from dotenv import load_dotenv
 
 from .media.image_maker import make_quote_card
 from .media.soul_reel import make_soul_reel
+from .media.soul_reel_v2 import make_illustrated_reel
 from .publishers import facebook_publisher, instagram_publisher
 
 ROOT = Path(__file__).resolve().parent.parent
 QUEUE_FILE = ROOT / "scheduled_ss" / "content.json"
+ART_DIR = ROOT / "assets" / "ss_art"
 WATERMARK = "speaking from soul"
 # 2026-09-27: switched from Echo to Michael after Mamun compared it against several
 # deep/pitch-shifted candidates on a matched line ("Pick up all your pieces and
@@ -99,8 +101,24 @@ def _quote_posted_today(queue) -> bool:
                for m in queue)
 
 
+def _scene_files() -> dict[int, Path]:
+    """scene id -> image path, for scenes whose art file is actually in the repo."""
+    try:
+        meta = json.loads((ART_DIR / "scenes.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return {s["id"]: ART_DIR / s["file"] for s in meta["scenes"] if (ART_DIR / s["file"]).exists()}
+
+
+def _playable(item, scene_files) -> bool:
+    """A reel2 item can only render once every scene it uses has its art in the repo."""
+    if item["type"] != "reel2":
+        return True
+    return all(sid in scene_files for sid in item["scenes"])
+
+
 def pick_next(queue):
-    unposted = [m for m in queue if not m.get("posted_at")]
+    unposted = [m for m in queue if not m.get("posted_at") and not m.get("skip")]
     if DAILY_QUOTE and not _quote_posted_today(queue):
         quote = next((m for m in unposted if m["type"] == "quote"), None)
         if quote:
@@ -109,7 +127,9 @@ def pick_next(queue):
     # long before the cards do (~26 days vs ~77 at these rates), and falling back
     # would dump 7 static cards a day and burn the whole card stock in 11 days.
     # Returning None instead leaves the slot empty, which the low-queue alert flags.
-    return next((m for m in unposted if m["type"] == "reel"), None)
+    scene_files = _scene_files()
+    return next((m for m in unposted
+                 if m["type"] in ("reel", "reel2") and _playable(m, scene_files)), None)
 
 
 def log(msg: str) -> None:
@@ -128,19 +148,37 @@ def post_one(queue, item, page_id, token, ig_id) -> int:
     kind, iid = item["type"], item["id"]
     media_dir = ROOT / "output" / "ss"
 
-    body = " ".join(item["blocks"]) if kind == "reel" else item.get("text")
+    if kind == "reel":
+        body = " ".join(item["blocks"])
+    elif kind == "reel2":
+        body = " ".join(item["phrases"])
+    else:
+        body = item.get("text")
     if not body or len(body.strip()) < 8:
         log(f"post_ss item{iid} ({kind}): text looks corrupted ({body!r}) - refusing to post")
         return 1
 
-    if kind == "reel":
+    if kind in ("reel", "reel2"):
         video = media_dir / f"item{iid:02d}.mp4"
         if not video.exists():
             voice = VOICES[iid % len(VOICES)]
-            built = make_soul_reel(item["blocks"], item.get("bg_prompts", []), item.get("variant", 0),
-                                   video, voice, watermark=WATERMARK)
+            if kind == "reel2":
+                files = _scene_files()
+                built = make_illustrated_reel(item["phrases"], [files[sid] for sid in item["scenes"]],
+                                              item.get("variant", 0), video, voice, watermark=WATERMARK)
+            else:
+                built = make_soul_reel(item["blocks"], item.get("bg_prompts", []), item.get("variant", 0),
+                                       video, voice, watermark=WATERMARK)
             if built is None:
                 log(f"post_ss item{iid}: reel render failed")
+                if kind == "reel2":
+                    # A reel that cannot render must not block the whole queue: after two
+                    # failed attempts it is skipped so the next item gets its turn.
+                    item["render_failures"] = item.get("render_failures", 0) + 1
+                    if item["render_failures"] >= 2:
+                        item["skip"] = True
+                        log(f"post_ss item{iid}: skipped after {item['render_failures']} failed renders")
+                    save(queue)
                 return 1
         try:
             fb_url = facebook_publisher.publish_reel(item["fb_caption"], video, page_id=page_id, token=token)
@@ -256,7 +294,7 @@ def main() -> int:
         posted += 1
 
     remaining = sum(1 for m in queue if not m.get("posted_at"))
-    reels_left = sum(1 for m in queue if not m.get("posted_at") and m["type"] == "reel")
+    reels_left = sum(1 for m in queue if not m.get("posted_at") and m["type"] in ("reel", "reel2"))
     log(f"post_ss: posted {posted} this run | {remaining} left in queue ({reels_left} reels)")
     return 0
 

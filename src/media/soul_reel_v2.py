@@ -53,21 +53,30 @@ def _font(size: int) -> ImageFont.FreeTypeFont:
 def _phrase_png(text: str, path: Path, watermark: str) -> None:
     """Small thin handwritten phrase, centred a little above the middle, soft shadow."""
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    font = _font(56)
+    font = _font(66)
     max_w = W - 260
     probe = ImageDraw.Draw(img)
-    lines, line = [], ""
-    for word in text.split():
-        trial = f"{line} {word}".strip()
-        if probe.textlength(trial, font=font) <= max_w:
-            line = trial
-        else:
-            lines.append(line)
-            line = word
-    if line:
-        lines.append(line)
 
-    line_h = 78
+    def wrap(limit: float) -> list[str]:
+        out, cur = [], ""
+        for word in text.split():
+            trial = f"{cur} {word}".strip()
+            if probe.textlength(trial, font=font) <= limit:
+                cur = trial
+            else:
+                out.append(cur)
+                cur = word
+        if cur:
+            out.append(cur)
+        return out
+
+    lines = wrap(max_w)
+    if len(lines) > 1:
+        # Balance the lines so a single word is never left alone on the last row.
+        total = probe.textlength(text, font=font)
+        lines = wrap(min(max_w, total / len(lines) * 1.12))
+
+    line_h = 90
     y0 = int(H * 0.40) - (len(lines) * line_h) // 2
 
     shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -84,7 +93,7 @@ def _phrase_png(text: str, path: Path, watermark: str) -> None:
         d.text(((W - w) / 2, y0 + i * line_h), ln, font=font, fill=(255, 255, 255, 245))
 
     if watermark:
-        wf = _font(34)
+        wf = _font(40)
         w = d.textlength(watermark, font=wf)
         d.text(((W - w) / 2, H - 190), watermark, font=wf, fill=(255, 255, 255, 140))
     img.save(path)

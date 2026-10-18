@@ -96,7 +96,7 @@ jobs:
       - name: Check queue depth
         id: queue
         if: always()
-        run: python scripts/queue_check.py scheduled_ss/content.json 6 "Speaking from soul" --only-type=reel
+        run: python scripts/queue_check.py scheduled_ss/content.json 6 "Speaking from soul" --only-type=reel,reel2
       - name: Open low-queue issue
         if: always() && steps.queue.outputs.low == 'true'
         env:

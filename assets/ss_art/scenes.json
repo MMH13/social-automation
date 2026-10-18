@@ -3,7 +3,7 @@
  "scenes": [
   {
    "id": 1,
-   "file": "bedroom_night_01.png",
+   "file": "bedroom_night_01.jpg",
    "prompt": "a lone young person sitting on the edge of a bed in a dark bedroom at night, moonlight at the window and a warm amber lamp",
    "tags": [
     "loneliness",
@@ -16,7 +16,7 @@
   },
   {
    "id": 2,
-   "file": "night_bus_01.png",
+   "file": "night_bus_01.jpg",
    "prompt": "a tired young person seen from behind by the window of a night bus, city lights streaking past in amber and teal",
    "tags": [
     "commute",
@@ -29,7 +29,7 @@
   },
   {
    "id": 3,
-   "file": "rain_street_01.png",
+   "file": "rain_street_01.jpg",
    "prompt": "a person walking alone down a rainy city street at night holding a dark umbrella, wet pavement reflecting amber street lamps",
    "tags": [
     "resilience",
@@ -42,7 +42,7 @@
   },
   {
    "id": 4,
-   "file": "tea_window_01.png",
+   "file": "tea_window_01.jpg",
    "prompt": "two hands holding a steaming cup of tea beside a rain-streaked window at dusk",
    "tags": [
     "comfort",
@@ -55,7 +55,7 @@
   },
   {
    "id": 5,
-   "file": "rooftop_sunrise_01.png",
+   "file": "rooftop_sunrise_01.jpg",
    "prompt": "a silhouetted person on a rooftop at sunrise over a quiet city, sky dusty orange and rose",
    "tags": [
     "hope",
@@ -68,7 +68,7 @@
   },
   {
    "id": 6,
-   "file": "cafe_empty_night.png",
+   "file": "cafe_empty_night.jpg",
    "prompt": "a person sitting alone at a small cafe table at night, empty chairs around, warm lamp glow, rain outside",
    "tags": [
     "loneliness",
@@ -77,11 +77,11 @@
     "city",
     "missing-someone"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 7,
-   "file": "two_cups_table.png",
+   "file": "two_cups_table.jpg",
    "prompt": "two tea cups on a small table by a window at dusk, one chair empty",
    "tags": [
     "love",
@@ -90,11 +90,11 @@
     "absence",
     "longing"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 8,
-   "file": "phone_glow_bed.png",
+   "file": "phone_glow_bed.jpg",
    "prompt": "a person lying in a dark bedroom, face lit by the cold glow of a phone, unread message mood",
    "tags": [
     "overthinking",
@@ -103,11 +103,11 @@
     "night",
     "anxiety"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 9,
-   "file": "train_platform_rain.png",
+   "file": "train_platform_rain.jpg",
    "prompt": "a person with a suitcase standing on an empty train platform on a rainy night, one lamp overhead",
    "tags": [
     "leaving",
@@ -116,11 +116,11 @@
     "journey",
     "rain"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 10,
-   "file": "airport_window_dusk.png",
+   "file": "airport_window_dusk.jpg",
    "prompt": "a person at a big airport window watching a plane at sunset, suitcase beside them",
    "tags": [
     "homesick",
@@ -129,11 +129,11 @@
     "journey",
     "longing"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 11,
-   "file": "kitchen_morning_light.png",
+   "file": "kitchen_morning_light.jpg",
    "prompt": "an old family kitchen in early morning light, kettle steaming on the stove, an empty chair at the table",
    "tags": [
     "family",
@@ -142,11 +142,11 @@
     "home",
     "nostalgia"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 12,
-   "file": "grandmother_chair.png",
+   "file": "grandmother_chair.jpg",
    "prompt": "an empty wooden rocking chair by a window with soft evening light and a shawl on it",
    "tags": [
     "grief",
@@ -155,11 +155,11 @@
     "absence",
     "nostalgia"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 13,
-   "file": "office_night_desk.png",
+   "file": "office_night_desk.jpg",
    "prompt": "a person at a desk in an empty office at night, laptop glow, city windows behind",
    "tags": [
     "burnout",
@@ -168,11 +168,11 @@
     "night",
     "tired"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 14,
-   "file": "subway_rush.png",
+   "file": "subway_rush.jpg",
    "prompt": "a blurred rushing crowd in a subway station with one person standing perfectly still",
    "tags": [
     "busy",
@@ -181,11 +181,11 @@
     "city",
     "pressure"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 15,
-   "file": "stairs_climb.png",
+   "file": "stairs_climb.jpg",
    "prompt": "a person climbing a long outdoor stone staircase at dawn, mist around",
    "tags": [
     "effort",
@@ -194,11 +194,11 @@
     "growth",
     "climbing"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 16,
-   "file": "running_dawn.png",
+   "file": "running_dawn.jpg",
    "prompt": "a lone runner on an empty road at dawn, soft pink and teal sky",
    "tags": [
     "discipline",
@@ -207,11 +207,11 @@
     "morning",
     "effort"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 17,
-   "file": "lake_morning_mist.png",
+   "file": "lake_morning_mist.jpg",
    "prompt": "a calm lake with mist and a small lone boat at sunrise",
    "tags": [
     "peace",
@@ -220,11 +220,11 @@
     "stillness",
     "hope"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 18,
-   "file": "forest_path_light.png",
+   "file": "forest_path_light.jpg",
    "prompt": "a quiet forest path with beams of light through the trees, a person walking away",
    "tags": [
     "calm",
@@ -233,11 +233,11 @@
     "nature",
     "walking"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 19,
-   "file": "mountain_view_figure.png",
+   "file": "mountain_view_figure.jpg",
    "prompt": "a person standing on a mountain ridge looking over valley clouds at golden hour",
    "tags": [
     "perspective",
@@ -246,11 +246,11 @@
     "freedom",
     "growth"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 20,
-   "file": "autumn_leaves_street.png",
+   "file": "autumn_leaves_street.jpg",
    "prompt": "an autumn street with falling orange leaves and a person walking with a scarf",
    "tags": [
     "letting-go",
@@ -259,11 +259,11 @@
     "melancholy",
     "walking"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 21,
-   "file": "snow_window_night.png",
+   "file": "snow_window_night.jpg",
    "prompt": "a snowy night seen through a cosy window, a warm lamp and a blanket on the sill",
    "tags": [
     "rest",
@@ -272,11 +272,11 @@
     "winter",
     "quiet"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 22,
-   "file": "journal_desk.png",
+   "file": "journal_desk.jpg",
    "prompt": "hands writing in a journal at a desk by lamplight, tea beside it",
    "tags": [
     "healing",
@@ -285,11 +285,11 @@
     "quiet",
     "night"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 23,
-   "file": "plant_window.png",
+   "file": "plant_window.jpg",
    "prompt": "a small green plant growing on a windowsill in soft morning light",
    "tags": [
     "growth",
@@ -298,11 +298,11 @@
     "hope",
     "morning"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 24,
-   "file": "prayer_window_light.png",
+   "file": "prayer_window_light.jpg",
    "prompt": "a person sitting in quiet prayer by a window with warm golden light on their face",
    "tags": [
     "faith",
@@ -311,11 +311,11 @@
     "trust",
     "morning"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 25,
-   "file": "open_hands_sky.png",
+   "file": "open_hands_sky.jpg",
    "prompt": "open hands raised toward a sunset sky, soft clouds",
    "tags": [
     "gratitude",
@@ -324,11 +324,11 @@
     "letting-go",
     "hope"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 26,
-   "file": "cat_window_rain.png",
+   "file": "cat_window_rain.jpg",
    "prompt": "a cat sitting on a windowsill watching rain, warm room behind",
    "tags": [
     "comfort",
@@ -337,11 +337,11 @@
     "rest",
     "rain"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 27,
-   "file": "neon_alley_walk.png",
+   "file": "neon_alley_walk.jpg",
    "prompt": "a person walking alone down a neon-lit alley at night with puddle reflections",
    "tags": [
     "city",
@@ -350,11 +350,11 @@
     "solitude",
     "walking"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 28,
-   "file": "bridge_night_city.png",
+   "file": "bridge_night_city.jpg",
    "prompt": "a person leaning on a bridge railing over a river with city lights at night",
    "tags": [
     "overthinking",
@@ -363,11 +363,11 @@
     "city",
     "crossroads"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 29,
-   "file": "beach_dusk_alone.png",
+   "file": "beach_dusk_alone.jpg",
    "prompt": "a person sitting alone on a beach at dusk with gentle waves",
    "tags": [
     "healing",
@@ -376,11 +376,11 @@
     "dusk",
     "peace"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 30,
-   "file": "couple_silhouette_sunset.png",
+   "file": "couple_silhouette_sunset.jpg",
    "prompt": "two silhouettes sitting apart on a bench at sunset with space between them",
    "tags": [
     "love",
@@ -389,11 +389,11 @@
     "sunset",
     "longing"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 31,
-   "file": "hallway_door_light.png",
+   "file": "hallway_door_light.jpg",
    "prompt": "a dark hallway with a thin line of light under a closed door",
    "tags": [
     "anxiety",
@@ -402,11 +402,11 @@
     "behind-the-door",
     "tension"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 32,
-   "file": "mirror_bathroom_night.png",
+   "file": "mirror_bathroom_night.jpg",
    "prompt": "a person looking at their reflection in a bathroom mirror in dim warm light",
    "tags": [
     "self-worth",
@@ -415,11 +415,11 @@
     "night",
     "self-reflection"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 33,
-   "file": "crowd_street_alone.png",
+   "file": "crowd_street_alone.jpg",
    "prompt": "a person standing still at a busy rainy crosswalk while blurred crowds pass",
    "tags": [
     "loneliness-in-crowd",
@@ -428,11 +428,11 @@
     "pressure",
     "numbness"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 34,
-   "file": "bookshop_corner.png",
+   "file": "bookshop_corner.jpg",
    "prompt": "a person reading in a cosy bookshop corner at night under a warm lamp",
    "tags": [
     "solitude",
@@ -441,11 +441,11 @@
     "night",
     "quiet"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 35,
-   "file": "window_seat_train_day.png",
+   "file": "window_seat_train_day.jpg",
    "prompt": "a person on a daytime train looking out at green fields",
    "tags": [
     "journey",
@@ -454,11 +454,11 @@
     "calm",
     "thinking"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 36,
-   "file": "old_photos_table.png",
+   "file": "old_photos_table.jpg",
    "prompt": "old photographs spread on a table in lamplight",
    "tags": [
     "memory",
@@ -467,11 +467,11 @@
     "grief",
     "past"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 37,
-   "file": "hospital_corridor_night.png",
+   "file": "hospital_corridor_night.jpg",
    "prompt": "a quiet hospital corridor late at night, a person waiting on a chair under a soft light",
    "tags": [
     "fear",
@@ -480,11 +480,11 @@
     "fragility",
     "night"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 38,
-   "file": "street_market_evening.png",
+   "file": "street_market_evening.jpg",
    "prompt": "a warm street market in the evening with lanterns, a person walking through",
    "tags": [
     "belonging",
@@ -493,11 +493,11 @@
     "warmth",
     "evening"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 39,
-   "file": "dawn_balcony_coffee.png",
+   "file": "dawn_balcony_coffee.jpg",
    "prompt": "a person on a balcony with a coffee at dawn as the city wakes",
    "tags": [
     "fresh-start",
@@ -506,11 +506,11 @@
     "hope",
     "new-beginning"
    ],
-   "status": "todo"
+   "status": "done"
   },
   {
    "id": 40,
-   "file": "starry_field_lying.png",
+   "file": "starry_field_lying.jpg",
    "prompt": "a person lying on grass looking up at a starry night sky",
    "tags": [
     "dreams",
@@ -519,7 +519,7 @@
     "night",
     "peace"
    ],
-   "status": "todo"
+   "status": "done"
   }
  ]
 }

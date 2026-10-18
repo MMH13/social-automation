@@ -52,8 +52,9 @@ def main() -> int:
 
     only = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--only-type=")), None)
     if only:
-        unposted = [i for i in unposted if i["type"] == only]
-        label = f"{label} ({only}s)"
+        types = only.split(",")
+        unposted = [i for i in unposted if i["type"] in types]
+        label = f"{label} ({'/'.join(types)})"
 
     left = len(unposted)
     days = left / per_day if per_day else 0
