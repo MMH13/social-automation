@@ -8,5 +8,10 @@
 kokoro>=0.9
 soundfile>=0.12
 edge-tts
+# 2026-10-26: preshed 3.0.14 (released between 2026-10-24 and 10-25) made kokoro's spaCy-based
+# phonemizer crash with "Python int too large to convert to C ssize_t", so every TTS call fell
+# back to edge-tts and the reels went out silent. These two are the versions that worked.
+preshed==3.0.13
+srsly==2.5.4
 # Pinned so kokoro's phonemizer doesn't shell out to `spacy download` at render time.
 en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl

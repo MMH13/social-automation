@@ -60,11 +60,18 @@ def _kokoro(text: str, path: Path, voice: str, speed: float = 1.0) -> bool:
         return False
 
 
-def _tts(text: str, base: Path, voice: str, speed: float = 1.0) -> Path | None:
-    """Render `text` to an audio file next to `base`. Returns the path actually written."""
+def _tts(text: str, base: Path, voice: str, speed: float = 1.0,
+         allow_fallback: bool = True) -> Path | None:
+    """Render `text` to an audio file next to `base`. Returns the path actually written.
+
+    allow_fallback=False refuses the edge-tts voice: a page with one chosen narrator would
+    rather skip a reel than post it in a different (or silent) voice."""
     wav = base.with_suffix(".wav")
     if _kokoro(text, wav, voice, speed):
         return wav
+    if not allow_fallback:
+        print("  [tts] kokoro unavailable and fallback is disabled for this page")
+        return None
     try:
         import edge_tts
     except ImportError:
@@ -77,6 +84,39 @@ def _tts(text: str, base: Path, voice: str, speed: float = 1.0) -> Path | None:
     except Exception as e:
         print(f"  [tts] failed: {e}")
         return None
+
+
+def audio_ok(video: Path, min_mean_db: float = -50.0, min_ratio: float = 0.55) -> bool:
+    """True only if the rendered video carries real audio.
+
+    A silent or truncated track used to publish without any error (exit code 0): once from a
+    timestamp bug in ffmpeg, once from a broken TTS fallback. Checks both the length of the
+    audio stream relative to the video and its mean level."""
+    probe = subprocess.run(
+        ["ffprobe", "-v", "error", "-select_streams", "a:0", "-show_entries", "stream=duration",
+         "-of", "csv=p=0", str(video)], capture_output=True, text=True)
+    try:
+        audio_len = float(probe.stdout.strip())
+    except ValueError:
+        print("  [audio] no audio stream in render")
+        return False
+    video_len = _duration(video)
+    if video_len and audio_len < min_ratio * video_len:
+        print(f"  [audio] audio track too short ({audio_len:.1f}s of {video_len:.1f}s)")
+        return False
+    vol = subprocess.run(["ffmpeg", "-v", "info", "-i", str(video), "-map", "0:a:0",
+                          "-af", "volumedetect", "-f", "null", "-"], capture_output=True, text=True)
+    mean = None
+    for line in vol.stderr.splitlines():
+        if "mean_volume:" in line:
+            try:
+                mean = float(line.split("mean_volume:")[1].split("dB")[0])
+            except ValueError:
+                pass
+    if mean is None or mean < min_mean_db:
+        print(f"  [audio] render is silent (mean volume {mean} dB)")
+        return False
+    return True
 
 
 def _duration(path: Path) -> float:
@@ -226,6 +266,10 @@ def make_narrated(
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.returncode != 0:
             print(f"  [narrated] ffmpeg failed: {result.stderr[-600:]}")
+            return None
+        if not audio_ok(out_path):
+            out_path.unlink(missing_ok=True)
+            print("  [narrated] rejected: rendered video has no usable audio")
             return None
         print(f"  [narrated] {len(segments)} segments, {total:.1f}s, {src}")
     return out_path

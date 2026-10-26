@@ -12,7 +12,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-from .narrated_video import _duration, _tts
+from .narrated_video import _duration, _tts, audio_ok
 from .reel_maker import _music_files, ffmpeg_available
 from .soul_reel import PITCH_FILTER, SPEED
 
@@ -123,7 +123,7 @@ def make_illustrated_reel(
         timed: list[tuple[Path, float, float]] = []
         clock = LEAD_IN
         for i, phrase in enumerate(phrases):
-            audio = _tts(phrase, tmp_dir / f"seg{i:02d}", voice, speed=SPEED)
+            audio = _tts(phrase, tmp_dir / f"seg{i:02d}", voice, speed=SPEED, allow_fallback=False)
             if audio is None:
                 print("  [reel_v2] TTS failed")
                 return None
@@ -239,6 +239,10 @@ def make_illustrated_reel(
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.returncode != 0:
             print(f"  [reel_v2] ffmpeg failed: {result.stderr[-1200:]}")
+            return None
+        if not audio_ok(out_path):
+            out_path.unlink(missing_ok=True)
+            print("  [reel_v2] rejected: rendered video has no usable audio")
             return None
         print(f"  [reel_v2] {total:.1f}s, {n} scenes, voice={voice}")
     return out_path
