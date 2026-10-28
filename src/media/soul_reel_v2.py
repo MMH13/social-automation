@@ -18,7 +18,7 @@ from .soul_reel import PITCH_FILTER, SPEED
 
 W, H = 1080, 1920
 FPS = 30
-LEAD_IN = 0.5
+LEAD_IN = 0.25
 GAP = 0.3
 TAIL = 1.6
 XFADE = 0.5
@@ -181,10 +181,13 @@ def make_illustrated_reel(
             png = tmp_dir / f"cap{i:02d}.png"
             _phrase_png(phrases[i], png, watermark)
             cap_inputs += ["-loop", "1", "-t", f"{total:.2f}", "-i", str(png)]
-            show_from = max(0.0, start - 0.15)
+            # The first phrase is on screen from the very first frame: retention is lost in the
+            # first seconds, so the hook must not wait for a fade.
+            show_from = 0.0 if i == 0 else max(0.0, start - 0.15)
+            fade_in = 0.15 if i == 0 else 0.4
             show_to = end + GAP
             cap_chain += (
-                f"[{idx}:v]format=rgba,fade=t=in:st={show_from:.2f}:d=0.4:alpha=1,"
+                f"[{idx}:v]format=rgba,fade=t=in:st={show_from:.2f}:d={fade_in}:alpha=1,"
                 f"fade=t=out:st={max(show_from, show_to - 0.3):.2f}:d=0.3:alpha=1[c{i}];"
                 f"[{prev}][c{i}]overlay=0:0:enable='between(t,{show_from:.2f},{show_to + 0.05:.2f})'[v{i}];"
             )

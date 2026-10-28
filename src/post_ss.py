@@ -30,7 +30,7 @@ VOICES = ["am_michael"]
 # 2026-08-28: 6 reels + 1 quote card per day (7 cron slots). The first run of each
 # UTC day takes a quote, the rest take reels. Once the 77 pre-written cards are used
 # up this degrades to reels-only on its own — no code change needed at that point.
-DAILY_QUOTE = True
+DAILY_QUOTE = False       # 2026-10-28: reels only (see the cadence note below)
 
 # 2026-08-29: GitHub only actually delivered 25-35% of this repo's scheduled runs
 # (5-7 of 20/day across all workflows) — scheduled events are best-effort and get
@@ -43,9 +43,17 @@ DAILY_QUOTE = True
 # Slots are evenly spaced: 24h / DAILY_TARGET, so every post sits the same distance
 # from its neighbours (7/day = one every 3h25m). SLOT_MINUTES must stay in sync with
 # the cron in .github/workflows/post-ss.yml.
-DAILY_TARGET = 7
-SLOT_MINUTES = [round(i * 1440 / DAILY_TARGET) for i in range(DAILY_TARGET)]
-GAP_SECONDS = 86400 // DAILY_TARGET          # 12342s = 3h25m, the even spacing
+# 2026-10-28: cut to 3 reels/day, 8 hours apart, no quote card. Plays per reel were flat at
+# ~200 (= the follower count) and from 2026-10-23 05:31 to 2026-10-26 22:58 UTC every reel
+# got 0-2 plays - a four-day distribution blackout while the page posted 7/day with pairs
+# 11 minutes apart. Fewer, spaced-out posts give each reel a clean first-hour test.
+# Slots 01:00 / 09:00 / 17:00 UTC (9pm / 5am / 1pm ET). Keep SLOT_OFFSET_HOURS in step with
+# --offset in post-ss.yml's gate (scripts/is_due.py).
+DAILY_TARGET = 3
+SLOT_OFFSET_HOURS = 1
+GAP_SECONDS = 86400 // DAILY_TARGET          # 28800s = 8h
+SLOT_MINUTES = sorted(((SLOT_OFFSET_HOURS * 3600 + i * GAP_SECONDS) % 86400) // 60
+                      for i in range(DAILY_TARGET))
 # 2026-09-01: the workflow polls every 15 minutes instead of firing at the 7 slots,
 # so a slot is picked up shortly after it opens and there is no backlog to burn down.
 # One post per run is therefore enough, and the hour-long in-run sleep that used to
@@ -59,10 +67,10 @@ GAP_SECONDS = 86400 // DAILY_TARGET          # 12342s = 3h25m, the even spacing
 # succeeds. Raised to 2/run + a spacing gap, mirroring the fix already proven for
 # PT (post_pt.py), so a delivered trigger can burn down more than one missed slot
 # instead of just the one closest to it.
-MAX_PER_RUN = 2
+MAX_PER_RUN = 1          # 3/day at 8h spacing: a late run posts one, never a pair
 SPACING_SECONDS = 600
 # Guards against two runs overlapping near a slot boundary and double-posting.
-MIN_GAP_SECONDS = 1200
+MIN_GAP_SECONDS = 6 * 3600
 
 
 def _posted_today(queue) -> int:

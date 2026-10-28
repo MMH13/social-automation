@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: check
-        run: python scripts/is_due.py scheduled_ss/content.json 7
+        run: python scripts/is_due.py scheduled_ss/content.json 3 --offset=1 --type=reel2
 
   post:
     needs: gate
@@ -96,7 +96,7 @@ jobs:
       - name: Check queue depth
         id: queue
         if: always()
-        run: python scripts/queue_check.py scheduled_ss/content.json 6 "Speaking from soul" --only-type=reel,reel2
+        run: python scripts/queue_check.py scheduled_ss/content.json 3 "Speaking from soul" --only-type=reel,reel2
       - name: Open low-queue issue
         if: always() && steps.queue.outputs.low == 'true'
         env:
@@ -104,7 +104,7 @@ jobs:
         run: |
           TITLE="Speaking from soul queue running low"
           EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
-          BODY="Only ${{ steps.queue.outputs.left }} item(s) (~${{ steps.queue.outputs.days }} days at 6/day) left in \`scheduled_ss/content.json\`. Refill it before the queue empties."
+          BODY="Only ${{ steps.queue.outputs.left }} item(s) (~${{ steps.queue.outputs.days }} days at 3/day) left in \`scheduled_ss/content.json\`. Refill it before the queue empties."
           if [ -z "$EXISTING" ]; then
             gh issue create --title "$TITLE" --body "$BODY"
           else

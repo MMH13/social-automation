@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 # queue file, posts expected per day, label, item type counted for runway (None = all)
 PAGES = [
-    ("scheduled_ss/content.json", 7, "Speaking from soul", "reel"),
+    ("scheduled_ss/content.json", 3, "Speaking from soul", "reel2"),
     ("scheduled_pt/content.json", 3, "Psychology Tube", "narrated"),
     ("scheduled_mh/content.json", 3, "Mamun Hossain", None),
 ]
