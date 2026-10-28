@@ -34,9 +34,15 @@ POST_TYPE = "narrated"
 # Speaking from soul had - GitHub delivers only a fraction of the scheduled slots, and
 # one-post-per-run turns every dropped slot into a permanently lost post. A run may now
 # catch up on the slots that have already passed.
-DAILY_POSTS = 10
-GAP_SECONDS = 86400 // DAILY_POSTS                      # 8640s = 2h24m
-SLOT_MINUTES = [(i * GAP_SECONDS) // 60 for i in range(DAILY_POSTS)]
+# 2026-10-28: cut to 3 reels/day, 8h apart. 453 reels at 10/day averaged ~5.7s watched and
+# ~150 plays, so volume was diluting early engagement. Slots sit at 05:00/13:00/21:00 UTC
+# (audience is 35% US, then PH/GB/AU): 1am/9am/5pm ET. Keep SLOT_OFFSET_HOURS in step with
+# --offset in post-memes.yml's gate (scripts/is_due.py).
+DAILY_POSTS = 3
+SLOT_OFFSET_HOURS = 5
+GAP_SECONDS = 86400 // DAILY_POSTS                      # 28800s = 8h
+SLOT_MINUTES = sorted(((SLOT_OFFSET_HOURS * 3600 + i * GAP_SECONDS) % 86400) // 60
+                      for i in range(DAILY_POSTS))
 # 2026-09-01: the workflow polls every 15 minutes instead of firing at the 10 slots.
 # 2026-09-03: even so, this page was still landing at 6-7/10 - GitHub was delivering
 # only ~9 scheduled runs/day (measured: Speaking from soul got almost the same 9-10,
@@ -44,9 +50,9 @@ SLOT_MINUTES = [(i * GAP_SECONDS) // 60 for i in range(DAILY_POSTS)]
 # schedule* events rather than anything specific to this workflow). With cap=1 that
 # ceiling IS the daily total. Replaying the actual delivered run times from 2026-09-02
 # through the real picker: cap=1 -> 7/10, cap=2 with a 10 min in-run sleep -> 10/10.
-MAX_PER_RUN = 2
+MAX_PER_RUN = 1          # 3/day at 8h spacing: a late run posts one, never bunches
 SPACING_SECONDS = 600
-MIN_GAP_SECONDS = 1200
+MIN_GAP_SECONDS = 6 * 3600
 
 
 def category(item) -> str:
@@ -123,6 +129,8 @@ def post_one(queue, item) -> int:
                     variant=item.get("variant", 0),
                     bg_query=item.get("bg_query"),
                     outro=item.get("outro", "Save this. Follow for more."),
+                    hook=item.get("hook"),
+                    **({"voice": item["voice"]} if item.get("voice") else {}),
                 )
             else:
                 built = make_reel(

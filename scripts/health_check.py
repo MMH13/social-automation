@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # queue file, posts expected per day, label, item type counted for runway (None = all)
 PAGES = [
     ("scheduled_ss/content.json", 7, "Speaking from soul", "reel"),
-    ("scheduled_pt/content.json", 10, "Psychology Tube", None),
+    ("scheduled_pt/content.json", 3, "Psychology Tube", "narrated"),
     ("scheduled_mh/content.json", 3, "Mamun Hossain", None),
 ]
 LOW_RUNWAY_DAYS = 3.0

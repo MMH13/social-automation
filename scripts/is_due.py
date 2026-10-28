@@ -31,7 +31,8 @@ def main() -> int:
 
     # Evenly spaced slots across the day, same rule the posters use.
     gap = 86400 // slots
-    slot_minutes = [(i * gap) // 60 for i in range(slots)]
+    offset = int(next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--offset=")), 0))
+    slot_minutes = sorted(((offset * 3600 + i * gap) % 86400) // 60 for i in range(slots))
     due = sum(1 for s in slot_minutes if now.hour * 60 + now.minute >= s)
 
     remaining = [i for i in items if not i.get("posted_at")]

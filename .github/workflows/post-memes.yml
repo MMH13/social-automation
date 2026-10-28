@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: check
-        run: python scripts/is_due.py scheduled_pt/content.json 10 --type=narrated
+        run: python scripts/is_due.py scheduled_pt/content.json 3 --offset=5 --type=narrated
 
   post:
     needs: gate
@@ -93,7 +93,7 @@ jobs:
         # --only-type=narrated because the page is narrated-only now: counting the ~50
         # skipped meme/psych/status items would overstate the runway and delay the warning
         # past the point where it is useful. Nothing covers a gap if narrated runs dry.
-        run: python scripts/queue_check.py scheduled_pt/content.json 10 "Psychology Tube" --only-type=narrated
+        run: python scripts/queue_check.py scheduled_pt/content.json 3 "Psychology Tube" --only-type=narrated
       - name: Open low-queue issue
         if: always() && steps.queue.outputs.any_low == 'true'
         env:
@@ -101,7 +101,7 @@ jobs:
         run: |
           TITLE="Psychology Tube queue running low"
           EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
-          BODY="Only ${{ steps.queue.outputs.left }} narrated item(s) left (~${{ steps.queue.outputs.days }} days at 10/day).
+          BODY="Only ${{ steps.queue.outputs.left }} narrated item(s) left (~${{ steps.queue.outputs.days }} days at 3/day).
           The page is narrated-only - no other format will cover the gap, so it goes quiet when this hits zero.
           Refill the narrated items in \`scheduled_pt/content.json\`."
           if [ -z "$EXISTING" ]; then

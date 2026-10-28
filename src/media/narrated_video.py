@@ -172,12 +172,16 @@ def make_narrated(
     watermark: str = "@psychology.tube",
     voice: str = VOICE,
     outro: str = "Follow for more.",
+    hook: str | None = None,
 ) -> Path | None:
     if not ffmpeg_available():
         print("  [narrated] ffmpeg not found - skipping")
         return None
 
-    segments = [title] + list(points) + ([outro] if outro else [])
+    # 2026-10-28: retention data (453 reels) showed 92% still watching at 3s but only 57%
+    # at 5s - the old opener read the title aloud, which is a weak hook. A queue item may
+    # now carry a short `hook` that replaces the title as the spoken + big-caption opener.
+    segments = [hook or title] + list(points) + ([outro] if outro else [])
     out_path.parent.mkdir(parents=True, exist_ok=True)
     bg_clip = get_background(variant, bg_query)
 
@@ -186,7 +190,7 @@ def make_narrated(
 
         # 1. Narrate each segment separately so captions can follow the voice.
         timed: list[tuple[Path, Path, float, float]] = []  # audio, png, start, end
-        clock = LEAD_IN
+        clock = 0.25 if hook else LEAD_IN
         for i, seg in enumerate(segments):
             audio = _tts(seg, tmp_dir / f"seg{i:02d}", voice, speed=SPEED)
             if audio is None:
