@@ -52,7 +52,10 @@ SLOT_MINUTES = sorted(((SLOT_OFFSET_HOURS * 3600 + i * GAP_SECONDS) % 86400) // 
 # through the real picker: cap=1 -> 7/10, cap=2 with a 10 min in-run sleep -> 10/10.
 MAX_PER_RUN = 1          # 3/day at 8h spacing: a late run posts one, never bunches
 SPACING_SECONDS = 600
-MIN_GAP_SECONDS = 6 * 3600
+# 2026-11-10: was 6h. GitHub runs land 2-4h late, so a 6h minimum pushed the 3rd post past
+# midnight (the day's count resets) on 8 of the first 13 days: 31 posted vs 39 due. 2h still
+# stops bunching but lets late slots catch up within the same UTC day.
+MIN_GAP_SECONDS = 2 * 3600
 
 
 def category(item) -> str:
