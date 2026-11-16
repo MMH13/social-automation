@@ -8884,6 +8884,46 @@
     "ig_url": "skipped: SS_IG_USER_ID not set"
   },
   {
+    "id": 515,
+    "type": "reel2",
+    "variant": 0,
+    "theme": "Faith and small mercies",
+    "phrases": [
+      "My grandmother prayed on a plastic mat by the stove.",
+      "Between boiling the rice",
+      "and swallowing all her fears.",
+      "That's where I learned God isn't fussy about location."
+    ],
+    "scenes": [
+      11,
+      4,
+      36,
+      24
+    ],
+    "fb_caption": "grandmother prayed on a plastic mat by the stove\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#gratitude #faith #smallmercies #thankful",
+    "ig_caption": "grandmother prayed on a plastic mat by the stove\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#gratitude #faith #smallmercies #thankful",
+    "hook_style": "confession"
+  },
+  {
+    "id": 493,
+    "type": "reel2",
+    "variant": 0,
+    "theme": "First-person confessions",
+    "phrases": [
+      "I kept every voicemail my father ever left me, but",
+      "I never listened to any of them. Not once.",
+      "If I press play, there's nothing new left to hear."
+    ],
+    "scenes": [
+      8,
+      1,
+      36
+    ],
+    "fb_caption": "the voicemails i'm not ready to play\n\nsome things you keep by never touching them\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#honestwords #confessions #lifelessons #growingup",
+    "ig_caption": "the voicemails i'm not ready to play\n\nsome things you keep by never touching them\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#honestwords #confessions #lifelessons #growingup",
+    "hook_style": "confession"
+  },
+  {
     "id": 393,
     "type": "reel2",
     "variant": 2,
@@ -8904,50 +8944,6 @@
     "posted_at": "2026-11-16T17:37:50",
     "fb_url": "https://www.facebook.com/reel/3325408207669451",
     "ig_url": "skipped: SS_IG_USER_ID not set"
-  },
-  {
-    "id": 501,
-    "type": "reel2",
-    "variant": 1,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "Six o'clock, the driveway.",
-      "Engine off, both hands gripping nothing.",
-      "Five minutes to turn back into who they need.",
-      "Nobody ever applauds this part of your day.",
-      "The reset. The deep breath. The key in the lock."
-    ],
-    "scenes": [
-      2,
-      28,
-      32,
-      16,
-      31
-    ],
-    "fb_caption": "the five minutes in the driveway before you go in\n\nnobody sees that part of the day\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife #deepthoughts",
-    "ig_caption": "the five minutes in the driveway before you go in\n\nnobody sees that part of the day\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife #deepthoughts",
-    "hook_style": "specific_detail"
-  },
-  {
-    "id": 418,
-    "type": "reel2",
-    "variant": 1,
-    "theme": "First-person confessions",
-    "phrases": [
-      "These days I go home the moment I'm properly tired.",
-      "No excuse. No dramatic headache.",
-      "Just \"I'm heading home. Lovely evening.\"",
-      "Nobody has ever hated me for it."
-    ],
-    "scenes": [
-      38,
-      27,
-      40,
-      17
-    ],
-    "fb_caption": "going home when i'm tired, no excuses\n\nnobody has ever hated me for it\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
-    "ig_caption": "going home when i'm tired, no excuses\n\nnobody has ever hated me for it\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
-    "hook_style": "statement"
   },
   {
     "id": 389,
@@ -8971,64 +8967,22 @@
     "hook_style": "confession"
   },
   {
-    "id": 414,
+    "id": 395,
     "type": "reel2",
     "variant": 4,
-    "theme": "Longing and heartbreak",
+    "theme": "First-person confessions",
     "phrases": [
-      "\"Are you happy?\" he asked.",
-      "\"Mostly,\" I said.",
-      "It was the most honest thing I said all year.",
-      "He nodded. We finished our tea and talked about buses."
+      "I wrote him a letter and mailed it to myself.",
+      "It arrived Tuesday, full of everything I couldn't say.",
+      "I read it aloud and finally agreed with me."
     ],
     "scenes": [
-      6,
-      7,
-      29,
-      34
-    ],
-    "fb_caption": "\"are you happy?\" \"mostly.\"\n\nwhat is your honest \"mostly\"?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#unsaidthings #oldlove #missingyou",
-    "ig_caption": "\"are you happy?\" \"mostly.\"\n\nwhat is your honest \"mostly\"?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#unsaidthings #oldlove #missingyou",
-    "hook_style": "dialogue"
-  },
-  {
-    "id": 482,
-    "type": "reel2",
-    "variant": 4,
-    "theme": "Work money and friendship",
-    "phrases": [
-      "\"Sorry for the late reply\" is the national anthem.",
-      "We all stand when it plays. We all mean nothing.",
-      "Let's agree to say \"I saw it, I'm thinking.\""
-    ],
-    "scenes": [
-      13,
-      33,
-      28
-    ],
-    "fb_caption": "sorry for the late reply, the national anthem\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#burnout #adulting #workinglife #adultfriendship #deepthoughts",
-    "ig_caption": "sorry for the late reply, the national anthem\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#burnout #adulting #workinglife #adultfriendship #deepthoughts",
-    "hook_style": "dialogue"
-  },
-  {
-    "id": 515,
-    "type": "reel2",
-    "variant": 0,
-    "theme": "Faith and small mercies",
-    "phrases": [
-      "My grandmother prayed on a plastic mat by the stove.",
-      "Between boiling the rice",
-      "and swallowing all her fears.",
-      "That's where I learned God isn't fussy about location."
-    ],
-    "scenes": [
-      11,
-      4,
+      22,
       36,
-      24
+      32
     ],
-    "fb_caption": "grandmother prayed on a plastic mat by the stove\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#gratitude #faith #smallmercies #thankful",
-    "ig_caption": "grandmother prayed on a plastic mat by the stove\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#gratitude #faith #smallmercies #thankful",
+    "fb_caption": "a letter to him, mailed to me\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
+    "ig_caption": "a letter to him, mailed to me\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
     "hook_style": "confession"
   },
   {
@@ -9051,23 +9005,532 @@
     "hook_style": "dialogue"
   },
   {
-    "id": 382,
+    "id": 368,
+    "type": "reel2",
+    "variant": 1,
+    "theme": "Family and memory",
+    "phrases": [
+      "My drawing is on their fridge.",
+      "I am thirty-four.",
+      "Magnets hold it. The sun has faded my sky white.",
+      "Some love is just refusing to take things down."
+    ],
+    "scenes": [
+      11,
+      32,
+      36,
+      23
+    ],
+    "fb_caption": "my crayon drawing is on their fridge\n\nsome love is refusing to take things down\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#family #childhood #memories",
+    "ig_caption": "my crayon drawing is on their fridge\n\nsome love is refusing to take things down\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#family #childhood #memories",
+    "hook_style": "confession"
+  },
+  {
+    "id": 447,
+    "type": "reel2",
+    "variant": 1,
+    "theme": "First-person confessions",
+    "phrases": [
+      "I used to rehearse whole arguments in the shower.",
+      "In every version I win and nobody gets hurt.",
+      "Real life has not once followed my script.",
+      "Thank goodness."
+    ],
+    "scenes": [
+      32,
+      28,
+      3,
+      17
+    ],
+    "fb_caption": "every argument i've ever won, in the shower\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#honestwords #confessions #lifelessons #growingup",
+    "ig_caption": "every argument i've ever won, in the shower\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#honestwords #confessions #lifelessons #growingup",
+    "hook_style": "confession"
+  },
+  {
+    "id": 449,
     "type": "reel2",
     "variant": 4,
-    "theme": "Dated concrete scenes",
+    "theme": "Tough love and defiance",
     "phrases": [
-      "Two a.m. You scroll back through three whole summers.",
-      "Everyone squints into the sun, cracking up at nothing.",
-      "You zoom in on a hand resting on your shoulder."
+      "He says, \"You've changed.\"",
+      "Good. Smile and say a gracious thanks.",
+      "The old you worked for free. He misses that, obviously.",
+      "Change isn't betrayal. It's your wages finally arriving."
+    ],
+    "scenes": [
+      32,
+      28,
+      3,
+      5
+    ],
+    "fb_caption": "he says you've changed. good.\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#standyourground #knowyourworth #toughlove #soul",
+    "ig_caption": "he says you've changed. good.\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#standyourground #knowyourworth #toughlove #soul",
+    "hook_style": "dialogue"
+  },
+  {
+    "id": 521,
+    "type": "reel2",
+    "variant": 2,
+    "theme": "Longing and heartbreak",
+    "phrases": [
+      "I drove past your street and didn't turn.",
+      "It's progress. The car wanted to. My hands said no.",
+      "Twenty minutes later I was crying at a petrol pump."
+    ],
+    "scenes": [
+      2,
+      27,
+      3
+    ],
+    "fb_caption": "the street i drove past and didn't turn onto\n\nwhat did you drive past tonight?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#longing #breakup #unsaidthings",
+    "ig_caption": "the street i drove past and didn't turn onto\n\nwhat did you drive past tonight?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#longing #breakup #unsaidthings",
+    "hook_style": "confession"
+  },
+  {
+    "id": 468,
+    "type": "reel2",
+    "variant": 2,
+    "theme": "First-person confessions",
+    "phrases": [
+      "My mother never said she was proud of me.",
+      "She packed my lunch.",
+      "She cut my apple every exam day.",
+      "Took me thirty years to hear that as a sentence."
+    ],
+    "scenes": [
+      11,
+      7,
+      23,
+      36
+    ],
+    "fb_caption": "my mother's pride came wrapped in an apple\n\nwhat did your parents say without saying it?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords #poetry",
+    "ig_caption": "my mother's pride came wrapped in an apple\n\nwhat did your parents say without saying it?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords #poetry",
+    "hook_style": "confession"
+  },
+  {
+    "id": 421,
+    "type": "reel2",
+    "variant": 3,
+    "theme": "Tough love and defiance",
+    "phrases": [
+      "Cancel the invite you accepted in an exhausted moment.",
+      "Your tired self made promises your rested self hates.",
+      "Delete the guilt too. Nobody ever sent you an invoice."
+    ],
+    "scenes": [
+      39,
+      1,
+      17
+    ],
+    "fb_caption": "cancel the plan you agreed to while tired\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#standyourground #knowyourworth #toughlove",
+    "ig_caption": "cancel the plan you agreed to while tired\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#standyourground #knowyourworth #toughlove",
+    "hook_style": "statement"
+  },
+  {
+    "id": 446,
+    "type": "reel2",
+    "variant": 3,
+    "theme": "Longing and heartbreak",
+    "phrases": [
+      "I miss him, and I am glad he's gone.",
+      "Both feelings share my bed, and neither will move over.",
+      "Anyone who calls grief simple never loved a mess."
+    ],
+    "scenes": [
+      1,
+      30,
+      18
+    ],
+    "fb_caption": "i miss him and i'm glad he's gone\n\ntwo truths can sleep in one bed\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#missingyou #heartbreak #longing #breakup #soul",
+    "ig_caption": "i miss him and i'm glad he's gone\n\ntwo truths can sleep in one bed\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#missingyou #heartbreak #longing #breakup #soul",
+    "hook_style": "confession"
+  },
+  {
+    "id": 458,
+    "type": "reel2",
+    "variant": 2,
+    "theme": "First-person confessions",
+    "phrases": [
+      "I used to think crying in public was weakness.",
+      "Then I cried on the night bus.",
+      "A stranger passed me a tissue",
+      "and looked away politely.",
+      "That's the nicest thing anyone's done for me this year."
+    ],
+    "scenes": [
+      35,
+      2,
+      14,
+      27,
+      4
+    ],
+    "fb_caption": "i cried on the night bus and a stranger passed me a tissue\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness",
+    "ig_caption": "i cried on the night bus and a stranger passed me a tissue\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness",
+    "hook_style": "confession"
+  },
+  {
+    "id": 478,
+    "type": "reel2",
+    "variant": 3,
+    "theme": "Tough love and defiance",
+    "phrases": [
+      "Today I'm retiring from being the easy one at work.",
+      "\"Easy\" is how they describe me when I swallow things.",
+      "Dinner's served. I've stopped swallowing my own words."
+    ],
+    "scenes": [
+      13,
+      14,
+      32
+    ],
+    "fb_caption": "retiring from being \"the easy one\"\n\nwho decided you were the easy one?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#standyourground #knowyourworth #toughlove",
+    "ig_caption": "retiring from being \"the easy one\"\n\nwho decided you were the easy one?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#standyourground #knowyourworth #toughlove",
+    "hook_style": "specific_detail"
+  },
+  {
+    "id": 465,
+    "type": "reel2",
+    "variant": 1,
+    "theme": "Faith and small mercies",
+    "phrases": [
+      "God, I don't have any long words today, sorry.",
+      "Only this: thanks for my breath, my bread, my people.",
+      "I'll bring the longer speeches another day, I promise."
+    ],
+    "scenes": [
+      24,
+      23,
+      25
+    ],
+    "fb_caption": "a prayer for the days with no long words\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmercies #thankful #prayer",
+    "ig_caption": "a prayer for the days with no long words\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmercies #thankful #prayer",
+    "hook_style": "statement"
+  },
+  {
+    "id": 510,
+    "type": "reel2",
+    "variant": 1,
+    "theme": "First-person confessions",
+    "phrases": [
+      "Why does saying no read like a three-page essay?",
+      "Lately I send it without the reasons.",
+      "A full stop, a polite face, no apology attached.",
+      "Funny how the world keeps on spinning when I'm brief."
+    ],
+    "scenes": [
+      32,
+      22,
+      19,
+      5
+    ],
+    "fb_caption": "saying no without a three-page reason\n\nwhat would you refuse if nobody asked why?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
+    "ig_caption": "saying no without a three-page reason\n\nwhat would you refuse if nobody asked why?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
+    "hook_style": "question"
+  },
+  {
+    "id": 370,
+    "type": "reel2",
+    "variant": 2,
+    "theme": "Longing and heartbreak",
+    "phrases": [
+      "I miss the person I was around you.",
+      "Funnier. Braver. Slightly worse at parking.",
+      "Maybe I'll meet her again without you.",
+      "She's probably been waiting at the corner."
+    ],
+    "scenes": [
+      32,
+      30,
+      27,
+      5
+    ],
+    "fb_caption": "i miss who i was around you\n\nfunnier, braver, worse at parking\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#longing #breakup #unsaidthings",
+    "ig_caption": "i miss who i was around you\n\nfunnier, braver, worse at parking\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#longing #breakup #unsaidthings",
+    "hook_style": "confession"
+  },
+  {
+    "id": 388,
+    "type": "reel2",
+    "variant": 2,
+    "theme": "Work money and friendship",
+    "phrases": [
+      "I got the job. I celebrated with instant noodles, alone.",
+      "Because the first salary is three weeks away.",
+      "Hope tastes like salt, steam and the cheapest hot water."
+    ],
+    "scenes": [
+      11,
+      13,
+      5
+    ],
+    "fb_caption": "i got the job and celebrated with instant noodles\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#burnout #adulting #workinglife #adultfriendship",
+    "ig_caption": "i got the job and celebrated with instant noodles\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#burnout #adulting #workinglife #adultfriendship",
+    "hook_style": "confession"
+  },
+  {
+    "id": 416,
+    "type": "reel2",
+    "variant": 2,
+    "theme": "Faith and small mercies",
+    "phrases": [
+      "Make me kind before I am right.",
+      "Make me quick to listen and slow to type.",
+      "Make me tender toward the people I love most.",
+      "And when I fail, let there be forgiveness nearby."
+    ],
+    "scenes": [
+      24,
+      22,
+      11,
+      19
+    ],
+    "fb_caption": "a small prayer for a loud week\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#gratitude #faith #smallmercies #thankful",
+    "ig_caption": "a small prayer for a loud week\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#gratitude #faith #smallmercies #thankful",
+    "hook_style": "statement"
+  },
+  {
+    "id": 390,
+    "type": "reel2",
+    "variant": 2,
+    "theme": "First-person confessions",
+    "phrases": [
+      "Nobody knows I keep his jacket in my wardrobe.",
+      "I don't wear it. I only check that it's there.",
+      "Some losses just need somewhere to hang, for years."
+    ],
+    "scenes": [
+      7,
+      1,
+      12
+    ],
+    "fb_caption": "the jacket i can't give away\n\ngrief needs a hanger too\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness",
+    "ig_caption": "the jacket i can't give away\n\ngrief needs a hanger too\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness",
+    "hook_style": "statement"
+  },
+  {
+    "id": 453,
+    "type": "reel2",
+    "variant": 2,
+    "theme": "Longing and heartbreak",
+    "phrases": [
+      "Why does missing you keep such strict hours?",
+      "Eleven o'clock, the phone. Saturday, our favourite song.",
+      "My heart works office hours for someone who resigned.",
+      "Overtime, unpaid, forever."
+    ],
+    "scenes": [
+      6,
+      13,
+      7,
+      27
+    ],
+    "fb_caption": "missing someone has a schedule\n\nfor the heart that works overtime\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#longing #breakup #unsaidthings",
+    "ig_caption": "missing someone has a schedule\n\nfor the heart that works overtime\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#longing #breakup #unsaidthings",
+    "hook_style": "question"
+  },
+  {
+    "id": 403,
+    "type": "reel2",
+    "variant": 0,
+    "theme": "Faith and small mercies",
+    "phrases": [
+      "At the hospital, a nurse held my hand",
+      "and prayed.",
+      "She didn't ask my religion, only my mother's name.",
+      "That is the only denomination I believe in: care."
+    ],
+    "scenes": [
+      37,
+      24,
+      12,
+      4
+    ],
+    "fb_caption": "the nurse who prayed without asking my religion\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#prayer #blessed #gratitude",
+    "ig_caption": "the nurse who prayed without asking my religion\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#prayer #blessed #gratitude",
+    "hook_style": "statement"
+  },
+  {
+    "id": 369,
+    "type": "reel2",
+    "variant": 0,
+    "theme": "First-person confessions",
+    "phrases": [
+      "At my father's funeral I worried about the sandwiches.",
+      "Grief gives you small jobs so the big one waits.",
+      "Three weeks later, a sandwich made me cry. Of course."
+    ],
+    "scenes": [
+      12,
+      36,
+      11
+    ],
+    "fb_caption": "the sandwiches at my father's funeral\n\ngrief is oddly practical\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness",
+    "ig_caption": "the sandwiches at my father's funeral\n\ngrief is oddly practical\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness",
+    "hook_style": "statement"
+  },
+  {
+    "id": 500,
+    "type": "reel2",
+    "variant": 3,
+    "theme": "Family and memory",
+    "phrases": [
+      "Gran's recipe says \"a handful\" and \"till it's right.\"",
+      "I've failed it nine times. Mine never looks quite right.",
+      "Maybe that's what her hands were really writing down."
+    ],
+    "scenes": [
+      11,
+      22,
+      23
+    ],
+    "fb_caption": "gran's recipe has no measurements\n\nher hands were the real recipe\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#family #childhood #memories",
+    "ig_caption": "gran's recipe has no measurements\n\nher hands were the real recipe\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#family #childhood #memories",
+    "hook_style": "dialogue"
+  },
+  {
+    "id": 414,
+    "type": "reel2",
+    "variant": 4,
+    "theme": "Longing and heartbreak",
+    "phrases": [
+      "\"Are you happy?\" he asked.",
+      "\"Mostly,\" I said.",
+      "It was the most honest thing I said all year.",
+      "He nodded. We finished our tea and talked about buses."
+    ],
+    "scenes": [
+      6,
+      7,
+      29,
+      34
+    ],
+    "fb_caption": "\"are you happy?\" \"mostly.\"\n\nwhat is your honest \"mostly\"?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#unsaidthings #oldlove #missingyou",
+    "ig_caption": "\"are you happy?\" \"mostly.\"\n\nwhat is your honest \"mostly\"?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#unsaidthings #oldlove #missingyou",
+    "hook_style": "dialogue"
+  },
+  {
+    "id": 418,
+    "type": "reel2",
+    "variant": 1,
+    "theme": "First-person confessions",
+    "phrases": [
+      "These days I go home the moment I'm properly tired.",
+      "No excuse. No dramatic headache.",
+      "Just \"I'm heading home. Lovely evening.\"",
+      "Nobody has ever hated me for it."
+    ],
+    "scenes": [
+      38,
+      27,
+      40,
+      17
+    ],
+    "fb_caption": "going home when i'm tired, no excuses\n\nnobody has ever hated me for it\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
+    "ig_caption": "going home when i'm tired, no excuses\n\nnobody has ever hated me for it\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
+    "hook_style": "statement"
+  },
+  {
+    "id": 439,
+    "type": "reel2",
+    "variant": 4,
+    "theme": "Family and memory",
+    "phrases": [
+      "\"Did you eat?\" my mother asks, before \"How are you?\"",
+      "Every call, for forty years.",
+      "The order never changes.",
+      "She learned worry in a decade of hunger. It stuck."
+    ],
+    "scenes": [
+      7,
+      38,
+      36,
+      25
+    ],
+    "fb_caption": "\"did you eat?\" always comes first\n\nlove in the shape of a question\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#parents #growingup #family #childhood #soul",
+    "ig_caption": "\"did you eat?\" always comes first\n\nlove in the shape of a question\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#parents #growingup #family #childhood #soul",
+    "hook_style": "dialogue"
+  },
+  {
+    "id": 472,
+    "type": "reel2",
+    "variant": 0,
+    "theme": "Longing and heartbreak",
+    "phrases": [
+      "He took the good umbrella and the last word.",
+      "I kept the cat, the plants and the better playlist.",
+      "Honestly? We both left with exactly what we deserved."
+    ],
+    "scenes": [
+      3,
+      26,
+      4
+    ],
+    "fb_caption": "who got the umbrella, who got the cat\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#missingyou #heartbreak #longing #breakup",
+    "ig_caption": "who got the umbrella, who got the cat\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#missingyou #heartbreak #longing #breakup",
+    "hook_style": "statement"
+  },
+  {
+    "id": 379,
+    "type": "reel2",
+    "variant": 0,
+    "theme": "First-person confessions",
+    "phrases": [
+      "In my thirties I stopped keeping score with friends.",
+      "Not because I'm generous.",
+      "I'm just tired of the maths.",
+      "Love shouldn't need a calculator, and neither should I."
+    ],
+    "scenes": [
+      30,
+      33,
+      28,
+      25
+    ],
+    "fb_caption": "i stopped keeping score with my friends\n\nfor the friend who always counted for both of you\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
+    "ig_caption": "i stopped keeping score with my friends\n\nfor the friend who always counted for both of you\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
+    "hook_style": "statement"
+  },
+  {
+    "id": 363,
+    "type": "reel2",
+    "variant": 2,
+    "theme": "Family and memory",
+    "phrases": [
+      "Mum's handwriting is on every jar in the cupboard.",
+      "Salt. Sugar. Cumin. Her sevens always wore little hats.",
+      "She's gone two years. I can't throw out a label."
+    ],
+    "scenes": [
+      11,
+      22,
+      12
+    ],
+    "fb_caption": "mum's handwriting on every jar\n\nfor everyone who can't throw out a label\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#parents #growingup #family #childhood #soul",
+    "ig_caption": "mum's handwriting on every jar\n\nfor everyone who can't throw out a label\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#parents #growingup #family #childhood #soul",
+    "hook_style": "statement"
+  },
+  {
+    "id": 531,
+    "type": "reel2",
+    "variant": 3,
+    "theme": "Longing and heartbreak",
+    "phrases": [
+      "Midnight. She types, \"I'm over it.\"",
+      "Seven times.",
+      "Seven different ways to say the same wound.",
+      "Then she puts the phone in the freezer.",
+      "Not a metaphor. It works."
     ],
     "scenes": [
       8,
-      39,
-      30
+      28,
+      22,
+      11,
+      26
     ],
-    "fb_caption": "scrolling back through old photos at two a.m.\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife #soul",
-    "ig_caption": "scrolling back through old photos at two a.m.\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife #soul",
-    "hook_style": "specific_detail"
+    "fb_caption": "\"i'm over it,\" typed seven times\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#missingyou #heartbreak #longing #breakup #poetry",
+    "ig_caption": "\"i'm over it,\" typed seven times\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#missingyou #heartbreak #longing #breakup #poetry",
+    "hook_style": "dialogue"
   },
   {
     "id": 385,
@@ -9112,277 +9575,44 @@
     "hook_style": "statement"
   },
   {
-    "id": 531,
+    "id": 482,
     "type": "reel2",
-    "variant": 3,
-    "theme": "Longing and heartbreak",
+    "variant": 4,
+    "theme": "Work money and friendship",
     "phrases": [
-      "Midnight. She types, \"I'm over it.\"",
-      "Seven times.",
-      "Seven different ways to say the same wound.",
-      "Then she puts the phone in the freezer.",
-      "Not a metaphor. It works."
+      "\"Sorry for the late reply\" is the national anthem.",
+      "We all stand when it plays. We all mean nothing.",
+      "Let's agree to say \"I saw it, I'm thinking.\""
     ],
     "scenes": [
-      8,
-      28,
-      22,
-      11,
-      26
+      13,
+      33,
+      28
     ],
-    "fb_caption": "\"i'm over it,\" typed seven times\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#missingyou #heartbreak #longing #breakup #poetry",
-    "ig_caption": "\"i'm over it,\" typed seven times\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#missingyou #heartbreak #longing #breakup #poetry",
+    "fb_caption": "sorry for the late reply, the national anthem\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#burnout #adulting #workinglife #adultfriendship #deepthoughts",
+    "ig_caption": "sorry for the late reply, the national anthem\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#burnout #adulting #workinglife #adultfriendship #deepthoughts",
     "hook_style": "dialogue"
   },
   {
-    "id": 388,
-    "type": "reel2",
-    "variant": 2,
-    "theme": "Work money and friendship",
-    "phrases": [
-      "I got the job. I celebrated with instant noodles, alone.",
-      "Because the first salary is three weeks away.",
-      "Hope tastes like salt, steam and the cheapest hot water."
-    ],
-    "scenes": [
-      11,
-      13,
-      5
-    ],
-    "fb_caption": "i got the job and celebrated with instant noodles\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#burnout #adulting #workinglife #adultfriendship",
-    "ig_caption": "i got the job and celebrated with instant noodles\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#burnout #adulting #workinglife #adultfriendship",
-    "hook_style": "confession"
-  },
-  {
-    "id": 416,
-    "type": "reel2",
-    "variant": 2,
-    "theme": "Faith and small mercies",
-    "phrases": [
-      "Make me kind before I am right.",
-      "Make me quick to listen and slow to type.",
-      "Make me tender toward the people I love most.",
-      "And when I fail, let there be forgiveness nearby."
-    ],
-    "scenes": [
-      24,
-      22,
-      11,
-      19
-    ],
-    "fb_caption": "a small prayer for a loud week\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#gratitude #faith #smallmercies #thankful",
-    "ig_caption": "a small prayer for a loud week\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#gratitude #faith #smallmercies #thankful",
-    "hook_style": "statement"
-  },
-  {
-    "id": 449,
-    "type": "reel2",
-    "variant": 4,
-    "theme": "Tough love and defiance",
-    "phrases": [
-      "He says, \"You've changed.\"",
-      "Good. Smile and say a gracious thanks.",
-      "The old you worked for free. He misses that, obviously.",
-      "Change isn't betrayal. It's your wages finally arriving."
-    ],
-    "scenes": [
-      32,
-      28,
-      3,
-      5
-    ],
-    "fb_caption": "he says you've changed. good.\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#standyourground #knowyourworth #toughlove #soul",
-    "ig_caption": "he says you've changed. good.\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#standyourground #knowyourworth #toughlove #soul",
-    "hook_style": "dialogue"
-  },
-  {
-    "id": 466,
-    "type": "reel2",
-    "variant": 3,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "Furniture shop, Saturday.",
-      "The salesman asks, \"Double or single?\" and smiles.",
-      "You say \"single\" a little faster than you meant to.",
-      "He pretends not to notice. That's kindness, honestly."
-    ],
-    "scenes": [
-      34,
-      30,
-      6,
-      4
-    ],
-    "fb_caption": "the word \"single\" said a little too fast\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife",
-    "ig_caption": "the word \"single\" said a little too fast\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife",
-    "hook_style": "statement"
-  },
-  {
-    "id": 447,
-    "type": "reel2",
-    "variant": 1,
-    "theme": "First-person confessions",
-    "phrases": [
-      "I used to rehearse whole arguments in the shower.",
-      "In every version I win and nobody gets hurt.",
-      "Real life has not once followed my script.",
-      "Thank goodness."
-    ],
-    "scenes": [
-      32,
-      28,
-      3,
-      17
-    ],
-    "fb_caption": "every argument i've ever won, in the shower\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#honestwords #confessions #lifelessons #growingup",
-    "ig_caption": "every argument i've ever won, in the shower\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#honestwords #confessions #lifelessons #growingup",
-    "hook_style": "confession"
-  },
-  {
-    "id": 486,
-    "type": "reel2",
-    "variant": 3,
-    "theme": "Family and memory",
-    "phrases": [
-      "Mum's last voice note is nine seconds long.",
-      "She says, \"Bring an umbrella, it might rain.\"",
-      "I carry one everywhere now, in all weather.",
-      "People think I'm eccentric. I'm obedient."
-    ],
-    "scenes": [
-      8,
-      3,
-      33,
-      4
-    ],
-    "fb_caption": "mum's last voice note\n\ni carry an umbrella everywhere now\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#memories #familylove #parents",
-    "ig_caption": "mum's last voice note\n\ni carry an umbrella everywhere now\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#memories #familylove #parents",
-    "hook_style": "specific_detail"
-  },
-  {
-    "id": 472,
-    "type": "reel2",
-    "variant": 0,
-    "theme": "Longing and heartbreak",
-    "phrases": [
-      "He took the good umbrella and the last word.",
-      "I kept the cat, the plants and the better playlist.",
-      "Honestly? We both left with exactly what we deserved."
-    ],
-    "scenes": [
-      3,
-      26,
-      4
-    ],
-    "fb_caption": "who got the umbrella, who got the cat\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#missingyou #heartbreak #longing #breakup",
-    "ig_caption": "who got the umbrella, who got the cat\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#missingyou #heartbreak #longing #breakup",
-    "hook_style": "statement"
-  },
-  {
-    "id": 535,
-    "type": "reel2",
-    "variant": 0,
-    "theme": "Work money and friendship",
-    "phrases": [
-      "The college group project taught me about people.",
-      "Who vanishes. Who takes over. Who brings snacks.",
-      "Adulthood is just that project, forever.",
-      "I try to be the snacks."
-    ],
-    "scenes": [
-      34,
-      14,
-      13,
-      38
-    ],
-    "fb_caption": "the group project taught me everything about people\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#workinglife #adultfriendship #moneystress",
-    "ig_caption": "the group project taught me everything about people\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#workinglife #adultfriendship #moneystress",
-    "hook_style": "statement"
-  },
-  {
-    "id": 403,
-    "type": "reel2",
-    "variant": 0,
-    "theme": "Faith and small mercies",
-    "phrases": [
-      "At the hospital, a nurse held my hand",
-      "and prayed.",
-      "She didn't ask my religion, only my mother's name.",
-      "That is the only denomination I believe in: care."
-    ],
-    "scenes": [
-      37,
-      24,
-      12,
-      4
-    ],
-    "fb_caption": "the nurse who prayed without asking my religion\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#prayer #blessed #gratitude",
-    "ig_caption": "the nurse who prayed without asking my religion\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#prayer #blessed #gratitude",
-    "hook_style": "statement"
-  },
-  {
-    "id": 478,
-    "type": "reel2",
-    "variant": 3,
-    "theme": "Tough love and defiance",
-    "phrases": [
-      "Today I'm retiring from being the easy one at work.",
-      "\"Easy\" is how they describe me when I swallow things.",
-      "Dinner's served. I've stopped swallowing my own words."
-    ],
-    "scenes": [
-      13,
-      14,
-      32
-    ],
-    "fb_caption": "retiring from being \"the easy one\"\n\nwho decided you were the easy one?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#standyourground #knowyourworth #toughlove",
-    "ig_caption": "retiring from being \"the easy one\"\n\nwho decided you were the easy one?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#standyourground #knowyourworth #toughlove",
-    "hook_style": "specific_detail"
-  },
-  {
-    "id": 471,
-    "type": "reel2",
-    "variant": 4,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "Sunday laundromat.",
-      "Everyone watches their clothes spin.",
-      "A man folds a child's tiny socks, slowly.",
-      "You wonder who he is folding them for.",
-      "Everybody here carries an entire life in a basket."
-    ],
-    "scenes": [
-      33,
-      14,
-      36,
-      12,
-      22
-    ],
-    "fb_caption": "the man folding tiny socks at the laundromat\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife",
-    "ig_caption": "the man folding tiny socks at the laundromat\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife",
-    "hook_style": "statement"
-  },
-  {
-    "id": 458,
+    "id": 488,
     "type": "reel2",
     "variant": 2,
     "theme": "First-person confessions",
     "phrases": [
-      "I used to think crying in public was weakness.",
-      "Then I cried on the night bus.",
-      "A stranger passed me a tissue",
-      "and looked away politely.",
-      "That's the nicest thing anyone's done for me this year."
+      "I drove two hours just to hear Grandma say hello.",
+      "She opened the gate, confused, in her old slippers.",
+      "We drank tea.",
+      "I never mentioned why I came."
     ],
     "scenes": [
-      35,
       2,
-      14,
-      27,
-      4
+      11,
+      4,
+      12
     ],
-    "fb_caption": "i cried on the night bus and a stranger passed me a tissue\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness",
-    "ig_caption": "i cried on the night bus and a stranger passed me a tissue\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness",
-    "hook_style": "confession"
+    "fb_caption": "two hours there, one hello back\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
+    "ig_caption": "two hours there, one hello back\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
+    "hook_style": "specific_detail"
   },
   {
     "id": 374,
@@ -9427,225 +9657,46 @@
     "hook_style": "statement"
   },
   {
-    "id": 503,
+    "id": 522,
     "type": "reel2",
-    "variant": 2,
-    "theme": "Work money and friendship",
+    "variant": 3,
+    "theme": "First-person confessions",
     "phrases": [
-      "She works two jobs and names it \"a busy season.\"",
-      "The season has lasted six years.",
-      "Someone please tell her that seasons can end.",
-      "Somebody bring her soup."
+      "At twenty-nine I finally asked for a raise, politely.",
+      "My voice shook.",
+      "My hands were under the table.",
+      "He said yes in four seconds. I'd lost four years."
     ],
     "scenes": [
       13,
-      2,
-      15,
-      4
-    ],
-    "fb_caption": "she works two jobs and calls it a busy season\n\nfor the ones who never get to say \"i'm tired\"\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
-    "ig_caption": "she works two jobs and calls it a busy season\n\nfor the ones who never get to say \"i'm tired\"\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
-    "hook_style": "dialogue"
-  },
-  {
-    "id": 465,
-    "type": "reel2",
-    "variant": 1,
-    "theme": "Faith and small mercies",
-    "phrases": [
-      "God, I don't have any long words today, sorry.",
-      "Only this: thanks for my breath, my bread, my people.",
-      "I'll bring the longer speeches another day, I promise."
-    ],
-    "scenes": [
-      24,
-      23,
-      25
-    ],
-    "fb_caption": "a prayer for the days with no long words\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmercies #thankful #prayer",
-    "ig_caption": "a prayer for the days with no long words\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmercies #thankful #prayer",
-    "hook_style": "statement"
-  },
-  {
-    "id": 421,
-    "type": "reel2",
-    "variant": 3,
-    "theme": "Tough love and defiance",
-    "phrases": [
-      "Cancel the invite you accepted in an exhausted moment.",
-      "Your tired self made promises your rested self hates.",
-      "Delete the guilt too. Nobody ever sent you an invoice."
-    ],
-    "scenes": [
-      39,
-      1,
-      17
-    ],
-    "fb_caption": "cancel the plan you agreed to while tired\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#standyourground #knowyourworth #toughlove",
-    "ig_caption": "cancel the plan you agreed to while tired\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#standyourground #knowyourworth #toughlove",
-    "hook_style": "statement"
-  },
-  {
-    "id": 518,
-    "type": "reel2",
-    "variant": 2,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "Midnight. The power cuts out in the stairwell.",
-      "Two neighbours finally say hello, by phone torch.",
-      "The lift is dead, so for once everyone is human.",
-      "Funny how one broken lift introduces an entire building."
-    ],
-    "scenes": [
       31,
-      21,
       16,
-      35
+      5
     ],
-    "fb_caption": "the night the lift broke and the building met\n\nsometimes the dark is just a good introduction\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife #deepthoughts",
-    "ig_caption": "the night the lift broke and the building met\n\nsometimes the dark is just a good introduction\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife #deepthoughts",
-    "hook_style": "statement"
-  },
-  {
-    "id": 390,
-    "type": "reel2",
-    "variant": 2,
-    "theme": "First-person confessions",
-    "phrases": [
-      "Nobody knows I keep his jacket in my wardrobe.",
-      "I don't wear it. I only check that it's there.",
-      "Some losses just need somewhere to hang, for years."
-    ],
-    "scenes": [
-      7,
-      1,
-      12
-    ],
-    "fb_caption": "the jacket i can't give away\n\ngrief needs a hanger too\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness",
-    "ig_caption": "the jacket i can't give away\n\ngrief needs a hanger too\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness",
-    "hook_style": "statement"
-  },
-  {
-    "id": 368,
-    "type": "reel2",
-    "variant": 1,
-    "theme": "Family and memory",
-    "phrases": [
-      "My drawing is on their fridge.",
-      "I am thirty-four.",
-      "Magnets hold it. The sun has faded my sky white.",
-      "Some love is just refusing to take things down."
-    ],
-    "scenes": [
-      11,
-      32,
-      36,
-      23
-    ],
-    "fb_caption": "my crayon drawing is on their fridge\n\nsome love is refusing to take things down\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#family #childhood #memories",
-    "ig_caption": "my crayon drawing is on their fridge\n\nsome love is refusing to take things down\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#family #childhood #memories",
-    "hook_style": "confession"
-  },
-  {
-    "id": 521,
-    "type": "reel2",
-    "variant": 2,
-    "theme": "Longing and heartbreak",
-    "phrases": [
-      "I drove past your street and didn't turn.",
-      "It's progress. The car wanted to. My hands said no.",
-      "Twenty minutes later I was crying at a petrol pump."
-    ],
-    "scenes": [
-      2,
-      27,
-      3
-    ],
-    "fb_caption": "the street i drove past and didn't turn onto\n\nwhat did you drive past tonight?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#longing #breakup #unsaidthings",
-    "ig_caption": "the street i drove past and didn't turn onto\n\nwhat did you drive past tonight?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#longing #breakup #unsaidthings",
-    "hook_style": "confession"
-  },
-  {
-    "id": 475,
-    "type": "reel2",
-    "variant": 4,
-    "theme": "Work money and friendship",
-    "phrases": [
-      "Everyone online is buying a house, apparently.",
-      "Meanwhile I'm comparing two kinds of rice.",
-      "Both of us are working really hard.",
-      "Only one of us gets a soundtrack."
-    ],
-    "scenes": [
-      28,
-      38,
-      14,
-      40
-    ],
-    "fb_caption": "everyone online is buying a house\n\nmeanwhile, two kinds of rice\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
-    "ig_caption": "everyone online is buying a house\n\nmeanwhile, two kinds of rice\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
-    "hook_style": "statement"
-  },
-  {
-    "id": 366,
-    "type": "reel2",
-    "variant": 3,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "Thirty-one today.",
-      "Fourteen messages, a few hearts, and one small cupcake.",
-      "You hum the song to yourself, softly, off-key.",
-      "Make a wish. It's the one from last year."
-    ],
-    "scenes": [
-      39,
-      8,
-      34,
-      40
-    ],
-    "fb_caption": "thirty-one, one cupcake, the same wish\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
-    "ig_caption": "thirty-one, one cupcake, the same wish\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "fb_caption": "it took four years to ask a four-second question\n\nfor everyone rehearsing how to ask\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness #deepthoughts",
+    "ig_caption": "it took four years to ask a four-second question\n\nfor everyone rehearsing how to ask\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness #deepthoughts",
     "hook_style": "specific_detail"
   },
   {
-    "id": 379,
+    "id": 486,
     "type": "reel2",
-    "variant": 0,
-    "theme": "First-person confessions",
-    "phrases": [
-      "In my thirties I stopped keeping score with friends.",
-      "Not because I'm generous.",
-      "I'm just tired of the maths.",
-      "Love shouldn't need a calculator, and neither should I."
-    ],
-    "scenes": [
-      30,
-      33,
-      28,
-      25
-    ],
-    "fb_caption": "i stopped keeping score with my friends\n\nfor the friend who always counted for both of you\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
-    "ig_caption": "i stopped keeping score with my friends\n\nfor the friend who always counted for both of you\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
-    "hook_style": "statement"
-  },
-  {
-    "id": 363,
-    "type": "reel2",
-    "variant": 2,
+    "variant": 3,
     "theme": "Family and memory",
     "phrases": [
-      "Mum's handwriting is on every jar in the cupboard.",
-      "Salt. Sugar. Cumin. Her sevens always wore little hats.",
-      "She's gone two years. I can't throw out a label."
+      "Mum's last voice note is nine seconds long.",
+      "She says, \"Bring an umbrella, it might rain.\"",
+      "I carry one everywhere now, in all weather.",
+      "People think I'm eccentric. I'm obedient."
     ],
     "scenes": [
-      11,
-      22,
-      12
+      8,
+      3,
+      33,
+      4
     ],
-    "fb_caption": "mum's handwriting on every jar\n\nfor everyone who can't throw out a label\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#parents #growingup #family #childhood #soul",
-    "ig_caption": "mum's handwriting on every jar\n\nfor everyone who can't throw out a label\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#parents #growingup #family #childhood #soul",
-    "hook_style": "statement"
+    "fb_caption": "mum's last voice note\n\ni carry an umbrella everywhere now\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#memories #familylove #parents",
+    "ig_caption": "mum's last voice note\n\ni carry an umbrella everywhere now\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#memories #familylove #parents",
+    "hook_style": "specific_detail"
   },
   {
     "id": 377,
@@ -9669,266 +9720,26 @@
     "hook_style": "statement"
   },
   {
-    "id": 524,
-    "type": "reel2",
-    "variant": 3,
-    "theme": "Work money and friendship",
-    "phrases": [
-      "\"Free Saturday?\" \"Probably.\" That actually means never.",
-      "At thirty, friendship is just two calendars sighing.",
-      "But I would gladly move mine for you.",
-      "Pick a date. Any date."
-    ],
-    "scenes": [
-      6,
-      14,
-      28,
-      17
-    ],
-    "fb_caption": "\"free on saturday?\" \"probably.\"\n\nfor the friend who still says busy\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
-    "ig_caption": "\"free on saturday?\" \"probably.\"\n\nfor the friend who still says busy\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
-    "hook_style": "dialogue"
-  },
-  {
-    "id": 513,
-    "type": "reel2",
-    "variant": 0,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "Sunday night, you iron the one good shirt for Monday.",
-      "Like armour for a battle nobody else can see.",
-      "Warm cotton and steam. It almost feels like courage."
-    ],
-    "scenes": [
-      13,
-      32,
-      16
-    ],
-    "fb_caption": "ironing the good shirt on a sunday night\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #deepthoughts",
-    "ig_caption": "ironing the good shirt on a sunday night\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #deepthoughts",
-    "hook_style": "specific_detail"
-  },
-  {
-    "id": 510,
-    "type": "reel2",
-    "variant": 1,
-    "theme": "First-person confessions",
-    "phrases": [
-      "Why does saying no read like a three-page essay?",
-      "Lately I send it without the reasons.",
-      "A full stop, a polite face, no apology attached.",
-      "Funny how the world keeps on spinning when I'm brief."
-    ],
-    "scenes": [
-      32,
-      22,
-      19,
-      5
-    ],
-    "fb_caption": "saying no without a three-page reason\n\nwhat would you refuse if nobody asked why?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
-    "ig_caption": "saying no without a three-page reason\n\nwhat would you refuse if nobody asked why?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
-    "hook_style": "question"
-  },
-  {
-    "id": 439,
-    "type": "reel2",
-    "variant": 4,
-    "theme": "Family and memory",
-    "phrases": [
-      "\"Did you eat?\" my mother asks, before \"How are you?\"",
-      "Every call, for forty years.",
-      "The order never changes.",
-      "She learned worry in a decade of hunger. It stuck."
-    ],
-    "scenes": [
-      7,
-      38,
-      36,
-      25
-    ],
-    "fb_caption": "\"did you eat?\" always comes first\n\nlove in the shape of a question\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#parents #growingup #family #childhood #soul",
-    "ig_caption": "\"did you eat?\" always comes first\n\nlove in the shape of a question\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#parents #growingup #family #childhood #soul",
-    "hook_style": "dialogue"
-  },
-  {
-    "id": 446,
-    "type": "reel2",
-    "variant": 3,
-    "theme": "Longing and heartbreak",
-    "phrases": [
-      "I miss him, and I am glad he's gone.",
-      "Both feelings share my bed, and neither will move over.",
-      "Anyone who calls grief simple never loved a mess."
-    ],
-    "scenes": [
-      1,
-      30,
-      18
-    ],
-    "fb_caption": "i miss him and i'm glad he's gone\n\ntwo truths can sleep in one bed\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#missingyou #heartbreak #longing #breakup #soul",
-    "ig_caption": "i miss him and i'm glad he's gone\n\ntwo truths can sleep in one bed\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#missingyou #heartbreak #longing #breakup #soul",
-    "hook_style": "confession"
-  },
-  {
-    "id": 452,
-    "type": "reel2",
-    "variant": 4,
-    "theme": "Work money and friendship",
-    "phrases": [
-      "Rent goes up. Salary stays put. Tea bags get stretched.",
-      "At parties I describe it as minimalism, very loudly.",
-      "Under the joke, a calculator weeps in my pocket."
-    ],
-    "scenes": [
-      11,
-      27,
-      1
-    ],
-    "fb_caption": "rent goes up, salary stays put, tea bags get stretched\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
-    "ig_caption": "rent goes up, salary stays put, tea bags get stretched\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
-    "hook_style": "statement"
-  },
-  {
-    "id": 402,
-    "type": "reel2",
-    "variant": 4,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "Metro station.",
-      "A toddler waves at every passing stranger.",
-      "Forty people look away.",
-      "One waves back, then three.",
-      "By the top, half the escalator is smiling at nothing."
-    ],
-    "scenes": [
-      16,
-      38,
-      33,
-      27,
-      5
-    ],
-    "fb_caption": "the toddler who waved at the whole metro\n\nkids do what the rest of us forgot\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #soul",
-    "ig_caption": "the toddler who waved at the whole metro\n\nkids do what the rest of us forgot\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #soul",
-    "hook_style": "statement"
-  },
-  {
-    "id": 488,
+    "id": 406,
     "type": "reel2",
     "variant": 2,
     "theme": "First-person confessions",
     "phrases": [
-      "I drove two hours just to hear Grandma say hello.",
-      "She opened the gate, confused, in her old slippers.",
-      "We drank tea.",
-      "I never mentioned why I came."
+      "I'm forty-one and I just learned to ride a bicycle.",
+      "I fell twice.",
+      "A child on a scooter overtook me.",
+      "Wobbling is also moving.",
+      "I wish I'd known earlier."
     ],
     "scenes": [
-      2,
-      11,
-      4,
-      12
-    ],
-    "fb_caption": "two hours there, one hello back\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
-    "ig_caption": "two hours there, one hello back\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
-    "hook_style": "specific_detail"
-  },
-  {
-    "id": 500,
-    "type": "reel2",
-    "variant": 3,
-    "theme": "Family and memory",
-    "phrases": [
-      "Gran's recipe says \"a handful\" and \"till it's right.\"",
-      "I've failed it nine times. Mine never looks quite right.",
-      "Maybe that's what her hands were really writing down."
-    ],
-    "scenes": [
-      11,
-      22,
-      23
-    ],
-    "fb_caption": "gran's recipe has no measurements\n\nher hands were the real recipe\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#family #childhood #memories",
-    "ig_caption": "gran's recipe has no measurements\n\nher hands were the real recipe\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#family #childhood #memories",
-    "hook_style": "dialogue"
-  },
-  {
-    "id": 453,
-    "type": "reel2",
-    "variant": 2,
-    "theme": "Longing and heartbreak",
-    "phrases": [
-      "Why does missing you keep such strict hours?",
-      "Eleven o'clock, the phone. Saturday, our favourite song.",
-      "My heart works office hours for someone who resigned.",
-      "Overtime, unpaid, forever."
-    ],
-    "scenes": [
-      6,
-      13,
-      7,
-      27
-    ],
-    "fb_caption": "missing someone has a schedule\n\nfor the heart that works overtime\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#longing #breakup #unsaidthings",
-    "ig_caption": "missing someone has a schedule\n\nfor the heart that works overtime\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#longing #breakup #unsaidthings",
-    "hook_style": "question"
-  },
-  {
-    "id": 401,
-    "type": "reel2",
-    "variant": 2,
-    "theme": "Work money and friendship",
-    "phrases": [
-      "The colleague who got my promotion brought cupcakes.",
-      "I clapped so hard that my watch fogged right up.",
-      "Later, by the photocopier, I let my face be honest."
-    ],
-    "scenes": [
-      13,
-      14,
-      31
-    ],
-    "fb_caption": "the colleague who got the promotion brought cupcakes\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout #deepthoughts",
-    "ig_caption": "the colleague who got the promotion brought cupcakes\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout #deepthoughts",
-    "hook_style": "statement"
-  },
-  {
-    "id": 529,
-    "type": "reel2",
-    "variant": 1,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "First warm evening. Every balcony has a person on it.",
-      "Nobody calls across. They just watch the sky go pink.",
-      "Winter is over, and the street exhales together."
-    ],
-    "scenes": [
-      39,
-      40,
-      5
-    ],
-    "fb_caption": "the first warm evening of the year\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #soul",
-    "ig_caption": "the first warm evening of the year\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #soul",
-    "hook_style": "statement"
-  },
-  {
-    "id": 522,
-    "type": "reel2",
-    "variant": 3,
-    "theme": "First-person confessions",
-    "phrases": [
-      "At twenty-nine I finally asked for a raise, politely.",
-      "My voice shook.",
-      "My hands were under the table.",
-      "He said yes in four seconds. I'd lost four years."
-    ],
-    "scenes": [
-      13,
-      31,
+      18,
+      15,
+      20,
       16,
       5
     ],
-    "fb_caption": "it took four years to ask a four-second question\n\nfor everyone rehearsing how to ask\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness #deepthoughts",
-    "ig_caption": "it took four years to ask a four-second question\n\nfor everyone rehearsing how to ask\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness #deepthoughts",
+    "fb_caption": "learning to ride a bicycle at forty-one\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#honestwords #confessions #lifelessons #growingup",
+    "ig_caption": "learning to ride a bicycle at forty-one\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#honestwords #confessions #lifelessons #growingup",
     "hook_style": "specific_detail"
   },
   {
@@ -9955,44 +9766,25 @@
     "hook_style": "statement"
   },
   {
-    "id": 370,
+    "id": 503,
     "type": "reel2",
     "variant": 2,
-    "theme": "Longing and heartbreak",
-    "phrases": [
-      "I miss the person I was around you.",
-      "Funnier. Braver. Slightly worse at parking.",
-      "Maybe I'll meet her again without you.",
-      "She's probably been waiting at the corner."
-    ],
-    "scenes": [
-      32,
-      30,
-      27,
-      5
-    ],
-    "fb_caption": "i miss who i was around you\n\nfunnier, braver, worse at parking\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#longing #breakup #unsaidthings",
-    "ig_caption": "i miss who i was around you\n\nfunnier, braver, worse at parking\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#longing #breakup #unsaidthings",
-    "hook_style": "confession"
-  },
-  {
-    "id": 469,
-    "type": "reel2",
-    "variant": 0,
     "theme": "Work money and friendship",
     "phrases": [
-      "At midnight I answered a work email, politely, again.",
-      "It wasn't urgent. I was just awake, and afraid.",
-      "The reply said, \"Thanks! No rush.\" I wanted to scream."
+      "She works two jobs and names it \"a busy season.\"",
+      "The season has lasted six years.",
+      "Someone please tell her that seasons can end.",
+      "Somebody bring her soup."
     ],
     "scenes": [
       13,
-      31,
-      14
+      2,
+      15,
+      4
     ],
-    "fb_caption": "answering a work email at two a.m.\n\nwhat keeps you awake at that hour?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#workinglife #adultfriendship #moneystress",
-    "ig_caption": "answering a work email at two a.m.\n\nwhat keeps you awake at that hour?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#workinglife #adultfriendship #moneystress",
-    "hook_style": "statement"
+    "fb_caption": "she works two jobs and calls it a busy season\n\nfor the ones who never get to say \"i'm tired\"\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
+    "ig_caption": "she works two jobs and calls it a busy season\n\nfor the ones who never get to say \"i'm tired\"\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
+    "hook_style": "dialogue"
   },
   {
     "id": 420,
@@ -10016,208 +9808,44 @@
     "hook_style": "question"
   },
   {
-    "id": 369,
-    "type": "reel2",
-    "variant": 0,
-    "theme": "First-person confessions",
-    "phrases": [
-      "At my father's funeral I worried about the sandwiches.",
-      "Grief gives you small jobs so the big one waits.",
-      "Three weeks later, a sandwich made me cry. Of course."
-    ],
-    "scenes": [
-      12,
-      36,
-      11
-    ],
-    "fb_caption": "the sandwiches at my father's funeral\n\ngrief is oddly practical\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness",
-    "ig_caption": "the sandwiches at my father's funeral\n\ngrief is oddly practical\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#lifelessons #growingup #selfawareness",
-    "hook_style": "statement"
-  },
-  {
-    "id": 508,
-    "type": "reel2",
-    "variant": 0,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "Four a.m. A night nurse eats cold noodles standing up.",
-      "She has held three strangers' hands since midnight.",
-      "Ask her what she does and she'll say, \"Just nursing.\""
-    ],
-    "scenes": [
-      37,
-      16,
-      5
-    ],
-    "fb_caption": "the night nurse who says it's \"just nursing\"\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
-    "ig_caption": "the night nurse who says it's \"just nursing\"\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
-    "hook_style": "specific_detail"
-  },
-  {
-    "id": 493,
-    "type": "reel2",
-    "variant": 0,
-    "theme": "First-person confessions",
-    "phrases": [
-      "I kept every voicemail my father ever left me, but",
-      "I never listened to any of them. Not once.",
-      "If I press play, there's nothing new left to hear."
-    ],
-    "scenes": [
-      8,
-      1,
-      36
-    ],
-    "fb_caption": "the voicemails i'm not ready to play\n\nsome things you keep by never touching them\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#honestwords #confessions #lifelessons #growingup",
-    "ig_caption": "the voicemails i'm not ready to play\n\nsome things you keep by never touching them\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#honestwords #confessions #lifelessons #growingup",
-    "hook_style": "confession"
-  },
-  {
-    "id": 490,
-    "type": "reel2",
-    "variant": 4,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "The neighbour plays violin badly every evening at six.",
-      "You hated it. You even thumped the wall once.",
-      "Last week it stopped.",
-      "Now you miss the wrong notes."
-    ],
-    "scenes": [
-      34,
-      31,
-      12,
-      21
-    ],
-    "fb_caption": "the neighbour who played the violin badly\n\nyou only hear it when it's gone\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
-    "ig_caption": "the neighbour who played the violin badly\n\nyou only hear it when it's gone\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
-    "hook_style": "specific_detail"
-  },
-  {
-    "id": 406,
-    "type": "reel2",
-    "variant": 2,
-    "theme": "First-person confessions",
-    "phrases": [
-      "I'm forty-one and I just learned to ride a bicycle.",
-      "I fell twice.",
-      "A child on a scooter overtook me.",
-      "Wobbling is also moving.",
-      "I wish I'd known earlier."
-    ],
-    "scenes": [
-      18,
-      15,
-      20,
-      16,
-      5
-    ],
-    "fb_caption": "learning to ride a bicycle at forty-one\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#honestwords #confessions #lifelessons #growingup",
-    "ig_caption": "learning to ride a bicycle at forty-one\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#honestwords #confessions #lifelessons #growingup",
-    "hook_style": "specific_detail"
-  },
-  {
-    "id": 540,
+    "id": 524,
     "type": "reel2",
     "variant": 3,
-    "theme": "Dated concrete scenes",
+    "theme": "Work money and friendship",
     "phrases": [
-      "Wednesday night, you cook for one.",
-      "And make too much rice, as always.",
-      "Habit. Somebody used to finish the second plate.",
-      "Tomorrow it's leftovers, and you call it remembering."
+      "\"Free Saturday?\" \"Probably.\" That actually means never.",
+      "At thirty, friendship is just two calendars sighing.",
+      "But I would gladly move mine for you.",
+      "Pick a date. Any date."
     ],
     "scenes": [
-      11,
-      4,
-      7,
-      36
+      6,
+      14,
+      28,
+      17
     ],
-    "fb_caption": "cooking for one and making rice for two\n\nwho did you used to cook for?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
-    "ig_caption": "cooking for one and making rice for two\n\nwho did you used to cook for?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
-    "hook_style": "specific_detail"
+    "fb_caption": "\"free on saturday?\" \"probably.\"\n\nfor the friend who still says busy\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
+    "ig_caption": "\"free on saturday?\" \"probably.\"\n\nfor the friend who still says busy\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
+    "hook_style": "dialogue"
   },
   {
-    "id": 395,
+    "id": 452,
     "type": "reel2",
     "variant": 4,
-    "theme": "First-person confessions",
+    "theme": "Work money and friendship",
     "phrases": [
-      "I wrote him a letter and mailed it to myself.",
-      "It arrived Tuesday, full of everything I couldn't say.",
-      "I read it aloud and finally agreed with me."
-    ],
-    "scenes": [
-      22,
-      36,
-      32
-    ],
-    "fb_caption": "a letter to him, mailed to me\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
-    "ig_caption": "a letter to him, mailed to me\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords",
-    "hook_style": "confession"
-  },
-  {
-    "id": 461,
-    "type": "reel2",
-    "variant": 0,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "Three a.m. Hospital corridor. The vending machine hums.",
-      "A daughter counts coins for terrible coffee.",
-      "The nurse says go home. She says she will.",
-      "Neither of them believes it."
-    ],
-    "scenes": [
-      37,
-      6,
-      31,
-      21
-    ],
-    "fb_caption": "three in the morning in a hospital corridor\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
-    "ig_caption": "three in the morning in a hospital corridor\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
-    "hook_style": "specific_detail"
-  },
-  {
-    "id": 468,
-    "type": "reel2",
-    "variant": 2,
-    "theme": "First-person confessions",
-    "phrases": [
-      "My mother never said she was proud of me.",
-      "She packed my lunch.",
-      "She cut my apple every exam day.",
-      "Took me thirty years to hear that as a sentence."
+      "Rent goes up. Salary stays put. Tea bags get stretched.",
+      "At parties I describe it as minimalism, very loudly.",
+      "Under the joke, a calculator weeps in my pocket."
     ],
     "scenes": [
       11,
-      7,
-      23,
-      36
+      27,
+      1
     ],
-    "fb_caption": "my mother's pride came wrapped in an apple\n\nwhat did your parents say without saying it?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords #poetry",
-    "ig_caption": "my mother's pride came wrapped in an apple\n\nwhat did your parents say without saying it?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#selfawareness #truth #honestwords #poetry",
-    "hook_style": "confession"
-  },
-  {
-    "id": 481,
-    "type": "reel2",
-    "variant": 1,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "First snow, six a.m.",
-      "Only the postman's footprints cross the street.",
-      "He knocks on one flat, though there's no letter.",
-      "The old woman inside only wanted a good morning."
-    ],
-    "scenes": [
-      21,
-      17,
-      31,
-      4
-    ],
-    "fb_caption": "the postman who knocked without a letter\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #soul",
-    "ig_caption": "the postman who knocked without a letter\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #soul",
-    "hook_style": "specific_detail"
+    "fb_caption": "rent goes up, salary stays put, tea bags get stretched\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
+    "ig_caption": "rent goes up, salary stays put, tea bags get stretched\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
+    "hook_style": "statement"
   },
   {
     "id": 415,
@@ -10239,45 +9867,102 @@
     "hook_style": "dialogue"
   },
   {
-    "id": 476,
+    "id": 401,
     "type": "reel2",
     "variant": 2,
-    "theme": "Dated concrete scenes",
+    "theme": "Work money and friendship",
     "phrases": [
-      "The alarm rings at six. You've been awake since four.",
-      "You lie drafting speeches that nobody asked to hear.",
-      "Then you get up anyway. No one will know."
+      "The colleague who got my promotion brought cupcakes.",
+      "I clapped so hard that my watch fogged right up.",
+      "Later, by the photocopier, I let my face be honest."
     ],
     "scenes": [
-      1,
-      28,
-      5
+      13,
+      14,
+      31
     ],
-    "fb_caption": "awake since four, up anyway\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
-    "ig_caption": "awake since four, up anyway\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
-    "hook_style": "specific_detail"
+    "fb_caption": "the colleague who got the promotion brought cupcakes\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout #deepthoughts",
+    "ig_caption": "the colleague who got the promotion brought cupcakes\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout #deepthoughts",
+    "hook_style": "statement"
   },
   {
-    "id": 392,
+    "id": 469,
     "type": "reel2",
-    "variant": 4,
-    "theme": "Dated concrete scenes",
+    "variant": 0,
+    "theme": "Work money and friendship",
     "phrases": [
-      "Midnight, after the wedding.",
-      "Chairs stacked, balloons going soft.",
-      "The bride's mother sits with a plate of rice.",
-      "She has been on her feet since five.",
-      "Finally, she is smiling."
+      "At midnight I answered a work email, politely, again.",
+      "It wasn't urgent. I was just awake, and afraid.",
+      "The reply said, \"Thanks! No rush.\" I wanted to scream."
     ],
     "scenes": [
-      38,
-      12,
-      11,
-      15,
-      4
+      13,
+      31,
+      14
     ],
-    "fb_caption": "the mother of the bride finally gets to sit\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife",
-    "ig_caption": "the mother of the bride finally gets to sit\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife",
+    "fb_caption": "answering a work email at two a.m.\n\nwhat keeps you awake at that hour?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#workinglife #adultfriendship #moneystress",
+    "ig_caption": "answering a work email at two a.m.\n\nwhat keeps you awake at that hour?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#workinglife #adultfriendship #moneystress",
+    "hook_style": "statement"
+  },
+  {
+    "id": 529,
+    "type": "reel2",
+    "variant": 1,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "First warm evening. Every balcony has a person on it.",
+      "Nobody calls across. They just watch the sky go pink.",
+      "Winter is over, and the street exhales together."
+    ],
+    "scenes": [
+      39,
+      40,
+      5
+    ],
+    "fb_caption": "the first warm evening of the year\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #soul",
+    "ig_caption": "the first warm evening of the year\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #soul",
+    "hook_style": "statement"
+  },
+  {
+    "id": 535,
+    "type": "reel2",
+    "variant": 0,
+    "theme": "Work money and friendship",
+    "phrases": [
+      "The college group project taught me about people.",
+      "Who vanishes. Who takes over. Who brings snacks.",
+      "Adulthood is just that project, forever.",
+      "I try to be the snacks."
+    ],
+    "scenes": [
+      34,
+      14,
+      13,
+      38
+    ],
+    "fb_caption": "the group project taught me everything about people\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#workinglife #adultfriendship #moneystress",
+    "ig_caption": "the group project taught me everything about people\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#workinglife #adultfriendship #moneystress",
+    "hook_style": "statement"
+  },
+  {
+    "id": 475,
+    "type": "reel2",
+    "variant": 4,
+    "theme": "Work money and friendship",
+    "phrases": [
+      "Everyone online is buying a house, apparently.",
+      "Meanwhile I'm comparing two kinds of rice.",
+      "Both of us are working really hard.",
+      "Only one of us gets a soundtrack."
+    ],
+    "scenes": [
+      28,
+      38,
+      14,
+      40
+    ],
+    "fb_caption": "everyone online is buying a house\n\nmeanwhile, two kinds of rice\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
+    "ig_caption": "everyone online is buying a house\n\nmeanwhile, two kinds of rice\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#moneystress #grind #burnout",
     "hook_style": "statement"
   },
   {
@@ -10300,25 +9985,80 @@
     "hook_style": "statement"
   },
   {
-    "id": 496,
+    "id": 382,
     "type": "reel2",
-    "variant": 3,
+    "variant": 4,
     "theme": "Dated concrete scenes",
     "phrases": [
-      "Saturday afternoon, in the barber's chair.",
-      "Men tell the truth there.",
-      "Scissors snip, radio low, nobody performs for anyone.",
-      "Grown men confess they're drowning, and the barber nods."
+      "Two a.m. You scroll back through three whole summers.",
+      "Everyone squints into the sun, cracking up at nothing.",
+      "You zoom in on a hand resting on your shoulder."
     ],
     "scenes": [
-      32,
-      22,
-      34,
-      29
+      8,
+      39,
+      30
     ],
-    "fb_caption": "the barber's chair is the last honest place\n\nfor the men who only talk with a cape on\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #deepthoughts",
-    "ig_caption": "the barber's chair is the last honest place\n\nfor the men who only talk with a cape on\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #deepthoughts",
-    "hook_style": "statement"
+    "fb_caption": "scrolling back through old photos at two a.m.\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife #soul",
+    "ig_caption": "scrolling back through old photos at two a.m.\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife #soul",
+    "hook_style": "specific_detail"
+  },
+  {
+    "id": 513,
+    "type": "reel2",
+    "variant": 0,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Sunday night, you iron the one good shirt for Monday.",
+      "Like armour for a battle nobody else can see.",
+      "Warm cotton and steam. It almost feels like courage."
+    ],
+    "scenes": [
+      13,
+      32,
+      16
+    ],
+    "fb_caption": "ironing the good shirt on a sunday night\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #deepthoughts",
+    "ig_caption": "ironing the good shirt on a sunday night\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #deepthoughts",
+    "hook_style": "specific_detail"
+  },
+  {
+    "id": 508,
+    "type": "reel2",
+    "variant": 0,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Four a.m. A night nurse eats cold noodles standing up.",
+      "She has held three strangers' hands since midnight.",
+      "Ask her what she does and she'll say, \"Just nursing.\""
+    ],
+    "scenes": [
+      37,
+      16,
+      5
+    ],
+    "fb_caption": "the night nurse who says it's \"just nursing\"\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "ig_caption": "the night nurse who says it's \"just nursing\"\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "hook_style": "specific_detail"
+  },
+  {
+    "id": 476,
+    "type": "reel2",
+    "variant": 2,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "The alarm rings at six. You've been awake since four.",
+      "You lie drafting speeches that nobody asked to hear.",
+      "Then you get up anyway. No one will know."
+    ],
+    "scenes": [
+      1,
+      28,
+      5
+    ],
+    "fb_caption": "awake since four, up anyway\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "ig_caption": "awake since four, up anyway\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "hook_style": "specific_detail"
   },
   {
     "id": 371,
@@ -10338,27 +10078,6 @@
     "fb_caption": "the old man and the four shopping bags\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #deepthoughts",
     "ig_caption": "the old man and the four shopping bags\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #deepthoughts",
     "hook_style": "specific_detail"
-  },
-  {
-    "id": 407,
-    "type": "reel2",
-    "variant": 3,
-    "theme": "Dated concrete scenes",
-    "phrases": [
-      "Chai stall at dusk, a bench of old men.",
-      "They argue about cricket, loudly and happily.",
-      "Each of them buried someone this year.",
-      "Nobody mentions it. They argue louder, and it helps."
-    ],
-    "scenes": [
-      38,
-      33,
-      12,
-      4
-    ],
-    "fb_caption": "four old men, one chai stall, one unspoken year\n\nsome grief is shared by arguing about cricket\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife",
-    "ig_caption": "four old men, one chai stall, one unspoken year\n\nsome grief is shared by arguing about cricket\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife",
-    "hook_style": "statement"
   },
   {
     "id": 436,
@@ -10396,6 +10115,287 @@
     ],
     "fb_caption": "the baker who is always \"two short\" on purpose\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
     "ig_caption": "the baker who is always \"two short\" on purpose\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "hook_style": "specific_detail"
+  },
+  {
+    "id": 466,
+    "type": "reel2",
+    "variant": 3,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Furniture shop, Saturday.",
+      "The salesman asks, \"Double or single?\" and smiles.",
+      "You say \"single\" a little faster than you meant to.",
+      "He pretends not to notice. That's kindness, honestly."
+    ],
+    "scenes": [
+      34,
+      30,
+      6,
+      4
+    ],
+    "fb_caption": "the word \"single\" said a little too fast\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife",
+    "ig_caption": "the word \"single\" said a little too fast\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife",
+    "hook_style": "statement"
+  },
+  {
+    "id": 518,
+    "type": "reel2",
+    "variant": 2,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Midnight. The power cuts out in the stairwell.",
+      "Two neighbours finally say hello, by phone torch.",
+      "The lift is dead, so for once everyone is human.",
+      "Funny how one broken lift introduces an entire building."
+    ],
+    "scenes": [
+      31,
+      21,
+      16,
+      35
+    ],
+    "fb_caption": "the night the lift broke and the building met\n\nsometimes the dark is just a good introduction\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife #deepthoughts",
+    "ig_caption": "the night the lift broke and the building met\n\nsometimes the dark is just a good introduction\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife #deepthoughts",
+    "hook_style": "statement"
+  },
+  {
+    "id": 496,
+    "type": "reel2",
+    "variant": 3,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Saturday afternoon, in the barber's chair.",
+      "Men tell the truth there.",
+      "Scissors snip, radio low, nobody performs for anyone.",
+      "Grown men confess they're drowning, and the barber nods."
+    ],
+    "scenes": [
+      32,
+      22,
+      34,
+      29
+    ],
+    "fb_caption": "the barber's chair is the last honest place\n\nfor the men who only talk with a cape on\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #deepthoughts",
+    "ig_caption": "the barber's chair is the last honest place\n\nfor the men who only talk with a cape on\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #deepthoughts",
+    "hook_style": "statement"
+  },
+  {
+    "id": 407,
+    "type": "reel2",
+    "variant": 3,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Chai stall at dusk, a bench of old men.",
+      "They argue about cricket, loudly and happily.",
+      "Each of them buried someone this year.",
+      "Nobody mentions it. They argue louder, and it helps."
+    ],
+    "scenes": [
+      38,
+      33,
+      12,
+      4
+    ],
+    "fb_caption": "four old men, one chai stall, one unspoken year\n\nsome grief is shared by arguing about cricket\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife",
+    "ig_caption": "four old men, one chai stall, one unspoken year\n\nsome grief is shared by arguing about cricket\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife",
+    "hook_style": "statement"
+  },
+  {
+    "id": 366,
+    "type": "reel2",
+    "variant": 3,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Thirty-one today.",
+      "Fourteen messages, a few hearts, and one small cupcake.",
+      "You hum the song to yourself, softly, off-key.",
+      "Make a wish. It's the one from last year."
+    ],
+    "scenes": [
+      39,
+      8,
+      34,
+      40
+    ],
+    "fb_caption": "thirty-one, one cupcake, the same wish\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "ig_caption": "thirty-one, one cupcake, the same wish\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "hook_style": "specific_detail"
+  },
+  {
+    "id": 490,
+    "type": "reel2",
+    "variant": 4,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "The neighbour plays violin badly every evening at six.",
+      "You hated it. You even thumped the wall once.",
+      "Last week it stopped.",
+      "Now you miss the wrong notes."
+    ],
+    "scenes": [
+      34,
+      31,
+      12,
+      21
+    ],
+    "fb_caption": "the neighbour who played the violin badly\n\nyou only hear it when it's gone\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "ig_caption": "the neighbour who played the violin badly\n\nyou only hear it when it's gone\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "hook_style": "specific_detail"
+  },
+  {
+    "id": 540,
+    "type": "reel2",
+    "variant": 3,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Wednesday night, you cook for one.",
+      "And make too much rice, as always.",
+      "Habit. Somebody used to finish the second plate.",
+      "Tomorrow it's leftovers, and you call it remembering."
+    ],
+    "scenes": [
+      11,
+      4,
+      7,
+      36
+    ],
+    "fb_caption": "cooking for one and making rice for two\n\nwho did you used to cook for?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "ig_caption": "cooking for one and making rice for two\n\nwho did you used to cook for?\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "hook_style": "specific_detail"
+  },
+  {
+    "id": 461,
+    "type": "reel2",
+    "variant": 0,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Three a.m. Hospital corridor. The vending machine hums.",
+      "A daughter counts coins for terrible coffee.",
+      "The nurse says go home. She says she will.",
+      "Neither of them believes it."
+    ],
+    "scenes": [
+      37,
+      6,
+      31,
+      21
+    ],
+    "fb_caption": "three in the morning in a hospital corridor\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "ig_caption": "three in the morning in a hospital corridor\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#smallmoments #dailylife #citylife",
+    "hook_style": "specific_detail"
+  },
+  {
+    "id": 481,
+    "type": "reel2",
+    "variant": 1,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "First snow, six a.m.",
+      "Only the postman's footprints cross the street.",
+      "He knocks on one flat, though there's no letter.",
+      "The old woman inside only wanted a good morning."
+    ],
+    "scenes": [
+      21,
+      17,
+      31,
+      4
+    ],
+    "fb_caption": "the postman who knocked without a letter\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #soul",
+    "ig_caption": "the postman who knocked without a letter\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #soul",
+    "hook_style": "specific_detail"
+  },
+  {
+    "id": 471,
+    "type": "reel2",
+    "variant": 4,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Sunday laundromat.",
+      "Everyone watches their clothes spin.",
+      "A man folds a child's tiny socks, slowly.",
+      "You wonder who he is folding them for.",
+      "Everybody here carries an entire life in a basket."
+    ],
+    "scenes": [
+      33,
+      14,
+      36,
+      12,
+      22
+    ],
+    "fb_caption": "the man folding tiny socks at the laundromat\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife",
+    "ig_caption": "the man folding tiny socks at the laundromat\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife",
+    "hook_style": "statement"
+  },
+  {
+    "id": 402,
+    "type": "reel2",
+    "variant": 4,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Metro station.",
+      "A toddler waves at every passing stranger.",
+      "Forty people look away.",
+      "One waves back, then three.",
+      "By the top, half the escalator is smiling at nothing."
+    ],
+    "scenes": [
+      16,
+      38,
+      33,
+      27,
+      5
+    ],
+    "fb_caption": "the toddler who waved at the whole metro\n\nkids do what the rest of us forgot\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #soul",
+    "ig_caption": "the toddler who waved at the whole metro\n\nkids do what the rest of us forgot\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#citylife #everydaystories #adultlife #soul",
+    "hook_style": "statement"
+  },
+  {
+    "id": 392,
+    "type": "reel2",
+    "variant": 4,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Midnight, after the wedding.",
+      "Chairs stacked, balloons going soft.",
+      "The bride's mother sits with a plate of rice.",
+      "She has been on her feet since five.",
+      "Finally, she is smiling."
+    ],
+    "scenes": [
+      38,
+      12,
+      11,
+      15,
+      4
+    ],
+    "fb_caption": "the mother of the bride finally gets to sit\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife",
+    "ig_caption": "the mother of the bride finally gets to sit\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife",
+    "hook_style": "statement"
+  },
+  {
+    "id": 501,
+    "type": "reel2",
+    "variant": 1,
+    "theme": "Dated concrete scenes",
+    "phrases": [
+      "Six o'clock, the driveway.",
+      "Engine off, both hands gripping nothing.",
+      "Five minutes to turn back into who they need.",
+      "Nobody ever applauds this part of your day.",
+      "The reset. The deep breath. The key in the lock."
+    ],
+    "scenes": [
+      2,
+      28,
+      32,
+      16,
+      31
+    ],
+    "fb_caption": "the five minutes in the driveway before you go in\n\nnobody sees that part of the day\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife #deepthoughts",
+    "ig_caption": "the five minutes in the driveway before you go in\n\nnobody sees that part of the day\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife #deepthoughts",
     "hook_style": "specific_detail"
   }
 ]

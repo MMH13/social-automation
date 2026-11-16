@@ -169,7 +169,8 @@ def post_one(queue, item, page_id, token, ig_id) -> int:
     if kind in ("reel", "reel2"):
         video = media_dir / f"item{iid:02d}.mp4"
         if not video.exists():
-            voice = VOICES[iid % len(VOICES)]
+            voice = item.get("voice") or VOICES[iid % len(VOICES)]
+            item["voice"] = voice
             if kind == "reel2":
                 files = _scene_files()
                 built = make_illustrated_reel(item["phrases"], [files[sid] for sid in item["scenes"]],
