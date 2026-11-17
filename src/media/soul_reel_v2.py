@@ -30,6 +30,18 @@ FONT_CANDIDATES = (
 )
 REPO = Path(__file__).resolve().parents[2]
 
+# 2026-11-17: the page rotates five narrators (see post_ss.VOICES). The deep-pitch effect
+# was tuned and approved on a male voice, so it is applied to male voices only; female
+# voices keep their natural pitch. VOICE_GAIN evens out loudness between narrators (the
+# raw voices differ by up to 5 dB) - a plain gain, not the EQ/echo/compressor chain that
+# was rejected. Values are relative to am_michael's long-standing volume=1.6.
+VOICE_GAIN = {"am_michael": 1.6, "am_puck": 0.88, "bm_george": 1.11, "af_bella": 1.04, "bf_emma": 1.02}
+
+
+def _pitch_for(voice: str) -> str:
+    return PITCH_FILTER if voice[:2] in ("am", "bm") else "anull"
+
+
 # Warm up the voice, add presence, a touch of room, then glue it with a compressor.
 VOICE_MASTER = (
     "highpass=f=70,"
@@ -200,12 +212,12 @@ def make_illustrated_reel(
         legs = ""
         for i, (_, start, _) in enumerate(timed):
             ms = int(start * 1000)
-            legs += f"[{voice_idx0 + i}:a]{PITCH_FILTER},adelay={ms}|{ms}[d{i}];"
+            legs += f"[{voice_idx0 + i}:a]{_pitch_for(voice)},adelay={ms}|{ms}[d{i}];"
         mix_ins = "".join(f"[d{i}]" for i in range(n))
         if master_voice:
             legs += f"{mix_ins}amix=inputs={n}:normalize=0,{VOICE_MASTER},volume=1.5[speech];"
         else:
-            legs += f"{mix_ins}amix=inputs={n}:normalize=0,volume=1.6[speech];"
+            legs += f"{mix_ins}amix=inputs={n}:normalize=0,volume={VOICE_GAIN.get(voice, 1.6)}[speech];"
 
         music = _music_files()
         if music:

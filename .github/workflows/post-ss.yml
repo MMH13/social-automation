@@ -50,7 +50,16 @@ jobs:
           path: |
             ~/.cache/huggingface
             ~/.cache/torch
-          key: kokoro-models-v1
+          key: kokoro-models-ss-v2
+      - name: Fetch narrator voices (kept in the model cache)
+        run: |
+          python - <<'PY'
+          from huggingface_hub import hf_hub_download
+          from src.post_ss import VOICES
+          for v in VOICES:
+              hf_hub_download("hexgrad/Kokoro-82M", f"voices/{v}.pt")
+              print("voice ready:", v)
+          PY
       - name: Build .env from secrets
         run: |
           cat > .env << EOF

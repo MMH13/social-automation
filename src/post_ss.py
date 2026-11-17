@@ -26,7 +26,12 @@ WATERMARK = "speaking from soul"
 # deep/pitch-shifted candidates on a matched line ("Pick up all your pieces and
 # start over.") and picked "am_michael deep" — the actual pitch-down effect lives in
 # soul_reel.py (PITCH_RATIO), not here; this just selects the base kokoro voice.
-VOICES = ["am_michael"]
+# 2026-11-17: Mamun asked for 4-5 different voices and told me to pick the best five.
+# Chosen on the kokoro model card's quality grades (I cannot audition audio): af_bella A-,
+# bf_emma B-, am_michael/am_puck C+, bm_george C - three men, two women, none shared with
+# Psychology Tube's rotation. Each queued reel carries its own "voice"; this list is the
+# fallback and the set the workflow pre-downloads.
+VOICES = ["am_michael", "af_bella", "am_puck", "bf_emma", "bm_george"]
 # 2026-08-28: 6 reels + 1 quote card per day (7 cron slots). The first run of each
 # UTC day takes a quote, the rest take reels. Once the 77 pre-written cards are used
 # up this degrades to reels-only on its own — no code change needed at that point.
