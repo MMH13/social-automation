@@ -78,7 +78,7 @@ def main() -> int:
     else:
         image = ROOT / "output" / "mh" / f"item{iid:02d}.png"
         if not image.exists():
-            make_hook_card(item["hook"], image, theme=item.get("theme", "black"))
+            make_hook_card(item["hook"], image, theme=item.get("theme", "black"), category=item.get("category"))
         caption = item["hook"].replace("*", "") + item.get("cta", "")
         try:
             fb_url = facebook_publisher.publish(caption, image, page_id=page_id, token=token)
