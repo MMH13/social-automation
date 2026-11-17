@@ -133,6 +133,7 @@ def post_one(queue, item) -> int:
                     bg_query=item.get("bg_query"),
                     outro=item.get("outro", "Save this. Follow for more."),
                     hook=item.get("hook"),
+                    **({"speed": item["speed"]} if item.get("speed") else {}),
                     **({"voice": item["voice"]} if item.get("voice") else {}),
                 )
             else:

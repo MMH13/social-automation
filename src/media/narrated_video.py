@@ -173,6 +173,7 @@ def make_narrated(
     voice: str = VOICE,
     outro: str = "Follow for more.",
     hook: str | None = None,
+    speed: float = SPEED,
 ) -> Path | None:
     if not ffmpeg_available():
         print("  [narrated] ffmpeg not found - skipping")
@@ -192,7 +193,7 @@ def make_narrated(
         timed: list[tuple[Path, Path, float, float]] = []  # audio, png, start, end
         clock = 0.25 if hook else LEAD_IN
         for i, seg in enumerate(segments):
-            audio = _tts(seg, tmp_dir / f"seg{i:02d}", voice, speed=SPEED)
+            audio = _tts(seg, tmp_dir / f"seg{i:02d}", voice, speed=speed)
             if audio is None:
                 return None
             dur = _duration(audio)
