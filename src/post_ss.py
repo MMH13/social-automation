@@ -31,7 +31,9 @@ WATERMARK = "speaking from soul"
 # bf_emma B-, am_michael/am_puck C+, bm_george C - three men, two women, none shared with
 # Psychology Tube's rotation. Each queued reel carries its own "voice"; this list is the
 # fallback and the set the workflow pre-downloads.
-VOICES = ["am_michael", "af_bella", "am_puck", "bf_emma", "bm_george"]
+# 2026-11-17: bm_george dropped - Mamun found him less clear than the others; replaced by
+# am_echo (his own pick for this page in August).
+VOICES = ["am_michael", "af_bella", "am_puck", "bf_emma", "am_echo"]
 # 2026-08-28: 6 reels + 1 quote card per day (7 cron slots). The first run of each
 # UTC day takes a quote, the rest take reels. Once the 77 pre-written cards are used
 # up this degrades to reels-only on its own — no code change needed at that point.

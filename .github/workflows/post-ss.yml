@@ -50,7 +50,7 @@ jobs:
           path: |
             ~/.cache/huggingface
             ~/.cache/torch
-          key: kokoro-models-ss-v2
+          key: kokoro-models-ss-v3
       - name: Fetch narrator voices (kept in the model cache)
         run: |
           python - <<'PY'

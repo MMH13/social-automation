@@ -35,7 +35,7 @@ REPO = Path(__file__).resolve().parents[2]
 # voices keep their natural pitch. VOICE_GAIN evens out loudness between narrators (the
 # raw voices differ by up to 5 dB) - a plain gain, not the EQ/echo/compressor chain that
 # was rejected. Values are relative to am_michael's long-standing volume=1.6.
-VOICE_GAIN = {"am_michael": 1.6, "am_puck": 0.88, "bm_george": 1.11, "af_bella": 1.04, "bf_emma": 1.02}
+VOICE_GAIN = {"am_michael": 1.6, "am_puck": 0.88, "am_echo": 1.33, "af_bella": 1.04, "bf_emma": 1.02}
 
 
 def _pitch_for(voice: str) -> str:
