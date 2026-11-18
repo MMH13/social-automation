@@ -14481,7 +14481,8 @@
     "ig_caption": "Why can't you let go of something that already ended?\n\nIs something still holding you? 👇\n\n5 reasons you cannot let go of the past.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset",
     "posted_at": "2026-11-15T15:39:52",
     "fb_url": "https://www.facebook.com/reel/1653897476397212",
-    "ig_url": "instagram reel id 18112298027213513"
+    "ig_url": "instagram reel id 18112298027213513",
+    "promoted": "2026-11-18T10:39:28"
   },
   {
     "id": 833,
@@ -14603,6 +14604,68 @@
     "ig_url": "instagram reel id 18081894380404090"
   },
   {
+    "id": 913,
+    "type": "narrated",
+    "title": "5 truths about waiting for an apology that never comes",
+    "hook": "If you are tired of waiting for an apology, watch this.",
+    "hook_style": "recognition",
+    "points": [
+      "One. Some people cannot give what they never learned to give.",
+      "Two. Their silence says more about them than about you.",
+      "Three. Waiting keeps you tied to the hurt."
+    ],
+    "bg_query": "clock waiting window sunset",
+    "outro": "Comment YES if this is you. Follow for more.",
+    "voice": "am_fenrir",
+    "variant": 5,
+    "fb_caption": "If you are tired of waiting for an apology, watch this.\n\nComment YES if this is you 👇\n\n5 truths about waiting for an apology that never comes.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset",
+    "ig_caption": "If you are tired of waiting for an apology, watch this.\n\nComment YES if this is you 👇\n\n5 truths about waiting for an apology that never comes.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset",
+    "theme": "letting_go",
+    "batch": "winner-clone-2026-11-17",
+    "speed": 0.95,
+    "test": "fast"
+  },
+  {
+    "id": 845,
+    "type": "narrated",
+    "title": "5 reasons nostalgia can feel painful",
+    "hook": "Why does nostalgia hurt so much?",
+    "hook_style": "question",
+    "points": [
+      "One. You miss who you were, not just the place.",
+      "Two. The past feels simpler than it truly was.",
+      "Three. You cannot go back to those exact people or moments.",
+      "Four. It shows how much something meant to you.",
+      "Five. Let it be a reminder, not a place to live."
+    ],
+    "bg_query": "old photographs hands memories",
+    "outro": "Save this for when you feel it.",
+    "voice": "am_onyx",
+    "variant": 1,
+    "fb_caption": "Why does nostalgia hurt so much?\n\nComment the number that's you 👇\n\n5 reasons nostalgia can feel painful.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset",
+    "ig_caption": "Why does nostalgia hurt so much?\n\nComment the number that's you 👇\n\n5 reasons nostalgia can feel painful.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset"
+  },
+  {
+    "id": 853,
+    "type": "narrated",
+    "title": "5 signs you need to forgive yourself",
+    "hook": "Do you still blame yourself for old mistakes?",
+    "hook_style": "question",
+    "points": [
+      "One. You replay the same mistake years later.",
+      "Two. You punish yourself for what you did not know then.",
+      "Three. You find it hard to enjoy good things.",
+      "Four. You expect more of yourself than anyone else.",
+      "Five. Learning from it is enough. Carrying it is optional."
+    ],
+    "bg_query": "person releasing butterflies",
+    "outro": "Save this and forgive one thing today.",
+    "voice": "am_onyx",
+    "variant": 1,
+    "fb_caption": "Do you still blame yourself for old mistakes?\n\nComment the number that's you 👇\n\n5 signs you need to forgive yourself.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset",
+    "ig_caption": "Do you still blame yourself for old mistakes?\n\nComment the number that's you 👇\n\n5 signs you need to forgive yourself.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset"
+  },
+  {
     "id": 910,
     "type": "narrated",
     "title": "5 reasons goodbyes hurt more as time passes",
@@ -14667,28 +14730,6 @@
     "ig_caption": "Why do you keep hoping they will come back?\n\nComment YES if this is you 👇\n\n5 reasons you keep hoping someone will come back.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset",
     "theme": "letting_go",
     "batch": "winner-clone-2026-11-17"
-  },
-  {
-    "id": 913,
-    "type": "narrated",
-    "title": "5 truths about waiting for an apology that never comes",
-    "hook": "If you are tired of waiting for an apology, watch this.",
-    "hook_style": "recognition",
-    "points": [
-      "One. Some people cannot give what they never learned to give.",
-      "Two. Their silence says more about them than about you.",
-      "Three. Waiting keeps you tied to the hurt."
-    ],
-    "bg_query": "clock waiting window sunset",
-    "outro": "Comment YES if this is you. Follow for more.",
-    "voice": "am_fenrir",
-    "variant": 5,
-    "fb_caption": "If you are tired of waiting for an apology, watch this.\n\nComment YES if this is you 👇\n\n5 truths about waiting for an apology that never comes.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset",
-    "ig_caption": "If you are tired of waiting for an apology, watch this.\n\nComment YES if this is you 👇\n\n5 truths about waiting for an apology that never comes.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset",
-    "theme": "letting_go",
-    "batch": "winner-clone-2026-11-17",
-    "speed": 0.95,
-    "test": "fast"
   },
   {
     "id": 914,
@@ -15179,26 +15220,6 @@
     "ig_caption": "If scrolling leaves you feeling behind, watch this.\n\nComment the number that's you 👇\n\n5 ways social media makes you feel behind.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset"
   },
   {
-    "id": 845,
-    "type": "narrated",
-    "title": "5 reasons nostalgia can feel painful",
-    "hook": "Why does nostalgia hurt so much?",
-    "hook_style": "question",
-    "points": [
-      "One. You miss who you were, not just the place.",
-      "Two. The past feels simpler than it truly was.",
-      "Three. You cannot go back to those exact people or moments.",
-      "Four. It shows how much something meant to you.",
-      "Five. Let it be a reminder, not a place to live."
-    ],
-    "bg_query": "old photographs hands memories",
-    "outro": "Save this for when you feel it.",
-    "voice": "am_onyx",
-    "variant": 1,
-    "fb_caption": "Why does nostalgia hurt so much?\n\nComment the number that's you 👇\n\n5 reasons nostalgia can feel painful.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset",
-    "ig_caption": "Why does nostalgia hurt so much?\n\nComment the number that's you 👇\n\n5 reasons nostalgia can feel painful.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset"
-  },
-  {
     "id": 846,
     "type": "narrated",
     "title": "5 reasons you wake up anxious",
@@ -15337,26 +15358,6 @@
     "variant": 0,
     "fb_caption": "If asking for help feels impossible, here's why.\n\nComment the number that's you 👇\n\n5 reasons you struggle to ask for help.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset",
     "ig_caption": "If asking for help feels impossible, here's why.\n\nComment the number that's you 👇\n\n5 reasons you struggle to ask for help.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset"
-  },
-  {
-    "id": 853,
-    "type": "narrated",
-    "title": "5 signs you need to forgive yourself",
-    "hook": "Do you still blame yourself for old mistakes?",
-    "hook_style": "question",
-    "points": [
-      "One. You replay the same mistake years later.",
-      "Two. You punish yourself for what you did not know then.",
-      "Three. You find it hard to enjoy good things.",
-      "Four. You expect more of yourself than anyone else.",
-      "Five. Learning from it is enough. Carrying it is optional."
-    ],
-    "bg_query": "person releasing butterflies",
-    "outro": "Save this and forgive one thing today.",
-    "voice": "am_onyx",
-    "variant": 1,
-    "fb_caption": "Do you still blame yourself for old mistakes?\n\nComment the number that's you 👇\n\n5 signs you need to forgive yourself.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset",
-    "ig_caption": "Do you still blame yourself for old mistakes?\n\nComment the number that's you 👇\n\n5 signs you need to forgive yourself.\n\n#psychology #psychologyfacts #mentalhealth #selfawareness #healing #emotionalintelligence #mindset"
   },
   {
     "id": 854,
