@@ -10486,5 +10486,485 @@
     "ig_caption": "the five minutes in the driveway before you go in\n\nnobody sees that part of the day\n\na new soul reel every 8 hours. follow so you never miss one.\n\n#adultlife #relatable #smallmoments #dailylife #deepthoughts",
     "hook_style": "specific_detail",
     "voice": "am_michael"
+  },
+  {
+    "id": 541,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I'm done shrinking so that people who never tried can feel comfortable around me.",
+    "fb_caption": "Not anymore.",
+    "ig_caption": "Not anymore."
+  },
+  {
+    "id": 542,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "You held everyone together for years. It's okay to let someone hold you for once.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 543,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "If you're reading this, I hope today is softer on you than yesterday was.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 544,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I stopped chasing people the day I noticed I was the only one running.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 545,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "You're not behind. You're healing from things other people never had to survive.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 546,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "I don't say it enough, but my life is better because you're in it.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 547,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "My peace costs too much now to hand it to anyone who just walks in.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 548,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "The fact that you kept going on the days nobody saw is enough.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 549,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I'm not cold. I just stopped giving warmth to people who only came to take it.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 550,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "If no one told you today: I'm proud of you, even for the small things.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 551,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "Your softness survived everything that tried to harden you. That's strength nobody clapped for.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 552,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "If you only call when you need something, don't be surprised when I'm busy.",
+    "fb_caption": "Busy.",
+    "ig_caption": "Busy."
+  },
+  {
+    "id": 553,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "Tired doesn't mean failing. It means you've been carrying more than anyone could see.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 554,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "I hope you find a calm that doesn't leave when people do.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 555,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I don't argue with people who already decided I'm the villain. I let them keep the story.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 556,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "Rest isn't something you earn after you break. You can take it before.",
+    "fb_caption": "Rest.",
+    "ig_caption": "Rest."
+  },
+  {
+    "id": 557,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "Being kind to you was my choice. Walking away is also my choice.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 558,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "To the friend who checks on me without being asked: I see you, and I'm grateful.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 559,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "A hard season can shape you without getting the final word on who you become.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 560,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I used to explain my silence. Now I let it speak for itself.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 561,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "You lived through things you rarely mention. Go easy on the one who carried them.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 562,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "Some doors I closed softly. That doesn't mean they're unlocked.",
+    "fb_caption": "Closed.",
+    "ig_caption": "Closed."
+  },
+  {
+    "id": 563,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "I hope life gives you back every bit of kindness you gave away for free.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 564,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I'm not hard to love. I was just hard to use.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 565,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "Some days, getting out of bed is the bravest thing you'll do. That counts.",
+    "fb_caption": "It counts.",
+    "ig_caption": "It counts."
+  },
+  {
+    "id": 566,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "If you ever feel invisible, remember that someone looks for your name first.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 567,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "You lost me slowly, one ignored message at a time. Don't act surprised it ended.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 568,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "You don't need closure from them. You're writing your own ending now.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 569,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "Not everyone deserves a front-row seat to my healing. Some can watch from outside.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 570,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "You might not hear it often, so here it is: you matter to me more than you know.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 571,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "Your worth didn't drop because someone failed to see it.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 572,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I gave second chances like they were free. Turns out they cost me years.",
+    "fb_caption": "Never again.",
+    "ig_caption": "Never again."
+  },
+  {
+    "id": 573,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "Healing isn't pretty most days. It's you choosing yourself again, even on the ugly ones.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 574,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "I hope tonight you sleep without carrying tomorrow's worries to bed.",
+    "fb_caption": "🌙",
+    "ig_caption": "🌙"
+  },
+  {
+    "id": 575,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I can wish you well and never want you back in my life.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 576,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "You gave your best to people who gave you their leftovers. Next time, give it to yourself first.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 577,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "The version of me you hurt is gone. Please stop talking to her.",
+    "fb_caption": "Gone.",
+    "ig_caption": "Gone."
+  },
+  {
+    "id": 578,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "Wherever you are right now, I hope someone is being gentle with you.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 579,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "The love you keep giving away so easily, try keeping a little of it for you.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 580,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I don't owe a smile to anyone who made me cry in private.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 581,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "You're not broken. You're just tired of pretending everything's fine.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 582,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "A boundary isn't me being difficult. It's me finally being honest about what hurts.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 583,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "Thank you for staying on the days I was hard to stay with.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 584,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I'm not too sensitive. You were just careless for too long.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 585,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "The person you are today got through everything that came before. Be proud of them.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 586,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "I hope you meet someone who makes you feel safe being exactly who you are.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 587,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I didn't change overnight. I just ran out of reasons to keep accepting less.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 588,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "You can outgrow people you once couldn't imagine living without. That's growth, not betrayal.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 589,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I won't fight for a place in someone's life that they keep giving away.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 590,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "If today was heavy, put it down here. You've carried it long enough.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 591,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "Crying doesn't undo your strength. It's how strong people put things down.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 592,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "Distance taught me what closeness never did: who was actually holding on.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 593,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "You were the safe place for so many people. Make sure you're safe too.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 594,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "I'm glad you made it through the year that almost broke you.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 595,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "If my absence is the only thing that made you notice me, you can keep noticing.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
+  },
+  {
+    "id": 596,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "It's okay if the only thing you did today was survive it.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 597,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "I'm done being the strong one for people who never once asked if I was okay.",
+    "fb_caption": "Done.",
+    "ig_caption": "Done."
+  },
+  {
+    "id": 598,
+    "type": "card2",
+    "line_type": "recipient",
+    "text": "Being around you has always felt like coming home after a long day.",
+    "fb_caption": "🕊️",
+    "ig_caption": "🕊️"
+  },
+  {
+    "id": 599,
+    "type": "card2",
+    "line_type": "validation",
+    "text": "The people who truly love you won't need you to shrink to stay close.",
+    "fb_caption": "🤍",
+    "ig_caption": "🤍"
+  },
+  {
+    "id": 600,
+    "type": "card2",
+    "line_type": "boundary",
+    "text": "Peace looks good on me. I'm not trading it for anyone's attention again.",
+    "fb_caption": "🖤",
+    "ig_caption": "🖤"
   }
 ]

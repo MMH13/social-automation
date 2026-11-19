@@ -1,0 +1,15 @@
+{
+  "_note": "Speaking from soul daily plan (UTC). 2026-11-19: 3 reels + 2 black 16:9 photocards. Read by scripts/is_due.py --plan and src/post_ss.py via src/slot_plan.py.",
+  "slots": [
+    {"at": "01:00", "kind": "reel2"},
+    {"at": "09:00", "kind": "reel2"},
+    {"at": "13:00", "kind": "card2"},
+    {"at": "17:00", "kind": "reel2"},
+    {"at": "21:00", "kind": "card2"}
+  ],
+  "kinds": {
+    "reel2": {"types": ["reel", "reel2"], "min_gap_minutes": 360},
+    "card2": {"types": ["card2"], "min_gap_minutes": 360}
+  },
+  "min_gap_any_minutes": 180
+}

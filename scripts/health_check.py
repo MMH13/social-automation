@@ -22,11 +22,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# queue file, posts expected per day, label, item type counted for runway (None = all)
+# queue file, posts expected per day, label, item types counted (None = all), hours of
+# silence that mean "stopped". Speaking from soul is checked per kind (2026-11-19): with
+# 3 reels + 2 photocards in one queue, a total card outage would otherwise still read as
+# 3 of 5 = 0.6 and pass.
 PAGES = [
-    ("scheduled_ss/content.json", 3, "Speaking from soul", "reel2"),
-    ("scheduled_pt/content.json", 3, "Psychology Tube", "narrated"),
-    ("scheduled_mh/content.json", 3, "Mamun Hossain", None),
+    ("scheduled_ss/content.json", 3, "Speaking from soul reels", ("reel", "reel2"), 12),
+    ("scheduled_ss/content.json", 2, "Speaking from soul photocards", ("card2",), 20),
+    ("scheduled_pt/content.json", 3, "Psychology Tube", ("narrated",), 12),
+    ("scheduled_mh/content.json", 3, "Mamun Hossain", None, 12),
 ]
 LOW_RUNWAY_DAYS = 3.0
 # A page is flagged when it publishes less than this share of its target. Kept below
@@ -42,7 +46,7 @@ def load(path: Path):
         return None
 
 
-def check_page(rel: str, per_day: int, label: str, runway_type):
+def check_page(rel: str, per_day: int, label: str, types, quiet_limit: float = 12):
     items = load(ROOT / rel)
     if items is None:
         return [f"{label}: queue file {rel} is missing"], []
@@ -51,6 +55,8 @@ def check_page(rel: str, per_day: int, label: str, runway_type):
     cutoff = now - timedelta(hours=24)
     recent = 0
     latest = None
+    if types:
+        items = [i for i in items if i.get("type") in types]
     for it in items:
         stamp = it.get("posted_at")
         if not stamp:
@@ -66,9 +72,7 @@ def check_page(rel: str, per_day: int, label: str, runway_type):
         if when >= cutoff:
             recent += 1
 
-    unposted = [i for i in items if not i.get("posted_at")]
-    if runway_type:
-        unposted = [i for i in unposted if i.get("type") == runway_type]
+    unposted = [i for i in items if not i.get("posted_at") and not i.get("skip")]
     runway = len(unposted) / per_day if per_day else 0
 
     problems, notes = [], []
@@ -84,7 +88,7 @@ def check_page(rel: str, per_day: int, label: str, runway_type):
         quiet = (now - latest).total_seconds() / 3600
         notes.append(f"{label}: last post {quiet:.1f}h ago")
         # Well past any single gap, so this means posting has stopped, not drifted.
-        if quiet > 12:
+        if quiet > quiet_limit:
             problems.append(f"{label}: silent for {quiet:.0f}h")
     if runway < LOW_RUNWAY_DAYS:
         problems.append(f"{label}: only {runway:.1f} days of content left - refill needed")
@@ -93,8 +97,8 @@ def check_page(rel: str, per_day: int, label: str, runway_type):
 
 def main() -> int:
     all_problems, all_notes = [], []
-    for rel, per_day, label, rtype in PAGES:
-        p, n = check_page(rel, per_day, label, rtype)
+    for rel, per_day, label, types, quiet_limit in PAGES:
+        p, n = check_page(rel, per_day, label, types, quiet_limit)
         all_problems += p
         all_notes += n
 

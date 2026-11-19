@@ -10,7 +10,8 @@ nothing due finishes in ~20 seconds on a bare checkout, and only a run that will
 actually publish pays for Python packages, ffmpeg and the TTS model.
 
 Usage: python scripts/is_due.py <queue.json> <slot_count> [--type=reel]
-Writes due=true|false to GITHUB_OUTPUT.
+       python scripts/is_due.py <queue.json> --plan=<slots.json>   (typed slots)
+Writes due=true|false (and kind=... in --plan mode) to GITHUB_OUTPUT.
 """
 import json
 import os
@@ -19,7 +20,31 @@ from datetime import datetime
 from pathlib import Path
 
 
+def _write(**kv) -> None:
+    out = os.environ.get("GITHUB_OUTPUT")
+    if out:
+        with open(out, "a", encoding="utf-8") as fh:
+            for k, v in kv.items():
+                fh.write(f"{k}={v}\n")
+
+
+def plan_mode(queue: Path, plan_path: Path) -> int:
+    """Typed slots (see src/slot_plan.py): also reports WHICH kind is due, so a card-only
+    run can skip installing torch, kokoro and ffmpeg."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    from src.slot_plan import decide, load  # stdlib only
+
+    items = json.loads(queue.read_text(encoding="utf-8"))
+    kind, why = decide(items, load(plan_path))
+    print(f"{queue.name}: {why} -> {'POST ' + kind if kind else 'nothing to do'}")
+    _write(due="true" if kind else "false", kind=kind or "")
+    return 0
+
+
 def main() -> int:
+    plan = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--plan=")), None)
+    if plan:
+        return plan_mode(Path(sys.argv[1]), Path(plan))
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     path, slots = Path(args[0]), int(args[1])
     only = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--type=")), None)

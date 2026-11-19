@@ -24,10 +24,12 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       due: ${{ steps.check.outputs.due }}
+      kind: ${{ steps.check.outputs.kind }}
     steps:
       - uses: actions/checkout@v4
       - id: check
-        run: python scripts/is_due.py scheduled_ss/content.json 3 --offset=1 --type=reel2
+        # 2026-11-19: typed plan - 3 reels + 2 photocards a day (scheduled_ss/slots.json).
+        run: python scripts/is_due.py scheduled_ss/content.json --plan=scheduled_ss/slots.json
 
   post:
     needs: gate
@@ -39,12 +41,20 @@ jobs:
         with:
           python-version: "3.12"
           cache: "pip"
+      # A photocard run needs only Pillow + requests: skip torch, kokoro and ffmpeg.
+      - name: Install card dependencies
+        if: needs.gate.outputs.kind == 'card2'
+        run: pip install -r requirements.txt
       - name: Install CPU torch first (avoids the 2.5GB CUDA build)
+        if: needs.gate.outputs.kind != 'card2'
         run: pip install torch --index-url https://download.pytorch.org/whl/cpu
-      - run: pip install -r requirements-video.txt
+      - if: needs.gate.outputs.kind != 'card2'
+        run: pip install -r requirements-video.txt
       - name: Install ffmpeg + espeak-ng (reels / TTS fallback)
+        if: needs.gate.outputs.kind != 'card2'
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng
       - name: Cache kokoro TTS model
+        if: needs.gate.outputs.kind != 'card2'
         uses: actions/cache@v4
         with:
           path: |
@@ -52,6 +62,7 @@ jobs:
             ~/.cache/torch
           key: kokoro-models-ss-v3
       - name: Fetch narrator voices (kept in the model cache)
+        if: needs.gate.outputs.kind != 'card2'
         run: |
           python - <<'PY'
           from huggingface_hub import hf_hub_download
@@ -79,7 +90,7 @@ jobs:
           CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}
           CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}
           EOF
-      - name: Post next item (quote card / reel)
+      - name: Post next item (reel / photocard)
         run: python -m src.post_ss
       - name: Commit queue state
         if: always()
@@ -106,6 +117,10 @@ jobs:
         id: queue
         if: always()
         run: python scripts/queue_check.py scheduled_ss/content.json 3 "Speaking from soul" --only-type=reel,reel2
+      - name: Check photocard queue depth
+        id: cards
+        if: always()
+        run: python scripts/queue_check.py scheduled_ss/content.json 2 "Speaking from soul" --only-type=card2
       - name: Open low-queue issue
         if: always() && steps.queue.outputs.low == 'true'
         env:
@@ -114,6 +129,19 @@ jobs:
           TITLE="Speaking from soul queue running low"
           EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
           BODY="Only ${{ steps.queue.outputs.left }} item(s) (~${{ steps.queue.outputs.days }} days at 3/day) left in \`scheduled_ss/content.json\`. Refill it before the queue empties."
+          if [ -z "$EXISTING" ]; then
+            gh issue create --title "$TITLE" --body "$BODY"
+          else
+            echo "Issue #$EXISTING already open - not spamming."
+          fi
+      - name: Open low-photocard issue
+        if: always() && steps.cards.outputs.low == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Speaking from soul photocards running low"
+          EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
+          BODY="Only ${{ steps.cards.outputs.left }} photocard(s) (~${{ steps.cards.outputs.days }} days at 2/day) left in \`scheduled_ss/content.json\`. Add more card2 items."
           if [ -z "$EXISTING" ]; then
             gh issue create --title "$TITLE" --body "$BODY"
           else

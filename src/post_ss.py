@@ -1,25 +1,28 @@
-"""Post the next queued "Speaking from soul" item (quote card / reel) to FB + IG.
+"""Post the next queued "Speaking from soul" item (reel / black photocard) to FB + IG.
 
-Usage: python -m src.post_ss
+Usage: python -m src.post_ss [--force [--kind=card2]]
 Mirrors post_pt.py but targets a second Facebook Page + Instagram account via the
 SS_-prefixed env vars, so it runs independently of the Psychology Tube track.
 """
 import json
 import os
 import sys
-import time
 from datetime import datetime
 from pathlib import Path
 
 from dotenv import load_dotenv
 
 from .media.image_maker import make_quote_card
+from .media.photocard import make_photocard
 from .media.soul_reel import make_soul_reel
 from .media.soul_reel_v2 import make_illustrated_reel
 from .publishers import facebook_publisher, instagram_publisher
+from . import slot_plan
 
 ROOT = Path(__file__).resolve().parent.parent
 QUEUE_FILE = ROOT / "scheduled_ss" / "content.json"
+# 2026-11-19: typed daily plan (3 reels + 2 black 16:9 photocards), shared with the gate.
+PLAN_FILE = ROOT / "scheduled_ss" / "slots.json"
 ART_DIR = ROOT / "assets" / "ss_art"
 WATERMARK = "speaking from soul"
 # 2026-09-27: switched from Echo to Michael after Mamun compared it against several
@@ -34,86 +37,12 @@ WATERMARK = "speaking from soul"
 # 2026-11-17: bm_george dropped - Mamun found him less clear than the others; replaced by
 # am_echo (his own pick for this page in August).
 VOICES = ["am_michael", "af_bella", "am_puck", "bf_emma", "am_echo"]
-# 2026-08-28: 6 reels + 1 quote card per day (7 cron slots). The first run of each
-# UTC day takes a quote, the rest take reels. Once the 77 pre-written cards are used
-# up this degrades to reels-only on its own — no code change needed at that point.
-DAILY_QUOTE = False       # 2026-10-28: reels only (see the cadence note below)
-
-# 2026-08-29: GitHub only actually delivered 25-35% of this repo's scheduled runs
-# (5-7 of 20/day across all workflows) — scheduled events are best-effort and get
-# dropped under load. One-item-per-run therefore capped the page at ~2 posts/day.
-#
-# Backfilling to a flat daily total fixed the volume but front-loaded the whole day:
-# on 2026-08-29 all 7 posts landed between 02:45 and 09:52, three of them inside two
-# minutes, then nothing for 7+ hours. So the budget is paced against the clock instead
-# of a day total — a run may only catch up to the slots that have actually passed.
-# Slots are evenly spaced: 24h / DAILY_TARGET, so every post sits the same distance
-# from its neighbours (7/day = one every 3h25m). SLOT_MINUTES must stay in sync with
-# the cron in .github/workflows/post-ss.yml.
-# 2026-10-28: cut to 3 reels/day, 8 hours apart, no quote card. Plays per reel were flat at
-# ~200 (= the follower count) and from 2026-10-23 05:31 to 2026-10-26 22:58 UTC every reel
-# got 0-2 plays - a four-day distribution blackout while the page posted 7/day with pairs
-# 11 minutes apart. Fewer, spaced-out posts give each reel a clean first-hour test.
-# Slots 01:00 / 09:00 / 17:00 UTC (9pm / 5am / 1pm ET). Keep SLOT_OFFSET_HOURS in step with
-# --offset in post-ss.yml's gate (scripts/is_due.py).
-DAILY_TARGET = 3
-SLOT_OFFSET_HOURS = 1
-GAP_SECONDS = 86400 // DAILY_TARGET          # 28800s = 8h
-SLOT_MINUTES = sorted(((SLOT_OFFSET_HOURS * 3600 + i * GAP_SECONDS) % 86400) // 60
-                      for i in range(DAILY_TARGET))
-# 2026-09-01: the workflow polls every 15 minutes instead of firing at the 7 slots,
-# so a slot is picked up shortly after it opens and there is no backlog to burn down.
-# One post per run is therefore enough, and the hour-long in-run sleep that used to
-# spread a catch-up is gone — spacing now comes from the schedule itself, which is
-# both better spaced and ~10x cheaper in runner minutes.
-#
-# 2026-10-01: that assumption broke down. GitHub is delivering far fewer of this
-# repo's */15min triggers than it used to (measured 4-6 actual runs/day instead of
-# ~96 - the same per-repo schedule-delivery cap documented for PT, now worse here
-# too), landing only 4-6 posts/day against the 7 target even though every run
-# succeeds. Raised to 2/run + a spacing gap, mirroring the fix already proven for
-# PT (post_pt.py), so a delivered trigger can burn down more than one missed slot
-# instead of just the one closest to it.
-MAX_PER_RUN = 1          # 3/day at 8h spacing: a late run posts one, never a pair
-SPACING_SECONDS = 600
-# Guards against two runs overlapping near a slot boundary and double-posting.
-MIN_GAP_SECONDS = 6 * 3600
-
-
-def _posted_today(queue) -> int:
-    today = datetime.now().strftime("%Y-%m-%d")
-    return sum(1 for m in queue if str(m.get("posted_at", "")).startswith(today))
-
-
-def _due_by_now() -> int:
-    """How many posts should have gone out by now — not the whole day's total."""
-    now = datetime.now()
-    minutes = now.hour * 60 + now.minute
-    return sum(1 for m in SLOT_MINUTES if minutes >= m)
-
-
-def _seconds_since_last(queue) -> float:
-    stamps = [m["posted_at"] for m in queue if m.get("posted_at")]
-    if not stamps:
-        return float("inf")
-    try:
-        last = datetime.fromisoformat(max(stamps))
-    except ValueError:
-        return float("inf")
-    gap = (datetime.now() - last).total_seconds()
-    # A stamp in the future means it was written by a clock in another timezone —
-    # a --force run from the Dhaka laptop stamps +6h ahead of the UTC runners, which
-    # otherwise reads as "just posted" and blocks every slot until UTC catches up.
-    # Treat that as no recent post rather than silently stalling the page.
-    return float("inf") if gap < 0 else gap
-
-
-def _quote_posted_today(queue) -> bool:
-    """Has a quote card already gone out today? Date-based rather than tied to a
-    specific cron hour, so a run GitHub delays or skips can't double-post one."""
-    today = datetime.now().strftime("%Y-%m-%d")
-    return any(m["type"] == "quote" and str(m.get("posted_at", "")).startswith(today)
-               for m in queue)
+# Cadence history (7/day with a daily quote card -> 3 reels/day 8h apart on 2026-10-28 after
+# a four-day distribution blackout -> 3 reels + 2 photocards on 2026-11-19) is in git log.
+# The daily plan, per-kind minimum gaps and the shared anti-bunching gap now live in
+# scheduled_ss/slots.json, read here and by the workflow gate through src/slot_plan.py.
+# One post per run: the workflow polls every 15 minutes, so a late slot is picked up by a
+# later run instead of being burned down as a back-to-back pair.
 
 
 def _scene_files() -> dict[int, Path]:
@@ -132,16 +61,13 @@ def _playable(item, scene_files) -> bool:
     return all(sid in scene_files for sid in item["scenes"])
 
 
-def pick_next(queue):
+def pick_next(queue, kind: str = "reel2"):
+    """Next unposted item of the given plan kind. Never falls back to another kind: an
+    empty kind leaves its slot empty (the low-queue alert flags it) instead of dumping
+    the other kind's stock."""
     unposted = [m for m in queue if not m.get("posted_at") and not m.get("skip")]
-    if DAILY_QUOTE and not _quote_posted_today(queue):
-        quote = next((m for m in unposted if m["type"] == "quote"), None)
-        if quote:
-            return quote
-    # Reels only from here. Deliberately NO fallback to quote cards: reels run out
-    # long before the cards do (~26 days vs ~77 at these rates), and falling back
-    # would dump 7 static cards a day and burn the whole card stock in 11 days.
-    # Returning None instead leaves the slot empty, which the low-queue alert flags.
+    if kind == "card2":
+        return next((m for m in unposted if m["type"] == "card2"), None)
     scene_files = _scene_files()
     return next((m for m in unposted
                  if m["type"] in ("reel", "reel2") and _playable(m, scene_files)), None)
@@ -223,7 +149,10 @@ def post_one(queue, item, page_id, token, ig_id) -> int:
     else:  # quote card image
         image = media_dir / f"item{iid:02d}.jpg"
         if not image.exists():
-            make_quote_card(item["text"], image, item.get("variant", 0), watermark=WATERMARK)
+            if kind == "card2":
+                make_photocard(item["text"], image, watermark=WATERMARK)
+            else:
+                make_quote_card(item["text"], image, item.get("variant", 0), watermark=WATERMARK)
         try:
             fb_url = facebook_publisher.publish(item["fb_caption"], image, page_id=page_id, token=token)
         except Exception as e:
@@ -265,55 +194,33 @@ def main() -> int:
         return 1
 
     queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
-    already = _posted_today(queue)
-    due = _due_by_now()
-    want = min(max(due - already, 0), MAX_PER_RUN)
+    plan = slot_plan.load(PLAN_FILE)
 
-    # `--force` posts one item regardless of pacing — for filling a gap by hand after
-    # an outage. It deliberately still marks posted_at, so the queue stays consistent
-    # and the next scheduled run counts it.
+    # `--force` posts one item now regardless of the plan - for filling a gap by hand after
+    # an outage (`--force --kind=card2` for a card; reel by default). It still marks
+    # posted_at, so the queue stays consistent and the next scheduled run counts it.
     if "--force" in sys.argv:
-        log(f"post_ss: --force, posting 1 now ({already} posted today, {due} due by now)")
-        want = 1
-    elif want == 0:
-        log(f"post_ss: {already} posted today, {due}/{DAILY_TARGET} due by now "
-            f"- nothing due this run")
+        kind = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--kind=")), "reel2")
+        log(f"post_ss: --force, posting one {kind} now")
+    else:
+        kind, why = slot_plan.decide(queue, plan)
+        if kind is None:
+            log(f"post_ss: {why} - nothing to post this run")
+            return 0
+        log(f"post_ss: {why} - posting one")
+
+    item = pick_next(queue, kind)
+    if item is None:
+        log(f"post_ss: no postable {kind} left in the queue")
         return 0
+    rc = post_one(queue, item, page_id, token, ig_id)
+    if rc != 0:
+        return rc
 
-    gap = _seconds_since_last(queue)
-    if "--force" not in sys.argv and gap < MIN_GAP_SECONDS:
-        log(f"post_ss: last post was {gap/60:.0f}min ago (<{MIN_GAP_SECONDS//60}min) "
-            f"- skipping so posts don't bunch")
-        return 0
-
-    log(f"post_ss: {already} posted today, {due}/{DAILY_TARGET} due by now "
-        f"- posting up to {want} this run")
-
-    posted = 0
-    for n in range(want):
-        if n:
-            # Spread a catch-up across hours; back-to-back reels compete for reach.
-            log(f"post_ss: waiting {SPACING_SECONDS//60}min before the next post")
-            time.sleep(SPACING_SECONDS)
-        # Re-pick each pass: the previous post mutated the queue, and the quote/reel
-        # choice depends on what has gone out today.
-        item = pick_next(queue)
-        if item is None:
-            log("post_ss: queue empty - nothing further to post")
-            break
-        rc = post_one(queue, item, page_id, token, ig_id)
-        if rc != 0:
-            # Stop on the first failure so a broken item can't burn the whole
-            # day's budget retrying siblings; the next run picks up from here.
-            log(f"post_ss: stopping this run after a failure ({posted} posted)")
-            return rc
-        posted += 1
-
-    remaining = sum(1 for m in queue if not m.get("posted_at"))
     reels_left = sum(1 for m in queue if not m.get("posted_at") and m["type"] in ("reel", "reel2"))
-    log(f"post_ss: posted {posted} this run | {remaining} left in queue ({reels_left} reels)")
+    cards_left = sum(1 for m in queue if not m.get("posted_at") and m["type"] == "card2")
+    log(f"post_ss: posted 1 {kind} | left: {reels_left} reels, {cards_left} cards")
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())
