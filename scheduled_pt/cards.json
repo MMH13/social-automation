@@ -2,201 +2,201 @@
   {
     "id": 1,
     "type": "card",
-    "text": "You stopped asking how I was a long time ago, and I still answer like you might.",
-    "job": "identity",
-    "fb_caption": "You stopped asking how I was a long time ago, and I still answer like you might.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "You stopped asking how I was a long time ago, and I still answer like you might.\n\n#psychology #healing #selfawareness",
+    "text": "If you are the one everyone calls when they are breaking, who do you call when you are?",
+    "job": "recognition",
+    "fb_caption": "If you are the one everyone calls when they are breaking, who do you call when you are?\n\n#psychology #healing #selfawareness",
+    "ig_caption": "If you are the one everyone calls when they are breaking, who do you call when you are?\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 2,
     "type": "card",
-    "text": "Some people leave quietly, and the silence teaches you more than any argument could.",
-    "job": "relationship",
-    "fb_caption": "Some people leave quietly, and the silence teaches you more than any argument could.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "Some people leave quietly, and the silence teaches you more than any argument could.\n\n#psychology #healing #selfawareness",
+    "text": "To the one who smiles all day and falls apart in the car: I see you.",
+    "job": "recognition",
+    "fb_caption": "To the one who smiles all day and falls apart in the car: I see you.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "To the one who smiles all day and falls apart in the car: I see you.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 3,
     "type": "card",
-    "text": "You are not too sensitive. You were just raised around people who were not.",
-    "job": "validation",
-    "fb_caption": "You are not too sensitive. You were just raised around people who were not.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "You are not too sensitive. You were just raised around people who were not.\n\n#psychology #healing #selfawareness",
+    "text": "You are not dramatic. You feel everything at full volume in a world that taught you to whisper.",
+    "job": "recognition",
+    "fb_caption": "You are not dramatic. You feel everything at full volume in a world that taught you to whisper.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "You are not dramatic. You feel everything at full volume in a world that taught you to whisper.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 4,
     "type": "card",
-    "text": "Being strong for everyone is lonely when no one asks who is strong for you.",
-    "job": "validation",
-    "fb_caption": "Being strong for everyone is lonely when no one asks who is strong for you.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "Being strong for everyone is lonely when no one asks who is strong for you.\n\n#psychology #healing #selfawareness",
+    "text": "If you still check on people who never check on you, you are not weak. You are loyal to the wrong places.",
+    "job": "recognition",
+    "fb_caption": "If you still check on people who never check on you, you are not weak. You are loyal to the wrong places.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "If you still check on people who never check on you, you are not weak. You are loyal to the wrong places.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 5,
     "type": "card",
-    "text": "The version of me you remember is the one who needed you the most.",
-    "job": "relationship",
-    "fb_caption": "The version of me you remember is the one who needed you the most.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "The version of me you remember is the one who needed you the most.\n\n#psychology #healing #selfawareness",
+    "text": "You were never too much. You were just too real for people who are comfortable with less.",
+    "job": "recognition",
+    "fb_caption": "You were never too much. You were just too real for people who are comfortable with less.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "You were never too much. You were just too real for people who are comfortable with less.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 6,
     "type": "card",
-    "text": "Healing does not feel like peace at first. It feels like missing what hurt you.",
-    "job": "universal",
-    "fb_caption": "Healing does not feel like peace at first. It feels like missing what hurt you.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "Healing does not feel like peace at first. It feels like missing what hurt you.\n\n#psychology #healing #selfawareness",
+    "text": "You laughed with everyone today and cried in the shower tonight. Both of those were really you.",
+    "job": "scenario",
+    "fb_caption": "You laughed with everyone today and cried in the shower tonight. Both of those were really you.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "You laughed with everyone today and cried in the shower tonight. Both of those were really you.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 7,
     "type": "card",
-    "text": "You do not owe anyone the story behind your boundary.",
-    "job": "boundary",
-    "fb_caption": "You do not owe anyone the story behind your boundary.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "You do not owe anyone the story behind your boundary.\n\n#psychology #healing #selfawareness",
+    "text": "You typed three replies, deleted them all, and sent nothing. That was self respect arguing with love.",
+    "job": "scenario",
+    "fb_caption": "You typed three replies, deleted them all, and sent nothing. That was self respect arguing with love.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "You typed three replies, deleted them all, and sent nothing. That was self respect arguing with love.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 8,
     "type": "card",
-    "text": "Sometimes the person you miss is not them. It is who you were when you still believed in them.",
-    "job": "identity",
-    "fb_caption": "Sometimes the person you miss is not them. It is who you were when you still believed in them.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "Sometimes the person you miss is not them. It is who you were when you still believed in them.\n\n#psychology #healing #selfawareness",
+    "text": "It is 2 a.m., you are exhausted, and your mind picks this moment to replay that one conversation.",
+    "job": "scenario",
+    "fb_caption": "It is 2 a.m., you are exhausted, and your mind picks this moment to replay that one conversation.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "It is 2 a.m., you are exhausted, and your mind picks this moment to replay that one conversation.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 9,
     "type": "card",
-    "text": "You can forgive someone and still never let them back in.",
-    "job": "boundary",
-    "fb_caption": "You can forgive someone and still never let them back in.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "You can forgive someone and still never let them back in.\n\n#psychology #healing #selfawareness",
+    "text": "You said I am fine so many times that nobody checks anymore, including you.",
+    "job": "scenario",
+    "fb_caption": "You said I am fine so many times that nobody checks anymore, including you.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "You said I am fine so many times that nobody checks anymore, including you.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 10,
     "type": "card",
-    "text": "Anxiety is love for the future with nowhere safe to put it.",
-    "job": "universal",
-    "fb_caption": "Anxiety is love for the future with nowhere safe to put it.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "Anxiety is love for the future with nowhere safe to put it.\n\n#psychology #healing #selfawareness",
+    "text": "Today you did the bare minimum and it counts. Some days surviving is the whole assignment.",
+    "job": "scenario",
+    "fb_caption": "Today you did the bare minimum and it counts. Some days surviving is the whole assignment.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "Today you did the bare minimum and it counts. Some days surviving is the whole assignment.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 11,
     "type": "card",
-    "text": "Being tired in a way sleep cannot fix is your mind asking to stop pretending.",
-    "job": "validation",
-    "fb_caption": "Being tired in a way sleep cannot fix is your mind asking to stop pretending.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "Being tired in a way sleep cannot fix is your mind asking to stop pretending.\n\n#psychology #healing #selfawareness",
+    "text": "Dreading good moments has a name: foreboding joy. It is what happens when happiness once ended badly.",
+    "job": "naming",
+    "fb_caption": "Dreading good moments has a name: foreboding joy. It is what happens when happiness once ended badly.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "Dreading good moments has a name: foreboding joy. It is what happens when happiness once ended badly.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 12,
     "type": "card",
-    "text": "You replay old conversations because part of you is still waiting for the peace they never offered.",
-    "job": "relationship",
-    "fb_caption": "You replay old conversations because part of you is still waiting for the peace they never offered.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "You replay old conversations because part of you is still waiting for the peace they never offered.\n\n#psychology #healing #selfawareness",
+    "text": "Missing someone who hurt you does not mean you want them back. It means they mattered.",
+    "job": "naming",
+    "fb_caption": "Missing someone who hurt you does not mean you want them back. It means they mattered.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "Missing someone who hurt you does not mean you want them back. It means they mattered.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 13,
     "type": "card",
-    "text": "The people who understand you fastest usually learned silence the hardest way.",
-    "job": "universal",
-    "fb_caption": "The people who understand you fastest usually learned silence the hardest way.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "The people who understand you fastest usually learned silence the hardest way.\n\n#psychology #healing #selfawareness",
+    "text": "Overthinking is often a mind trying to protect you from a pain it already knows.",
+    "job": "naming",
+    "fb_caption": "Overthinking is often a mind trying to protect you from a pain it already knows.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "Overthinking is often a mind trying to protect you from a pain it already knows.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 14,
     "type": "card",
-    "text": "Not everyone who left was a mistake. Some were only meant to carry you part of the way.",
-    "job": "relationship",
-    "fb_caption": "Not everyone who left was a mistake. Some were only meant to carry you part of the way.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "Not everyone who left was a mistake. Some were only meant to carry you part of the way.\n\n#psychology #healing #selfawareness",
+    "text": "Being too independent is often a child deciding: if I never need anyone, no one can leave.",
+    "job": "naming",
+    "fb_caption": "Being too independent is often a child deciding: if I never need anyone, no one can leave.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "Being too independent is often a child deciding: if I never need anyone, no one can leave.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 15,
     "type": "card",
-    "text": "You are allowed to outgrow the person everyone got used to.",
-    "job": "identity",
-    "fb_caption": "You are allowed to outgrow the person everyone got used to.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "You are allowed to outgrow the person everyone got used to.\n\n#psychology #healing #selfawareness",
+    "text": "Waiting for an apology for years is not patience. It is hope that never got a reply.",
+    "job": "naming",
+    "fb_caption": "Waiting for an apology for years is not patience. It is hope that never got a reply.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "Waiting for an apology for years is not patience. It is hope that never got a reply.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 16,
     "type": "card",
-    "text": "I never stopped loving you. I just stopped making myself smaller to be loved.",
-    "job": "boundary",
-    "fb_caption": "I never stopped loving you. I just stopped making myself smaller to be loved.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "I never stopped loving you. I just stopped making myself smaller to be loved.\n\n#psychology #healing #selfawareness",
+    "text": "I hope you know how hard you are trying, even when nobody says it out loud.",
+    "job": "sendable",
+    "fb_caption": "I hope you know how hard you are trying, even when nobody says it out loud.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "I hope you know how hard you are trying, even when nobody says it out loud.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 17,
     "type": "card",
-    "text": "You keep waiting for closure from the same person who gave you the questions.",
-    "job": "relationship",
-    "fb_caption": "You keep waiting for closure from the same person who gave you the questions.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "You keep waiting for closure from the same person who gave you the questions.\n\n#psychology #healing #selfawareness",
+    "text": "Nobody sees what it costs you to keep going, so let me say it: it is a lot, and it counts.",
+    "job": "sendable",
+    "fb_caption": "Nobody sees what it costs you to keep going, so let me say it: it is a lot, and it counts.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "Nobody sees what it costs you to keep going, so let me say it: it is a lot, and it counts.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 18,
     "type": "card",
-    "text": "Calm feels strange when you grew up bracing for the next storm.",
-    "job": "universal",
-    "fb_caption": "Calm feels strange when you grew up bracing for the next storm.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "Calm feels strange when you grew up bracing for the next storm.\n\n#psychology #healing #selfawareness",
+    "text": "You are allowed to be unfinished and still be loved.",
+    "job": "sendable",
+    "fb_caption": "You are allowed to be unfinished and still be loved.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "You are allowed to be unfinished and still be loved.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 19,
     "type": "card",
-    "text": "Maybe what you call overthinking is just caring with no one to tell.",
-    "job": "validation",
-    "fb_caption": "Maybe what you call overthinking is just caring with no one to tell.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "Maybe what you call overthinking is just caring with no one to tell.\n\n#psychology #healing #selfawareness",
+    "text": "Someday someone will love you the way you love everyone else, without keeping score.",
+    "job": "sendable",
+    "fb_caption": "Someday someone will love you the way you love everyone else, without keeping score.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "Someday someone will love you the way you love everyone else, without keeping score.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   },
   {
     "id": 20,
     "type": "card",
-    "text": "One day you will thank the version of you who stayed when it was hardest.",
-    "job": "identity",
-    "fb_caption": "One day you will thank the version of you who stayed when it was hardest.\n\n#psychology #healing #selfawareness",
-    "ig_caption": "One day you will thank the version of you who stayed when it was hardest.\n\n#psychology #healing #selfawareness",
+    "text": "Quiet healing is still healing. Nobody has to applaud for it to be real.",
+    "job": "turn",
+    "fb_caption": "Quiet healing is still healing. Nobody has to applaud for it to be real.\n\n#psychology #healing #selfawareness",
+    "ig_caption": "Quiet healing is still healing. Nobody has to applaud for it to be real.\n\n#psychology #healing #selfawareness",
     "skip": true,
-    "batch": "card-test-2026-11-20"
+    "batch": "card-test-v2-2026-11-20"
   }
 ]
