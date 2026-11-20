@@ -1,0 +1,10 @@
+{
+  "_note": "Psychology Tube photocard plan (UTC). 2026-11-20: 14-day test, 1 black 16:9 card/day. Week two (from ~2026-11-27) add {\"at\": \"17:00\", \"kind\": \"card\"} for 2/day. Read by scripts/is_due.py --plan and src/post_pt_card.py via src/slot_plan.py.",
+  "slots": [
+    {"at": "09:00", "kind": "card"}
+  ],
+  "kinds": {
+    "card": {"types": ["card"], "min_gap_minutes": 360}
+  },
+  "min_gap_any_minutes": 0
+}
