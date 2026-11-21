@@ -30,6 +30,7 @@ PAGES = [
     ("scheduled_ss/content.json", 3, "Speaking from soul reels", ("reel", "reel2"), 12),
     ("scheduled_ss/content.json", 2, "Speaking from soul photocards", ("card2",), 20),
     ("scheduled_pt/content.json", 3, "Psychology Tube", ("narrated",), 12),
+    ("scheduled_pt/cards.json", 1, "Psychology Tube photocards", ("card",), 36),
     ("scheduled_mh/content.json", 3, "Mamun Hossain", None, 12),
 ]
 LOW_RUNWAY_DAYS = 3.0
